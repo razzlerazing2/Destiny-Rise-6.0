@@ -199,33 +199,33 @@ transition: all 1s ease;
 
 .top-nav {
   position: fixed;
-  top: 1px; /* Adjust as needed */
+  top: 1px;
   left: 0;
   width: 100%;
   display: flex;
+  justify-content: center; /* Center the nav content */
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   z-index: 999;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 25px;
   box-sizing: border-box;
+  gap: 20px; /* 👈 THIS separates .logo and ul with space */
 }
-.top-nav .logo {
- background: linear-gradient(0deg, #FF0000, #0000FF);
+
+.top-nav .logo a {
+  background: linear-gradient(45deg, #f39c12, #8e44ad);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease;
+  background-clip: text;
+  color: transparent;
   font-size: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
-.top-nav .logo:hover {
-    transform: translateY(-20%) scale(1.05);
-    transition: all 0.3s ease;
-}
-.top-nav > *:not(:first-child) {
-  margin-left: 30px; /* Add 20px left margin to all direct children except the first */
+
+.top-nav .logo a:hover {
+  transform: translateY(-20%) scale(1.05);
 }
 
 .top-nav ul {
@@ -240,15 +240,15 @@ transition: all 1s ease;
   color: white;
   text-decoration: none;
   font-size: 14px;
-  transition: all 0.3s ease; /* Ensure transitions apply */
-  display: inline-block; /* Needed for transform to work properly */
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .top-nav ul li a:hover {
-  transform: translateY(-20%) scale(1.05);
-  background: linear-gradient(0deg, #FF0000, #0000FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ background: linear-gradient(45deg, #f39c12, #8e44ad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
   transition: all 0.3s ease;
 }
 /* Push content down so it's not hidden under fixed nav */

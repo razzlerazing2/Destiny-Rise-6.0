@@ -2,17 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-body {
-   font-family: "Press Start 2P", cursive;
-   text-decoration: none;
-   margin: 0;
-   overflow-x: hidden;
-   overflow-y: hidden;
-   color: var(--text-primary);
-     background: url("/assets/media/background/senkbucketup.webp") no-repeat center center;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-
+  font-family: "Press Start 2P", cursive;
+  overflow-x: hidden;
 }
 .nav {
    padding: 1rem;
@@ -244,10 +241,12 @@ background: rgba(0, 0, 0, 0.35);
    display: flex;
    align-items: center;
    justify-content: center;
+   color: white;
 }
 
 li.active {
-   background: darkgray;
+   color: black;
+   background: whitesmoke;
 }
 
 
