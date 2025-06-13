@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/media/favicon/daddy.png.png" type="image/x-icon" />
+  <title>Math Bros. Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/404.css">
+</head>
+<!--<body onload="showLoader()">-->
+    <!-- Loader -->
+    <!--<div id="loader">
+        <h1><span class="highlight">SKELLY</span>💀</h1>
+        <p><span class="highlight2">Hanging Extension, please wait...</span></p>
+        <div class="loader"></div>
+    </div>-->
+<!-- Content Section -->
+<div class="content">
+  <div class="container">
+    <h1><span class="highlight">404 Error</span></h1>
+    <h2><span class="highlight">File not found</span></h2>
+    <p><span class="highlight2">This error encountered due to you opening a file that has not been found.</span></p>
+    <div class="proxy-buttons-container" id="proxy-buttons-container">
+     <a href="/learnmathhere" class="proxy-button">Home</a>
+    </div>
+    <div class="time" id="time">Loading time wait...</div>
+      <div class="battery" id="battery">
+        <div class="battery-icon">
+          <div class="battery-fill" id="battery-fill"></div>
+        </div><span id="battery-percentage">Loading battery wait...</span>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+ </div>
+</div>
+</div>
+</div>
+    </div>
+  </div>
+  <script src="/assets/js/settings.js"></script>
+    <script>
+function showLoader() {
+  const loader = document.getElementById("loader");
+  
+  // Start fading it out
+  loader.style.opacity = "0";
+
+  // After the transition ends (0.3s later), hide it completely
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 1000); // 300ms matches your CSS transition
+}
+
+// Update the time every 10ms
+function updateTime() {
+  const timeElement = document.getElementById("time");
+  const now = new Date();
+
+  let hours = now.getHours();
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
+  const ampm = hours >= 12 ? "PM" : "AM";
+
+  // Convert to 12-hour format
+  hours = hours % 12;
+  hours = hours ? hours : 12; // 0 becomes 12
+
+  timeElement.textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+}
+
+setInterval(updateTime, 10);
+
+// Update battery status
+async function updateBattery() { 
+  const battery = await navigator.getBattery();
+  const level = Math.floor(battery.level * 100);
+  const fill = document.getElementById("battery-fill");
+
+  document.getElementById("battery-percentage").textContent = `${level}%`;
+  fill.style.width = `${level}%`;
+  
+
+  // Set color based on charging state and level
+  if (battery.charging) {
+    fill.style.backgroundColor = "green"; // Charging = green
+  } else if (level > 50) {
+    fill.style.backgroundColor = "white"; // >50% = white
+  } else if (level >= 20) {
+    fill.style.backgroundColor = "yellow"; // 20–50% = yellow
+  } else {
+    fill.style.backgroundColor = "red"; // <20% = red
+  }
+}
+navigator.getBattery().then(battery => {
+  function updateAll() {
+    updateBattery(); // your custom update logic
+  }
+
+  battery.addEventListener("levelchange", updateAll);
+  battery.addEventListener("chargingchange", updateAll);
+  updateAll(); // initial update
+});
+updateBattery();
+// Toggle sidebar visibility and blur effect
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const hamburger = document.querySelector(".hamburger");
+      const content = document.querySelector(".content"); // Select the content section
+
+      sidebar.classList.toggle("closed");
+      hamburger.classList.toggle("open");
+
+      // Toggle blur on content when sidebar is open
+      content.classList.toggle("blur", !sidebar.classList.contains("closed"));
+    }
+          </script>
+    </body>
+
+</html>

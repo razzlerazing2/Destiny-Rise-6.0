@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/media/favicon/khan.png" type="image/x-icon">
+  <title>Dashboard | Khan Academy</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/holy.css">
+</head>
+
+<body onload="showLoader()">
+
+  <!-- Loader -->
+  <div id="loader">
+    <h1><span class="highlight">SKELLY</span>💀</h1>
+    <p><span class="highlight2">Hanging Extension, please wait...</span></p>
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="top-nav">
+    <div class="logo"><a href="/home">SKG</a></div>
+    <ul>
+      <li><a href="/games">Games</a></li>
+      <li><a href="/apps">Apps</a></li>
+         <li><a href="/search">Search</a></li>
+      <li><a href="/settings">Settings</a></li>
+      <!--<li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact Info</a></li>-->
+    </ul>
+  </nav>
+
+  <!-- Content Section -->
+  <div class="content">
+      <div class="container">
+        <h1><span class="highlight">SKELLY GAMING&trade;</span>💀</h1>
+        <h2><span class="highlight2">Originated by <i>@razzlerazing2</i></span></h2>
+
+        <!-- System Info -->
+        <div class="time" id="time">Loading time, please wait...</div>
+        <div class="battery" id="battery">
+          <div class="battery-icon">
+            <div class="battery-fill" id="battery-fill"></div>
+          </div>
+          <span id="battery-percentage">Loading battery, please wait...</span>
+        </div>
+
+        <!-- Settings & Proxy -->
+        <div class="settings-card">
+          <div class="select-wrapper">
+            <div class="proxy-buttons-container" id="proxy-buttons-container">
+              <a href="/games" class="proxy-button">Games</a>
+              <a href="/apps" class="proxy-button">Apps</a>
+              <a href="/search" class="proxy-button">Proxy Search</a>
+              <!--<a href="/about" class="proxy-button">About</a>-->
+              <a href="/settings" class="proxy-button">Settings</a>
+              <!--<a href="/contact" class="proxy-button">Contact Us</a>-->
+              <button onclick="AB()" class="key-button">Open A:B Cloak</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+   <script src="/assets/js/swaholebo.js"></script>
+  <script src="/callfall.js"></script>
+  <script src="/assets/js/settings.js"></script>
+  <script src="/assets/js/i.js?v=03"></script>
+  <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
+  <script src="./assets/ultra/config.js?v=10-02-2024"></script>
+  <script src="/assets/js/f.js"></script>
+  <script src="/assets/js/mv.js?v=003"></script>
+  <script src="/assets/js/m.js?v=08"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-WKJQ5QHQTJ");
+  </script>
+
+</body>
+</html>

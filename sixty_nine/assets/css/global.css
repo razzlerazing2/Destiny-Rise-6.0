@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+   /* Background Variables */
+   --background-image: url("/./assets/media/background/senkbucketup.webp");  /* Background Image */
+   --backdrop-filter: blur(10px) brightness(80%); /* Nav Backdrop filter */
+   --background-nav: rgba(255, 255, 255, 0.02); /* Nav Background */
+   --background-color: #222; /* Main Background Color */
+   --background-input: #4545459e; /* Input Field Background Color */
+   --background-column: #353535; /* Background for Apps Container */
+   --background-settings: #2a2a2a; /* Settings Card Background */
+   --background-buttons: #333; /* Button Background Color */
+   --tab-active-background: #444; /* Accent Color for Tabs */
+   --tab-inactive-background: ; /* Background Color for Tabs Not In Use */
+   --slider-active-background: #4caf50; /* Active Slider Background Color */
+   --slider-inactive-background: #ccc; /*  Slider Background Color */
+   --nav-image: url("/./assets/media/favicon/main.png"); /* Nav Logo */
+   /* Text Variables */
+   --text-primary: #fff; /* Primary Text Color */
+   --text-dark: #555; /* Dark Text Color for Error Page, Scrollbar, and Particles */
+   --text-placeholder: #aaa; /* Placeholder Text Color */
+   /* Other Variables */
+   --save-button: #4caf50; /* Save Button, Typically Green */
+   --reset-button: #f44336; /* Reset Button, Typically Red */
+   --import-button: #009688; /* Import Button, Typically Teal */
+   --export-button: #ea76cb; /* Export Button, Typically Pink */
+}
+
+::-webkit-scrollbar {
+   width: 6px;
+   background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   border-radius: 10px;
+   background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   background-color: var(--text-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background-color: var(--text-dark);
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+   text-decoration: none;
+   height: 100%;
+     background: url("/assets/media/background/senkbucketup.webp") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+   /* animation: gradientAnimation 5s linear infinite; */
+}
+
+
+ /* @keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(45deg, green, red, black);
+  }
+  12.5% {
+    background: linear-gradient(45deg, yellow, orange, red);
+  }
+  25% {
+    background: linear-gradient(45deg, black, red, green);
+  }
+  50% {
+    background: linear-gradient(45deg, yellow, blue, violet);
+  }
+  62.5% {
+    background: linear-gradient(45deg, green, black, indigo);
+  }
+  75% {
+    background: linear-gradient(45deg, red, orange, blue);
+  }
+  87.5% {
+    background: linear-gradient(45deg, red, indigo, gray);
+  }
+  100% {
+    background: linear-gradient(45deg, green, black, red);
+  }
+} */
+
+::placeholder {
+   color: var(--text-placeholder);
+   opacity: 1;
+}
+
+.main {
+   letter-spacing: 0px;
+   font-family: 'Press Start 2P', cursive;
+   width: 99%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   top: 0%;
+   position: absolute;
+   z-index: 99;
+}
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with 50% opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+transition: all 1s ease;
+}
+#loader h1 {
+  font-size: 85px;
+  margin: 0;
+}
+
+#loader span {
+  color: red;
+}
+
+#loader p {
+  font-size: 20px;
+  margin-top: 1px;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 10px solid rgba(255, 255, 255, 0.2);
+  border-top: 10px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1.0s linear infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.highlight2 {
+  background: linear-gradient(0deg, #FF0000, #0000FF);
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Highlight styles */
+.highlight {
+  background: linear-gradient(
+    90deg,
+    #ff0000 0%,
+    #ff7f00 16.66%,
+    #ffff00 33.33%,
+    #00ff00 50%,
+    #0000ff 66.66%,
+    #4b0082 83.33%,
+    #8b00ff 100%
+  );
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

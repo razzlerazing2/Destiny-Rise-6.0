@@ -1,0 +1,249 @@
+[
+   {
+    "name": "! Create Custom App",
+    "image": "/assets/media/icons/custom.webp",
+    "categories": ["all"],
+    "custom": "true"
+  },
+
+  {
+    "name": "Crazy Games",
+    "link": "https://www.crazygames.com/",
+    "image": "/assets/media/icons/crazy.webp",
+    "categories": ["all", "social"]
+  },
+  {
+    "name": "Scratch",
+    "link": "https://scratch.mit.edu",
+    "image": "/assets/media/icons/scratch.webp",
+    "categories": ["all", "social", "game"]
+  },
+  {
+    "name": "Cool Math Games",
+    "link": "https://www.coolmathgames.com/",
+    "image": "/assets/media/icons/coolmath.webp",
+    "categories": ["all", "game"]
+  },
+  {
+    "name": "DuckDuckGo",
+    "link": "https://start.duckduckgo.com/",
+    "image": "/assets/media/icons/duckduckgo.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Geforce NOW",
+    "link": "https://play.geforcenow.com",
+    "image": "/assets/media/icons/geforce-now.webp",
+    "categories": ["all", "stream", "cloud"]
+  },
+  {
+    "name": "Github",
+    "link": "https://github.com",
+    "image": "/assets/media/icons/github.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Google",
+    "link": "https://google.com",
+    "image": "/assets/media/icons/google.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Pinterest",
+    "link": "https://pinterest.com",
+    "image": "/assets/media/icons/pinterest.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Pixlr",
+    "link": "https://pixlr.com/",
+    "image": "/assets/media/icons/pix.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Poki",
+    "link": "https://poki.com",
+    "image": "/assets/media/icons/poki.webp",
+    "categories": ["all", "game"]
+  },
+  {
+    "name": "Telegram",
+    "link": "https://web.telegram.org/",
+    "image": "/assets/media/icons/telegram.webp",
+    "categories": ["all", "social"]
+  },
+  {
+    "name": "Tubi",
+    "link": "https://tubitv.com",
+    "image": "https://play-lh.googleusercontent.com/3nVkWPn19cL1C1LZ8AXEtS8z3VxoWc4SIlIN75sc437oM_9hVL1vhKpAGdUtVIPLj9o=w240-h480-rw",
+    "categories": ["all"]
+  },
+  {
+    "name": "Twitch",
+    "link": "https://twitch.tv",
+    "image": "/assets/media/icons/twitch.webp",
+    "categories": ["all", "stream"]
+  },
+  {
+    "name": "Twitter",
+    "link": "https://twitter.com",
+    "image": "/assets/media/icons/twitter.webp",
+    "categories": ["all", "social"]
+  },
+  {
+    "name": "VS Code",
+    "link": "https://vscode.dev",
+    "image": "/assets/media/icons/vscode.webp",
+    "categories": ["all", "tool"]
+  },
+  {
+    "name": "Y8 Games",
+    "link": "https://y8.com/",
+    "image": "/assets/media/icons/y8.webp",
+    "categories": ["all", "game"]
+  },
+
+  {
+    "name": "Wattpad",
+    "link": "https://www.wattpad.com/",
+    "image": "/assets/media/icons/wattpad.webp",
+    "categories": ["all", "social"]
+  },
+  {
+    "name": "Now.GG",
+    "link": "https://now.gg",
+    "image": "/assets/media/icons/now-gg.webp",
+    "categories": ["all", "emu", "android"]
+  },
+  {
+    "name": "Vercel",
+    "link": "https://vercel.com",
+    "image": "/assets/media/icons/vercel.webp",
+    "categories": ["all", "tool"]
+  },
+  {
+    "name": "Amazon Luna",
+    "link": "https://luna.amazon.com/",
+    "image": "/assets/media/icons/amazon-luna.webp",
+    "categories": ["all", "game", "cloud"],
+    "blank": "true"
+  },
+  {
+    "name": "Google Gemini",
+    "link": "https://gemini.google.com",
+    "image": "/assets/media/icons/gemini.webp",
+    "categories": ["all", "ai"]
+  },
+  {
+    "name": "SpaceHey",
+    "link": "https://www.spacehey.com",
+    "image": "/assets/media/icons/spacehey.png",
+    "categories": ["all", "social"]
+  },
+  {
+    "name": "Movie Web",
+    "link": "https://movie-web-me.vercel.app/",
+    "image": "/assets/media/icons/MW.png",
+    "say": "This is not an official domain for Movie Web",
+    "categories": ["all", "media"]
+  },
+  {
+    "name": "Sudo-Flix.Lol (Movie Web Clone)",
+    "link": "https://sudo-flix.lol/",
+    "image": "/assets/media/icons/MW.png",
+    "say": "This is not an official domain for Movie Web",
+    "categories": ["all", "media"]
+  },
+  {
+    "name": "GBA Games",
+    "link": "https://gba.js.org/",
+    "image": "/assets/media/icons/gba.png",
+    "categories": ["all", "emu"]
+  },
+
+  {
+    "name": "GPTZero.me",
+    "link": "https://gptzero.me/",
+    "image": "/assets/media/icons/gz.webp",
+    "categories": ["all", "ad"]
+  },
+  {
+    "name": "ZeroGPT.com",
+    "link": "https://www.zerogpt.com/",
+    "image": "/assets/media/icons/zg.webp",
+    "categories": ["all", "ad"]
+  },
+
+  {
+    "name": "CopyLeaks.com",
+    "link": "https://copyleaks.com/ai-content-detector",
+    "image": "/assets/media/icons/cl.jpg",
+    "categories": ["all", "ad"]
+  },
+  {
+    "name": "Writer.com",
+    "link": "https://writer.com/ai-content-detector/",
+    "image": "/assets/media/icons/wr.png",
+    "categories": ["all", "ad"]
+  },
+  {
+    "name": "Quillbot.com AI Detector",
+    "link": "https://quillbot.com/ai-content-detector",
+    "image": "/assets/media/icons/qb.jpg",
+    "categories": ["all", "ad"]
+  },
+  {
+    "name": "Kome.ai YouTube Transcript",
+    "link": "https://kome.ai/tools/youtube-transcript-generator",
+    "image": "/assets/media/icons/km.webp",
+    "categories": ["all", "ts"]
+  },
+  {
+    "name": "NoteGPT.io YouTube Transcript",
+    "link": "https://notegpt.io/youtube-transcript-generator",
+    "image": "/assets/media/icons/ng.jpg",
+    "categories": ["all", "ts"]
+  },
+  {
+    "name": "Grammarly Plagiarism Checker",
+    "link": "https://www.grammarly.com/plagiarism-checker",
+    "image": "/assets/media/icons/gm.png",
+    "categories": ["all", "pc"]
+  },
+   {
+    "name": "Discord",
+    "link": "https://discord.gg",
+    "image": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxsG72wAo9EWJR4yQWyJJaDb6rYcBtJvTvH3UoAS4JFNDaxGhmKNaMwgElLURlRFeVkLCjkfnXmWtINWZIrPGYq0-&format=source",
+    "categories": ["all", "pc"]
+  },
+  {
+    "name": "Plagiarism Detector",
+    "link": "https://plagiarismdetector.net/",
+    "image": "/assets/media/icons/pdn.png",
+    "categories": ["all", "pc"]
+  },
+  {
+    "name": "Blooket Cheats",
+    "link": "https://githubman6996.github.io/05konz-blooket-site/",
+    "image": "/assets/media/icons/bl.webp",
+    "categories": ["all", "bl", "cs"]
+  },
+  {
+    "name": "DeepAI.org",
+    "link": "https://deepai.org/",
+    "image": "/assets/media/icons/da.webp",
+    "categories": ["all", "ai"]
+  },
+  {
+    "name": "Fmovies",
+    "link": "https://new-fmovies.net",
+    "image": "/assets/media/FM.png",
+    "categories": ["all", "ai"]
+  },
+  {
+    "name": "TalkAI.info",
+    "link": "https://talkai.info/chat/",
+    "image": "/assets/media/icons/ta.webp",
+    "categories": ["all", "ai"]
+  }
+]

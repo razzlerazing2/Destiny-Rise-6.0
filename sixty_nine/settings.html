@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/assets/media/favicon/khan.png" type="image/x-icon" />
+<title>Dashboard | Khan Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/settings.css" />
+    <link rel="stylesheet" href="/assets/css/settings.css?v=06" />
+</head>
+
+<body onload="showLoader()">
+    <!-- Loader -->
+    <div id="loader">
+        <h1><span class="highlight">SKELLY</span>💀</h1>
+        <p><span class="highlight2">Hanging Extension, please wait...</span></p>
+        <div class="loader"></div>
+    </div>
+  <nav class="top-nav">
+    <div class="logo"><a href="/home">SKG</a></div>
+    <ul>
+      <li><a href="/games">Games</a></li>
+      <li><a href="/apps">Apps</a></li>
+         <li><a href="/search">Search</a></li>
+      <li><a href="/settings">Settings</a></li>
+      <!--<li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact Info</a></li>-->
+    </ul>
+  </nav>
+    <!-- Content Section -->
+    <div class="content">
+        <div class="container">
+            <h1><span class="highlight">Settings</span></h1>
+           
+
+
+            <!-- Time and Battery Section -->
+            <div class="settings-container">
+                <div class="settings-card">
+                    <h3><span class="highlight">About:Blank</span></h3>
+                    <p>Cloak the site into about:blank to hide it from your search history. WARNING: costs come, so don't use dynamic when about:blank is on/cloaked.</p>
+                    <div id="ab-settings">
+                        <div id="ab-settings-container">
+                            <label class="switch">
+                                <input type="checkbox" id="ab-settings-switch" class="slider-checkbox"
+                                    onchange="toggleAB()" />
+                                <span class="slider-round"></span>
+                            </label>
+                        </div>
+                        <button onclick="AB()" class="key-button">Open</button>
+                    </div>
+                </div>
+
+<div class="settings-card">
+        <h3><span class="highlight">Engine</span></h3>
+        <p>Here u can change search engine and it will affect stuff, google is the main/best one, but if google is down/not letting u go through, use anything else.</p>
+        <select title="engine" id="engine" onchange="EngineChange(this)">
+          <option value="Google">Google (Default)</option>
+          <option value="Bing">Bing</option>
+          <option value="DuckDuckGo">DuckDuckGo</option>
+          <option value="Qwant">Qwant</option>
+          <option value="Startpage">Startpage</option>
+          <option value="SearchEncrypt">SearchEncrypt</option>
+          <option value="Ecosia">Ecosia</option>
+        </select>
+        <!--<input class="key-form" type="text" id="engine-form" placeholder="Change Search Engine" name="engine" />-->
+        <button class="key-button" value="Save" onclick="SaveEngine();">
+          Save
+        </button>
+      </div>
+
+                <div class="settings-card">
+                    <h3><span class="highlight">Choose your Proxy</span></h3>
+                    <p>Dynamic is ideal for extra site-supporing & speed, while yet Ultraviolet is ideal for it's fame, trust, and successions. This is a very hard choice, but don't try Dynamic in about:blank</p>
+                    <div class="select-wrapper">
+                    <select id="pChange">
+                        <option value="uv">Ultra<an>vio</an>let</option>
+                        <option value="dy">Dynamic</option>
+                    </select>
+                </div>
+            </div>
+             <div class="settings-card">
+        <h3><span class="highlight">Set Background Image</span></h3>
+        <p>It is very good and I worked on it so hard. If you don't like this, you may def change it. It is no longer on beta testing so this is very good and you will enjoy it. Was definitely hard to create.</p>
+        <input class="key-form" type="text" id="background-input" placeholder="DO HTTPS:// FIRST" />
+        <button class="key-button" id="save-button">Save</button>
+        <button class="key-button" id="reset-button">Reset</button>
+      </div>
+                        <div class="settings-card">
+        <h3><span class="highlight">Set Panic Key</span></h3>
+        <p>
+          Whatever key u use then that key u press (not while typing), then u will be redirected to a site of ur choice leaving NO trace. (except for ur search history LOL)
+        </p>
+        <input type="text" id="eventKeyInput" placeholder="Panic Keys (comma separated)" class="key-form" />
+        <input class="key-form" placeholder="Panic Link DO HTTPS://" type="text" id="linkInput" value />
+        <button class="key-button" value="Save" onclick="saveEventKey()">
+          Save
+        </button>
+        <button class="key-button" onclick="resetButton()">Reset</button>
+      </div>
+        </div>
+</div>
+    </div>
+</div>
+    <script src="/what.js"></script>
+    <script src="assets/js/i.js?v=03"></script>
+    <script src="/assets/js/passobemsolto.js"></script>
+    <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
+    <script src="./assets/ultra/config.js?v=10-02-2024"></script>
+    <script src="assets/js/f.js"></script>
+    <script src="/assets/js/mv.js?v=003"></script>
+    <script src="/assets/js/m.js?v=08"></script>
+    <script src="/assets/js/settings.js?v=010"></script>
+    <!-- DO NOT REMOVE-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || []
+        function gtag() {
+            dataLayer.push(arguments)
+        }
+        gtag("js", new Date())
+
+        gtag("config", "G-WKJQ5QHQTJ")
+    </script>
+    <!-- DO NOT REMOVE-->
+</body>
+
+</html>
