@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-.column::before {
+/*.column::before {
   content: "";
   position: absolute;
   top: -5px;
@@ -58,7 +58,7 @@
   z-index: -1;
   animation: none;
   filter: blur(6px);
-}
+}*/
 
 .column:hover {
   transform: translateY(-10%) scale(1.05);
@@ -67,7 +67,7 @@
   transition: all 0.4s ease;
 }
 
-.column:hover::before {
+/*.column:hover::before {
   animation: rainbowGlow 5s linear infinite;
 }
 
@@ -81,7 +81,7 @@
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 
 
