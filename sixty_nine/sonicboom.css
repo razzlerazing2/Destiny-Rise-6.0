@@ -62,14 +62,48 @@ body::-webkit-scrollbar {
       
 
         .container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  border: 2px solid white;
+  background: rgba(0, 0, 0, 0.3);
+  /* backdrop-filter: blur(4px); */ /* I'm pretty sure adds a thing called "glassy" effect. */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+   display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* This pushes inner content to the bottom */
+}
+
+.container:hover {
+   /* backdrop-filter: blur(5px); */
+  border: 2px solid transparent;
+  box-shadow: 
+    0 0 60px 20px #FF0000,
+    0 0 80px 30px #0000FF;
+  transition: all 0.4s ease;
+}
+
+/* WebKit Scrollbar Styling */
+.container::-webkit-scrollbar {
+  width: 6px;
+  background-color: #222;
+}
+.container::-webkit-scrollbar-track {
+  background-color: #222;
+  border-radius: 10px;
+}
+.container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
 
         .overlay {
             position: absolute;
@@ -80,30 +114,41 @@ body::-webkit-scrollbar {
         }
 
         .container-inner {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 50px;
-            border-radius: 20px;
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-            
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
-            color: white;
-            transition: transform 0.5s ease-in-out;
-        }
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    /* max-width: 600px; <-- Remove this line */
+    width: 100%; /* Full width within the .container */
+    max-width: 1100px; /* Optional: set this only if you want to cap it on large screens */
+    
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
 
-        .container-inner h1 {
+
+        .container h1 {
             font-size: 40px;
             color: #fff;
             margin-bottom: 20px;
             font-weight: bold;
-            text-transform: uppercase;
             background: linear-gradient(45deg, #f39c12, #8e44ad);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-
+.container h2 {
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 20px;
+  font-weight: bold;
+            background: linear-gradient(45deg, #f39c12, #8e44ad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 20px;
+}
         
 .search-container {
    display: flex;
@@ -338,3 +383,123 @@ transition: all 1s ease;
   width: 0%;
   transition: width 0.3s ease;
 }
+.proxy-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.proxy-button {
+  position: relative;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+}
+.proxy-button:hover {
+  transform: translateY(-20%) scale(1.1);
+  transition: 0.3s ease;
+}
+.proxy-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: rainbow 5s linear infinite;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.proxy-button:hover::before {
+  opacity: 1;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.settings-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  display: block;
+}
+.key-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.key-button {
+  font-family: 'Press Start 2P', cursive;
+  position: relative;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: underline;
+}
+.key-button:hover {
+  transform: translateY(-20%) scale(1.1);
+  transition: 0.3s ease;
+}
+.key-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: rainbow 5s linear infinite;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.key-button:hover::before {
+  opacity: 1;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
