@@ -1,3 +1,3 @@
-# SkellySKript
+# Skrypt
 # Where unblocking possibilities are endless 💀
 I just want to give credits to @467riguy8 for helping me with this project! I am @razzlerazing2 and I created this project with them in order to bypass school restrictions. If you want to fork this repository, then i suggest you don't edit these files: index.js, package.json, package-lock.json, Dockerfile, SECURITY.md, render.yaml, vercel.json, webpack.config.mjs, config.js, biome.json, Masqr.js, app.json .zip, .gitignore and lastly. .replit. Just edit anything in the sixty_nine folder. Or else there will be problem with deploying, and if you're editing this and want to test it, go to Terminal, type npm install then npm run start. I just hope you enjoy this. Hide this from teachers bcuz we want freedom on our school chromebooks.
