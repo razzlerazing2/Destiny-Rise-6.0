@@ -23,7 +23,7 @@
 }
 
 .column p {
-   font-family: 'Press Start 2P', cursive;
+   font-family: 'Arial', sans-serif;
    font-size: 13px;
    color: var(--text-primary);
    text-align: center;
@@ -107,7 +107,7 @@
 }
 
 input {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Arial', sans-serif;
   width: 83%;
   padding: 16px 20px;
   color: white;
@@ -144,23 +144,6 @@ select {
   flex-direction: column; /* Stack items vertically */
   align-items: center;     /* Center items horizontally */
   gap: 20px;               /* Space between h1 and input */
-}
-
-.container {
-  width: 1220px;
-  height: 474px;
-  margin: 100px auto 0 auto;
-  padding: 30px 40px;
-border-radius: 5px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid white; /* Clean inner white border */
-  transition: all 0.3s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(0px); /* I'm pretty sure adds a thing called "glassy" effect. */
 }
 /* Hide WebKit scrollbars */
 .container::-webkit-scrollbar {

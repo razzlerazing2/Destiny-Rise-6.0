@@ -48,14 +48,17 @@
 }
 
 body {
-    font-family: 'Press Start 2P', cursive;
-   text-decoration: none;
-   height: 100%;
-     background: url("/assets/media/background/senkbucketup.webp") no-repeat center center;
-  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  background-color: #000000CC;
+ background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-   /* animation: gradientAnimation 5s linear infinite; */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* ensures full height coverage */
 }
+
+
 
 
  /* @keyframes gradientAnimation {
@@ -92,7 +95,7 @@ body {
 
 .main {
    letter-spacing: 0px;
-   font-family: 'Press Start 2P', cursive;
+   font-family: 'Arial', sans-serif;
    width: 99%;
    display: flex;
    flex-direction: column;

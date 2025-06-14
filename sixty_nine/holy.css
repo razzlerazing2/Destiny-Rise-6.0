@@ -196,60 +196,47 @@ transition: all 1s ease;
 }
 /* Sidebar styling */
 
-.top-nav {
-  position: fixed;
-  top: 1px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center; /* Center the nav content */
-  align-items: center;
-  padding: 20px;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 25px;
-  box-sizing: border-box;
-  gap: 20px; /* 👈 THIS separates .logo and ul with space */
-}
+nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
 
-.top-nav .logo a {
-  background: linear-gradient(45deg, #f39c12, #8e44ad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 25px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
+        .nav-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
 
-.top-nav .logo a:hover {
-  transform: translateY(-20%) scale(1.05);
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
 
-.top-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
 
-.top-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
+        .nav-links a i {
+            margin-right: 8px;
+        }
 
-.top-nav ul li a:hover {
- background: linear-gradient(45deg, #f39c12, #8e44ad);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-  transition: all 0.3s ease;
-}
+        .nav-links a:hover {
+            color: #f39c12;
+            transform: scale(1.2);
+        }
+
 /* Push content down so it's not hidden under fixed nav */
 
 .content {

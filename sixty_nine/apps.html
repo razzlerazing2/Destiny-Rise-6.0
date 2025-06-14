@@ -10,91 +10,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://raw.githubusercontent.com/razzlerazing2/SkellyScript/refs/heads/main/IMG_3642.webp" type="image/x-icon" />
     <title>Home - SkellySKript Script</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/global.css?v=6" />
+    <link rel="stylesheet" href="/settings2.css" />
     <link rel="stylesheet" href="/assets/css/container.css?v=2" />
 
     <script src="/assets/js/i.js?v=03"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840529569014734"
         crossorigin="anonymous"></script>
-<style>
-.top-nav {
-  position: fixed;
-  top: 1px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center; /* Center the nav content */
-  align-items: center;
-  padding: 20px;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 25px;
-  box-sizing: border-box;
-  gap: 20px; /* 👈 THIS separates .logo and ul with space */
-}
-
-.top-nav .logo a {
-  background: linear-gradient(45deg, #f39c12, #8e44ad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 25px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.top-nav .logo a:hover {
-  transform: translateY(-20%) scale(1.05);
-}
-
-.top-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.top-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.top-nav ul li a:hover {
- background: linear-gradient(45deg, #f39c12, #8e44ad);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-  transition: all 0.3s ease;
-}
-</style>
 </head>
 
-<body onload="showLoader()">
-    <!-- Loader -->
-    <div id="loader">
-        <h1><span class="highlight">SkellySKript</span>💀</h1>
-        <p><span class="highlight2">Hanging Extension, please wait...</span></p>
-        <div class="loader"></div>
-    </div>
-  <nav class="top-nav">
-    <div class="logo"><a href="/home">SKR</a></div>
-    <ul>
-      <li><a href="/games">Games</a></li>
-      <li><a href="/apps">Apps</a></li>
-         <!--<li><a href="/search">Search</a></li>-->
-      <li><a href="/settings">Settings</a></li>
-      <!--<li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact Info</a></li>-->
-    </ul>
-  </nav>
-    <div class="container">
+<body>
+ <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                <li><a href="/apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
+                <li><a href="/settings"><i class="fas fa-cogs"></i> Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+   <div class="container">
+        <div class="overlay"></div>
+        <div class="container-inner">
         <div class="input-c">
             
             <input type="text" id="search" onkeyup="bar()" placeholder="Scroll down or search apps..." />
@@ -102,6 +41,8 @@
            <div class="pinned"><h1><span class="highlight">Use your fav apps now!</span></h1></div>
     <div class="apps"></div>
     </div>
+</div>
+</div>
 </div>
 </div>
 </div>

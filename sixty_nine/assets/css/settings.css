@@ -1,12 +1,4 @@
-body {
-   background-color: var(--background-image);
-     font-family: 'Press Start 2P', cursive;
-   color: var(--text-primary);
-   margin: 0;
-   padding: 0;
-   letter-spacing: 0px;
-   overflow-x: hidden;
-}
+
 
 .settings-container {
    display: flex;
@@ -107,7 +99,7 @@ input {
 }
 
 .key-form {
-   font-family: 'Press Start 2P', cursive;
+   font-family: 'Arial', sans-serif;
    padding: 15px;
    width: 92.5%;
    border-radius: 10px;
@@ -167,7 +159,7 @@ input {
   }
 }
 button {
-   font-family: 'Press Start 2P', cursive;
+   font-family: 'Arial', sans-serif;
    cursor: pointer;
    border: 2px;
    transition: 0.2s;
@@ -219,7 +211,7 @@ button:hover::before {
 }
 
 select {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Arial', sans-serif;
   position: relative;
   padding: 1rem 2rem;
   border: 2px solid transparent;
@@ -286,7 +278,7 @@ select {
    }
 
    .settings-title {
-      font-family: 'Press Start 2P', cursive;
+      font-family: 'Arial', sans-serif;
       font-size: 40px;
    }
 
@@ -297,7 +289,7 @@ select {
 
    button,
    .key-button {
-      font-family: 'Press Start 2P', cursive;
+      font-family: 'Arial', sans-serif;
       width: 100%;
       max-width: 200px;
    }
