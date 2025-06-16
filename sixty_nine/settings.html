@@ -130,6 +130,42 @@
         gtag("config", "G-WKJQ5QHQTJ")
     </script>
     <!-- DO NOT REMOVE-->
+      <!-- 🎵 BGM Playlist Player -->
+    <audio id="bgm" autoplay hidden></audio>
+    <script>
+        const playlist = [
+            "/assets/media/audio/dabottom2.mp3",
+            "/assets/media/audio/dabottom.mp3"
+        ];
+
+          const audio = document.getElementById("bgm");
+
+    // Restore previous track/time from localStorage
+    let currentTrack = parseInt(localStorage.getItem("bgmTrack")) || 0;
+    let currentTime = parseFloat(localStorage.getItem("bgmTime")) || 0;
+
+    audio.src = playlist[currentTrack];
+    audio.currentTime = currentTime;
+
+    audio.play().catch(() => {
+        // Some browsers require interaction before playing audio
+    });
+
+    // Save state every few seconds
+    setInterval(() => {
+        localStorage.setItem("bgmTrack", currentTrack);
+        localStorage.setItem("bgmTime", audio.currentTime);
+    }, 1000);
+
+    // When track ends, go to the next one and save index
+    audio.addEventListener("ended", () => {
+        currentTrack = (currentTrack + 1) % playlist.length;
+        localStorage.setItem("bgmTrack", currentTrack);
+        localStorage.setItem("bgmTime", 0);
+        audio.src = playlist[currentTrack];
+        audio.play();
+    });
+    </script>
 </body>
 
 </html>
