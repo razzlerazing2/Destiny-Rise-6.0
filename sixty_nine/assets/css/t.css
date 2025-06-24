@@ -6,8 +6,12 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.8) no-repeat center center fixed;
-  background-size: cover;
+color: #fff;
+    background-image: url('/assets/media/background/skibididdy.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
   font-family: "Press Start 2P", cursive;
   overflow-x: hidden;
 }
