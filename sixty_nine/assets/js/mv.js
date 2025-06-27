@@ -13,12 +13,8 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     // Blocked Hostnames Check
-    /* const blockedHostnames = [
-      "gointerstellar.app",
-      "computers-science.com",
-      "roundrockisd.online",
-      "algebraxyz.info",
-      "thegalleryofart.info",
+     const blockedHostnames = [
+      "https://phantomtax.shop",
     ];
 
     if (!blockedHostnames.includes(window.location.hostname)) {
@@ -26,7 +22,7 @@
       script.type = "text/javascript";
       script.src = "//flatjeep.com/5e/6b/27/5e6b2776400180cc548a7dfd8ab3f717.js";
       document.body.appendChild(script);
-    } */
+    } 
 
     const nav = document.querySelector(".f-nav");
 
