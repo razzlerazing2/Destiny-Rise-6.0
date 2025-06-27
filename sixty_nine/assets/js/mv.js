@@ -13,7 +13,9 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     // Blocked Hostnames Check
-     const blockedHostnames = [
+ document.addEventListener("DOMContentLoaded", () => {
+    // Blocked Hostnames Check
+    const blockedHostnames = [
       "https://phantomtax.shop",
     ];
 
