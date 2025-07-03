@@ -28,6 +28,7 @@
         <div class="container-inner">
             <h1>SKrypt</h1>
             <h2>Where unblocking possibilities are endless</h2>
+
             <div class="search-container">
                 <div class="search-box">
                     <form id="fv" method="POST">
@@ -35,12 +36,15 @@
                         <button class="search-btn"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
-                <!--<button class="search-btn open-blank-btn" onclick="aboutblank()">
-                    <i class="fas fa-external-link-alt"></i> Open about:blank
-                </button>-->
             </div>
+
+            <!-- Moved button outside search-container and below it -->
+            <button class="open-blank-btn" onclick="aboutblank()">
+                <i class="fas fa-external-link-alt"></i> Open about:blank
+            </button>
         </div>
     </div>
+
 
     <script src="/callfall.js"></script>
     <script src="/assets/js/settings.js"></script>
@@ -60,7 +64,7 @@
             iframe.src = url;
             win.document.body.appendChild(iframe);
 
-            window.location.href = 'https://www.google.com';
+            window.location.href = 'https://portal.friscoisd.org';
         }
     </script>
 <!-- 🎵 BGM Playlist Player -->

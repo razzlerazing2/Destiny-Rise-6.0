@@ -175,22 +175,24 @@
         }
 
         .open-blank-btn {
-            margin-top: 90px;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 30px;
-            background: linear-gradient(45deg, #8e44ad, #f39c12);
-            color: #fff;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            float: right;
-            margin-right: 195px;
-        }
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #8e44ad, #f39c12);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
         .open-blank-btn:hover {
             transform: translateY(-5px) rotate(2deg) scale(1.1);
@@ -202,5 +204,60 @@
         .open-blank-btn i {
             font-size: 18px;
         }
+        .key-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.key-button {
+  font-family: 'Press Start 2P', cursive;
+  position: relative;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: underline;
+}
+.key-button:hover {
+  transform: translateY(-20%) scale(1.1);
+  transition: 0.3s ease;
+}
+.key-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: rainbow 5s linear infinite;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.key-button:hover::before {
+  opacity: 1;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
         
 
