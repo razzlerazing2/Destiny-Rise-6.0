@@ -17,6 +17,34 @@
     <script>
         window.addEventListener("resize", navigator.keyboard.lock(["Escape"]));
     </script>
+     <style>
+             body[theme="catppuccin-frappe"] {
+   background: url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+
+body[theme="catppuccin-macchiato"] {
+   background: url("/assets/media/background/rizzyaf.gif") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+
+body[theme="catppuccin-mocha"] {
+  background: url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+body[theme="default"] {
+  background: url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+  </style>
 </head>
 
 <body id="no">
@@ -79,7 +107,7 @@
     </script>
     <!-- DO NOT REMOVE-->
       <!-- 🎵 BGM Playlist Player -->
-    <audio id="bgm" autoplay hidden></audio>
+   <!-- <audio id="bgm" autoplay hidden></audio>
     <script>
         const playlist = [
             "/assets/media/audio/dabottom2.mp3",
@@ -113,7 +141,19 @@
         audio.src = playlist[currentTrack];
         audio.play();
     });
-    </script>
+    </script>-->
+     <script>
+// Apply saved theme on page load
+const savedTheme = localStorage.getItem('theme') || 'default';
+document.body.setAttribute('theme', savedTheme);
+
+// Define the setTheme function globally
+function setTheme(theme) {
+  document.body.setAttribute('theme', theme);
+  localStorage.setItem('theme', theme);
+}
+
+  </script>
 </body>
 
 </html>

@@ -477,3 +477,4 @@ function importSaveData() {
   };
   input.click();
 }
+

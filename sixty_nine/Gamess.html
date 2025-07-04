@@ -18,7 +18,34 @@
     <script src="/assets/js/i.js?v=03"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840529569014734"
         crossorigin="anonymous"></script>
-        
+        <style>
+            body[theme="catppuccin-frappe"] {
+   background: url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+
+body[theme="catppuccin-macchiato"] {
+   background: url("/assets/media/background/rizzyaf.gif") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+
+body[theme="catppuccin-mocha"] {
+  background: url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+body[theme="default"] {
+  background: url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+  </style>
 </head>
 
 <body>
@@ -38,7 +65,8 @@
 <div class="input-c">
     <input type="text" id="search" onkeyup="bar()" placeholder="Scroll down or search games..." />
 </div>
-    <div class="pinned"><h1><span class="highlight">Play your fav games now!</span></h1></div>
+    <div class="pinned">
+    <h1><span class="highlight">Play your fav games now!</span></h1></div>
     <div class="apps"></div>
 </div>
 </div>
@@ -96,6 +124,18 @@
         audio.play();
     });
     </script>-->
+     <script>
+// Apply saved theme on page load
+const savedTheme = localStorage.getItem('theme') || 'default';
+document.body.setAttribute('theme', savedTheme);
+
+// Define the setTheme function globally
+function setTheme(theme) {
+  document.body.setAttribute('theme', theme);
+  localStorage.setItem('theme', theme);
+}
+
+  </script>
 </body>
 
 </html>

@@ -11,23 +11,38 @@
   <link rel="stylesheet" href="/settings.css" />
   <style>
             body[theme="catppuccin-frappe"] {
-   background: url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
-  background-size: cover;
-  --shadow: rgba(0, 0, 0, 0.01);
-  --text: #cdd6f4;
+  --background: #232634;
+  --background2: #292c3c;
+  --background3: #414559;
+  --background4: #51576d;
+  --shadow: rgba(140, 170, 238, 0.5);
+  --blue: #8caaee;
+  --green: #a6d189;
+  --mauve: #ca9ee6;
+  --text: #c6d0f5;
 }
 
 body[theme="catppuccin-macchiato"] {
-   background: url("/assets/media/background/rizzyaf.gif") no-repeat center center fixed;
-  background-size: cover;
-  --shadow: rgba(0, 0, 0, 0.01);
-  --text: #cdd6f4;
+  --background: #181926; /* crust */
+  --background2: #1e2030; /* base */
+  --background3: #363a4f; /* surface 0 */
+  --background4: #494d64; /* surface 1 */
+  --shadow: rgba(138, 173, 244, 0.5); /* blue with less opacity */
+  --blue: #8aadf4; /* blue */
+  --green: #a6da95; /* green */
+  --mauve: #c6a0f6; /* mauve */
+  --text: #cad3f5; /* text */
 }
 
 body[theme="catppuccin-mocha"] {
-  background: url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
-  background-size: cover;
-  --shadow: rgba(0, 0, 0, 0.01);
+  --background: #11111b;
+  --background2: #181825;
+  --background3: #313244;
+  --background4: #45475a;
+  --shadow: rgba(137, 180, 250, 0.5);
+  --blue: #89b4fa;
+  --green: #a6e3a1;
+  --mauve: #cba6f7;
   --text: #cdd6f4;
 }
 body[theme="default"] {
@@ -103,9 +118,9 @@ body[theme="default"] {
             <h2>Theme</h2>
             <div class="theme-buttons">
               <button class="key-button" onclick="setTheme('default')" style="color: white;">Default</button>
-              <button class="key-button" onclick="setTheme('catppuccin-frappe')" style="color: white;">Ghost Skull</button>
-              <button class="key-button" onclick="setTheme('catppuccin-macchiato')" style="color: white;">Cool gif</button>
-              <button class="key-button" onclick="setTheme('catppuccin-mocha')" style="color: white;">Skull</button>
+              <button class="key-button" onclick="setTheme('catppuccin-frappe')" style="color: white;">Catppuccin Frappe</button>
+              <button class="key-button" onclick="setTheme('catppuccin-macchiato')" style="color: white;">Catppuccin Macchiato</button>
+              <button class="key-button" onclick="setTheme('catppuccin-mocha')" style="color: white;">Catppuccin Mocha</button>
             </div>
           </div>
 

@@ -2,18 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-color: #fff;
-    background-image: url('/assets/media/background/skibididdy.jpg'); /* Replace with your image path */
+body {
+    font-family: 'Press Start 2P', cursive;
+      background-color: var(--background, #000);
+  color: var(--text, #fff);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed; /* Keeps the background fixed when scrolling */
-  font-family: "Press Start 2P", cursive;
-  overflow-x: hidden;
 }
 .nav {
    padding: 1rem;

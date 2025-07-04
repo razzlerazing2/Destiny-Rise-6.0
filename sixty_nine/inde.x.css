@@ -7,8 +7,8 @@
 
        body {
     font-family: 'Arial', sans-serif;
-    color: #fff;
-    background-image: url('/assets/media/background/skibididdy.jpg'); /* Replace with your image path */
+      background-color: var(--background, #000);
+  color: var(--text, #fff);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -258,6 +258,5 @@
   100% {
     background-position: 100% 50%;
   }
-}
-        
+}    
 
