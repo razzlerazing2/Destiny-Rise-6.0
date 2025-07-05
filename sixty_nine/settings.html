@@ -9,6 +9,7 @@
   <title>Home - SkellySKript Script</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/settings.css" />
+  <link rel="stylesheet" href="frappe.css" />
   <style>
             body[theme="catppuccin-frappe"] {
    background: url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
@@ -40,16 +41,22 @@ body[theme="default"] {
 </head>
 
 <body>
-  <nav>
-    <div class="nav-container">
-      <ul class="nav-links">
-        <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
-        <li><a href="/apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
-        <li><a href="/settings"><i class="fas fa-cogs"></i> Settings</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <!--<li><a href="/home"><i class="fas fa-undo"></i></a></li>-->
+                  <button title="More Options" class="nav-button nav-btn-right more-options">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <div id="popup-menu" style="display: none; position: absolute; top: 60px; right: 20px; background: #1e1e1e; border-radius: 8px; padding: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 999;">
+                    <a href="/home" style="display: block; color: white; text-decoration: none; margin-bottom: 8px;">Home</a>
+                    <a href="/games" style="display: block; color: white; text-decoration: none; margin-bottom: 8px;">Games</a>
+                     <a href="/apps" style="display: block; color: white; text-decoration: none; margin-bottom: 8px;">Apps</a>
+                    <a href="/settings" style="display: block; color: white; text-decoration: none;">Settings</a>
+                </div>
+            </ul>
+        </div>
+    </nav>
 
   <div class="content">
     <div class="container">
@@ -132,6 +139,8 @@ body[theme="default"] {
   </div>
 
   <!-- Scripts -->
+    <script src="assets/js/t.js?v=03"></script>
+  <script src="tabs.js"></script>
   <script src="/what.js"></script>
   <script src="assets/js/i.js?v=03"></script>
   <script src="/assets/js/passobemsolto.js"></script>
