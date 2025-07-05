@@ -2,122 +2,144 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="referrer" content="no-referrer" />
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:description" content="SkellySKripts is a very clean and fast proxy" />
-    <link rel="icon" href="https://raw.githubusercontent.com/razzlerazing2/SkellyScript/refs/heads/main/IMG_3642.webp" type="image/x-icon" />
-    <title>Home - Skrypt</title>
-    <link rel="stylesheet" href="/assets/css/global.css?v=6" />
-    <link rel="stylesheet" href="/assets/css/t.css?v=02" />
-    <script src="assets/js/f.js"></script>
-    <script>
-        window.addEventListener("resize", navigator.keyboard.lock(["Escape"]));
-    </script>
+    <meta charset="UTF-8">
+    <meta property="og:description" content="SKrypt is a very clean and fast proxy" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SKrypt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="inde.x.css">
     <style>
-        body[theme="catppuccin-frappe"] {
-            background: url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
-            background-size: cover;
-            --shadow: rgba(0, 0, 0, 0.01);
-            --text: #cdd6f4;
-        }
+            body[theme="catppuccin-frappe"] {
+   background: url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
 
-        body[theme="catppuccin-macchiato"] {
-            background: url("/assets/media/background/rizzyaf.gif") no-repeat center center fixed;
-            background-size: cover;
-            --shadow: rgba(0, 0, 0, 0.01);
-            --text: #cdd6f4;
-        }
+body[theme="catppuccin-macchiato"] {
+   background: url("/assets/media/background/rizzyaf.gif") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
 
-        body[theme="catppuccin-mocha"] {
-            background: url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
-            background-size: cover;
-            --shadow: rgba(0, 0, 0, 0.01);
-            --text: #cdd6f4;
-        }
-
-        body[theme="default"] {
-            background: url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
-            background-size: cover;
-            --shadow: rgba(0, 0, 0, 0.01);
-            --text: #cdd6f4;
-        }
+body[theme="catppuccin-mocha"] {
+  background: url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+body[theme="default"] {
+  background: url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
     </style>
 </head>
 
-<body id="no">
-    <nav class="nav" id="right-side-nav">
-        <ul id="tab-list"></ul>
-        <button title="add-tab" id="add-tab">
-            <i class="fa-solid fa-plus"></i>
-        </button>
-    </nav>
-    <div class="nav-bar">
+<body>
+
+    <nav>
         <div class="nav-container">
-            <div class="nav-left">
-                <button title="Back Arrow" class="nav-button" onclick="goBack()">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <button title="Forward Arrow" class="nav-button" onclick="goForward()">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-                <button title="Reload" onclick="reload()" class="nav-button">
-                    <i class="fa-solid fa-rotate-right"></i>
-                </button>
-                <button title="Fullscreen" id="fullscreen-button" class="nav-button" onclick="FS()">
-                    <i class="fa-solid fa-expand"></i>
-                </button>
-                <form id="fv" class="navpost" method="POST">
-                    <input id="iv" class="bar" placeholder="Enter search or web address" type="text" />
-                </form>
-            </div>
-            <div class="nav-right">
-                <button title="Window Popout" id="popout-button" class="nav-button nav-btn-right" onclick="popout()">
-                    <i class="fa-solid fa-up-right-from-square"></i>
-                </button>
-                <button title="Inspect" class="nav-button nav-btn-right" onclick="eToggle()">
-                    <i class="fa-solid fa-code"></i>
-                </button>
-                <button title="Tabs" id="tabs-button" class="nav-button nav-btn-right">
-                    <i class="fa-solid fa-magnifying-glass-minus"></i>
-                </button>
-                <button title="More Options" class="nav-button nav-btn-right more-options">
-                    <i class="fas fa-ellipsis-v"></i>
-                </button>
-                <div id="popup-menu" style="display: none; position: absolute; top: 60px; right: 20px; background: #1e1e1e; border-radius: 8px; padding: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 999;">
-                    <a href="/home" style="display: block; color: white; text-decoration: none; margin-bottom: 8px;">Home</a>
-                    <a href="/games" style="display: block; color: white; text-decoration: none; margin-bottom: 8px;">Games</a>
-                     <a href="/apps" style="display: block; color: white; text-decoration: none; margin-bottom: 8px;">Apps</a>
-                    <a href="/settings" style="display: block; color: white; text-decoration: none;">Settings</a>
+            <ul class="nav-links">
+                <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                <li><a href="/apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
+                <li><a href="/settings"><i class="fas fa-cogs"></i> Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="container-inner">
+            <h1>SKrypt</h1>
+            <h2>Where unblocking possibilities are endless</h2>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <form id="fv" method="POST">
+                        <input id="iv" class="input" placeholder="Search through the web freely...">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </form>
                 </div>
             </div>
+
+            <!-- Moved button outside search-container and below it -->
+            <button class="open-blank-btn" onclick="aboutblank()">
+                <i class="fas fa-external-link-alt"></i> Open about:blank
+            </button>
         </div>
     </div>
-    <div class="frame-container" id="frame-container"></div>
-    <script src="tabs.js"></script>
-    <script src="assets/js/t.js?v=03"></script>
+
+
+    <script src="/callfall.js"></script>
+    <script src="/assets/js/i.js?v=03"></script>
     <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
     <script src="./assets/ultra/config.js?v=10-02-2024"></script>
+    <script src="/assets/js/f.js"></script>
     <script src="/assets/js/mv.js?v=003"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+    <script src="/assets/js/m.js?v=08"></script>
+    <script src="/assets/js/settings.js?v=010"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "G-WKJQ5QHQTJ");
-    </script>
-    <script>
-        const savedTheme = localStorage.getItem('theme') || 'default';
-        document.body.setAttribute('theme', savedTheme);
+        function aboutblank() {
+            var win = window.open('about:blank');
+            var url = 'index.html';
+            var iframe = win.document.createElement('iframe');
+            iframe.style = "position:fixed;width:100vw;height:100vh;top:0px;left:0px;right:0px;bottom:0px;z-index:2147483647;background-color:white;border:none;";
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
 
-        function setTheme(theme) {
-            document.body.setAttribute('theme', theme);
-            localStorage.setItem('theme', theme);
+            window.location.href = 'https://portal.friscoisd.org';
         }
+    </script>
+<!-- 🎵 BGM Playlist Player -->
+    <!--<audio id="bgm" autoplay hidden></audio>
+    <script>
+        const playlist = [
+            "/assets/media/audio/dabottom2.mp3",
+            "/assets/media/audio/dabottom.mp3"
+        ];
+
+          const audio = document.getElementById("bgm");
+
+    // Restore previous track/time from localStorage
+    let currentTrack = parseInt(localStorage.getItem("bgmTrack")) || 0;
+    let currentTime = parseFloat(localStorage.getItem("bgmTime")) || 0;
+
+    audio.src = playlist[currentTrack];
+    audio.currentTime = currentTime;
+
+    audio.play().catch(() => {
+        // Some browsers require interaction before playing audio
+    });
+
+    // Save state every few seconds
+    setInterval(() => {
+        localStorage.setItem("bgmTrack", currentTrack);
+        localStorage.setItem("bgmTime", audio.currentTime);
+    }, 1000);
+
+    // When track ends, go to the next one and save index
+    audio.addEventListener("ended", () => {
+        currentTrack = (currentTrack + 1) % playlist.length;
+        localStorage.setItem("bgmTrack", currentTrack);
+        localStorage.setItem("bgmTime", 0);
+        audio.src = playlist[currentTrack];
+        audio.play();
+    });
+    </script>-->
+    <script>
+// Apply saved theme on page load
+const savedTheme = localStorage.getItem('theme') || 'default';
+document.body.setAttribute('theme', savedTheme);
+
+// Define the setTheme function globally
+function setTheme(theme) {
+  document.body.setAttribute('theme', theme);
+  localStorage.setItem('theme', theme);
+}
     </script>
 </body>
 
