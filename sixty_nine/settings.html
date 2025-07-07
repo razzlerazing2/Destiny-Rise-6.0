@@ -10,6 +10,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/settings.css" />
   <style>
+    body[theme="cuhs"] {
+   background: url("/assets/media/background/poppingthatGTV.jpg") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+body[theme="cuhs2"] {
+   background: url("/assets/media/background/stadning.jpg") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
+body[theme="cuhs3"] {
+   background: url("/assets/media/background/Pacificthatis.jpg") no-repeat center center fixed;
+  background-size: cover;
+  --shadow: rgba(0, 0, 0, 0.01);
+  --text: #cdd6f4;
+}
             body[theme="catppuccin-frappe"] {
    background: url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -103,6 +121,9 @@ body[theme="default"] {
             <h2>Theme</h2>
             <div class="theme-buttons">
               <button class="key-button" onclick="setTheme('default')" style="color: white;">Default</button>
+              <button class="key-button" onclick="setTheme('cuhs')" style="color: white;">Beautiful</button>
+              <button class="key-button" onclick="setTheme('cuhs2')" style="color: white;">Abstract</button>
+              <button class="key-button" onclick="setTheme('cuhs3')" style="color: white;">Other abstract</button>
               <button class="key-button" onclick="setTheme('catppuccin-frappe')" style="color: white;">Ghost Skull</button>
               <button class="key-button" onclick="setTheme('catppuccin-macchiato')" style="color: white;">Cool gif</button>
               <button class="key-button" onclick="setTheme('catppuccin-mocha')" style="color: white;">Skull</button>
