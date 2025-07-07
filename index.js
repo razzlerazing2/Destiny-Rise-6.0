@@ -94,7 +94,7 @@ app.use(express.urlencoded({ extended: true }));
   setupMasqr(app);
 } */
 
-app.use(express.static(path.join(__dirname, "sixty_nine")));
+app.use(express.static(path.join(__dirname, "htmljavascriptandcssfilesakastaticLOL")));
 app.use("/fq", cors({ origin: true }));
 
 const routes = [
@@ -103,28 +103,29 @@ const routes = [
   { path: "/games", file: "Gamess.html" },
   { path: "/play.html", file: "games.html" },
   { path: "/settings", file: "settings.html" },
-  { path: "/lightspeedbypasser", file: "tabs.html" },
+  { path: "/chatarewecookedindabig25", file: "tabs.html" },
   { path: "/home", file: "index.html" },
   { path: "/exthangr", file: "proxy.html" },
   { path: "/contact", file: "contactsupport.html" },
   { path: "/search", file: "search.html" },
   { path: "/learnmathhere", file: "index.html" },
+  { path: "/movies", file: "cuh.html" },
 ];
 
 // biome-ignore lint/complexity/noForEach:
 routes.forEach((route) => {
   app.get(route.path, (_req, res) => {
-    res.sendFile(path.join(__dirname, "sixty_nine", route.file));
+    res.sendFile(path.join(__dirname, "htmljavascriptandcssfilesakastaticLOL", route.file));
   });
 });
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, "sixty_nine", "404.html"));
+  res.status(404).sendFile(path.join(__dirname, "htmljavascriptandcssfilesakastaticLOL", "404.html"));
 });
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).sendFile(path.join(__dirname, "sixty_nine", "404.html"));
+  res.status(500).sendFile(path.join(__dirname, "htmljavascriptandcssfilesakastaticLOL", "404.html"));
 });
 
 server.on("request", (req, res) => {

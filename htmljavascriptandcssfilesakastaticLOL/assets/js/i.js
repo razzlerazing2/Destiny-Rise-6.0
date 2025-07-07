@@ -7,10 +7,10 @@ window.addEventListener("load", () => {
 let xl;
 
 try {
-  xl = window.top.location.pathname === "/lightspeedbypasser";
+  xl = window.top.location.pathname === "/chatarewecookedindabig25";
 } catch {
   try {
-    xl = window.parent.location.pathname === "/lightspeedbypasser";   
+    xl = window.parent.location.pathname === "/chatarewecookedindabig25";   
   } catch {
     xl = false;
   }
@@ -24,9 +24,9 @@ if (form && input) {
     event.preventDefault();
     try {
       if (xl) processUrl(input.value, "");
-      else processUrl(input.value, "/lightspeedbypasser");
+      else processUrl(input.value, "/chatarewecookedindabig25");
     } catch {
-      processUrl(input.value, "/lightspeedbypasser");
+      processUrl(input.value, "/chatarewecookedindabig25");
     }
   });
 }
@@ -54,7 +54,7 @@ function processUrl(value, path) {
 }
 
 function go(value) {
-  processUrl(value, "/lightspeedbypasser");
+  processUrl(value, "/chatarewecookedindabig25");
 }
 
 function blank(value) {

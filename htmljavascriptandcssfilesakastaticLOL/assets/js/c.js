@@ -2,14 +2,15 @@ let appInd;
 const g = window.location.pathname === "/games";
 const a = window.location.pathname === "/apps";
 const c = window.location.pathname === "/gawd.html";
+const m = window.location.pathname === "/movies";
 
 let t;
 
 try {
-  t = window.top.location.pathname === "/lightspeedbypasser";
+  t = window.top.location.pathname === "/chatarewecookedindabig25";
 } catch {
   try {
-    t = window.parent.location.pathname === "/lightspeedbypasser";   
+    t = window.parent.location.pathname === "/chatarewecookedindabig25";   
   } catch {
     t = false;
   }
@@ -42,7 +43,7 @@ function handleClick(app) {
 
   if (app.local) {
     saveToLocal(Selected);
-    window.location.href = "/lightspeedbypasser";
+    window.location.href = "/chatarewecookedindabig25";
     if (t) {
       window.location.href = Selected;
     }
@@ -94,6 +95,8 @@ function CustomApp(customApp) {
   let apps;
   if (g) {
     apps = localStorage.getItem("Gcustom");
+  } else if (m) {
+    apps = localStorage.getItem("Mcustom");
   } else if (c) {
     apps = localStorage.getItem("Tcustom");
   } else if (a) {
@@ -114,7 +117,10 @@ function CustomApp(customApp) {
     localStorage.setItem("Gcustom", JSON.stringify(apps));
   } else if (c) {
     localStorage.setItem("Tcustom", JSON.stringify(apps));
-  } else if (a) {
+  } else if (m) {
+    localStorage.setItem("Mcustom", JSON.stringify(apps));
+  }
+   else if (a) {
     localStorage.setItem("Acustom", JSON.stringify(apps));
   }
 }
@@ -123,7 +129,9 @@ function setPin(index) {
   let pins;
   if (g) {
     pins = localStorage.getItem("Gpinned");
-  } else if (c) {
+  }  else if (m) {
+    pins = localStorage.getItem("Mpinned");
+  }  else if (c) {
     pins = localStorage.getItem("Tpinned");
   } else if (a) {
     pins = localStorage.getItem("Apinned");
@@ -146,6 +154,8 @@ function setPin(index) {
     localStorage.setItem("Tpinned", pins);
   } else if (a) {
     localStorage.setItem("Apinned", pins);
+  } else if (m) {
+    localStorage.setItem("Mpinned", pins);
   }
   location.reload();
 }
@@ -225,6 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
     storedApps = JSON.parse(localStorage.getItem("Tcustom"));
   } else if (a) {
     storedApps = JSON.parse(localStorage.getItem("Acustom"));
+  } else if (m) {
+    storedApps = JSON.parse(localStorage.getItem("Mcustom"));
   }
   if (storedApps) {
     for (const app of Object.values(storedApps)) {
@@ -240,6 +252,8 @@ if (g) {
   path = "/assets/json/t.min.json";
 } else if (a) {
   path = "/assets/json/a.min.json";
+} else if (m) {
+  path = "/assets/json/m.min.json";
 }
 fetch(path)
   .then(response => {
@@ -264,6 +278,9 @@ fetch(path)
       pinList = localStorage.getItem("Apinned") || "";
     } else if (c) {
       pinList = localStorage.getItem("Tpinned") || "";
+    }
+    else if (m) {
+      pinList = localStorage.getItem("Mpinned") || "";
     }
     pinList = pinList ? pinList.split(",").map(Number) : [];
     appInd = 0;
