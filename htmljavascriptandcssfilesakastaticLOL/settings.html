@@ -95,6 +95,7 @@ body[theme="default"] {
           <div class="settings-card">
             <h3><span class="highlight">Engine</span></h3>
             <p>Change search engine here. Google is best, but others work if it's down.</p>
+            <div class="select-wrapper">
             <select title="engine" id="engine" onchange="EngineChange(this)">
               <option value="Google">Google (Default)</option>
               <option value="Bing">Bing</option>
@@ -104,12 +105,13 @@ body[theme="default"] {
               <option value="SearchEncrypt">SearchEncrypt</option>
               <option value="Ecosia">Ecosia</option>
             </select>
+          </div>
             <button class="key-button" onclick="SaveEngine();">Save</button>
           </div>
 
           <div class="settings-card">
             <h3><span class="highlight">Choose your Proxy</span></h3>
-            <p>Use Dynamic for support/speed; Ultraviolet for trust/fame. Avoid Dynamic with about:blank.</p>
+            <p>Use Dynamic for support/speed; Ultraviolet for trust/fame. Avoid Dynamic with about:blank. Dynamic still a bit in beta, so it might not be as good, but for things like Spotify, etc. use dynamic only if needed</p>
             <div class="select-wrapper">
               <select id="pChange">
                 <option value="uv">Ultra<an>vio</an>let</option>
@@ -120,13 +122,13 @@ body[theme="default"] {
 
           <div class="settings-card">
   <h3>Themes</h3>
-  <p>Choose from a different variety of themes to personalize your choice of backgrounds.</p>
+  <p>Choose from a different variety of themes to personalize your background theme of choice. Good for picky little good boys (JK IM SORRY). But anyway, it's really good and I prefer you use it.</p>
   <div class="select-wrapper">
     <select id="themeChange" onchange="setTheme(this.value)" style="color: white;">
-      <option value="default">Default</option>
+      <option value="cuhs3">Default</option>
       <option value="cuhs">Beautiful</option>
       <option value="cuhs2">Abstract</option>
-      <option value="cuhs3">Other abstract</option>
+      <option value="default">Other abstract</option>
       <option value="catppuccin-frappe">Ghost Skull</option>
       <option value="catppuccin-macchiato">Cool gif</option>
       <option value="catppuccin-mocha">Skull</option>
@@ -136,7 +138,7 @@ body[theme="default"] {
 
           <div class="settings-card">
             <h3><span class="highlight">Set Background Image</span></h3>
-            <p>Change the site background. Use a valid HTTPS image link.</p>
+            <p>Change the site background. Good for picky little good boys (JK IM SORRY) Use a valid HTTPS image link. Or it wont work.</p>
             <input class="key-form" type="text" id="background-input" placeholder="DO HTTPS:// FIRST" />
             <button class="key-button" id="save-button">Save</button>
             <button class="key-button" id="reset-button">Reset</button>
@@ -166,21 +168,9 @@ body[theme="default"] {
   <script src="/assets/js/mv.js?v=003"></script>
   <script src="/assets/js/m.js?v=08"></script>
   <script src="/assets/js/settings.js?v=010"></script>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-WKJQ5QHQTJ");
-  </script>
   <script>
 // Apply saved theme on page load
-const savedTheme = localStorage.getItem('theme') || 'default';
+const savedTheme = localStorage.getItem('theme') || 'cuhs3';
 document.body.setAttribute('theme', savedTheme);
 
 // Define the setTheme function globally

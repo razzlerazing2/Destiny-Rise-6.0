@@ -107,6 +107,15 @@
             background-clip: text;
             color: transparent;
         }
+        .container-inner h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #f39c12, #8e44ad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
         .search-container {
             margin-top: 20px;
@@ -236,8 +245,13 @@
 
 
 .settings-card h3 {
-   margin-top: 0;
-   color: var(--text-primary);
+color: #fff;
+margin-bottom: 20px;
+font-weight: bold;    
+background: linear-gradient(45deg, #f39c12, #8e44ad);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
 }
 
 .settings-card p {
