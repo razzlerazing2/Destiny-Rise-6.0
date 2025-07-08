@@ -133,7 +133,7 @@
         <div class="overlay"></div>
         <div class="container-inner">
             <h1><span class="highlight">AI Chat</span></h1>
-            <p class="chat-description">Ask me anything! I'm powered by Skrypt.</p> <!-- This line has been changed -->
+            <p class="chat-description">Ask me anything! I'm powered by Skrypt.</p>
 
             <div id="chat-messages">
                 <!-- Chat messages will be appended here by JavaScript -->
@@ -152,7 +152,6 @@
 
     <!-- General scripts -->
     <script src="/assets/js/i.js?v=03"></script>
-    <!-- Removed other specific scripts as they might not be needed for a standalone chat page -->
 
     <script>
         // Apply saved theme on page load
@@ -250,9 +249,8 @@
             }
         });
 
-        // Add a new nav link to the existing nav-links list
-        // This part is already in the HTML, so this JS is redundant if the HTML is static.
-        // If your nav is dynamically built, keep this. Otherwise, remove it.
+        // This JavaScript snippet to add the nav link is redundant if the HTML is static.
+        // If your nav is dynamically built, you might need it, but for static HTML, it's already there.
         // const navLinks = document.querySelector('.nav-links');
         // const newNavLink = document.createElement('li');
         // newNavLink.innerHTML = '<a href="/ai.html"><i class="fas fa-robot"></i> AI Chat</a>';
