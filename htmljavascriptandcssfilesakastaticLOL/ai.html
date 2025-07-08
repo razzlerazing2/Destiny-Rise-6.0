@@ -208,6 +208,11 @@
             chatHistory.push({ role: "user", parts: [{ text: prompt }] });
 
             const payload = { contents: chatHistory };
+            // IMPORTANT: If you are running this outside of a Canvas environment
+            // that automatically injects the API key, you might need to
+            // paste your Gemini API key here for testing purposes.
+            // Example: const apiKey = "YOUR_GEMINI_API_KEY_HERE";
+            // Make sure to remove it before public deployment!
             const apiKey = ""; // Leave this as-is; Canvas will provide it at runtime.
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
@@ -218,6 +223,14 @@
                     body: JSON.stringify(payload)
                 });
 
+                // Check for HTTP errors (e.g., 400, 401, 403, 404, 500)
+                if (!response.ok) {
+                    const errorData = await response.json(); // Try to parse error details
+                    console.error("API Error:", response.status, response.statusText, errorData);
+                    displayMessage(`Error: ${errorData.error.message || 'Failed to get response from AI. Check console for details.'}`, 'ai');
+                    return; // Stop execution
+                }
+
                 const result = await response.json();
 
                 if (result.candidates && result.candidates.length > 0 &&
@@ -227,12 +240,12 @@
                     displayMessage(aiResponse, 'ai');
                     chatHistory.push({ role: "model", parts: [{ text: aiResponse }] }); // Add AI response to history
                 } else {
-                    displayMessage("Sorry, I couldn't get a response. Please try again.", 'ai');
+                    displayMessage("Sorry, I couldn't get a valid response. The AI might be having trouble.", 'ai');
                     console.error("Unexpected API response structure:", result);
                 }
             } catch (error) {
-                console.error("Error calling Gemini API:", error);
-                displayMessage("An error occurred. Please check your network connection.", 'ai');
+                console.error("Network or API Call Error:", error);
+                displayMessage("An error occurred. Please check your network connection or console for details.", 'ai');
             } finally {
                 userInput.disabled = false; // Re-enable input
                 sendButton.disabled = false;
