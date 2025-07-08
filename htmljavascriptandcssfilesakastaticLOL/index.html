@@ -66,7 +66,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #1a1a2e;
+            background-color: #1a1a2e; /* A dark background, adjust to match your theme */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -77,7 +77,7 @@
 
         #preloader.hidden {
             opacity: 0;
-            pointer-events: none;
+            pointer-events: none; /* Allows clicks to pass through once hidden */
         }
 
         .spinner {
@@ -90,13 +90,8 @@
         }
 
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .animated-content {
@@ -149,6 +144,7 @@
                 <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
                 <li><a href="/apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
                 <li><a href="/settings"><i class="fas fa-cogs"></i> Settings</a></li>
+                <li><a href="/chat.html"><i class="fas fa-comments"></i> Live Chat</a></li> <!-- New Live Chat link -->
             </ul>
         </div>
     </nav>
@@ -156,6 +152,7 @@
     <div class="container animated-content">
         <div class="overlay"></div>
         <div class="container-inner">
+            <!-- Live Clock element added here -->
             <div id="live-clock"></div>
 
             <h1>SKrypt</h1>
@@ -206,7 +203,7 @@
             localStorage.setItem('theme', theme);
         }
 
-        // --- New JavaScript for Intro Animation ---
+        // --- New JavaScript for Intro Animation & Active Nav Link ---
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
             const animatedElements = document.querySelectorAll('.animated-content');
@@ -217,6 +214,27 @@
                 // Once preloader is hidden, reveal content
                 animatedElements.forEach(element => {
                     element.classList.add('show');
+                });
+
+                // Active Navigation Link Logic
+                const navLinks = document.querySelectorAll('.nav-links li a');
+                const currentPath = window.location.pathname;
+
+                navLinks.forEach(link => {
+                    const normalizedCurrentPath = currentPath.endsWith('/') && currentPath.length > 1
+                        ? currentPath.slice(0, -1)
+                        : currentPath;
+
+                    const normalizedLinkPath = link.pathname.endsWith('/') && link.pathname.length > 1
+                        ? link.pathname.slice(0, -1)
+                        : link.pathname;
+
+                    if (normalizedLinkPath === normalizedCurrentPath ||
+                        (normalizedLinkPath === '/home' && normalizedCurrentPath === '/')) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
                 });
             }, 500); // Adjust this delay as needed
         });
