@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destiny Rise Gaming</title>
+  <style>
+    /* Global styles for body and layout */
+    body {
+      font-family: serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-image: url("https://gifdb.com/images/high/cyberpunk-pixel-city-neon-2bagugxcfp2to7tx.gif");
+      background-size: cover; /* Scale to cover the screen */
+      text-align: center;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      width: 150px;
+      display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Playfair Display, serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: black;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 35px;
+      font-weight: bold;
+      color: blue;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 20px;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size:25px;
+      transition: color 0.3s ease;
+    }
+
+    .sidebar ul li a:hover {
+      background: linear-gradient(90deg, 
+      #FF0000 0%, 
+      #FF7F00 16.66%, 
+      #FFFF00 33.33%, 
+      #00FF00 50%, 
+      #0000FF 66.66%, 
+      #4B0082 83.33%, 
+      #8B00FF 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+    }
+    /* Content section */
+    .content {
+      flex-grow: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      line-height: 1.5;
+    }
+
+    .highlight {
+      color: red;
+    }
+
+    /* Time and Battery Section */
+    .time,
+    .battery {
+      font-size: 2em;
+      margin: 10px 0;
+    }
+
+    .battery {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .battery-icon {
+      width: 20px;
+      height: 10px;
+      border: 2px solid #fff;
+      border-radius: 3px;
+      margin-right: 5px;
+      position: relative;
+    }
+
+    .battery-icon::after {
+      content: "";
+      width: 4px;
+      height: 6px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      right: -7px;
+      transform: translateY(-50%);
+    }
+
+    .battery-fill {
+      height: 100%;
+      background-color: #4caf50;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">DR</div>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="g.html">GAMES</a></li>
+    </ul>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content">
+    <h1>DESTINY RISE GAMING</h1>
+    <h2>DESTINY RISE IS THE BEST WEBSITE FOR <span class="highlight">GAMING</span> DURING SCHOOL.</h2>
+
+    <!-- Time and Battery Section -->
+    <div class="time" id="time">Loading time...</div>
+    <div class="battery" id="battery">
+      <div class="battery-icon">
+        <div class="battery-fill" id="battery-fill"></div>
+      </div>
+      <span id="battery-percentage">Loading battery...</span>
+    </div>
+  <script>
+    // Function to update the current time
+    function updateTime() {
+      const timeElement = document.getElementById("time");
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, "0");
+      const minutes = now.getMinutes().toString().padStart(2, "0");
+      const seconds = now.getSeconds().toString().padStart(2, "0");
+      timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Function to update the battery percentage
+    async function updateBattery() {
+      const battery = await navigator.getBattery();
+      const batteryPercentageElement = document.getElementById("battery-percentage");
+      const batteryFillElement = document.getElementById("battery-fill");
+      const level = Math.floor(battery.level * 100);
+
+      batteryPercentageElement.textContent = `${level}%`;
+      batteryFillElement.style.width = `${level}%`;
+
+      // Update the color of the battery fill based on level
+      if (level < 20) {
+        batteryFillElement.style.backgroundColor = "#f44336"; // Red
+      } else if (level < 50) {
+        batteryFillElement.style.backgroundColor = "#ff9800"; // Orange
+      } else {
+        batteryFillElement.style.backgroundColor = "#4caf50"; // Green
+      }
+    }
+
+    // Update time every second
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    // Update battery status when the page loads
+    updateBattery();
+
+    // Monitor battery changes
+    navigator.getBattery().then((battery) => {
+      battery.addEventListener("levelchange", updateBattery);
+    });
+  </script>
+</body>
+</html>

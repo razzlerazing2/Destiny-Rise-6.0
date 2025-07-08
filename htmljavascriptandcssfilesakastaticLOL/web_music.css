@@ -116,8 +116,6 @@ nav {
 
 .container-inner {
     background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 10px 30px var(--shadow-strong);

@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="inde.x.css">
     <style>
+        body[theme="skibididdy"] {
+   background: url("https://gifdb.com/images/high/cyberpunk-pixel-city-neon-2bagugxcfp2to7tx.gif") no-repeat center center fixed;
+  background-size: cover;
+  --text: #cdd6f4;
+}
         /* Your existing theme styles */
         body[theme="cuhs"] {
             background: url("/assets/media/background/poppingthatGTV.jpg") no-repeat center center fixed;
@@ -66,7 +71,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #1a1a2e; /* A dark background, adjust to match your theme */
+            background-color: rgba(0, 0, 0, 0.15); /* A dark background, adjust to match your theme */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -144,13 +149,12 @@
                 <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
                 <li><a href="/apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
                 <li><a href="/settings"><i class="fas fa-cogs"></i> Settings</a></li>
-                <li><a href="/web_music.html"><i class="fas fa-music"></i> Web Music</a></li>
+                <li><a href="/web_music.html"><i class="fas fa-music"></i> Web Music</a></li> <!-- New Web Music link -->
             </ul>
         </div>
     </nav>
 
     <div class="container animated-content">
-        <div class="overlay"></div>
         <div class="container-inner">
             <!-- Live Clock element added here -->
             <div id="live-clock"></div>
@@ -172,7 +176,7 @@
             </button>
         </div>
     </div>
-
+    <script src="themesandcuhs.js"></script>
     <script src="/callfall.js"></script>
     <script src="/assets/js/i.js?v=03"></script>
     <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
@@ -192,76 +196,7 @@
 
             window.location.href = 'https://portal.friscoisd.org';
         }
-
-        // Apply saved theme on page load
-        const savedTheme = localStorage.getItem('theme') || 'cuhs3';
-        document.body.setAttribute('theme', savedTheme);
-
-        // Define the setTheme function globally
-        function setTheme(theme) {
-            document.body.setAttribute('theme', theme);
-            localStorage.setItem('theme', theme);
-        }
-
-        // --- New JavaScript for Intro Animation & Active Nav Link ---
-        window.addEventListener('load', () => {
-            const preloader = document.getElementById('preloader');
-            const animatedElements = document.querySelectorAll('.animated-content');
-
-            // Hide preloader after a short delay (e.g., 500ms)
-            setTimeout(() => {
-                preloader.classList.add('hidden');
-                // Once preloader is hidden, reveal content
-                animatedElements.forEach(element => {
-                    element.classList.add('show');
-                });
-
-                // Active Navigation Link Logic
-                const navLinks = document.querySelectorAll('.nav-links li a');
-                const currentPath = window.location.pathname;
-
-                navLinks.forEach(link => {
-                    const normalizedCurrentPath = currentPath.endsWith('/') && currentPath.length > 1
-                        ? currentPath.slice(0, -1)
-                        : currentPath;
-
-                    const normalizedLinkPath = link.pathname.endsWith('/') && link.pathname.length > 1
-                        ? link.pathname.slice(0, -1)
-                        : link.pathname;
-
-                    if (normalizedLinkPath === normalizedCurrentPath ||
-                        (normalizedLinkPath === '/home' && normalizedCurrentPath === '/')) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
-                });
-            }, 500); // Adjust this delay as needed
-        });
-
-        // --- New JavaScript for Live Clock ---
-        function updateClock() {
-            const now = new Date();
-            let hours = now.getHours();
-            let minutes = now.getMinutes();
-            let seconds = now.getSeconds();
-            const ampm = hours >= 12 ? 'PM' : 'AM';
-
-            hours = hours % 12;
-            hours = hours ? hours : 12; // The hour '0' should be '12'
-            minutes = minutes < 10 ? '0' + minutes : minutes;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
-            document.getElementById('live-clock').textContent = timeString;
-        }
-
-        // Update the clock every second
-        setInterval(updateClock, 1000);
-
-        // Call updateClock once immediately to avoid initial blank display
-        updateClock();
-    </script>
+</script>
 </body>
 
 </html>

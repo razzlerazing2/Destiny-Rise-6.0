@@ -1,6 +1,5 @@
-/* Import Google Font - Poppins for general text, Press Start 2P for titles if desired */
+/* Import Google Font - Poppins for general text */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Uncomment if you want to use this for specific headings */
 
 :root {
     /* Define primary colors. Adjust these to match your preferred theme. */
@@ -15,7 +14,7 @@
     --glass-border: rgba(255, 255, 255, 0.2);
     --shadow-light: rgba(0, 0, 0, 0.15);
     --shadow-strong: rgba(0, 0, 0, 0.3);
-    --card-bg: rgba(0, 0, 0, 0.3); /* Slightly darker glass for cards */
+    --card-bg: rgba(0, 0, 0, 0.3); /* Slightly darker glass for cards/elements */
 }
 
 body {
@@ -27,17 +26,18 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scroll */
-    /* Add smooth transitions for theme changes if background images are subtle */
     transition: background-color 0.5s ease;
 }
 
-/* --- Navigation Bar (Reused from home page) --- */
+/* --- Navigation Bar (Reused from home and settings pages) --- */
 nav {
     width: 100%;
     position: fixed; /* Keep nav at the top */
     top: 0;
     left: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
     background-color: var(--glass-background); /* Slightly transparent background */
     border-bottom: 1px solid var(--glass-border);
     padding: 10px 0;
@@ -76,14 +76,14 @@ nav {
 }
 
 .nav-links li a:hover,
-.nav-links li a[href="/settings"] { /* Highlight current page */
+.nav-links li a[href="/apps"] { /* Highlight current page */
     background-color: var(--primary-color);
     color: var(--button-text-color);
     transform: translateY(-2px); /* Slight lift on hover */
 }
 
 /* --- Main Content Area --- */
-.content {
+.container {
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -91,13 +91,7 @@ nav {
     padding: 100px 20px 20px; /* Adjust padding for fixed nav */
     position: relative;
     z-index: 1;
-}
-
-.container {
-    width: 100%;
-    width: 900px; /* Wider container for settings cards */
-    margin: 0 auto;
-    text-align: center;
+    min-height: calc(100vh - 120px); /* Ensure container takes full height */
 }
 
 .overlay {
@@ -115,101 +109,157 @@ nav {
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 10px 30px var(--shadow-strong);
+    max-width: 1200px; /* Adjust max-width as needed for game cards */
     width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Space between elements within the container */
-}
-
-.container-inner h1 {
-    font-size: 3em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--primary-light); /* Highlight the main title */
-    text-shadow: 0 2px 5px var(--shadow-strong);
-    /* If you want to use 'Press Start 2P' for just the title: */
-    /* font-family: 'Press Start 2P', cursive; */
+    align-items: center; /* Center content horizontally */
+    gap: 25px; /* Space between elements */
 }
 
 .highlight {
     color: var(--primary-light);
 }
 
-/* --- Settings Cards --- */
-.settings-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 25px; /* Space between cards */
-    margin-top: 20px;
+.pinned h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-light);
+    text-shadow: 0 2px 5px var(--shadow-strong);
 }
 
-.settings-card {
-    background-color: var(--card-bg); /* Slightly darker glass for cards */
+/* --- Search Input --- */
+.input-c {
+    width: 100%;
+    max-width: 600px; /* Limit width of the search input */
+    margin-bottom: 20px; /* Space below search input */
+}
+
+#search {
+    width: calc(100% - 30px); /* Account for padding */
+    padding: 15px 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: 30px; /* Rounded search input */
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1.1em;
+    outline: none;
+    box-shadow: inset 0 2px 5px var(--shadow-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+#search::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#search:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.3), inset 0 2px 5px var(--shadow-light);
+}
+
+/* --- Games Grid/Container (to be populated by JS) --- */
+.apps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid for game cards */
+    gap: 20px; /* Space between game cards */
+    width: 100%; /* Take full width of parent container-inner */
+    padding: 10px; /* Inner padding for the grid */
+    box-sizing: border-box;
+    /* You'll add styling for individual game cards (.app-card) here or in your JS-generated HTML */
+}
+
+/* --- Placeholder for individual game cards (assuming .app-card will be generated by JS) --- */
+/* This is a suggested style for game cards. Adjust as needed when you know the structure of your JS-generated content. */
+.app-card {
+    background-color: var(--card-bg);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 5px 15px var(--shadow-strong);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px var(--shadow-strong);
     border: 1px solid var(--glass-border);
-    text-align: left; /* Align text within cards to left */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Space between elements in card */
+    justify-content: space-between; /* Push image to top, text to bottom */
 }
 
-.settings-card h3 {
-    font-size: 1.5em;
-    margin-top: 0;
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--shadow-strong);
+}
+
+.app-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
     margin-bottom: 10px;
-    color: var(--primary-color);
+    object-fit: cover; /* Ensure images cover the area without distortion */
 }
 
-.settings-card p {
-    font-size: 0.95em;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* --- Input Fields (Key Forms) --- */
-.key-form,
-#background-input,
-#eventKeyInput,
-#linkInput {
-    width: calc(100% - 30px); /* Account for padding */
-    padding: 12px 15px;
-    border: 1px solid var(--glass-border);
-    border-radius: 8px; /* Slightly rounded corners */
-    background-color: var(--input-bg);
+.app-card h4 {
+    font-size: 1.1em;
     color: var(--text-color);
-    font-size: 1em;
-    outline: none;
-    box-shadow: inset 0 1px 3px var(--shadow-light);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; /* Include padding in width */
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long titles */
 }
 
-.key-form::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .container-inner {
+        padding: 30px;
+        margin-top: 80px;
+    }
+
+    .pinned h1 {
+        font-size: 2em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav {
+        padding: 5px 0;
+    }
+
+    .apps {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Smaller cards on small screens */
+    }
 }
 
-.key-form:focus {
-    border-color: var(--primary-light);
-    box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.3), inset 0 1px 3px var(--shadow-light);
-}
+@media (max-width: 480px) {
+    .nav-links li a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
 
-/* --- Buttons --- */
-.key-button {
-    background-color: var(--primary-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px; /* Pill shape for buttons */
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    margin-top: 10;
+    .container-inner {
+        padding: 20px;
+    }
+
+    #search {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    .apps {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Even smaller cards */
+        gap: 15px;
+    }
+    .app-card h4 {
+        font-size: 1em;
+    }
 }
 #preloader {
     position: fixed;

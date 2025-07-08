@@ -41,6 +41,11 @@ body[theme="catppuccin-macchiato"] {
   --shadow: rgba(0, 0, 0, 0.01);
   --text: #cdd6f4;
 }
+body[theme="skibididdy"] {
+   background: url("https://gifdb.com/images/high/cyberpunk-pixel-city-neon-2bagugxcfp2to7tx.gif") no-repeat center center fixed;
+  background-size: cover;
+  --text: #cdd6f4;
+}
 
 body[theme="catppuccin-mocha"] {
   background: url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
@@ -58,21 +63,23 @@ body[theme="default"] {
 </head>
 
 <body>
-  <nav>
+   <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+ <nav class="animated-content">
         <div class="nav-container">
             <ul class="nav-links">
                 <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
                 <li><a href="/apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
-                <!--<li><a href="/movies"><i class="fas fa-tv"></i> Movies</a></li>-->
                 <li><a href="/settings"><i class="fas fa-cogs"></i> Settings</a></li>
+                <li><a href="/web_music.html"><i class="fas fa-music"></i> Web Music</a></li> <!-- New Web Music link -->
             </ul>
         </div>
     </nav>
-
+<div class="container animated-content">
   <div class="content">
     <div class="container">
-      <div class="overlay"></div>
       <div class="container-inner">
         <h1><span class="highlight">Settings</span></h1>
 
@@ -124,13 +131,14 @@ body[theme="default"] {
   <h3>Themes</h3>
   <p>Choose from a different variety of themes to personalize your background theme of choice. Good for picky little good boys (JK IM SORRY). But anyway, it's really good and I prefer you use it.</p>
   <div class="select-wrapper">
-    <select id="themeChange" onchange="setTheme(this.value)" style="color: white;">
+    <select id="themeChange" onchange="setTheme(this.value)" style="background-color: white; color: black;">
       <option value="cuhs3">Default</option>
       <option value="cuhs">Beautiful</option>
       <option value="cuhs2">Abstract</option>
       <option value="default">Other abstract</option>
       <option value="catppuccin-frappe">Ghost Skull</option>
       <option value="catppuccin-macchiato">Cool gif</option>
+      <option value="skibididdy">Another cool gif</option>
       <option value="catppuccin-mocha">Skull</option>
     </select>
   </div>
@@ -160,6 +168,7 @@ body[theme="default"] {
 
   <!-- Scripts -->
   <script src="/what.js"></script>
+  <script src="themesandcuhs.js"></script>
   <script src="assets/js/i.js?v=03"></script>
   <script src="/assets/js/passobemsolto.js"></script>
   <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
@@ -168,18 +177,6 @@ body[theme="default"] {
   <script src="/assets/js/mv.js?v=003"></script>
   <script src="/assets/js/m.js?v=08"></script>
   <script src="/assets/js/settings.js?v=010"></script>
-  <script>
-// Apply saved theme on page load
-const savedTheme = localStorage.getItem('theme') || 'cuhs3';
-document.body.setAttribute('theme', savedTheme);
-
-// Define the setTheme function globally
-function setTheme(theme) {
-  document.body.setAttribute('theme', theme);
-  localStorage.setItem('theme', theme);
-}
-
-  </script>
 </body>
 
 </html>
