@@ -87,12 +87,12 @@
         <div class="overlay"></div>
         <div class="container-inner">
             <h1><span class="highlight">Live Chat</span></h1>
-            <p class="chat-description">Join the conversation! Please enter your name to chat.</p>
+            <p class="chat-description">Join the conversation!</p>
 
             <div id="chat-messages">
                 <!-- Chat messages will be appended here by JavaScript -->
                 <div class="message system-message">
-                    <p>Welcome to the chat! Please enter your name to start.</p>
+                    <p>Welcome to the chat! You are currently chatting as Anonymous.</p>
                 </div>
             </div>
 
@@ -101,16 +101,6 @@
                 <button id="send-message-button" disabled><i class="fas fa-paper-plane"></i> Send</button>
             </div>
             <div id="loading-indicator" class="hidden">Connecting to chat...</div>
-        </div>
-    </div>
-
-    <!-- Username Modal -->
-    <div id="username-modal" class="modal">
-        <div class="modal-content">
-            <h2>Enter Your Name</h2>
-            <p>Please enter a name to join the chat.</p>
-            <input type="text" id="username-input" placeholder="Your Name" maxlength="20" />
-            <button id="set-username-button">Join Chat</button>
         </div>
     </div>
 
@@ -130,16 +120,13 @@
         const auth = getAuth(app);
 
         let userId = '';
-        let username = '';
+        const username = "Anonymous"; // Default username
 
         // DOM elements
         const chatMessagesDiv = document.getElementById('chat-messages');
         const messageInput = document.getElementById('message-input');
         const sendMessageButton = document.getElementById('send-message-button');
         const loadingIndicator = document.getElementById('loading-indicator');
-        const usernameModal = document.getElementById('username-modal');
-        const usernameInput = document.getElementById('username-input');
-        const setUsernameButton = document.getElementById('set-username-button');
 
         // --- Utility Functions ---
 
@@ -162,29 +149,14 @@
             chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight; // Auto-scroll to bottom
         }
 
-        // Show/Hide username modal
-        function showUsernameModal() {
-            usernameModal.classList.add('active');
-            usernameInput.focus();
-        }
-
-        function hideUsernameModal() {
-            usernameModal.classList.remove('active');
-        }
-
         // --- Firebase Authentication ---
         onAuthStateChanged(auth, async (user) => {
             if (user) {
                 userId = user.uid;
-                username = localStorage.getItem('chatUsername');
-                if (!username) {
-                    showUsernameModal();
-                } else {
-                    startChatListener();
-                    messageInput.disabled = false;
-                    sendMessageButton.disabled = false;
-                    messageInput.focus();
-                }
+                startChatListener();
+                messageInput.disabled = false;
+                sendMessageButton.disabled = false;
+                messageInput.focus();
             } else {
                 loadingIndicator.classList.remove('hidden');
                 loadingIndicator.textContent = "Signing in anonymously...";
@@ -205,32 +177,10 @@
             }
         });
 
-        // --- Username Submission ---
-        setUsernameButton.addEventListener('click', () => {
-            const enteredName = usernameInput.value.trim();
-            if (enteredName) {
-                username = enteredName;
-                localStorage.setItem('chatUsername', username);
-                hideUsernameModal();
-                startChatListener();
-                messageInput.disabled = false;
-                sendMessageButton.disabled = false;
-                messageInput.focus();
-            } else {
-                alert('Please enter a valid name.'); // Using alert for simplicity, consider custom modal
-            }
-        });
-
-        usernameInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                setUsernameButton.click();
-            }
-        });
-
         // --- Send Message Function ---
         async function sendMessage() {
             const messageText = messageInput.value.trim();
-            if (!messageText || !username) return;
+            if (!messageText) return; // No need to check username, it's always "Anonymous"
 
             messageInput.disabled = true;
             sendMessageButton.disabled = true;
@@ -240,7 +190,7 @@
             try {
                 // Add message to Firestore
                 await addDoc(collection(db, `artifacts/${appId}/public/data/chat_messages`), {
-                    username: username,
+                    username: username, // Uses the default "Anonymous"
                     message: messageText,
                     timestamp: serverTimestamp(), // Use server timestamp for consistent ordering
                     userId: userId // Store userId for identifying sender
@@ -336,4 +286,3 @@
 </body>
 
 </html>
-
