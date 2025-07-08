@@ -1,0 +1,333 @@
+/* Import Google Font - Poppins for general text */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Define primary colors. Adjust these to match your preferred theme. */
+    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
+    --primary-light: #9a88ff;
+    --secondary-color: #5d5c61; /* A dark grey for subtle elements */
+    --accent-color: #b0e0e6; /* A light blue for highlights */
+    --text-color: #cdd6f4; /* Your existing text color */
+    --input-bg: rgba(255, 255, 255, 0.1); /* Slightly transparent white for inputs */
+    --button-text-color: #ffffff;
+    --glass-background: rgba(255, 255, 255, 0.08); /* Lighter transparency for glass effect */
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-strong: rgba(0, 0, 0, 0.3);
+    --card-bg: rgba(0, 0, 0, 0.3); /* Slightly darker glass for cards/elements */
+
+    /* New chat specific colors */
+    --user-message-bg: rgba(123, 104, 238, 0.6); /* Primary color with transparency */
+    --ai-message-bg: rgba(255, 255, 255, 0.15); /* Lighter glass for AI messages */
+    --chat-area-bg: rgba(0, 0, 0, 0.2); /* Background for the chat message display */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    transition: background-color 0.5s ease;
+}
+
+/* --- Navigation Bar (Reused from other pages) --- */
+nav {
+    width: 100%;
+    position: fixed; /* Keep nav at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    background-color: var(--glass-background); /* Slightly transparent background */
+    border-bottom: 1px solid var(--glass-border);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px var(--shadow-strong);
+    display: flex;
+    justify-content: center; /* Center the nav content */
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px; /* Space out nav items */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 8px 18px; /* Padding for pill shape */
+    border-radius: 20px; /* Pill shape */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.nav-links li a:hover,
+.nav-links li a[href="/ai.html"] { /* Highlight current page */
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* --- Main Content Area --- */
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 20px; /* Adjust padding for fixed nav */
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 120px); /* Ensure container takes full height */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Subtle darkening of background image */
+    z-index: -1;
+}
+
+.container-inner {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background for content block */
+    backdrop-filter: blur(8px); /* More glass effect for the main content */
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px var(--shadow-strong);
+    max-width: 800px; /* Max width for chat interface */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    gap: 25px; /* Space between elements */
+}
+
+.container-inner h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--primary-light);
+    text-shadow: 0 2px 5px var(--shadow-strong);
+}
+
+.chat-description {
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--primary-light);
+}
+
+/* --- Chat Messages Area --- */
+#chat-messages {
+    width: 100%;
+    height: 400px; /* Fixed height for chat history */
+    overflow-y: auto; /* Enable scrolling */
+    background-color: var(--chat-area-bg);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between messages */
+    box-shadow: inset 0 2px 5px var(--shadow-light);
+    border: 1px solid var(--glass-border);
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.message {
+    max-width: 85%;
+    padding: 12px 18px;
+    border-radius: 15px;
+    line-height: 1.5;
+    word-wrap: break-word; /* Ensure long words wrap */
+}
+
+.message p {
+    margin: 0;
+}
+
+.user-message {
+    background-color: var(--user-message-bg);
+    color: var(--button-text-color);
+    align-self: flex-end; /* Align user messages to the right */
+    border-bottom-right-radius: 5px; /* Pointy corner for user */
+}
+
+.ai-message {
+    background-color: var(--ai-message-bg);
+    color: var(--text-color);
+    align-self: flex-start; /* Align AI messages to the left */
+    border-bottom-left-radius: 5px; /* Pointy corner for AI */
+}
+
+/* --- Chat Input Area --- */
+.chat-input-area {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: 30px; /* Rounded input field */
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1.1em;
+    outline: none;
+    box-shadow: inset 0 2px 5px var(--shadow-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#user-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#user-input:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.3), inset 0 2px 5px var(--shadow-light);
+}
+
+#send-button {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px; /* Rounded button */
+    color: var(--button-text-color);
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#send-button:hover {
+    background: linear-gradient(45deg, var(--primary-light), var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-strong);
+}
+
+#send-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#loading-indicator {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#loading-indicator.hidden {
+    opacity: 0;
+    height: 0; /* Collapse height when hidden */
+    overflow: hidden;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .container-inner {
+        padding: 30px;
+        margin-top: 80px;
+    }
+
+    .container-inner h1 {
+        font-size: 2.5em;
+    }
+
+    .chat-description {
+        font-size: 1em;
+    }
+
+    #chat-messages {
+        height: 300px; /* Shorter chat history on smaller screens */
+        padding: 15px;
+    }
+
+    .message {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .chat-input-area {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 15px;
+    }
+
+    #user-input {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    #send-button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links li a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    .container-inner {
+        padding: 20px;
+    }
+
+    .container-inner h1 {
+        font-size: 2em;
+    }
+
+    #chat-messages {
+        height: 250px;
+    }
+}
