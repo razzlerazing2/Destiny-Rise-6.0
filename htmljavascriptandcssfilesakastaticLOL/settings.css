@@ -38,6 +38,8 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
     background-color: var(--glass-background); /* Slightly transparent background */
     border-bottom: 1px solid var(--glass-border);
     padding: 10px 0;
@@ -146,8 +148,6 @@ nav {
 
 .settings-card {
     background-color: var(--card-bg); /* Slightly darker glass for cards */
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 5px 15px var(--shadow-strong);
