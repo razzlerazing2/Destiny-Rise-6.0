@@ -90,10 +90,6 @@ body[theme="default"] {
             <p>Cloak the site into about:blank to hide it from your search history. WARNING: costs come, so don't use dynamic when about:blank is on/cloaked.</p>
             <div id="ab-settings">
               <div id="ab-settings-container">
-                <label class="switch">
-                  <input type="checkbox" id="ab-settings-switch" class="slider-checkbox" onchange="toggleAB()" />
-                  <span class="slider-round"></span>
-                </label>
               </div>
               <button onclick="AB()" class="key-button">Open</button>
             </div>
@@ -130,8 +126,7 @@ body[theme="default"] {
           <div class="settings-card">
   <h3>Themes</h3>
   <p>Choose from a different variety of themes to personalize your background theme of choice. Good for picky little good boys (JK IM SORRY). But anyway, it's really good and I prefer you use it.</p>
-  <div class="select-wrapper">
-    <select id="themeChange" onchange="setTheme(this.value)" style="background-color: white; color: black;">
+    <select id="themeChange" onchange="setTheme(this.value)">
       <option value="cuhs3">Default</option>
       <option value="cuhs">Beautiful</option>
       <option value="cuhs2">Abstract</option>
@@ -141,7 +136,6 @@ body[theme="default"] {
       <option value="skibididdy">Another cool gif</option>
       <option value="catppuccin-mocha">Skull</option>
     </select>
-  </div>
 </div>
 
           <div class="settings-card">
