@@ -71,14 +71,17 @@ body[theme="default"] {
 </head>
 
 <body id="no">
-    <nav class="nav" id="right-side-nav">
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <nav class="nav animated-content" id="right-side-nav">
         <ul id="tab-list"></ul>
         <button title="add-tab" id="add-tab">
             <i class="fa-solid fa-plus"></i>
         </button>
     </nav>
-    <div class="nav-bar">
-        <div class="nav-container">
+    <div class="nav-bar animated-content">
+        <div class="nav-container animated-content">
             <div class="nav-left">
                 <button title="Home Page" id="home-page" class="nav-button" onclick="Home()">
                     <i class="fa-solid fa-house"></i>
@@ -114,6 +117,7 @@ body[theme="default"] {
     </div>
     <div class="frame-container" id="frame-container"></div>
     <script src="assets/js/t.js?v=03"></script>
+    <script src="themesandcuhs.js"></script>
     <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
     <script src="./assets/ultra/config.js?v=10-02-2024"></script>
     <script src="/assets/js/mv.js?v=003"></script>
