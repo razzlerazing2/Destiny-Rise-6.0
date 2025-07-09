@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:description" content="SKrypt is a very clean and fast proxy" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SKrypt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="inde.x.css">
+    <style>
+        /* Your existing theme styles (from original HTML) */
+        body[theme="skibididdy"] {
+            background: url("https://gifdb.com/images/high/cyberpunk-pixel-city-neon-2bagugxcfp2to7tx.gif") no-repeat center center fixed;
+            background-size: cover;
+            --text: #cdd6f4;
+        }
+
+        body[theme="cuhs"] {
+            background: url("/assets/media/background/poppingthatGTV.jpg") no-repeat center center fixed;
+            background-size: cover;
+            --shadow: rgba(0, 0, 0, 0.01);
+            --text: #cdd6f4;
+        }
+
+        body[theme="cuhs2"] {
+            background: url("/assets/media/background/stadning.jpg") no-repeat center center fixed;
+            background-size: cover;
+            --shadow: rgba(0, 0, 0, 0.01);
+            --text: #cdd6f4;
+        }
+
+        body[theme="cuhs3"] {
+            background: url("/assets/media/background/Pacificthatis.jpg") no-repeat center center fixed;
+            background-size: cover;
+            --shadow: rgba(0, 0, 0, 0.01);
+            --text: #cdd6f4;
+        }
+
+        body[theme="catppuccin-frappe"] {
+            background: url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
+            background-size: cover;
+            --shadow: rgba(0, 0, 0, 0.01);
+            --text: #cdd6f4;
+        }
+
+        body[theme="catppuccin-macchiato"] {
+            background: url("/assets/media/background/rizzyaf.gif") no-repeat center center fixed;
+            background-size: cover;
+            --shadow: rgba(0, 0, 0, 0.01);
+            --text: #cdd6f4;
+        }
+
+        body[theme="catppuccin-mocha"] {
+            background: url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
+            background-size: cover;
+            --shadow: rgba(0, 0, 0, 0.01);
+            --text: #cdd6f4;
+        }
+
+        body[theme="default"] {
+            background: url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
+            background-size: cover;
+            --shadow: rgba(0, 0, 0, 0.01);
+            --text: #cdd6f4;
+        }
+
+        /* --- Intro Animation CSS --- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.15);
+            /* A dark background, adjust to match your theme */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+            opacity: 1;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+            /* Allows clicks to pass through once hidden */
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animated-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animated-content.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Live Clock Styles --- */
+        #live-clock {
+            font-family: 'Poppins', sans-serif;
+            /* Ensure Poppins is used for the clock */
+            font-size: 1.8em;
+            font-weight: 600;
+            color: var(--primary-light);
+            /* Highlight color */
+            text-shadow: 0 2px 5px var(--shadow-strong);
+            margin-bottom: 25px;
+            /* Space between clock and main title */
+            background-color: var(--card-bg);
+            /* Use a subtle glass background */
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 10px 20px;
+            border: 1px solid var(--glass-border);
+            display: inline-block;
+            /* Wrap content tightly */
+        }
+
+        @media (max-width: 768px) {
+            #live-clock {
+                font-size: 1.4em;
+                margin-bottom: 20px;
+                padding: 8px 15px;
+            }
+        }
+
+        /* Styles for active navigation link */
+        .nav-links a.active {
+            font-weight: bold;
+            color: #fff;
+            /* Or any highlight color you prefer */
+        }
+
+        /* Base style for page sections */
+        .page {
+            display: none;
+            /* Hide all pages by default */
+            padding: 20px;
+            /* Add some padding for content */
+            min-height: 500px;
+            /* Added for visibility if content is small */
+        }
+
+        /* Display the active page */
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="animated-content">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                <li><a href="/apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
+                <li><a href="/settings"><i class="fas fa-cogs"></i> Settings</a></li>
+                <li><a href="/web_music"><i class="fas fa-music"></i> Web Music</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <div id="home" class="page">
+            <section class="hero-section">
+                <h1 id="main-title">Welcome to SKrypt!</h1>
+                <div id="live-clock"></div>
+                <p>Your fast and clean web proxy for games, apps, and more.</p>
+                <button onclick="aboutblank()">Cloak Tab</button>
+            </section>
+            </div>
+
+        <div id="games" class="page"></div>
+        <div id="apps" class="page"></div>
+        <div id="settings" class="page"></div>
+        <div id="web_music" class="page"></div>
+        </main>
+
+    <script src="themesandcuhs.js"></script>
+    <script>
+        function aboutblank() {
+            var win = window.open('about:blank');
+            // This URL should point to your proxy's actual route
+            // Based on your server.js, '/exthangr' serves 'proxy.html'
+            var url = '/exthangr';
+            var iframe = win.document.createElement('iframe');
+            iframe.style = "position:fixed;width:100vw;height:100vh;top:0px;left:0px;right:0px;bottom:0px;z-index:2147483647;background-color:white;border:none;";
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+            // Redirect the current tab (opener) to the Frisco ISD portal
+            window.location.href = 'https://portal.friscoisd.org';
+        }
+
+        // --- Dynamic HTML loader for SPA page sections ---
+        async function loadHtmlInto(divId, urlPath) {
+            const target = document.getElementById(divId);
+            if (!target) return;
+
+            // Show spinner only if the content is not already present or not marked as loaded
+            // For 'home', we explicitly don't show a spinner as its content is always there initially
+            if (divId !== 'home' && !target.dataset.loaded) {
+                target.innerHTML = '<div style="text-align:center;padding:2em;"><div class="spinner"></div><p>Loading...</p></div>';
+            }
+
+            try {
+                // If it's the 'home' page, and it's already shown/initialized, don't fetch its content again.
+                // Its content is already in the main index.html.
+                if (divId === 'home' && target.dataset.initialized) {
+                    return; // Content is already present and initialized
+                }
+
+                const response = await fetch(urlPath); // Fetch from the Express route (e.g., /games, /apps)
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status} from ${urlPath}`);
+                }
+                const html = await response.text();
+                target.innerHTML = html;
+                target.dataset.loaded = 'true'; // Mark as loaded after successful fetch
+            } catch (err) {
+                target.innerHTML = `<p style="color:red">Failed to load content for ${divId}. Please check server logs and file paths.</p>`;
+                console.error(`Failed to load ${urlPath}:`, err);
+            }
+        }
+
+        // --- SPA Page Switching Logic ---
+        async function showPage(pageId, pushState = true) {
+            // Hide all pages and remove 'active' class
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Find the target page div
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active'); // Show the page div
+
+                // Logic for loading content:
+                if (pageId === 'home') {
+                    // For the home page, its content is already embedded in index.html.
+                    // We just need to mark it as initialized after the very first display.
+                    if (!targetPage.dataset.initialized) {
+                        targetPage.dataset.initialized = 'true';
+                        targetPage.dataset.loaded = 'true'; // Mark as loaded since its content is in the HTML
+                    }
+                } else if (!targetPage.dataset.loaded) {
+                    // For other pages, if content is not loaded, fetch it
+                    await loadHtmlInto(pageId, `/${pageId}`); // Example: fetches from /games for games page
+                }
+            } else {
+                console.warn(`Page element with ID "${pageId}" not found. Falling back to /home.`);
+                // If a page element isn't found, fall back to home and update URL
+                showPage('home', true);
+                return;
+            }
+
+            // Update nav active link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                // Get the path from the href (e.g., '/home')
+                // Use window.location.origin to correctly resolve relative paths
+                const linkPath = new URL(link.href, window.location.origin).pathname;
+                link.classList.toggle('active', linkPath === `/${pageId}`);
+            });
+
+            // Update browser history if pushState is true
+            if (pushState) {
+                history.pushState(null, '', `/${pageId}`);
+            }
+        }
+
+        // Handle initial load and subsequent popstate (back/forward button)
+        function handlePopState() {
+            // Get the page ID from the current URL path (e.g., /home -> 'home')
+            const path = window.location.pathname.substring(1); // Remove leading '/'
+            const pageId = path || 'home'; // Default to 'home' if path is empty (e.g., /)
+
+            showPage(pageId, false); // Do not push state again on popstate event
+        }
+
+        // Add event listeners for navigation links
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle the initial page load based on the URL
+            handlePopState(); // This will display the correct section when the page first loads
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent full page reload on link click
+
+                    // Extract the page ID from the link's href (e.g., '/games' -> 'games')
+                    const targetPath = new URL(link.href, window.location.origin).pathname;
+                    const pageId = targetPath.substring(1);
+
+                    showPage(pageId); // Show the new page and update history
+                });
+            });
+
+            // Initial animation for content (from your original script)
+            const preloader = document.getElementById('preloader');
+            const animatedContent = document.querySelector('.animated-content');
+
+            if (preloader && animatedContent) {
+                // Delay hiding preloader and showing content
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                    animatedContent.classList.add('show');
+                    // Remove preloader from DOM after transition
+                    preloader.addEventListener('transitionend', () => preloader.remove());
+                }, 1000); // Adjust delay as needed
+            }
+        });
+
+        // Listen for browser back/forward buttons (History API popstate event)
+        window.addEventListener('popstate', handlePopState);
+
+        // --- Live Clock Functionality (ensure this is present if not in themesandcuhs.js) ---
+        function updateClock() {
+            const now = new Date();
+            const options = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            };
+            const timeString = now.toLocaleTimeString('en-US', options);
+            const clockElement = document.getElementById('live-clock');
+            if (clockElement) {
+                clockElement.textContent = timeString;
+            }
+        }
+        // Update clock every second
+        setInterval(updateClock, 1000);
+        // Initial call to display clock immediately
+        updateClock();
+    </script>
+</body>
+
+</html>
