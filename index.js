@@ -145,7 +145,7 @@ server.on("upgrade", (req, socket, head) => {
 });
 
 server.on("listening", () => {
-  console.log(chalk.whiteBright("✅ SKrypt server ready at:"), chalk.cyan(`http://localhost:${PORT}`));
+  console.log(chalk.whiteBright("✅ skryptonite server ready at:"), chalk.cyan(`http://localhost:${PORT}`));
 });
   console.log(chalk.white("✅ Server is fully operational and ready to accept connections!"));
   console.log(chalk.red("Removed pnpm-lock.yaml because of some deploying issues"));

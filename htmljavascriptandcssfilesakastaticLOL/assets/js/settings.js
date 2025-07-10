@@ -468,7 +468,7 @@ function importSaveData() {
           });
         }
         alert('Your save data has been imported. Please test it out.')
-        alert('If you find any issues then report it in GitHub or the SKrypt Discord.')
+        alert('If you find any issues then report it in GitHub or the skryptoniteptonite Discord.')
       } catch (error) {
         console.error('Error parsing JSON file:', error);
       }
