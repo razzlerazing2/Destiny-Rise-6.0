@@ -211,6 +211,11 @@ nav {
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     margin-top: 10;
 }
+.key-button:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-4px); /* Slight lift on hover */
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}
 #preloader {
     position: fixed;
     top: 0;

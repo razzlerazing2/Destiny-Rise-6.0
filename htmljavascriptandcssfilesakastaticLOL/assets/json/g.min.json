@@ -743,13 +743,14 @@
     "image": "/assets/media/icons/nealfun.webp",
     "categories": ["all"],
     "error": "true",
-    "say": "Neal.fun does not work on Skelly because of Cloudflare protection."
+    "say": "Neal.fun does not work on skryptonite because of Cloudflare protection."
   },
   {
     "name": "YoHoHo.io",
     "link": "https://yohoho.io/",
     "image": "/assets/media/icons/yohoho.webp",
-    "categories": ["all", "2P"]
+    "categories": ["all", "2P"],
+    "say": "YoHoHo.io has some ads and they are annoying on skrpytonite, but the game itself is playable."
   },
   {
     "name": "AntWar.io",
