@@ -386,3 +386,15 @@ function decodeXor(input) {
       .join("") + (search.length ? `?${search.join("?")}` : "")
   );
 }
+    function dropDown() {
+      document.getElementById('dropdownMenu').classList.toggle('show');
+    }
+
+    // Optional: close dropdown if clicked outside
+    window.addEventListener('click', function(e) {
+      const btn = document.querySelector('.dropdown-toggle');
+      const menu = document.getElementById('dropdownMenu');
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });

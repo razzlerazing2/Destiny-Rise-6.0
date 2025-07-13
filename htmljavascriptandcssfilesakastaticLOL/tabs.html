@@ -83,9 +83,9 @@ body[theme="default"] {
     <div class="nav-bar animated-content">
         <div class="nav-container animated-content">
             <div class="nav-left">
-                <button title="Home Page" id="home-page" class="nav-button" onclick="Home()">
+                <!--<button title="Home Page" id="home-page" class="nav-button" onclick="Home()">
                     <i class="fa-solid fa-house"></i>
-                </button>
+                </button>-->
                 <button title="Back Arrow" class="nav-button" onclick="goBack()">
                     <i class="fa-solid fa-arrow-left"></i>
                 </button>
@@ -100,6 +100,16 @@ body[theme="default"] {
                 </form>
             </div>
             <div class="nav-right">
+                <button title="More Options" class="nav-button nav-btn-right" onclick="dropDown()">
+  <i class="fa-solid fa-ellipsis-v"></i>
+</button>
+<div class="dropdown-menu" id="dropdownMenu">
+    <a href="/home" class="dropdown-item"><i class="fas fa-house"></i></a>
+    <a href="/games" class="dropdown-item"><i class="fas fa-gamepad"></i></a>
+    <a href="/apps"><i class="fas fa-mobile-alt"></i></a>
+    <a href="/settings"><i class="fas fa-cogs"></i></a>
+    <a href="/web_music.html"><i class="fas fa-music"></i></a>
+</div>
                 <button title="Fullscreen" id="fullscreen-button" class="nav-button nav-btn-right" onclick="FS()">
                     <i class="fa-solid fa-expand"></i>
                 </button>
@@ -108,9 +118,6 @@ body[theme="default"] {
                 </button>
                 <button title="Inspect" class="nav-button nav-btn-right" onclick="eToggle()">
                     <i class="fa-solid fa-code"></i>
-                </button>
-                <button title="Tabs" id="tabs-button" class="nav-button nav-btn-right">
-                    <i class="fa-solid fa-magnifying-glass-minus"></i>
                 </button>
             </div>
         </div>

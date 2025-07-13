@@ -175,3 +175,36 @@ transition: all 1s ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+    .dropdown-container {
+      position: relative;
+      display: inline-block;
+    }
+
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 6px;
+      max-width: 50px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover {
+      transform: scaley(-2px);
+    }
+
+    .show {
+      display: block;
+    }
