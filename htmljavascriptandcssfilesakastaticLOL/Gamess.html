@@ -16,6 +16,18 @@
    
     <script src="/assets/js/i.js?v=03"></script>
         <style>
+          @keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body[theme="animated-gradient"] {
+  background: linear-gradient(270deg, #ff007f, #00ff7f, #007fff, #ff7f00, #ff00ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  --text: #ffffff;
+}
           body[theme="skibididdy"] {
    background: url("https://gifdb.com/images/high/cyberpunk-pixel-city-neon-2bagugxcfp2to7tx.gif") no-repeat center center fixed;
   background-size: cover;

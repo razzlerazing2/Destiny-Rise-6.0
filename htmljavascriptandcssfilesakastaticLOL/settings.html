@@ -9,6 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/settings.css" />
   <style>
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body[theme="animated-gradient"] {
+  background: linear-gradient(270deg, #ff007f, #00ff7f, #007fff, #ff7f00, #ff00ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  --text: #ffffff;
+}
     body[theme="cuhs"] {
    background: url("/assets/media/background/poppingthatGTV.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -127,6 +139,7 @@ body[theme="default"] {
   <p>Choose from a different variety of themes to personalize your background theme of choice. Good for picky little good boys (JK IM SORRY). But anyway, it's really good and I prefer you use it.</p>
     <select id="themeChange" onchange="setTheme(this.value)">
       <option value="cuhs3">Default</option>
+      <option value="animated-gradient">Animated Gradient</option>
       <option value="cuhs">Beautiful</option>
       <option value="cuhs2">Abstract</option>
       <option value="default">Other abstract</option>
