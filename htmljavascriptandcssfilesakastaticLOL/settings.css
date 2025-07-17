@@ -386,8 +386,8 @@ select#engine:focus {
     animation: gradientAnimation 15s ease infinite;
     --text: #cdd6f4;
 
-    --primary-color: green;  /* vivid pink */
-    --primary-light: lightgreen;  /* lighter pink */
+    --primary-color: #cdd104;  /* vivid pink */
+    --primary-light: orange;  /* lighter pink */
   }
 
   @keyframes gradient {
@@ -422,7 +422,6 @@ select#engine:focus {
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     --text: #cdd6f4;
-
     --primary-color: blue;
     --primary-light: lightblue;
   }
