@@ -11,55 +11,7 @@
 <title>𝕊𝕜𝕣𝕪𝕡𝕥𝕠𝕟𝕚𝕥𝕖 -- 𝔹𝕪𝕡𝕒𝕤𝕤</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/web_music.css"> <!-- Link to the new web music specific CSS -->
-
-    <style>
-
-        /* --- Intro Animation CSS (reused) --- */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.15); /* A dark background, adjust to match your theme */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease-out;
-            opacity: 1;
-        }
-
-        #preloader.hidden {
-            opacity: 0;
-            pointer-events: none; /* Allows clicks to pass through once hidden */
-        }
-
-        .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid #fff;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .animated-content {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .animated-content.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/themes.css" />
 </head>
 
 <body>
