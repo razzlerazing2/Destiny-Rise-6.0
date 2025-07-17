@@ -251,12 +251,23 @@ nav {
     100% { transform: rotate(360deg); }
 }
 
+/* Base animation style */
 .animated-content {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
+/* Nav starts from -100px (top) */
+nav.animated-content {
+    transform: translateY(-50px);
+}
+
+/* Container starts from +100px (bottom) */
+.container.animated-content {
+    transform: translateY(50px);
+}
+
+/* When show is added */
 .animated-content.show {
     opacity: 1;
     transform: translateY(0);
