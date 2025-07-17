@@ -36,12 +36,6 @@
     "categories": ["all"]
   },
   {
-    "name": "Duck Life 5",
-    "link": "https://www.primarygames.com/arcade/simulation/ducklife5/mobile/",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-0kuHw1u6TTsZyQfutzyQzfn38ehIdw_aaA&s",
-    "categories": ["all"]
-  },
-  {
     "name": "Poly Track",
   "link": "https://games.crazygames.com/en_US/polytrack/index.html",
     "image": "https://images.crazygames.com/polytrack_16x9/20240814074159/polytrack_16x9-cover?auto=format,compress&q=75&cs=strip",
@@ -940,7 +934,7 @@
   },
   {
     "name": "Speed Stars",
-    "link": "https://speedstarsgames.com",
+    "link": "https://speedstarsfree.github.io",
     "image": "https://play-lh.googleusercontent.com/AIdar8HSSXg0NQ6BUR1mVt-uOudupELbjPkU_cgwo_7fP0tKT0R49dfFltYj-43u6A",
     "categories": ["all"]
   },
@@ -962,5 +956,29 @@
     "image": "/assets/media/icons/dl4.webp",
     "categories": ["all", "local"],
     "load": true
+  },
+  {
+    "name": "Duck Life 5",
+    "link": "https://www.hoodamath.com/mobile/games/duck-life-5-origins/game.html",
+    "image": "/assets/media/icons/ducklife.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Duck Life Adventure",
+    "link": "https://www.hoodamath.com/mobile/games/duck-life-adventure/game.html",
+    "image": "/assets/media/icons/ducklife.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Duck Life Battle",
+    "link": "https://www.hoodamath.com/mobile/games/duck-life-battle/game.html",
+    "image": "/assets/media/icons/ducklife.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Duck Life Treasure Hunt",
+    "link": "https://www.hoodamath.com/mobile/games/duck-life-treasure-hunt/game.html",
+    "image": "/assets/media/icons/ducklife.webp",
+    "categories": ["all"]
   }
 ]

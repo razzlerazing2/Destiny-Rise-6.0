@@ -2,7 +2,7 @@ let appInd;
 const g = window.location.pathname === "/games";
 const a = window.location.pathname === "/apps";
 const c = window.location.pathname === "/gawd.html";
-const m = window.location.pathname === "/movies";
+const anime = window.location.pathname === "/animes";
 
 let t;
 
@@ -95,7 +95,7 @@ function CustomApp(customApp) {
   let apps;
   if (g) {
     apps = localStorage.getItem("Gcustom");
-  } else if (m) {
+  } else if (anime) {
     apps = localStorage.getItem("Mcustom");
   } else if (c) {
     apps = localStorage.getItem("Tcustom");
@@ -117,7 +117,7 @@ function CustomApp(customApp) {
     localStorage.setItem("Gcustom", JSON.stringify(apps));
   } else if (c) {
     localStorage.setItem("Tcustom", JSON.stringify(apps));
-  } else if (m) {
+  } else if (anime) {
     localStorage.setItem("Mcustom", JSON.stringify(apps));
   }
    else if (a) {
@@ -129,8 +129,8 @@ function setPin(index) {
   let pins;
   if (g) {
     pins = localStorage.getItem("Gpinned");
-  }  else if (m) {
-    pins = localStorage.getItem("Mpinned");
+  }  else if (anime) {
+    pins = localStorage.getItem("animepinned");
   }  else if (c) {
     pins = localStorage.getItem("Tpinned");
   } else if (a) {
@@ -154,8 +154,8 @@ function setPin(index) {
     localStorage.setItem("Tpinned", pins);
   } else if (a) {
     localStorage.setItem("Apinned", pins);
-  } else if (m) {
-    localStorage.setItem("Mpinned", pins);
+  } else if (anime) {
+    localStorage.setItem("animepinned", pins);
   }
   location.reload();
 }
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     storedApps = JSON.parse(localStorage.getItem("Tcustom"));
   } else if (a) {
     storedApps = JSON.parse(localStorage.getItem("Acustom"));
-  } else if (m) {
+  } else if (anime) {
     storedApps = JSON.parse(localStorage.getItem("Mcustom"));
   }
   if (storedApps) {
@@ -252,8 +252,8 @@ if (g) {
   path = "/assets/json/t.min.json";
 } else if (a) {
   path = "/assets/json/a.min.json";
-} else if (m) {
-  path = "/assets/json/m.min.json";
+} else if (anime) {
+  path = "/assets/json/anime.min.json";
 }
 fetch(path)
   .then(response => {
@@ -279,7 +279,7 @@ fetch(path)
     } else if (c) {
       pinList = localStorage.getItem("Tpinned") || "";
     }
-    else if (m) {
+    else if (anime) {
       pinList = localStorage.getItem("Mpinned") || "";
     }
     pinList = pinList ? pinList.split(",").map(Number) : [];
