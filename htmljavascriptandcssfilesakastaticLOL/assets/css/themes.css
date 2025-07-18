@@ -99,9 +99,9 @@
     background: url("/assets/media/background/Pacificthatis.jpg") no-repeat center center fixed;
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
-    --text: #cdd6f4;
-    --primary-color: #7cc1ff;      /* Soft sky blue */
-    --primary-light: #b9d9ff;      /* Light sky blue */
+    --text: #cdd6f4; 
+    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
+    --primary-light: #9a88ff;     /* Light sky blue */
   }
 
   body[theme="catppuccin-frappe"] {
@@ -109,8 +109,8 @@
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
-    --primary-light: #9a88ff; /* A vivid purple for light actions*/
+    --primary-color: #7cc1ff;      /* Soft sky blue */
+    --primary-light: #b9d9ff;
   }
 
   body[theme="catppuccin-macchiato"] {
