@@ -87,7 +87,7 @@ nav {
 
 .nav-links li a:hover,
 .nav-links li a.active { /* Uses .active class for highlighting */
-    background-color: var(--primary-color);
+    background-color: var(--primary-light);
     color: var(--button-text-color);
     transform: translateY(-2px);
 }

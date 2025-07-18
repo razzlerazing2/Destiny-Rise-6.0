@@ -75,7 +75,7 @@ nav {
 
 .nav-links li a:hover,
 .nav-links li a.active { /* Add an 'active' class to current page link if desired */
-    background-color: var(--primary-color);
+    background-color: var(--primary-light);
     color: var(--button-text-color);
     transform: translateY(-2px); /* Slight lift on hover */
 }
@@ -99,7 +99,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Adjust transparency */
+    background-color: rgba(0, 0, 0, 0.39); /* Adjust transparency */
     z-index: -1;
 }
 

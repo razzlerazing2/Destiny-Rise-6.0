@@ -1,4 +1,17 @@
-
+:root {
+    /* Define primary colors. You can adjust these to match your theme better. */
+    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
+    --primary-light: #9a88ff;
+    --secondary-color: #5d5c61; /* A dark grey for subtle elements */
+    --accent-color: #b0e0e6; /* A light blue for highlights */
+    --text-color: #cdd6f4; /* Your existing text color */
+    --input-bg: rgba(255, 255, 255, 0.1); /* Slightly transparent white for inputs */
+    --button-text-color: #ffffff;
+    --glass-background: rgba(255, 255, 255, 0.1); /* Lighter transparency for glass effect */
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-strong: rgba(0, 0, 0, 0.3);
+}
 @keyframes gradientAnimation {
   0% {
     background: linear-gradient(45deg, green, red, black);
@@ -77,8 +90,9 @@
     --primary-light: lightblue;
   }
 
-  body[theme="cuhs"] {
-    background: url("/assets/media/background/poppingthatGTV.jpg") no-repeat center center fixed;
+  body[theme="cuhs3"] {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     url("/assets/media/background/poppingthatGTV.jpg") no-repeat center center fixed;
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
@@ -86,8 +100,9 @@
     --primary-light: #ffa1a9;      /* Light pink */
   }
 
-  body[theme="cuhs2"] {
-    background: url("/assets/media/background/stadning.jpg") no-repeat center center fixed;
+  body[theme="cuhs"] {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/media/background/stadning.jpg") no-repeat center center fixed;
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
@@ -95,17 +110,19 @@
     --primary-light: #b9fff0;      /* Light aquamarine */
   }
 
-  body[theme="cuhs3"] {
-    background: url("/assets/media/background/Pacificthatis.jpg") no-repeat center center fixed;
+  body[theme="cuhs2"] {
+   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/assets/media/background/Pacificthatis.jpg") no-repeat center center fixed;
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4; 
-    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
-    --primary-light: #9a88ff;     /* Light sky blue */
+    --primary-color: #7b68ee;
+    --primary-light: #9a88ff;
   }
 
   body[theme="catppuccin-frappe"] {
-    background: url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     url("/assets/media/background/skibididdy.jpg") no-repeat center center fixed;
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
@@ -114,7 +131,8 @@
   }
 
   body[theme="catppuccin-macchiato"] {
-    background: url("/assets/media/background/rizzyaf.gif") no-repeat center center fixed;
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/media/background/rizzyaf.gif") no-repeat center center fixed;
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
@@ -122,16 +140,19 @@
     --primary-light: #a3d1ff;       /* Lighter sky blue */
   }
 
-  body[theme="skibididdy"] {
-    background: url("https://gifdb.com/images/high/cyberpunk-pixel-city-neon-2bagugxcfp2to7tx.gif") no-repeat center center fixed;
+body[theme="skibididdy"] {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("https://gifdb.com/images/high/cyberpunk-pixel-city-neon-2bagugxcfp2to7tx.gif") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-   --primary-color: #0057FF;      /* Electric Blue */
-  --primary-light: #4D88FF;      /* Soft electric blue */
-  }
+    --primary-color: #FF0000;      /* Vivid Red */
+    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
+}
+
 
   body[theme="catppuccin-mocha"] {
-    background: url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
@@ -139,11 +160,12 @@
     --primary-light: #f9c7ad;       /* Light warm peach */
   }
 
-  body[theme="default"] {
-    background: url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
+  /*body[theme="default"] {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    --primary-color: blue;       /* Light gray */
-    --primary-light: #007FFF;       /* Very light gray */
-  }
+    --primary-color: blue;
+    --primary-light: #007FFF;
+/*
