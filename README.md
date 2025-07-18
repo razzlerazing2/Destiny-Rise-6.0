@@ -1,3 +1,47 @@
-# skryptonite
-# Where unblocking possibilities are endless 💀
-I just want to give credits to @467riguy8 for helping me with this project! I am @razzlerazing2 and I created this project with them in order to bypass school restrictions. If you want to fork this repository, then i suggest you don't edit these files: index.js, package.json, package-lock.json, Dockerfile, SECURITY.md, render.yaml, vercel.json, webpack.config.mjs, config.js, biome.json, Masqr.js, app.json .zip, .gitignore and lastly. .replit. Just edit anything in the sixty_nine folder. Or else there will be problem with deploying, and if you're editing this and want to test it, go to Terminal, type npm install then npm run start. I just hope you enjoy this. Hide this from teachers bcuz we want freedom on our school chromebooks.
+<div align="center">
+
+#  𝕊𝕂ℝ𝕐ℙ𝕋𝕆ℕ𝕀𝕋𝔼   
+### *Where unblocking possibilities are endless 💀*
+
+---
+
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)  
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)  
+![Node](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js)  
+![Unblocker](https://img.shields.io/badge/Proxy-Enabled-ff4757?style=for-the-badge)  
+![Speed](https://img.shields.io/badge/Speed-Blazing%20Fast-orange?style=for-the-badge)  
+
+</div>
+
+---
+
+##  Why Skryptonite?
+- 🔓 **Bypass school restrictions like a pro**  
+- ⚡ **Ultra-fast proxy performance**  
+- 🎨 **Beautiful UI with custom themes**  
+- 🛠️ **Open-source & customizable**
+
+---
+
+## 🚀 Quick Start
+
+
+# Clone the repo
+```git clone https://github.com/razzlerazing2/skryptonite.git cd skryptonite```
+
+# Install dependencies
+```npm install```
+
+# Start the app
+```npm run start```
+<h1>⚠️ Important Notes</h1>
+<h2>Don't edit files outside "totallynotthefrontendtrust" folder unless yk what you're doing</h2>
+
+<h2>✅ You MAY edit anything inside the folder: <code>totallynotthefrontendtrust</code></h2>
+<h3>🔐 Pro Tip: Hide this from teachers 👀. Freedom > Restrictions 💻
+
+👑 Credits
+Huge thanks to @467riguy8 for the help!
+Maintained by @razzlerazing2</h3>
+
+<div align="center"> <h1>⭐ Star this repo if you love FREEDOM ⭐</h1> </div>
