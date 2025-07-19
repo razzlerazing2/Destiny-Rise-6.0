@@ -1,3 +1,4 @@
+/* hop off, skids */
 self.__uv$config = {
   prefix: "/a/",
   bare: "/fq/",

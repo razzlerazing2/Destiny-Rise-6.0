@@ -1,3 +1,4 @@
+/* hop off, skids */
 // Ads
 document.addEventListener("DOMContentLoaded", () => {
   function adChange(selectedValue) {

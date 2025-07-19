@@ -1,3 +1,4 @@
+/* hop off, skids */
 // Remove the problematic Font Awesome Kit configuration and replace with CDN version
 document.addEventListener("DOMContentLoaded", function() {
   const link = document.createElement("link");

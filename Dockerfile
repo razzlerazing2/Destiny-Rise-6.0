@@ -1,3 +1,4 @@
+# hop off, skids
 FROM node:bookworm-slim
 ENV NODE_ENV=production
 
@@ -10,4 +11,3 @@ RUN npm install
 COPY . .
 
 CMD [ "node", "index.js" ]
-# @razzlerazing2 was here :)

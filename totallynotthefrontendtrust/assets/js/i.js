@@ -1,3 +1,4 @@
+/* hop off, skids */
 window.addEventListener("load", () => {
   navigator.serviceWorker.register("/assets/js/sw.js", {
     scope: "/a/",

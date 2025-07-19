@@ -1,3 +1,4 @@
+// hop off, skids
 import path from 'path';
 import nodeExternals from 'webpack-node-externals';
 

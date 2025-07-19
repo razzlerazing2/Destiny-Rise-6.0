@@ -1,3 +1,4 @@
+/* hop off, skids */
 importScripts("/assets/ultra/bundle.js?v=9-30-2024"),
   importScripts("/assets/ultra/config.js?v=9-30-2024");
 class UVServiceWorker extends EventEmitter {

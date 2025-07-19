@@ -1,3 +1,4 @@
+/* hop off, skids */
 importScripts("/assets/dyn/config.js?v=10-02-2024");
 importScripts("/assets/dyn/worker.js?v=10-02-2024");
 importScripts("/assets/ultra/bundle.js?v=10-02-2024");
