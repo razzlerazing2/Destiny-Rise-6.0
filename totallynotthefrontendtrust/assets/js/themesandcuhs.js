@@ -27,9 +27,15 @@
                 // Define your playlist here
                 const allSongs = [ // Renamed to allSongs to distinguish from filtered playlist
                     // CORRECTED URL FOR 'Feel it'
-                    { name: "Feel it - d4vd", url: "https://raw.githubusercontent.com/razzlerazing2/SKrypt/main/music/feel-it-dvad.mp3" },
-                    { name: "Squabble Up - Kendrick Lamar", url: "https://raw.githubusercontent.com/razzlerazing2/SKrypt/main/music/spotifydown.com - squabble up - Kendrick Lamar.mp3" },
-                    { name: "Hide - Juice WRLD", url: "https://raw.githubusercontent.com/razzlerazing2/SKrypt/main/music/Hide (feat. Seezyn) - Juice WRLD.mp3" },
+                    { name: "Hide - Juice WRLD", url: "/assets/media/_music/hide.mp3" },
+                    { name: "Ransom - Lil Tecca", url: "/assets/media/_music/ransomCUH.mp3" },
+                    { name: "The Bottom - Glorb", url: "/assets/media/_music/bottom.mp3" },
+                    { name: "The Bottom 2 - Glorb", url: "/assets/media/_music/bottom2.mp3" },
+                    { name: "Feel It - d4vd", url: "/assets/media/_music/feel.mp3" },
+                    { name: "FE!N - Travis Scott", url: "/assets/media/_music/fein.mp3" },
+                    { name: "Let You Down - NF", url: "/assets/media/_music/letyadown.mp3" },
+                    { name: "Not Like Us - Kendrick Lamar", url: "/assets/media/_music/nlu.mp3" },
+                    { name: "Squabble Up - Kendrick Lamar", url: "/assets/media/_music/squabbleup.mp3" },
                     // Add more songs here
                     // Example: { name: "My Awesome Song", url: "/assets/music/my_awesome_song.mp3" },
                 ];
