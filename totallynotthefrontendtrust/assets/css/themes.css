@@ -97,8 +97,9 @@
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    --primary-color: #ff5c79;      /* Soft pink-red */
-    --primary-light: #ffa1a9;      /* Light pink */
+    --primary-color: #a8143a;  /* Dark pink-red */
+  --primary-light: #ff7c95;  /* Soft vivid pinkish red */
+
   }
 
   body[theme="cuhs"] {

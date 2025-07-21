@@ -27,10 +27,13 @@
                 // Define your playlist here
                 const allSongs = [ // Renamed to allSongs to distinguish from filtered playlist
                     // CORRECTED URL FOR 'Feel it'
+                    
+                    {name: "HAPPY - NF", url: "/assets/media/_music/HAPPY.mp3"},
                     { name: "Hide - Juice WRLD", url: "/assets/media/_music/hide.mp3" },
                     { name: "Ransom - Lil Tecca", url: "/assets/media/_music/ransomCUH.mp3" },
                     { name: "The Bottom - Glorb", url: "/assets/media/_music/bottom.mp3" },
                     { name: "The Bottom 2 - Glorb", url: "/assets/media/_music/bottom2.mp3" },
+                    { name: "The Bottom 3 - Glorb", url: "/assets/media/_music/bottom3.mp3" },
                     { name: "Feel It - d4vd", url: "/assets/media/_music/feel.mp3" },
                     { name: "FE!N - Travis Scott", url: "/assets/media/_music/fein.mp3" },
                     { name: "Let You Down - NF", url: "/assets/media/_music/letyadown.mp3" },
@@ -109,6 +112,7 @@
                             <div class="ai-analysis-output hidden">
                                 <p class="loading-analysis hidden">Analyzing...</p>
                                 <p class="analysis-text"></p>
+                               
                             </div>
                         `;
                         musicListDiv.appendChild(musicItem);
