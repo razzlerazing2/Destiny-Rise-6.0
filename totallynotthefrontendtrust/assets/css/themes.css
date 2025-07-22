@@ -141,6 +141,24 @@
     --primary-color: #63b3ff;       /* Bright sky blue */
     --primary-light: #a3d1ff;       /* Lighter sky blue */
   }
+    body[theme="ggcuh"] {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/media/background/gg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    --shadow: rgba(0, 0, 0, 0.01);
+    --text: #cdd6f4;
+     --primary-color: #FF0000;      /* Vivid Red */
+    --primary-light: #FF4D4D;      /* Lighter sky blue */
+  }
+      body[theme="ggccc"] {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/media/background/ggccc.jpg") no-repeat center center fixed;
+    background-size: cover;
+    --shadow: rgba(0, 0, 0, 0.01);
+    --text: #cdd6f4;
+     --primary-color: #FF0000;      /* Vivid Red */
+    --primary-light: #FF4D4D;      /* Lighter sky blue */
+  }
 
 body[theme="skibididdy"] {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),

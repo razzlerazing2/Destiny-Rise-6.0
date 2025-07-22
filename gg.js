@@ -13,7 +13,7 @@ import fetch from "node-fetch";
 // import { setupMasqr } from "./Masqr.js";
 import config from "./config.js";
 
-console.log(chalk.yellow("Starting npm node.js server using file </index.js\>"));
+
 
 const __dirname = process.cwd();
 const server = http.createServer();
