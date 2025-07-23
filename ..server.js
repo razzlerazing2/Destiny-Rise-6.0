@@ -98,9 +98,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "totallynotthefrontendtrust")));
 app.use("/fq", cors({ origin: true }));
 
-// Add specific route handling for proxy paths
-app.get("/a/*", (req, res, next) => {
-  // Let the service worker handle these requests
+// Add specific route handling for proxy paths - serve the proxy page
+app.get("/a/*", (req, res) => {
+  console.log("Server handling proxy route:", req.path);
   res.sendFile(path.join(__dirname, "totallynotthefrontendtrust", "proxeh.html"));
 });
 

@@ -84,6 +84,10 @@
     <!-- DO NOT REMOVE-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
     <script>
+        // Debug logging
+        console.log("Proxy page loaded");
+        console.log("Service Worker supported:", 'serviceWorker' in navigator);
+        
         window.dataLayer = window.dataLayer || [];
         function gtag() {
             dataLayer.push(arguments);
@@ -91,6 +95,10 @@
         gtag("js", new Date());
 
         gtag("config", "G-WKJQ5QHQTJ");
+        
+        // Check if we have a URL to load
+        const goUrl = sessionStorage.getItem("GoUrl");
+        console.log("GoUrl from session:", goUrl);
     </script>
     <!-- DO NOT REMOVE-->
       <!-- 🎵 BGM Playlist Player -->

@@ -1,8 +1,37 @@
 /* hop off, skids */
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("/assets/js/register-sw.js", {
-    scope: "/",
-  });
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("/assets/js/register-sw.js", {
+      scope: "/",
+    }).then((registration) => {
+      console.log("Service Worker registered successfully:", registration);
+      
+      // Force update if there's a waiting service worker
+      if (registration.waiting) {
+        registration.waiting.postMessage({ type: "SKIP_WAITING" });
+      }
+      
+      // Listen for updates
+      registration.addEventListener("updatefound", () => {
+        const newWorker = registration.installing;
+        newWorker.addEventListener("statechange", () => {
+          if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+            // New service worker is available
+            newWorker.postMessage({ type: "SKIP_WAITING" });
+          }
+        });
+      });
+    }).catch((error) => {
+      console.error("Service Worker registration failed:", error);
+    });
+    
+    // Listen for service worker messages
+    navigator.serviceWorker.addEventListener("message", (event) => {
+      if (event.data && event.data.type === "SW_UPDATED") {
+        window.location.reload();
+      }
+    });
+  }
 });
 
 let xl;
@@ -37,23 +66,32 @@ function processUrl(value, path) {
   const engine = localStorage.getItem("engine");
   const searchUrl = engine ? engine : "https://www.google.com/search?q=";
 
+  console.log("Processing URL:", url);
+
   if (!isUrl(url)) {
     url = searchUrl + url;
   } else if (!(url.startsWith("https://") || url.startsWith("http://"))) {
     url = `https://${url}`;
   }
 
+  console.log("Final URL:", url);
+
   const encodedUrl = __uv$config.encodeUrl(url);
+  console.log("Encoded URL:", encodedUrl);
   sessionStorage.setItem("GoUrl", encodedUrl);
   const dy = localStorage.getItem("dy");
 
+  let finalPath;
   if (dy === "true") {
-    window.location.href = `/a/q/${encodedUrl}`;
+    finalPath = `/a/q/${encodedUrl}`;
   } else if (path) {
-    location.href = path;
+    finalPath = path;
   } else {
-    window.location.href = `/a/${encodedUrl}`;
+    finalPath = `/a/${encodedUrl}`;
   }
+  
+  console.log("Navigating to:", finalPath);
+  window.location.href = finalPath;
 }
 
 function go(value) {
