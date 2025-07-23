@@ -25,7 +25,7 @@
                 <li><a href="/apps"><i class="fas fa-mobile-alt"></i> Apps</a></li>
                 <li><a href="/animes"><i class="fas fa-tv"></i> Anime</a></li>
                 <li><a href="/memories.html"><i class="fas fa-brain"></i> Old Site</a></li>
-                <li><a href="/web_music.html"><i class="fas fa-music"></i> Web Music</a></li>
+                <li><a href="/song"><i class="fas fa-music"></i> Web Music</a></li>
                 <li><a href="/settings"><i class="fas fa-cogs"></i> Settings</a></li>
             </ul>
         </div>
@@ -35,8 +35,10 @@
     <div class="container">
       <div class="container-inner">
         <h1><span class="highlight">Settings</span></h1>
+<a href="theme_settings" class="key-button">Themes Settings</a>
+<a href="/misc_settings" class="key-button">Other Settings</a>
 
-        <div class="settings-container">
+        <!--<div class="settings-container">
 
           <div class="settings-card">
             <h3><span class="highlight">About:Blank</span></h3>
@@ -77,7 +79,7 @@
           </div>
 
           <div class="settings-card">
-  <h3>Themes</h3>
+  <h3>Pre-Made Themes</h3>
   <p>Choose from a different variety of themes to personalize your background theme of choice. Good for picky little good boys (JK IM SORRY). But anyway, it's really good and I prefer you use it.</p>
     <select id="themeChange" onchange="setTheme(this.value)">
       <option value="cuhs3">Default</option>
@@ -91,7 +93,14 @@
       <option value="catppuccin-mocha">Skull</option>
     </select>
 </div>
-
+          <div class="settings-card">
+  <h3>Light Themes</h3>
+  <p>Choose from a different variety of themes to personalize your background theme of choice. Good for picky little good boys (JK IM SORRY). But anyway, it's really good and I prefer you use it.</p>
+    <select id="themeChange" onchange="setTheme(this.value)">
+<option value="ggcuh">Light theme 1</option>
+<option value="ggccc">Light theme 2</option>
+    </select>
+</div>
           <div class="settings-card">
             <h3><span class="highlight">Set Background Image</span></h3>
             <p>Change the site background. Good for picky little good boys (JK IM SORRY) Use a valid HTTPS image link. Or it wont work.</p>
@@ -107,24 +116,22 @@
             <input class="key-form" placeholder="Panic Link DO HTTPS://" type="text" id="linkInput" />
             <button class="key-button" onclick="saveEventKey()">Save</button>
             <button class="key-button" onclick="resetButton()">Reset</button>
-          </div>
+          </div>-->
 
         </div>
       </div>
     </div>
   </div>
-
   <!-- Scripts -->
-  <script src="/what.js"></script>
-  <script src="/assets/js/themesandcuhs.js"></script>
-  <script src="assets/js/i.js?v=03"></script>
-  <script src="/assets/js/passobemsolto.js"></script>
-  <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
-  <script src="./assets/ultra/config.js?v=10-02-2024"></script>
-  <script src="assets/js/f.js"></script>
-  <script src="/assets/js/mv.js?v=003"></script>
-  <script src="/assets/js/m.js?v=08"></script>
-  <script src="/assets/js/settings.js?v=010"></script>
+   <script src="/assets/js/themesandcuhs.js"></script>
+    <script src="/callfall.js"></script>
+    <script src="/assets/js/i.js?v=03"></script>
+    <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
+    <script src="./assets/ultra/config.js?v=10-02-2024"></script>
+    <script src="/assets/js/f.js"></script>
+    <script src="/assets/js/mv.js?v=003"></script>
+    <script src="/assets/js/m.js?v=08"></script>
+    <script src="/assets/js/settings.js?v=010"></script>
 </body>
 
 </html>

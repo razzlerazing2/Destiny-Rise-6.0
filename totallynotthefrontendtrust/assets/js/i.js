@@ -1,17 +1,46 @@
 /* hop off, skids */
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("/assets/js/sw.js", {
-    scope: "/a/",
-  });
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("/assets/js/register-sw.js", {
+      scope: "/",
+    }).then((registration) => {
+      console.log("Service Worker registered successfully:", registration);
+      
+      // Force update if there's a waiting service worker
+      if (registration.waiting) {
+        registration.waiting.postMessage({ type: "SKIP_WAITING" });
+      }
+      
+      // Listen for updates
+      registration.addEventListener("updatefound", () => {
+        const newWorker = registration.installing;
+        newWorker.addEventListener("statechange", () => {
+          if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+            // New service worker is available
+            newWorker.postMessage({ type: "SKIP_WAITING" });
+          }
+        });
+      });
+    }).catch((error) => {
+      console.error("Service Worker registration failed:", error);
+    });
+    
+    // Listen for service worker messages
+    navigator.serviceWorker.addEventListener("message", (event) => {
+      if (event.data && event.data.type === "SW_UPDATED") {
+        window.location.reload();
+      }
+    });
+  }
 });
 
 let xl;
 
 try {
-  xl = window.top.location.pathname === "/chatarewecookedindabig25";
+  xl = window.top.location.pathname === "/gg";
 } catch {
   try {
-    xl = window.parent.location.pathname === "/chatarewecookedindabig25";   
+    xl = window.parent.location.pathname === "/gg";   
   } catch {
     xl = false;
   }
@@ -25,16 +54,19 @@ if (form && input) {
     event.preventDefault();
     try {
       if (xl) processUrl(input.value, "");
-      else processUrl(input.value, "/chatarewecookedindabig25");
+      else processUrl(input.value, "/gg");
     } catch {
-      processUrl(input.value, "/chatarewecookedindabig25");
+      processUrl(input.value, "/gg");
     }
   });
 }
+
 function processUrl(value, path) {
   let url = value.trim();
   const engine = localStorage.getItem("engine");
   const searchUrl = engine ? engine : "https://www.google.com/search?q=";
+
+  console.log("Processing URL:", url);
 
   if (!isUrl(url)) {
     url = searchUrl + url;
@@ -42,20 +74,28 @@ function processUrl(value, path) {
     url = `https://${url}`;
   }
 
-  sessionStorage.setItem("GoUrl", __uv$config.encodeUrl(url));
+  console.log("Final URL:", url);
+
+  const encodedUrl = __uv$config.encodeUrl(url);
+  console.log("Encoded URL:", encodedUrl);
+  sessionStorage.setItem("GoUrl", encodedUrl);
   const dy = localStorage.getItem("dy");
 
+  let finalPath;
   if (dy === "true") {
-    window.location.href = `/a/q/${__uv$config.encodeUrl(url)}`;
+    finalPath = `/a/q/${encodedUrl}`;
   } else if (path) {
-    location.href = path;
+    finalPath = path;
   } else {
-    window.location.href = `/a/${__uv$config.encodeUrl(url)}`;
+    finalPath = `/a/${encodedUrl}`;
   }
+  
+  console.log("Navigating to:", finalPath);
+  window.location.href = finalPath;
 }
 
 function go(value) {
-  processUrl(value, "/chatarewecookedindabig25");
+  processUrl(value, "/gg");
 }
 
 function blank(value) {

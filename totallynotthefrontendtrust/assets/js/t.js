@@ -1,28 +1,36 @@
 /* hop off, skids */
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("/assets/js/sw.js", { scope: "/a/" });
+  console.log("t.js loaded, registering service worker");
+  navigator.serviceWorker.register("/assets/js/register-sw.js", { scope: "/" });
   const form = document.getElementById("fv");
   const input = document.getElementById("iv");
   if (form && input) {
     form.addEventListener("submit", async event => {
       event.preventDefault();
+      console.log("Form submitted with value:", input.value);
       const formValue = input.value.trim();
       const url = isUrl(formValue)
         ? prependHttps(formValue)
         : `https://www.google.com/search?q=${formValue}`;
+      console.log("Processing URL in t.js:", url);
       processUrl(url);
     });
   }
   function processUrl(url) {
-    sessionStorage.setItem("GoUrl", __uv$config.encodeUrl(url));
+    console.log("processUrl called with:", url);
+    const encodedUrl = __uv$config.encodeUrl(url);
+    console.log("Encoded URL:", encodedUrl);
+    sessionStorage.setItem("GoUrl", encodedUrl);
     const iframeContainer = document.getElementById("frame-container");
     const activeIframe = Array.from(iframeContainer.querySelectorAll("iframe")).find(
       iframe => iframe.classList.contains("active"),
     );
-    activeIframe.src = `/a/${__uv$config.encodeUrl(url)}`;
+    const proxyUrl = `/a/${encodedUrl}`;
+    console.log("Setting iframe src to:", proxyUrl);
+    activeIframe.src = proxyUrl;
     activeIframe.dataset.tabUrl = url;
     input.value = url;
-    console.log(activeIframe.dataset.tabUrl);
+    console.log("Tab URL set to:", activeIframe.dataset.tabUrl);
   }
   function isUrl(val = "") {
     if (

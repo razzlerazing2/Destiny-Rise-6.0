@@ -3,7 +3,7 @@ import path from 'path';
 import nodeExternals from 'webpack-node-externals';
 
 export default {
-  entry: './index.js', // Entry point for your application
+  entry: './gg.js', // Entry point for your application
   target: 'node', // Target environment is Node.js
   externals: [nodeExternals()], // Exclude Node.js built-in modules and dependencies from the bundle
   output: {
