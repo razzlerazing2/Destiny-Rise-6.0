@@ -98,6 +98,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "totallynotthefrontendtrust")));
 app.use("/fq", cors({ origin: true }));
 
+// Add specific route handling for proxy paths
+app.get("/a/*", (req, res, next) => {
+  // Let the service worker handle these requests
+  res.sendFile(path.join(__dirname, "totallynotthefrontendtrust", "proxeh.html"));
+});
+
 const routes = [
   { path: "/about", file: "about.html" },
   { path: "/apps", file: "apps.html" },

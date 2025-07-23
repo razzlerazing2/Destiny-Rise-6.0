@@ -1,7 +1,7 @@
 /* hop off, skids */
 window.addEventListener("load", () => {
   navigator.serviceWorker.register("/assets/js/register-sw.js", {
-    scope: "/a/",
+    scope: "/",
   });
 });
 
@@ -31,6 +31,7 @@ if (form && input) {
     }
   });
 }
+
 function processUrl(value, path) {
   let url = value.trim();
   const engine = localStorage.getItem("engine");
@@ -42,15 +43,16 @@ function processUrl(value, path) {
     url = `https://${url}`;
   }
 
-  sessionStorage.setItem("GoUrl", __uv$config.encodeUrl(url));
+  const encodedUrl = __uv$config.encodeUrl(url);
+  sessionStorage.setItem("GoUrl", encodedUrl);
   const dy = localStorage.getItem("dy");
 
   if (dy === "true") {
-    window.location.href = `/a/q/${__uv$config.encodeUrl(url)}`;
+    window.location.href = `/a/q/${encodedUrl}`;
   } else if (path) {
     location.href = path;
   } else {
-    window.location.href = `/a/${__uv$config.encodeUrl(url)}`;
+    window.location.href = `/a/${encodedUrl}`;
   }
 }
 

@@ -1,6 +1,6 @@
 /* hop off, skids */
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("/assets/js/register-sw.js", { scope: "/a/" });
+  navigator.serviceWorker.register("/assets/js/register-sw.js", { scope: "/" });
   const form = document.getElementById("fv");
   const input = document.getElementById("iv");
   if (form && input) {
@@ -14,12 +14,13 @@ window.addEventListener("load", () => {
     });
   }
   function processUrl(url) {
-    sessionStorage.setItem("GoUrl", __uv$config.encodeUrl(url));
+    const encodedUrl = __uv$config.encodeUrl(url);
+    sessionStorage.setItem("GoUrl", encodedUrl);
     const iframeContainer = document.getElementById("frame-container");
     const activeIframe = Array.from(iframeContainer.querySelectorAll("iframe")).find(
       iframe => iframe.classList.contains("active"),
     );
-    activeIframe.src = `/a/${__uv$config.encodeUrl(url)}`;
+    activeIframe.src = `/a/${encodedUrl}`;
     activeIframe.dataset.tabUrl = url;
     input.value = url;
     console.log(activeIframe.dataset.tabUrl);
