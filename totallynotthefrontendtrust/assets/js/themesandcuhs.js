@@ -299,41 +299,59 @@
             });
         }
 
-        // --- Live Clock ---
-        function updateClock() {
-            const now = new Date();
-            let hours = now.getHours();
-            let minutes = now.getMinutes();
-            let seconds = now.getSeconds();
-            const ampm = hours >= 12 ? 'PM' : 'AM';
-            hours = hours % 12;
-            hours = hours ? hours : 12;
-            minutes = minutes < 10 ? '0' + minutes : minutes;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-            const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
-            const clockElem = document.getElementById('live-clock');
-            if (clockElem) {
-                clockElem.textContent = timeString;
+  // --- Live Clock ---
+            function updateClock() {
+                const now = new Date();
+                let hours = now.getHours();
+                let minutes = now.getMinutes();
+                let seconds = now.getSeconds();
+                const ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12;
+                hours = hours ? hours : 12;
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
+                const clockElem = document.getElementById('live-clock');
+                if (clockElem) {
+                    clockElem.textContent = timeString;
+                }
             }
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
+            setInterval(updateClock, 1000);
+            updateClock();
 
-        // --- Intro Animation ---
-        const preloader = document.getElementById('preloader');
-        const animatedElements = document.querySelectorAll('.animated-content');
-        setTimeout(() => {
-            if (preloader) preloader.classList.add('hidden');
-            animatedElements.forEach(element => {
-                element.classList.add('show');
-            });
-
+            // --- Intro Animation ---
+            const preloader = document.getElementById('preloader');
+            const animatedElements = document.querySelectorAll('.animated-content');
+            setTimeout(() => {
+                if (preloader) preloader.classList.add('hidden');
+                animatedElements.forEach(element => {
+                    element.classList.add('show');
+                });
+                // --- Active Navigation Link ---
+                const navLinks = document.querySelectorAll('.nav-links li a');
+                const currentPath = window.location.pathname;
+                navLinks.forEach(link => {
+                    const normalizedCurrentPath = currentPath.endsWith('/') && currentPath.length > 1
+                        ? currentPath.slice(0, -1)
+                        : currentPath;
+                    const normalizedLinkPath = link.pathname.endsWith('/') && link.pathname.length > 1
+                        ? link.pathname.slice(0, -1)
+                        : link.pathname;
+                    if (normalizedLinkPath === normalizedCurrentPath ||
+                        (normalizedLinkPath === '/home' && normalizedCurrentPath === '/')) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }, 500);
+        });
             // ===============================================
             // CRITICAL: SPA Navigation Event Listeners
             // This was the missing piece for navigation.
             // ===============================================
-            const navLinks = document.querySelectorAll('.nav-links li a');
-            navLinks.forEach(link => {
+           // const navLinks = document.querySelectorAll('.nav-links li a');
+           /* navLinks.forEach(link => {
                 link.addEventListener('click', (event) => {
                     event.preventDefault(); // Stop the browser from doing a full page reload
                     const pageId = link.getAttribute('href').substring(1); // Get the ID from href="#some-page"
@@ -341,12 +359,12 @@
                 });
             });
 
-            // Handle initial page load based on URL hash, or default to home
+          /*  // Handle initial page load based on URL hash, or default to home
             const initialHash = window.location.hash.substring(1); // Get the hash part (e.g., "home-page")
             const initialPageId = initialHash || 'home-page'; // If no hash, default to 'home-page'
             openPage(initialPageId); // Open the correct page on load
 
-            // Handle browser back/forward buttons
+           /* // Handle browser back/forward buttons
             window.addEventListener('hashchange', () => {
                 const pageId = window.location.hash.substring(1);
                 if (pageId) {
@@ -354,13 +372,14 @@
                 } else {
                     openPage('home-page'); // Default to home if hash becomes empty (e.g., after navigating back)
                 }
-            });
+            });*/
 
-        }, 500); // Delay for preloader to finish
-    });
+        // }, 500); // Delay for preloader to finish
+    /* });
 
-    /*🎵 BGM Playlist Player - This was commented out in your HTML,
-      so I'm keeping it commented here. If you want it, uncomment and ensure paths are correct.
+    /*🎵 BGM Playlist Player */
+    /* I am commenting this out, bcuz i don't need these songs playlist. I already got a thing not ayo but yuh 🤨*/
+    /*
       <audio id="bgm" autoplay hidden></audio>
       const playlist = [
           "/assets/media/audio/dabottom2.mp3",
