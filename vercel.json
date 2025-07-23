@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "gg.js",
+      "src": "..server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "gg.js"
+      "dest": "..server.js"
     }
   ]
 }
