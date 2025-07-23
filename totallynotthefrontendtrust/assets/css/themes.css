@@ -97,8 +97,9 @@
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    --primary-color: #ff5c79;      /* Soft pink-red */
-    --primary-light: #ffa1a9;      /* Light pink */
+    --primary-color: #a8143a;  /* Dark pink-red */
+  --primary-light: #ff7c95;  /* Soft vivid pinkish red */
+
   }
 
   body[theme="cuhs"] {
@@ -139,6 +140,24 @@
     --text: #cdd6f4;
     --primary-color: #63b3ff;       /* Bright sky blue */
     --primary-light: #a3d1ff;       /* Lighter sky blue */
+  }
+    body[theme="ggcuh"] {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/media/background/gg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    --shadow: rgba(0, 0, 0, 0.01);
+    --text: #cdd6f4;
+     --primary-color: #FF0000;      /* Vivid Red */
+    --primary-light: #FF4D4D;      /* Lighter sky blue */
+  }
+      body[theme="ggccc"] {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/media/background/ggccc.jpg") no-repeat center center fixed;
+    background-size: cover;
+    --shadow: rgba(0, 0, 0, 0.01);
+    --text: #cdd6f4;
+     --primary-color: #FF0000;      /* Vivid Red */
+    --primary-light: #FF4D4D;      /* Lighter sky blue */
   }
 
 body[theme="skibididdy"] {

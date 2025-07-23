@@ -233,7 +233,7 @@ nav {
 }
 
 .player-buttons button {
-    background: linear-gradient(45deg, var(--player-button-bg), var(--player-button-hover-bg));
+    background: var(--primary-color);
     border: none;
     padding: 12px 20px;
     border-radius: 50%; /* Circular buttons */
@@ -250,7 +250,7 @@ nav {
 }
 
 .player-buttons button:hover {
-    background: linear-gradient(45deg, var(--player-button-hover-bg), var(--player-button-bg));
+    background: var(--primary-light);
     transform: translateY(-2px);
     box-shadow: 0 6px 15px var(--shadow-strong);
 }

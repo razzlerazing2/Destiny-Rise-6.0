@@ -29,7 +29,25 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll */
     transition: background-color 0.5s ease;
 }
+  /*.fa-home-cool {
+    font-size: 15px;
+    color: #2c3e50;
+    position: relative;
+    text-shadow:
+      1px 1px 0 #34495e,
+      2px 2px 0 #2c3e50,
+      3px 3px 6px rgba(0,0,0,0.7);
+    filter: drop-shadow(2px 4px 3px rgba(0,0,0,0.4));
+    transition: transform 0.3s ease;
+  }
 
+  .fa-home-cool:hover {
+    color: #3498db;
+    transform: rotateX(20deg) rotateY(15deg) scale(1.1);
+    text-shadow:
+      2px 2px 5px #2980b9,
+      4px 4px 10px rgba(0,0,0,0.8);
+  }
 /* --- Navigation Bar (Reused from home and settings pages) --- */
 nav {
     width: 100%;
