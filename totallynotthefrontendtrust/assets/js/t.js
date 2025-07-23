@@ -1,6 +1,6 @@
 /* hop off, skids */
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("/assets/js/sw.js", { scope: "/a/" });
+  navigator.serviceWorker.register("/assets/js/register-sw.js", { scope: "/a/" });
   const form = document.getElementById("fv");
   const input = document.getElementById("iv");
   if (form && input) {

@@ -1,6 +1,6 @@
 /* hop off, skids */
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("/assets/js/sw.js", {
+  navigator.serviceWorker.register("/assets/js/register-sw.js", {
     scope: "/a/",
   });
 });
@@ -8,10 +8,10 @@ window.addEventListener("load", () => {
 let xl;
 
 try {
-  xl = window.top.location.pathname === "/chatarewecookedindabig25";
+  xl = window.top.location.pathname === "/gg";
 } catch {
   try {
-    xl = window.parent.location.pathname === "/chatarewecookedindabig25";   
+    xl = window.parent.location.pathname === "/gg";   
   } catch {
     xl = false;
   }
@@ -25,9 +25,9 @@ if (form && input) {
     event.preventDefault();
     try {
       if (xl) processUrl(input.value, "");
-      else processUrl(input.value, "/chatarewecookedindabig25");
+      else processUrl(input.value, "/gg");
     } catch {
-      processUrl(input.value, "/chatarewecookedindabig25");
+      processUrl(input.value, "/gg");
     }
   });
 }
@@ -55,7 +55,7 @@ function processUrl(value, path) {
 }
 
 function go(value) {
-  processUrl(value, "/chatarewecookedindabig25");
+  processUrl(value, "/gg");
 }
 
 function blank(value) {

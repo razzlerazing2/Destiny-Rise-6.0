@@ -104,7 +104,7 @@ const routes = [
   { path: "/games", file: "Gamess.html" },
   { path: "/play.html", file: "games.html" },
   { path: "/settings", file: "settings.html" },
-  { path: "/chatarewecookedindabig25", file: "tabs.html" },
+  { path: "/gg", file: "proxeh.html" },
   { path: "/home", file: "index.html" },
   { path: "/exthangr", file: "proxy.html" },
   { path: "/contact", file: "contactsupport.html" },
