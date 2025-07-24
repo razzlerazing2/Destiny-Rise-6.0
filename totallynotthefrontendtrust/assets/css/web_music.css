@@ -1,0 +1,560 @@
+/* Import Google Font - Poppins for general text */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Define primary colors. Adjust these to match your preferred theme. */
+    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
+    --primary-light: #9a88ff;
+    --secondary-color: #5d5c61; /* A dark grey for subtle elements */
+    --accent-color: #b0e0e6; /* A light blue for highlights */
+    --text-color: #cdd6f4; /* Your existing text color */
+    --input-bg: rgba(255, 255, 255, 0.1); /* Slightly transparent white for inputs */
+    --button-text-color: #ffffff;
+    --glass-background: rgba(255, 255, 255, 0.08); /* Lighter transparency for glass effect */
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-strong: rgba(0, 0, 0, 0.3);
+    --card-bg: rgba(0, 0, 0, 0.3); /* Slightly darker glass for cards/elements */
+
+    /* Music player specific colors */
+    --player-bg: rgba(0, 0, 0, 0.4);
+    --player-button-bg: var(--primary-color);
+    --player-button-hover-bg: var(--primary-light);
+    --player-text-color: var(--text-color);
+
+    /* AI Analysis specific colors */
+    --ai-analysis-bg: rgba(255, 255, 255, 0.05); /* Very light glass for analysis box */
+    --ai-analysis-text: rgba(255, 255, 255, 0.8);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    transition: background-color 0.5s ease;
+}
+
+/* --- Navigation Bar (Reused from other pages) --- */
+nav {
+    width: 100%;
+    position: fixed; /* Keep nav at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    background-color: var(--glass-background); /* Slightly transparent background */
+    border-bottom: 1px solid var(--glass-border);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px var(--shadow-strong);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active { /* Uses .active class for highlighting */
+    background-color: var(--primary-light);
+    color: var(--button-text-color);
+    transform: translateY(-2px);
+}
+
+/* --- Main Content Area --- */
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 20px;
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 120px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.container-inner {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px var(--shadow-strong);
+    max-width: 800px; /* Max width for music interface */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.container-inner h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--primary-light);
+    text-shadow: 0 2px 5px var(--shadow-strong);
+}
+
+.music-description {
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--primary-light);
+}
+
+/* --- Search Input (reused from other pages) --- */
+.input-c {
+    width: 100%;
+    max-width: 600px; /* Limit width of the search input */
+    margin-bottom: 20px; /* Space below search input */
+}
+
+#music-search { /* Specific ID for music search input */
+    width: calc(100% - 30px); /* Account for padding */
+    padding: 15px 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: 30px; /* Rounded search input */
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1.1em;
+    outline: none;
+    box-shadow: inset 0 2px 5px var(--shadow-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+#music-search::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#music-search:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.3), inset 0 2px 5px var(--shadow-light);
+}
+
+
+/* --- Music Player Controls --- */
+#music-player-controls {
+    width: 100%;
+    background-color: var(--player-bg);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 5px 15px var(--shadow-strong);
+    border: 1px solid var(--glass-border);
+}
+
+#audio-player {
+    width: 100%;
+    max-width: 500px; /* Limit width of the audio player itself */
+    height: 45px;
+    background-color: var(--input-bg);
+    border-radius: 25px;
+    outline: none;
+}
+
+/* Customizing audio player controls (browser-dependent, limited) */
+#audio-player::-webkit-media-controls-panel {
+    background-color: var(--input-bg);
+    border-radius: 25px;
+}
+#audio-player::-webkit-media-controls-play-button,
+#audio-player::-webkit-media-controls-current-time-display,
+#audio-player::-webkit-media-controls-time-remaining-display,
+#audio-player::-webkit-media-controls-timeline,
+#audio-player::-webkit-media-controls-volume-slider {
+    color: var(--primary-light); /* Affects some elements */
+}
+
+
+.player-info {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--player-text-color);
+    text-align: center;
+    min-height: 1.5em; /* Prevent layout shift */
+}
+
+.player-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.player-buttons button {
+    background: var(--primary-color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50%; /* Circular buttons */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--button-text-color);
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 3px 10px var(--shadow-strong);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.player-buttons button:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px var(--shadow-strong);
+}
+
+.player-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- Music List --- */
+#music-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    max-height: 300px; /* Limit height for scrollability */
+    overflow-y: auto;
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+.no-music-message {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+    padding: 20px;
+    background-color: var(--input-bg);
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+}
+
+.music-item {
+    background-color: var(--card-bg);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 12px 18px;
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px var(--shadow-strong);
+    border: 1px solid var(--glass-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    position: relative; /* For absolute positioning of analysis output if needed */
+}
+
+.music-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-strong);
+    background-color: rgba(0, 0, 0, 0.4); /* Slightly darker on hover */
+}
+
+.music-item.active {
+    background-color: var(--primary-color); /* Highlight active song */
+    box-shadow: 0 4px 15px rgba(123, 104, 238, 0.5);
+    border-color: var(--primary-light);
+    transform: scale(1.02);
+}
+
+.music-item.active .music-info span,
+.music-item.active .music-info i {
+    color: var(--button-text-color); /* White text for active song */
+}
+
+.music-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1; /* Allows it to take available space */
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.music-info i {
+    color: var(--primary-light);
+    font-size: 1.1em;
+}
+
+.item-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.play-song-btn, .ai-analyze-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-light);
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: color 0.2s ease, transform 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
+    width: 35px; /* Fixed size for consistency */
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-song-btn:hover, .ai-analyze-btn:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.play-song-btn:disabled, .ai-analyze-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Hide the play button for the active song */
+.music-item.active .play-song-btn {
+    display: none;
+}
+
+/* --- AI Analysis Output --- */
+.ai-analysis-output {
+    width: 100%; /* Take full width of the music item */
+    background-color: var(--ai-analysis-bg);
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 10px; /* Space from buttons/info */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    color: var(--ai-analysis-text);
+    font-size: 0.9em;
+    line-height: 1.4;
+    transition: all 0.3s ease-out;
+    max-height: 150px; /* Limit height for long responses */
+    overflow-y: auto;
+}
+
+.ai-analysis-output.hidden {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.loading-analysis {
+    text-align: center;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .container-inner {
+        padding: 30px;
+        margin-top: 80px;
+    }
+
+    .container-inner h1 {
+        font-size: 2.5em;
+    }
+
+    .music-description {
+        font-size: 1em;
+    }
+
+    #music-player-controls {
+        padding: 15px;
+    }
+
+    .player-info {
+        font-size: 1em;
+    }
+
+    .player-buttons {
+        gap: 15px;
+    }
+
+    .player-buttons button {
+        width: 45px;
+        height: 45px;
+        font-size: 1em;
+    }
+
+    .music-item {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .music-info {
+        width: 100%;
+        justify-content: space-between; /* Push icon to left, name to right */
+    }
+
+    .item-actions {
+        width: 100%; /* Take full width */
+        justify-content: flex-end; /* Push buttons to the right */
+        margin-top: -10px; /* Adjust vertical position */
+    }
+
+    .ai-analysis-output {
+        margin-top: 5px; /* Adjust margin for stacked layout */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links li a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    .container-inner {
+        padding: 20px;
+    }
+
+    .container-inner h1 {
+        font-size: 2em;
+    }
+
+    #music-player-controls {
+        gap: 10px;
+    }
+
+    .player-buttons button {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9em;
+    }
+
+    .music-item {
+        padding: 8px 12px;
+    }
+
+    .music-info {
+        font-size: 0.9em;
+    }
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15); /* A dark background, adjust to match your theme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Base animation style */
+.animated-content {
+    opacity: 0;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* Nav starts from -100px (top) */
+nav.animated-content {
+    transform: translateY(-50px);
+}
+
+/* Container starts from +100px (bottom) */
+.container.animated-content {
+    transform: translateY(50px);
+}
+
+/* When show is added */
+.animated-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}

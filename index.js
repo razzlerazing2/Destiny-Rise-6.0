@@ -110,6 +110,7 @@ const routes = [
   { path: "/search", file: "search.html" },
   { path: "/learnmathhere", file: "index.html" },
   { path: "/animes", file: "cuh.html" },
+  { path: "/song", file: "web_music.html" },
 ];
 
 // biome-ignore lint/complexity/noForEach:

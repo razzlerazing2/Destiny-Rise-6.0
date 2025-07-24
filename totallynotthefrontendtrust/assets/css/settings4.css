@@ -1,0 +1,318 @@
+/* Import Google Font - Poppins for general text */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Define primary colors. Adjust these to match your preferred theme. */
+    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
+    --primary-light: #9a88ff;
+    --secondary-color: #5d5c61; /* A dark grey for subtle elements */
+    --accent-color: #b0e0e6; /* A light blue for highlights */
+    --text-color: #cdd6f4; /* Your existing text color */
+    --input-bg: rgba(255, 255, 255, 0.1); /* Slightly transparent white for inputs */
+    --button-text-color: #ffffff;
+    --glass-background: rgba(255, 255, 255, 0.08); /* Lighter transparency for glass effect */
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-strong: rgba(0, 0, 0, 0.3);
+    --card-bg: rgba(0, 0, 0, 0.3); /* Slightly darker glass for cards/elements */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    transition: background-color 0.5s ease;
+}
+
+/* --- Navigation Bar (Reused from home and settings pages) --- */
+nav {
+    width: 100%;
+    position: fixed; /* Keep nav at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    background-color: var(--glass-background); /* Slightly transparent background */
+    border-bottom: 1px solid var(--glass-border);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px var(--shadow-strong);
+    display: flex;
+    justify-content: center; /* Center the nav content */
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px; /* Space out nav items */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 8px 18px; /* Padding for pill shape */
+    border-radius: 20px; /* Pill shape */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.nav-links li a:hover,
+.nav-links li a[href="/animes"] { /* Highlight current page */
+    background-color: var(--primary-light);
+    color: var(--button-text-color);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* --- Main Content Area --- */
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 20px; /* Adjust padding for fixed nav */
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 120px); /* Ensure container takes full height */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Subtle darkening of background image */
+    z-index: -1;
+}
+
+.container-inner {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background for content block */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px var(--shadow-strong);
+    max-width: 1200px; /* Adjust max-width as needed for game cards */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    gap: 25px; /* Space between elements */
+}
+
+.highlight {
+    color: var(--primary-light);
+}
+
+.pinned h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-light);
+    text-shadow: 0 2px 5px var(--shadow-strong);
+}
+
+/* --- Search Input --- */
+.input-c {
+    width: 100%;
+    max-width: 600px; /* Limit width of the search input */
+    margin-bottom: 20px; /* Space below search input */
+}
+
+#search {
+    width: calc(100% - 30px); /* Account for padding */
+    padding: 15px 20px;
+    border: 1px solid var(--glass-border);
+    border-radius: 30px; /* Rounded search input */
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1.1em;
+    outline: none;
+    box-shadow: inset 0 2px 5px var(--shadow-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+#search::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#search:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.3), inset 0 2px 5px var(--shadow-light);
+}
+
+/* --- Games Grid/Container (to be populated by JS) --- */
+.apps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid for game cards */
+    gap: 20px; /* Space between game cards */
+    width: 100%; /* Take full width of parent container-inner */
+    padding: 10px; /* Inner padding for the grid */
+    box-sizing: border-box;
+    /* You'll add styling for individual game cards (.app-card) here or in your JS-generated HTML */
+}
+
+/* --- Placeholder for individual game cards (assuming .app-card will be generated by JS) --- */
+/* This is a suggested style for game cards. Adjust as needed when you know the structure of your JS-generated content. */
+.app-card {
+    background-color: var(--card-bg);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px var(--shadow-strong);
+    border: 1px solid var(--glass-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push image to top, text to bottom */
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--shadow-strong);
+}
+
+.app-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.app-card h4 {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long titles */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .container-inner {
+        padding: 30px;
+        margin-top: 80px;
+    }
+
+    .pinned h1 {
+        font-size: 2em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav {
+        padding: 5px 0;
+    }
+
+    .apps {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Smaller cards on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links li a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    .container-inner {
+        padding: 20px;
+    }
+
+    #search {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    .apps {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Even smaller cards */
+        gap: 15px;
+    }
+    .app-card h4 {
+        font-size: 1em;
+    }
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15); /* A dark background, adjust to match your theme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Base animation style */
+.animated-content {
+    opacity: 0;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* Nav starts from -100px (top) */
+nav.animated-content {
+    transform: translateY(-50px);
+}
+
+/* Container starts from +100px (bottom) */
+.container.animated-content {
+    transform: translateY(50px);
+}
+
+/* When show is added */
+.animated-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}

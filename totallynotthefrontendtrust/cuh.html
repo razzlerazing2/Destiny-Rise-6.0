@@ -11,7 +11,7 @@
 <title>𝕊𝕜𝕣𝕪𝕡𝕥𝕠𝕟𝕚𝕥𝕖 -- 𝔹𝕪𝕡𝕒𝕤𝕤</title>
     <!--<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/settings4.css" />
+    <link rel="stylesheet" href="/assets/css/settings4.css" />
     <link rel="stylesheet" href="/assets/css/container.css?v=2" />
         <link rel="stylesheet" href="/assets/css/themes.css" />
    
@@ -44,61 +44,13 @@
     <div class="apps"></div>
 </div>
 </div>
-    <script src="themesandcuhs.js"></script>
+    <script src="/assets/js/themesandcuhs.js"></script>
     <script src="/rankingg.js"></script>
     <script src="/assets/js/c.js?v=06"></script>
     <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
     <script src="./assets/ultra/config.js?v=10-02-2024"></script>
     <script src="assets/js/f.js"></script>
     <script src="/assets/js/mv.js?v=003"></script>
-   <!-- 🎵 BGM Playlist Player -->
-    <!--<audio id="bgm" autoplay hidden></audio>
-    <script>
-        const playlist = [
-            "/assets/media/audio/dabottom2.mp3",
-            "/assets/media/audio/dabottom.mp3"
-        ];
-
-          const audio = document.getElementById("bgm");
-
-    // Restore previous track/time from localStorage
-    let currentTrack = parseInt(localStorage.getItem("bgmTrack")) || 0;
-    let currentTime = parseFloat(localStorage.getItem("bgmTime")) || 0;
-
-    audio.src = playlist[currentTrack];
-    audio.currentTime = currentTime;
-
-    audio.play().catch(() => {
-        // Some browsers require interaction before playing audio
-    });
-
-    // Save state every few seconds
-    setInterval(() => {
-        localStorage.setItem("bgmTrack", currentTrack);
-        localStorage.setItem("bgmTime", audio.currentTime);
-    }, 1000);
-
-    // When track ends, go to the next one and save index
-    audio.addEventListener("ended", () => {
-        currentTrack = (currentTrack + 1) % playlist.length;
-        localStorage.setItem("bgmTrack", currentTrack);
-        localStorage.setItem("bgmTime", 0);
-        audio.src = playlist[currentTrack];
-        audio.play();
-    });
-    </script>-->
-     <script>
-// Apply saved theme on page load
-const savedTheme = localStorage.getItem('theme') || 'cuhs3';
-document.body.setAttribute('theme', savedTheme);
-
-// Define the setTheme function globally
-function setTheme(theme) {
-  document.body.setAttribute('theme', theme);
-  localStorage.setItem('theme', theme);
-}
-
-  </script>
 </body>
 
 </html>
