@@ -29,58 +29,6 @@ body {
     transition: background-color 0.5s ease;
 }
 
-/* --- Navigation Bar (Reused from home and settings pages) --- */
-nav {
-    width: 100%;
-    position: fixed; /* Keep nav at the top */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
-    background-color: var(--glass-background); /* Slightly transparent background */
-    border-bottom: 1px solid var(--glass-border);
-    padding: 10px 0;
-    box-shadow: 0 4px 10px var(--shadow-strong);
-    display: flex;
-    justify-content: center; /* Center the nav content */
-    align-items: center;
-}
-
-.nav-container {
-    max-width: 1200px;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 25px; /* Space out nav items */
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    padding: 8px 18px; /* Padding for pill shape */
-    border-radius: 20px; /* Pill shape */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Space between icon and text */
-}
-
-.nav-links li a:hover,
-.nav-links li a[href="/animes"] { /* Highlight current page */
-    background-color: var(--primary-light);
-    color: var(--button-text-color);
-    transform: translateY(-2px); /* Slight lift on hover */
-}
 
 /* --- Main Content Area --- */
 .container {
@@ -223,15 +171,7 @@ nav {
         font-size: 2em;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
 
-    nav {
-        padding: 5px 0;
-    }
 
     .apps {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Smaller cards on small screens */
@@ -239,10 +179,7 @@ nav {
 }
 
 @media (max-width: 480px) {
-    .nav-links li a {
-        padding: 6px 12px;
-        font-size: 0.9em;
-    }
+
 
     .container-inner {
         padding: 20px;
@@ -301,10 +238,6 @@ nav {
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
-/* Nav starts from -100px (top) */
-nav.animated-content {
-    transform: translateY(-50px);
-}
 
 /* Container starts from +100px (bottom) */
 .container.animated-content {
