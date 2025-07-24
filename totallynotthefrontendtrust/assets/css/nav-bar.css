@@ -37,18 +37,19 @@ nav {
     font-weight: 600;
     padding: 8px 18px; /* Padding for pill shape */
     border-radius: 20px; /* Pill shape */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    transition: color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
     gap: 8px; /* Space between icon and text */
 }
 
-/* .nav-links li a:hover,
-.nav-links li a.active {  Add an 'active' class to current page link if desired
-    background-color: var(--primary-light);
-    color: var(--button-text-color);
-    transform: translateY(-2px);  Slight lift on hover 
-} */
+ .nav-links li a:hover {
+    color: var(--primary-light);
+    transform: rotate(360deg);
+} 
+.nav-links li a.active { 
+    color: var(--primary-light);
+}
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .container-inner {
@@ -82,4 +83,11 @@ nav {
 }
 nav.animated-content {
     transform: translateY(-50px);
+}
+.cuhs {
+  font-size: 15px;          /* Size of the icon */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.75s ease, color 0.3s ease;
 }
