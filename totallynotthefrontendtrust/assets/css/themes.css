@@ -272,3 +272,17 @@ body[theme="nnotnew"] {
     --primary-color: #FF0000;      /* Vivid Red */
     --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
+.cuhs {
+  font-size: 15px;          /* Size of the icon */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.75s ease, color 0.3s ease;
+}
+ .cuhs li a:hover {
+    color: var(--primary-light);
+    transform: rotate(720deg);
+} 
+.cuhs li a.active { 
+    color: var(--primary-light);
+}
