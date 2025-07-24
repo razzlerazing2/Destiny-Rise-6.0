@@ -304,7 +304,7 @@ function AB() {
       const name = localStorage.getItem("name") || "Dashboard | Khan Academy";
       const icon =
         localStorage.getItem("icon") ||
-        "/assets/media/favicon/khan.png";
+        "/assets/media/icon/favicon.png";
 
       doc.title = name;
       link.rel = "icon";

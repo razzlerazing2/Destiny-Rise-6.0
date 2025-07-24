@@ -160,7 +160,7 @@ body[theme="skibididdy"] {
     --primary-light: #f9c7ad;       /* Light warm peach */
   }
 
-  /*body[theme="default"] {
+  body[theme="default"] {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
      url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
     background-size: cover;
@@ -168,4 +168,20 @@ body[theme="skibididdy"] {
     --text: #cdd6f4;
     --primary-color: blue;
     --primary-light: #007FFF;
-/*
+ }
+body[theme="gg"] {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("/assets/media/background/gg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    --text: #cdd6f4;
+    --primary-color: #FF0000;      /* Vivid Red */
+    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
+} 
+body[theme="ggccc"] {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("/assets/media/background/ggccc.jpg") no-repeat center center fixed;
+    background-size: cover;
+    --text: #cdd6f4;
+    --primary-color: #FF0000;      /* Vivid Red */
+    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
+}
