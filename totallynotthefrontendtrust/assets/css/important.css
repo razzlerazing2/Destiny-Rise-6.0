@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-/*.column::before {
+.column::before {
   content: "";
   position: absolute;
   top: -5px;
@@ -58,16 +58,16 @@
   z-index: -1;
   animation: none;
   filter: blur(6px);
-}*/
-
-.column:hover {
-  transform: translateY(-10%) scale(1.05);
-  box-shadow: 0 0 60px 20px #FF0000,   /* Red glow */
-              0 0 80px 30px #0000FF; /* Blue glow */
-  transition: all 0.4s ease;
 }
 
-/*.column:hover::before {
+/*.column:hover {
+  transform: translateY(-10%) scale(1.05);
+  box-shadow: 0 0 60px 20px #FF0000,    Red glow 
+              0 0 80px 30px #0000FF;  Blue glow 
+  transition: all 0.4s ease;
+}
+*/
+.column:hover::before {
   animation: rainbowGlow 5s linear infinite;
 }
 
@@ -81,7 +81,7 @@
   100% {
     background-position: 0% 50%;
   }
-} */
+} 
 
 
 
