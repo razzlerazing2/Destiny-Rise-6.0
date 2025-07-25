@@ -112,6 +112,8 @@
                 { name: "HAPPY - NF", url: "/assets/media/_music/HAPPY.mp3"}, // good
                 { name: "Hide - Juice WRLD", url: "/assets/media/_music/hide.mp3" }, // good
                 { name: "Ransom - Lil Tecca", url: "/assets/media/_music/ransomCUH.mp3" }, // good
+                { name: "Lifestyle - Rich Gang", url: "/assets/media/_music/life.mp3" }, // good
+                { name: "Big Dawgs - Hanumankind", url: "/assets/media/_music/bigdawgs.mp3" }, // good
                 { name: "STD - Glorb", url: "/assets/media/_music/std.mp3" }, // good
                 { name: "The Bottom - Glorb", url: "/assets/media/_music/bottom.mp3" }, // good
                 { name: "The Bottom 2 - Glorb", url: "/assets/media/_music/bottom2.mp3" }, // good
