@@ -108,11 +108,11 @@
 
         if (audioPlayer && playPauseButton && prevButton && nextButton && currentSongTitle && musicListDiv && musicSearchInput) {
             const allSongs = [
-                { name: "Hope - XXXTentacion", url: "/assets/media/_music/hope.mp3" },
+                { name: "Hope - XXXTentacion", url: "/assets/media/_music/hope.mp3" }, // good
                 { name: "HAPPY - NF", url: "/assets/media/_music/HAPPY.mp3"}, // good
                 { name: "Hide - Juice WRLD", url: "/assets/media/_music/hide.mp3" }, // good
                 { name: "Ransom - Lil Tecca", url: "/assets/media/_music/ransomCUH.mp3" }, // good
-                { name: "STD - Glorb", url: "/assets/media/_music/std.mp3" },
+                { name: "STD - Glorb", url: "/assets/media/_music/std.mp3" }, // good
                 { name: "The Bottom - Glorb", url: "/assets/media/_music/bottom.mp3" }, // good
                 { name: "The Bottom 2 - Glorb", url: "/assets/media/_music/bottom2.mp3" }, // good
                 { name: "The Bottom 3 - Glorb", url: "/assets/media/_music/bottom3.mp3" }, // good
@@ -123,7 +123,9 @@
                 { name: "Fight Back - Neffex", url: "/assets/media/_music/fbn.mp3" }, // good
                  { name: "Crown - Neffex", url: "/assets/media/_music/crown-Lil'Cuzzin.mp3" },
                 { name: "Grateful - Neffex", url: "/assets/media/_music/thankful.mp3" }, // good
-                { name: "Burn - Juice Wrld", url: "/assets/media/_music/burnjw.mp3" }, // good
+                { name: "Roses - Juice WRLD", url: "/assets/media/_music/rosesCUH.mp3" }, // good
+                { name: "From My Window - Juice WRLD", url: "/assets/media/_music/frommywindowCUH.mp3" }, // good
+                { name: "Burn - Juice WRLD", url: "/assets/media/_music/burnjw.mp3" }, // good
                 { name: "Squabble Up - Kendrick Lamar", url: "/assets/media/_music/squabbleup.mp3" }, // good
             ];
 
