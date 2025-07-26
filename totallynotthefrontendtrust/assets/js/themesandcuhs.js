@@ -1,6 +1,6 @@
 
     /* hop off, skids */
-    const savedTheme = localStorage.getItem('theme') || 'cuhs3';
+    const savedTheme = localStorage.getItem('theme') || 'nnotnew';
     document.body.setAttribute('theme', savedTheme);
 
     // Define the setTheme function globally
