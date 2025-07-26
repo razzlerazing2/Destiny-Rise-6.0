@@ -123,8 +123,8 @@ nav {
 }
 /* Container starts from +100px (bottom) */
 .container.animated-content {
-       transform: scale(-1.1);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+       transform: translatey(50px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
     
 }
 /* When show is added */
@@ -133,8 +133,8 @@ nav {
     transform: translateY(0);
 }
 nav.animated-content {
-       transform: scale(-1.7);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+       transform: translateY(-50px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 .cuhs {
   font-size: 15px;          /* Size of the icon */
