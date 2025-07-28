@@ -313,19 +313,38 @@ fetch(path)
       pinIcon.classList.add("fa", "fa-map-pin");
       pinIcon.ariaHidden = true;
 
-      const btn = document.createElement("button");
-      btn.appendChild(pinIcon);
-      btn.style.float = "right";
-      btn.style.backgroundColor = "rgb(45,45,45)";
-      btn.style.borderRadius = "50%";
-      btn.style.borderColor = "transparent";
-      btn.style.color = "white";
-      btn.style.top = "-200px";
-      btn.style.position = "relative";
-      btn.onclick = () => {
-        setPin(pinNum);
-      };
-      btn.title = "Pin";
+     const btn = document.createElement("button");
+btn.appendChild(pinIcon);
+btn.style.cssText = `
+  float: right;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.15));
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  top: -200px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3), inset 0 0 6px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+`;
+
+btn.onmouseover = () => {
+  btn.style.transform = "scale(1.1) rotate(5deg)";
+  btn.style.boxShadow = "0 0 15px rgba(0, 255, 255, 0.6), inset 0 0 8px rgba(255, 255, 255, 0.2)";
+};
+
+btn.onmouseout = () => {
+  btn.style.transform = "scale(1) rotate(0)";
+  btn.style.boxShadow = "0 0 12px rgba(0, 255, 255, 0.3), inset 0 0 6px rgba(255, 255, 255, 0.1)";
+};
+
+btn.onclick = () => {
+  setPin(pinNum);
+};
+btn.title = "Pin";
+
 
       const link = document.createElement("a");
 
