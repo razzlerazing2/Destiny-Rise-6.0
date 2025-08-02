@@ -343,7 +343,7 @@ btn.onmouseout = () => {
 btn.onclick = () => {
   setPin(pinNum);
 };
-btn.title = "Pin";
+btn.title = "pin this app";
 
 
       const link = document.createElement("a");
@@ -372,18 +372,18 @@ btn.title = "Pin";
       if (app.error) {
         paragraph.style.color = "red";
         if (!app.say) {
-          app.say = "This app is currently not working.";
+          app.say = "This app is currently not working, please try again later.";
         }
       } else if (app.load) {
         paragraph.style.color = "yellow";
         if (!app.say) {
-          app.say = "This app may experience excessive loading times.";
+          app.say = "This app may take a while to load, please be patient.";
         }
       } else if (app.partial) {
         paragraph.style.color = "yellow";
         if (!app.say) {
           app.say =
-            "This app is currently experiencing some issues, it may not work for you. (Dynamic doesn't work in about:blank)";
+            "This app is currently going through some issues, remember, dynamic doesn't work in a:b";
         }
       }
 

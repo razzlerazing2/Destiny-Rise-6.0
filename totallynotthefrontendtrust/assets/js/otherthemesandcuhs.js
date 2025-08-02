@@ -367,7 +367,7 @@
                         link.classList.remove('active');
                     }
                 });
-            }, 500);
+            }, 1000);
         });
             // ===============================================
             // CRITICAL: SPA Navigation Event Listeners
@@ -428,3 +428,19 @@
           audio.play();
       });
     */
+   const preloader = document.createElement("div");
+preloader.id = "preloader";
+
+const spinner = document.createElement("div");
+spinner.className = "spinner";
+
+// Add emoji inside an <h1> tag
+const emoji = document.createElement("h1");
+emoji.textContent = "💀";
+
+// Nest elements
+spinner.appendChild(emoji);
+preloader.appendChild(spinner);
+
+// Append to body
+document.body.appendChild(preloader);

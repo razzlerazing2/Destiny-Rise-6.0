@@ -17,10 +17,6 @@
 </head>
 
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="spinner"></div>
-  </div>
 
   <!-- Main Content -->
   <div class="container animated-content">
@@ -48,20 +44,7 @@
       <div id="music-list"></div>
     </div>
   </div>
-
-  <!-- Theme + Preloader JS -->
   <script src="/assets/js/themesandcuhs.js"></script>
-  <script>
-    window.addEventListener('load', () => {
-      const preloader = document.getElementById('preloader');
-      const animatedContent = document.querySelectorAll('.animated-content');
-
-      setTimeout(() => {
-        preloader.classList.add('hidden');
-        animatedContent.forEach(el => el.classList.add('show'));
-      }, 500); // Optional delay
-    });
-  </script>
 </body>
 
 </html>
