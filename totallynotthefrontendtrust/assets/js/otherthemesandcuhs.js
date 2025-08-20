@@ -1,13 +1,13 @@
 
-    /* hop off, skids */
-    const savedTheme = localStorage.getItem('theme') || 'whatare';
-    document.body.setAttribute('theme', savedTheme);
+/* hop off, skids */
+const savedTheme = localStorage.getItem('background') || 'whatare';
+document.body.setAttribute('background', savedTheme);
 
-    // Define the setTheme function globally
-    function setTheme(theme) {
-        document.body.setAttribute('theme', theme);
-        localStorage.setItem('theme', theme);
-    }
+// Define the setTheme function globally
+function setBackground(background) {
+    document.body.setAttribute('background', background);
+    localStorage.setItem('background', background);
+}
   /*  document.addEventListener("DOMContentLoaded", () => {
   const navHTML = `
     <nav class="animated-content">
