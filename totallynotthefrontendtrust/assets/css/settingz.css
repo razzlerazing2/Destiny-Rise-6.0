@@ -172,7 +172,7 @@ select#backgroundChange {
   padding: 10px 15px;
   font-size: 0.9rem;
   font-family: 'Poppins', sans-serif;
-    background-color: black;
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--text, #fff);
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
@@ -183,11 +183,12 @@ select#backgroundChange {
 }
 
 select#backgroundChange:hover {
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
 select#backgroundChange:focus {
+    background-color: black;
   outline: none;
   border-color: var(--accent, #7f5af0);
   box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.3);
@@ -197,7 +198,7 @@ select#pChange {
   padding: 10px 15px;
   font-size: 0.9rem;
   font-family: 'Poppins', sans-serif;
-    background-color: black;
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--text, #fff);
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
@@ -208,11 +209,12 @@ select#pChange {
 }
 
 select#pChange:hover {
-    background-color: black;
+  background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
 select#pChange:focus {
+    background-color: black;
   outline: none;
   border-color: var(--accent, #7f5af0);
   box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.3);
@@ -222,7 +224,7 @@ select#engine {
   padding: 10px 15px;
   font-size: 0.9rem;
   font-family: 'Poppins', sans-serif;
-    background-color: black;
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--text, #fff);
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
@@ -233,11 +235,12 @@ select#engine {
 }
 
 select#engine:hover {
-    background-color: black;
+  background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
 select#engine:focus {
+    background-color: black;
   outline: none;
   border-color: var(--accent, #7f5af0);
   box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.3);
