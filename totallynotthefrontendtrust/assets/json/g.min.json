@@ -7,13 +7,13 @@
   },
   {
     "name": "Retro Bowl",
-    "link": "https://ethonion10.neocities.org/",
+    "link": "https://retro-bowlgames.github.io/",
     "image": "https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ=w600-h300-pc0xffffff-pd",
     "categories": ["all"]
     },
   {
     "name": "Space Waves",
-    "link": "https://games.crazygames.com/en_US/space-waves/index.html",
+    "link": "https://block-blasts-online.github.io/game/space-waves.html",
     "image": "https://imgs.crazygames.com/space-waves_16x9/20241203031650/space-waves_16x9-cover?metadata=none&quality=40&width=1200&height=630&fit=crop",
     "categories": ["all"]
   },
@@ -43,26 +43,14 @@
   },
   {
     "name": "Poly Track",
-  "link": "https://games.crazygames.com/en_US/polytrack/index.html",
+  "link": "https://poly-track-14060073.codehs.me/",
     "image": "https://images.crazygames.com/polytrack_16x9/20240814074159/polytrack_16x9-cover?auto=format,compress&q=75&cs=strip",
-    "categories": ["all"]
-  },
-    {
-    "name": "Count Masters",
-  "link": "https://games.crazygames.com/en_US/count-masters-stickman-games/index.html",
-    "image": "https://imgs.crazygames.com/count-masters-stickman-games_16x9/20250220041115/count-masters-stickman-games_16x9-cover?metadata=none&quality=40&width=1200&height=630&fit=crop",
     "categories": ["all"]
   },
     {
     "name": "Obby on Bike",
     "link": "https://html5.gamedistribution.com/bc2f52c2d9d04e41aee48bef01075d22/",
     "image": "https://tr.rbxcdn.com/180DAY-0aee4808db5c1ebae4fa0c0edae0d78c/768/432/Image/Webp/noFilter",
-    "categories": ["all"]
-  },
-  {
-    "name": "1v1space",
-    "link": "https://mathematics.global.ssl.fastly.net/1v1space/",
-    "image": "https://cdn-0001.qstv.on.epicgames.com/DIHfGRHTTJPqjYlnbO/image/landscape_comp.jpeg",
     "categories": ["all"]
   },
   {
@@ -91,13 +79,13 @@
   },
   {
     "name": "Slope",
-    "link": "https://mathematics.global.ssl.fastly.net/slope/",
+    "link": "https://slopeunblocked.bitbucket.io/",
     "image": "https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs",
     "categories": ["all"]
     },
       {
     "name": "Run 3",
-    "link": "https://mathematics.global.ssl.fastly.net/run%203/",
+    "link": "https://run-3.gitlab.io/",
     "image": "https://imgs.crazygames.com/run3b.png?metadata=none&quality=40&width=1200&height=630&fit=crop",
     "categories": ["all"]
     },
@@ -109,7 +97,7 @@
     },
      {
     "name": "Basketball Stars",
-    "link": "https://mathematics.global.ssl.fastly.net/basketball-stars",
+    "link": "https://player03.com/run/3/beta/",
     "image": "https://imgs.crazygames.com/games/basketball-stars-2019/cover-1583231506155.png?metadata=none&quality=40&width=1200&height=630&fit=crop",
     "categories": ["all"]
     },
@@ -118,13 +106,7 @@
     "link": "https://basket-random-game.github.io",
     "image": "https://images.crazygames.com/basket-random_16x9/20240617090207/basket-random_16x9-cover?auto=format,compress&q=75&cs=strip",
     "categories": ["all"]
-    },
-        {
-    "name": "1",
-    "link": "https://mathematics.global.ssl.fastly.net/1",
-    "image": "https://d3nsrxdg84ic1d.cloudfront.net/uploads/b5ccd5e1-c51c-43de-9452-3e467dc48e88/3eb0f0cc.PNG?v=0",
-    "categories": ["all"]
-    },
+         },
       {
     "name": "2048",
     "link": "/e/1/2048/index.html",
@@ -133,7 +115,7 @@
   },
   {
     "name": "Drift Hunters",
-    "link": "https://mathematics.global.ssl.fastly.net/drift-hunters/",
+    "link": "https://drift-hunters-online.github.io/",
     "image": "/assets/media/icons/drift-hunters.webp",
     "categories": ["all"]
   },
@@ -216,12 +198,6 @@
     "categories": ["all"]
   },
   {
-    "name": "Haunted School 1",
-    "link": "https://games.crazygames.com/en_US/haunted-school---horror-game/index.html",
-    "image": "/assets/media/icons/na.webp",
-    "categories": ["all"]
-  },
-  {
     "name": "HexArena",
     "link": "https://hexarena.io/",
     "image": "/assets/media/icons/hexarena.webp",
@@ -261,12 +237,6 @@
     "name": "Jacksmith",
     "link": "https://www.coolmathgames.com/0-jacksmith/play",
     "image": "/assets/media/icons/jacksmith.webp",
-    "categories": ["all"]
-  },
-  {
-    "name": "Sandtrix",
-    "link": "https://files.crazygames.com/sandtrix/16/index.html",
-    "image": "/assets/media/icons/sandtrix.webp",
     "categories": ["all"]
   },
   {
@@ -474,24 +444,6 @@
     "categories": ["all"]
   },
   {
-    "name": "Madalin Stunt Cars Multiplayer",
-    "link": "https://games.crazygames.com/en_US/madalin-cars-multiplayer/index.html",
-    "image": "/assets/media/icons/madalinmultiplayer.webp",
-    "categories": ["all", "2P"]
-  },
-  {
-    "name": "Madalin Stunt Cars 2",
-    "link": "https://games.crazygames.com/en_US/madalin-stunt-cars-2/index.html",
-    "image": "/assets/media/icons/madalinstuntcars2.webp",
-    "categories": ["all"]
-  },
-  {
-    "name": "Madalin Stunt Cars 3",
-    "link": "https://games.crazygames.com/en_US/madalin-stunt-cars-3/index.html",
-    "image": "/assets/media/icons/madalinstuntcars3.webp",
-    "categories": ["all"]
-  },
-  {
     "name": "PM: Light Platinum",
     "link": "https://browncha023.github.io/GBA/launcher.html#pokemonlp",
     "image": "/assets/media/icons/lp.webp",
@@ -546,12 +498,6 @@
     "categories": ["all"]
   },
   {
-    "name": "Riddle School 3",
-    "link": "https://riddle-school-3.game-files.crazygames.com/ruffle/riddleschool3.html",
-    "image": "/assets/media/icons/rs3.webp",
-    "categories": ["all"]
-  },
-  {
     "name": "Rocket Pult",
     "link": "https://v6p9d9t4.ssl.hwcdn.net/html/565140/index.html",
     "image": "/assets/media/icons/rocketpult.webp",
@@ -559,7 +505,7 @@
   },
   {
     "name": "Rooftop Snipers",
-      "link": "https://mathematics.global.ssl.fastly.net/rooftop-snipers",
+      "link": "https://rooftop-snipers.github.io/",
     "image": "/assets/media/icons/rooftop.webp",
     "categories": ["all"]
   },
@@ -591,12 +537,6 @@
     "name": "BTD 4",
     "link": "https://en.gameslol.net/data/bloons-td-4/index.html",
     "image": "/assets/media/icons/btd4.webp",
-    "categories": ["all"]
-  },
-  {
-    "name": "BuildNow.GG",
-    "link": "https://games.crazygames.com/en_US/buildnow-gg/index.html",
-    "image": "/assets/media/icons/build-now.webp",
     "categories": ["all"]
   },
   {
@@ -808,7 +748,7 @@
   },
   {
     "name": "Happy Wheels",
-    "link": "https://files.crazygames.com/ruffle/happywheels.html",
+    "link": "https://happy-wheels-online.github.io/",
     "image": "/assets/media/icons/happywheels.webp",
     "categories": ["all"]
   },
@@ -847,18 +787,6 @@
     "link": "https://powerline.io",
     "image": "/assets/media/icons/powerline.webp",
     "categories": ["all", "2P"]
-  },
-  {
-    "name": "Papa's Scooperia",
-    "link": "https://files.crazygames.com/ruffle/papasscooperia.html",
-    "image": "/assets/media/icons/papasscooperia.webp",
-    "categories": ["all"]
-  },
-  {
-    "name": "Papa's Sushiria",
-    "link": "https://files.crazygames.com/ruffle/papassushiria.html",
-    "image": "/assets/media/icons/papassushiria.webp",
-    "categories": ["all"]
   },
   {
     "name": "Burrito Bison",
