@@ -114,29 +114,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (audioPlayer && playPauseButton && prevButton && nextButton && currentSongTitle && musicListDiv && musicSearchInput) {
             const allSongs = [
-                { name: "Hope - XXXTentacion", url: "/assets/media/_music/hope.mp3" },
-                { name: "Pray for me - Kendrick Lamar & The Weeknd", url: "/assets/media/_music/pfm.mp3" },
-                { name: "Prove it - 21 Savage", url: "/assets/media/_music/proveit.mp3" }, // good
-                { name: "HAPPY - NF", url: "/assets/media/_music/HAPPY.mp3"}, // good
-                { name: "Hide - Juice WRLD", url: "/assets/media/_music/hide.mp3" }, // good
-                { name: "Ransom - Lil Tecca", url: "/assets/media/_music/ransomCUH.mp3" }, // good
-                { name: "Lifestyle - Rich Gang", url: "/assets/media/_music/life.mp3" }, // good
-                { name: "Big Dawgs - Hanumankind", url: "/assets/media/_music/bigdawgs.mp3" }, // good
-                { name: "STD - Glorb", url: "/assets/media/_music/std.mp3" }, // good
-                { name: "The Bottom - Glorb", url: "/assets/media/_music/bottom.mp3" }, // good
-                { name: "The Bottom 2 - Glorb", url: "/assets/media/_music/bottom2.mp3" }, // good
-                { name: "The Bottom 3 - Glorb", url: "/assets/media/_music/bottom3.mp3" }, // good
-                { name: "Feel It - d4vd", url: "/assets/media/_music/feel.mp3" }, // good
-                // { name: "FE!N - Travis Scott", url: "/assets/media/_music/fein.mp3" }, // not good
-                { name: "Let You Down - NF", url: "/assets/media/_music/letyadown.mp3" }, // good
-                { name: "Not Like Us - Kendrick Lamar", url: "/assets/media/_music/nlu.mp3" }, // good
-                { name: "Fight Back - Neffex", url: "/assets/media/_music/fbn.mp3" }, // good
-                 { name: "Crown - Neffex", url: "/assets/media/_music/crown-Lil'Cuzzin.mp3" },
-                { name: "Grateful - Neffex", url: "/assets/media/_music/thankful.mp3" }, // good
-                { name: "Roses - Juice WRLD", url: "/assets/media/_music/rosesCUH.mp3" }, // good
-                { name: "From My Window - Juice WRLD", url: "/assets/media/_music/frommywindowCUH.mp3" }, // good
-                { name: "Burn - Juice WRLD", url: "/assets/media/_music/burnjw.mp3" }, // good
-                { name: "Squabble Up - Kendrick Lamar", url: "/assets/media/_music/squabbleup.mp3" }, // good
+                { name: "Hope - XXXTentacion", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hope.mp3" },
+                { name: "Pray for me - Kendrick Lamar & The Weeknd", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/pfm.mp3" },
+                { name: "Prove it - 21 Savage", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/proveit.mp3" }, // good
+                { name: "HAPPY - NF", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/HAPPY.mp3"}, // good
+                { name: "Hide - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hide.mp3" }, // good
+                { name: "Ransom - Lil Tecca", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ransomCUH.mp3" }, // good
+                { name: "Lifestyle - Rich Gang", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/life.mp3" }, // good
+                { name: "Big Dawgs - Hanumankind", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bigdawgs.mp3" }, // good
+                { name: "STD - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/std.mp3" }, // good
+                { name: "The Bottom - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bottom.mp3" }, // good
+                { name: "The Bottom 2 - Glorb", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom2.mp3" }, // good
+                { name: "The Bottom 3 - Glorb", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom3.mp3" }, // good
+                { name: "Feel It - d4vd", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/feel.mp3" }, // good
+             // { name: "FE!N - Travis Scott", url: "/assets/media/_music/fein.mp3" }, // not good
+                { name: "Let You Down - NF", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/letyadown.mp3" }, // good
+                { name: "Not Like Us - Kendrick Lamar", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/nlu.mp3" }, // good
+                { name: "Fight Back - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/fbn.mp3" }, // good
+                 { name: "Crown - Neffex", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/crown-Lil'Cuzzin.mp3" },
+                { name: "Grateful - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/thankful.mp3" }, // good
+                { name: "Roses - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/rosesCUH.mp3" }, // good
+                { name: "From My Window - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/frommywindowCUH.mp3" }, // good
+                { name: "Burn - Juice WRLD", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/burnjw.mp3" }, // good
+                { name: "Squabble Up - Kendrick Lamar", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/squabbleup.mp3" }, // good
             ];
 
             let filteredPlaylist = [...allSongs];
