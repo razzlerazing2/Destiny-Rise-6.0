@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (audioPlayer && playPauseButton && prevButton && nextButton && currentSongTitle && musicListDiv && musicSearchInput) {
             const allSongs = [
                 { name: "Hope - XXXTentacion", url: "/assets/media/_music/hope.mp3" },
-                { name: "Squabble Up - Kendrick Lamar", url: "/assets/media/_music/pfm.mp3" },
-                { name: "Squabble Up - Kendrick Lamar", url: "/assets/media/_music/proveit.mp3" }, // good
+                { name: "Pray for me - Kendrick Lamar & The Weeknd", url: "/assets/media/_music/pfm.mp3" },
+                { name: "Prove it - 21 Savage", url: "/assets/media/_music/proveit.mp3" }, // good
                 { name: "HAPPY - NF", url: "/assets/media/_music/HAPPY.mp3"}, // good
                 { name: "Hide - Juice WRLD", url: "/assets/media/_music/hide.mp3" }, // good
                 { name: "Ransom - Lil Tecca", url: "/assets/media/_music/ransomCUH.mp3" }, // good
