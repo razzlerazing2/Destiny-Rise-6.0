@@ -1,5 +1,4 @@
-
-    /* hop off, skids */
+/* hop off, skids */
     const savedTheme = localStorage.getItem('background') || 'whatare';
     document.body.setAttribute('background', savedTheme);
 
