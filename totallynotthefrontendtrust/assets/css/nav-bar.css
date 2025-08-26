@@ -1,31 +1,30 @@
 nav {
-    width: 250px; /* Set a fixed width for the sidebar */
+    width: 200px; /* Set a fixed width for the sidebar */
     height: 100%; /* Full height of the viewport */
     position: fixed; /* Keep nav fixed */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
     z-index: 1000;
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
     background-color: var(--glass-background); /* Slightly transparent background */
     border-right: 1px solid var(--glass-border);
     padding: 20px 0; /* Padding for sidebar */
     box-shadow: 4px 0 10px var(--shadow-strong); /* Shadow on the right */
-    display: flex;
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: center; /* Center items in the sidebar */
     transform: translateX(-100%); /* Initially hide the sidebar */
     transition: transform 0.3s ease; /* Smooth transition for showing/hiding */
 }
+
 nav.active {
     transform: translateX(0); /* Show the sidebar when active */
 }
+
 #toggle-button {
     position: fixed; /* Fixed position for the toggle button */
     top: 20px; /* Adjust as needed */
     left: 20px; /* Adjust as needed */
     z-index: 1001; /* Ensure it's above the sidebar */
-    background-color: var(--glass-background); /* Match the sidebar */
+    background: linear-gradient(180deg, orange, yellow);
+    
+    /* Match the sidebar */
     border: none;
     padding: 10px;
     border-radius: 5px; /* Rounded button */

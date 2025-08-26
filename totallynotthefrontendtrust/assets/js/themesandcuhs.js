@@ -8,41 +8,31 @@
         document.body.setAttribute('background', background);
         localStorage.setItem('background', background);
     }
-document.addEventListener("DOMContentLoaded", () => {
-  // Create the toggle button HTML
-  const toggleButtonHTML = `
-    <button id="toggle-button" aria-label="Toggle navigation">☰</button>
-  `;
 
-  // Create the nav HTML
+
+
+
+   // Create the toggle button HTML
+document.addEventListener("DOMContentLoaded", () => {
   const navHTML = `
-    <nav id="navbar" class="animated-content">
+    <nav class="animated-content">
       <div class="nav-container">
         <ul class="nav-links">
-          <li><a href="/home" title="Home"><i class="fas fa-home cuhs"></i>Home</a></li>
-          <li><a href="/games" title="Games"><i class="fas fa-gamepad cuhs"></i>Games</a></li>
-          <li><a href="/apps" title="Apps"><i class="fas fa-mobile-alt cuhs"></i>Apps</a></li>
-          <li><a href="/animes" title="Animes"><i class="fas fa-tv cuhs"></i>Anime</a></li>
-          <li><a href="/settings" title="Settings"><i class="fas fa-cogs cuhs"></i>Settings</a></li>
-          <li><a href="/song" title="Songs"><i class="fas fa-music cuhs"></i>Songs</a></li>
+          <li><a href="/home"><i class="fas fa-home cuhs"></i>Home</a></li>
+          <li><a href="/games"><i class="fas fa-gamepad cuhs"></i>Games</a></li>
+          <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i>Apps</a></li>
+          <li><a href="/animes"><i class="fas fa-tv cuhs"></i>Anime</a></li>
+          <li><a href="/settings"><i class="fas fa-cogs cuhs"></i>Settings</a></li>
+          <li><a href="/song"><i class="fas fa-music cuhs"></i>Songs</a></li>
         </ul>
       </div>
     </nav>
   `;
 
-  // Insert the toggle button and nav at the top of the body
-  document.body.insertAdjacentHTML("afterbegin", toggleButtonHTML);
+  // Insert nav at the top of the body (or wherever you want)
   document.body.insertAdjacentHTML("afterbegin", navHTML);
-
-  // Select the toggle button and navbar
-  const toggleButton = document.getElementById('toggle-button');
-  const navbar = document.getElementById('navbar');
-
-  // Add event listener to the toggle button
-  toggleButton.addEventListener('click', () => {
-    navbar.classList.toggle('active'); // Toggle the 'active' class
-  });
 });
+
 /*
 
     // ===============================================
@@ -109,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ===============================================
-    // All Features Initialized on DOMContentLoaded
+    // All Features Initialized on domcontentloadeed
     // ===============================================
     */
     document.addEventListener('DOMContentLoaded', () => {
