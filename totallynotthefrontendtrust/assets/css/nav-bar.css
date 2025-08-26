@@ -1,26 +1,47 @@
 nav {
-    width: 100%;
-    position: fixed; /* Keep nav at the top */
-    top: 0;
-    left: 0;
+    width: 250px; /* Set a fixed width for the sidebar */
+    height: 100%; /* Full height of the viewport */
+    position: fixed; /* Keep nav fixed */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
     z-index: 1000;
     backdrop-filter: blur(10px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
     background-color: var(--glass-background); /* Slightly transparent background */
-    border-bottom: 1px solid var(--glass-border);
-    padding: 10px 0;
-    box-shadow: 0 4px 10px var(--shadow-strong);
+    border-right: 1px solid var(--glass-border);
+    padding: 20px 0; /* Padding for sidebar */
+    box-shadow: 4px 0 10px var(--shadow-strong); /* Shadow on the right */
     display: flex;
-    justify-content: center; /* Center the nav content */
-    align-items: center;
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center items in the sidebar */
+    transform: translateX(-100%); /* Initially hide the sidebar */
+    transition: transform 0.3s ease; /* Smooth transition for showing/hiding */
+}
+nav.active {
+    transform: translateX(0); /* Show the sidebar when active */
+}
+#toggle-button {
+    position: fixed; /* Fixed position for the toggle button */
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1001; /* Ensure it's above the sidebar */
+    background-color: var(--glass-background); /* Match the sidebar */
+    border: none;
+    padding: 10px;
+    border-radius: 5px; /* Rounded button */
+    cursor: pointer; /* Cursor pointer for button */
+    box-shadow: 0 4px 10px var(--shadow-strong); /* Add shadow */
+}
+
+#toggle-button:focus {
+    outline: none; /* Remove default outline */
 }
 
 .nav-container {
-    max-width: 1200px;
-    width: 90%;
+    width: 100%; /* Full width of the sidebar */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center items */
 }
 
 .nav-links {
@@ -28,33 +49,40 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 25px; /* Space out nav items */
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 15px; /* Space out nav items */
+    width: 100%; /* Full width of the sidebar */
+    align-items: center; /* Center items horizontally */
 }
 
 .nav-links li a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 600;
-    padding: 8px 18px; /* Padding for pill shape */
-    border-radius: 20px; /* Pill shape */
-    transition: color 0.3s ease, color 0.3s ease, transform 0.6s ease;
+    padding: 12px 18px; /* Padding for button shape */
+    border-radius: 10px; /* Rounded corners */
+    transition: color 0.3s ease, transform 0.6s ease;
     display: flex;
     align-items: center;
+    justify-content: center; /* Center text within the button */
     gap: 8px; /* Space between icon and text */
+    width: 80%; /* Give buttons a width and center them */
 }
 
- .nav-links li a:hover {
+.nav-links li a:hover {
     color: var(--primary-light);
-    transform: rotate(720deg);
-} 
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 .nav-links li a.active { 
     color: var(--primary-light);
 }
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .container-inner {
         padding: 30px;
-        margin-top: 80px; /* More space from top on smaller screens */
+        margin-left: 260px; /* Space for the sidebar */
     }
 
     .container-inner h1 {
@@ -66,18 +94,17 @@ nav {
     }
 
     .nav-links {
-        flex-direction: column; /* Stack nav links on smaller screens */
-        gap: 10px;
-        align-items: center;
+        gap: 10px; /* Adjust space on smaller screens */
     }
 
     nav {
-        padding: 5px 0;
+        padding: 20px 0; /* Maintain padding */
     }
 }
+
 @media (max-width: 480px) {
     .nav-links li a {
-        padding: 6px 12px;
+        padding: 8px 12px; /* Adjust padding */
         font-size: 0.9em;
     }
 }
