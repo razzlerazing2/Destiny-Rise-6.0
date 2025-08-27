@@ -145,12 +145,12 @@ nav.active {
 /* Base animation style */
 .animated-content {
     opacity: 0;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 /* Container starts from +100px (bottom) */
 .container.animated-content {
        transform: translatey(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     
 }
 /* When show is added */
@@ -160,7 +160,7 @@ nav.active {
 }
 nav.animated-content {
        transform: translateX(-50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 .cuhs {
   font-size: 15px;          /* Size of the icon */

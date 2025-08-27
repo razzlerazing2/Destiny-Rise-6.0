@@ -1,3 +1,4 @@
+// hop off, skids
 let appInd;
 const g = window.location.pathname === "/games";
 const a = window.location.pathname === "/apps";
