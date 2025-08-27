@@ -167,5 +167,5 @@ nav.animated-content {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.75s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.75s ease;
 }
