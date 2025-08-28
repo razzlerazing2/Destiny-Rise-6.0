@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "public": "totallynotthefrontendtrust",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "index.js",
+      "config.js"
+    ],
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
