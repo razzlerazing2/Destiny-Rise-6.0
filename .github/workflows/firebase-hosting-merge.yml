@@ -1,0 +1,29 @@
+name: Deploy to Firebase Hosting on merge
+
+on:
+  push:
+    branches:
+      - main  # deploy when main branch gets updated
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout your repo
+      - uses: actions/checkout@v4
+
+      # 2️⃣ Install dependencies (if you have a build script)
+      - run: npm ci
+
+      # 3️⃣ Run your build script
+      - run: npm run build
+
+      # 4️⃣ Deploy static site
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SKRYPTONITE_3FD46 }}
+          channelId: live
+          projectId: skryptonite-3fd46
