@@ -11,26 +11,43 @@
 
 
 
-   // Create the toggle button HTML
 document.addEventListener("DOMContentLoaded", () => {
+  // Insert nav + button
   const navHTML = `
-   <nav class="animated-content">
-  <div class="nav-container">
-    <ul class="nav-links">
-      <li><a href="/home"><i class="fas fa-home cuhs"></i><span>Home</span></a></li>
-      <li><a href="/games"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
-      <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
-      <li><a href="/animes"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
-      <li><a href="/settings"><i class="fas fa-cogs cuhs"></i><span>Settings</span></a></li>
-      <li><a href="/song"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
-    </ul>
-  </div>
-</nav>
+    <nav class="animated-content open" id="main-nav">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="/home"><i class="fas fa-home cuhs"></i><span>Home</span></a></li>
+          <li><a href="/games"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
+          <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
+          <li><a href="/animes"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
+          <li><a href="/settings"><i class="fas fa-cogs cuhs"></i><span>Settings</span></a></li>
+          <li><a href="/song"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <button id="nav-toggle">☰</button>
   `;
-
-  // Insert nav at the top of the body (or wherever you want)
   document.body.insertAdjacentHTML("afterbegin", navHTML);
+
+  // Grab elements
+  const nav = document.getElementById("main-nav");
+  const btn = document.getElementById("nav-toggle");
+
+  // Ensure nav is open by default
+  nav.style.display = "block";
+
+  // Toggle visibility
+  btn.addEventListener("click", () => {
+    if (nav.style.display === "block") {
+      nav.style.display = "none";
+    } else {
+      nav.style.display = "block";
+    }
+  });
 });
+
+
 
 /*
 

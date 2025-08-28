@@ -1,20 +1,21 @@
 nav {
-    width: 200px; /* Set a fixed width for the sidebar */
-    height: 100%; /* Full height of the viewport */
-    position: fixed; /* Keep nav fixed */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
-    background-color: var(--glass-background); /* Slightly transparent background */
+    background-color: var(--glass-background);
     border-right: 1px solid var(--glass-border);
-    padding: 20px 0; /* Padding for sidebar */
-    box-shadow: 4px 0 10px var(--shadow-strong); /* Shadow on the right */
-    transform: translateX(-100%); /* Initially hide the sidebar */
-    transition: transform 0.3s ease; /* Smooth transition for showing/hiding */
+    padding: 20px 0;
+    box-shadow: 4px 0 10px var(--shadow-strong);
+    transform: translateX(0);          /* start visible if no class */
+    transition: transform 0.3s ease;  /* smooth sliding */
 }
 
-nav.active {
-    transform: translateX(0); /* Show the sidebar when active */
+/* When nav is closed */
+nav.closed {
+    transform: translateX(-100%);
 }
 
 #toggle-button {
@@ -117,6 +118,19 @@ nav.active {
         padding: 8px 12px; /* Adjust padding */
         font-size: 0.9em;
     }
+}
+#nav-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  background: #111;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 /* --- Preloader Styles (Kept as is, but ensured it integrates) --- */
 #preloader {
