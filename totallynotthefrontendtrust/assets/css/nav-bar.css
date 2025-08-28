@@ -68,10 +68,21 @@ nav.active {
     width: 80%; /* Give buttons a width and center them */
 }
 
-.nav-links li a:hover {
-    color: var(--primary-light);
-    transform: scale(1.05); /* Slightly enlarge on hover */
+/* base: make the icon rotatable */
+.nav-links i.cuhs {
+  display: inline-block;              /* required for transform */
+  transition: transform 0.6s ease;    /* smooth spin */
 }
+
+/* on link hover: change text color, but spin ONLY the icon */
+.nav-links li a:hover {
+  color: var(--primary-light);
+}
+
+.nav-links li a:hover i.cuhs {
+  transform: rotate(720deg);
+}
+
 
 .nav-links li a.active { 
     color: var(--primary-light);

@@ -14,18 +14,18 @@
    // Create the toggle button HTML
 document.addEventListener("DOMContentLoaded", () => {
   const navHTML = `
-    <nav class="animated-content">
-      <div class="nav-container">
-        <ul class="nav-links">
-          <li><a href="/home"><i class="fas fa-home cuhs"></i>Home</a></li>
-          <li><a href="/games"><i class="fas fa-gamepad cuhs"></i>Games</a></li>
-          <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i>Apps</a></li>
-          <li><a href="/animes"><i class="fas fa-tv cuhs"></i>Anime</a></li>
-          <li><a href="/settings"><i class="fas fa-cogs cuhs"></i>Settings</a></li>
-          <li><a href="/song"><i class="fas fa-music cuhs"></i>Songs</a></li>
-        </ul>
-      </div>
-    </nav>
+   <nav class="animated-content">
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="/home"><i class="fas fa-home cuhs"></i><span>Home</span></a></li>
+      <li><a href="/games"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
+      <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
+      <li><a href="/animes"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
+      <li><a href="/settings"><i class="fas fa-cogs cuhs"></i><span>Settings</span></a></li>
+      <li><a href="/song"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
+    </ul>
+  </div>
+</nav>
   `;
 
   // Insert nav at the top of the body (or wherever you want)
