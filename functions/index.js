@@ -2,10 +2,10 @@ const functions = require("firebase-functions");
 const express = require("express");
 const app = express();
 
-// Example API endpoint
+// Example route
 app.get("/hello", (req, res) => {
-  res.send("Hello from Firebase Functions!");
+  res.send("Hello from Cloud Functions!");
 });
 
-// Export the function
+// Export function
 exports.myFunction = functions.https.onRequest(app);
