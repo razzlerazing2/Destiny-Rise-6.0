@@ -1,17 +1,10 @@
 {
   "hosting": {
-<<<<<<< HEAD
     "public": "totallynotthefrontendtrust",
-=======
-    "public": "public",
->>>>>>> 3b903235687ffff46e879ea15fff18a252d7a427
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-<<<<<<< HEAD
-    ]
-=======
     ],
     "rewrites": [
       {
@@ -22,6 +15,5 @@
   },
   "functions": {
     "source": "functions"
->>>>>>> 3b903235687ffff46e879ea15fff18a252d7a427
   }
 }
