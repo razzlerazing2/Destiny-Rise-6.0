@@ -29,21 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
     <button id="nav-toggle">☰</button>
   `;
   document.body.insertAdjacentHTML("afterbegin", navHTML);
-
-  // Grab elements
   const nav = document.getElementById("main-nav");
   const btn = document.getElementById("nav-toggle");
 
-  // Ensure nav is open by default
-  nav.style.display = "block";
+  // Trigger intro animation (small delay looks smoother)
+  setTimeout(() => {
+    nav.classList.add("show");
+  }, 1000);
 
-  // Toggle visibility
+  // Toggle nav on button click
   btn.addEventListener("click", () => {
-    if (nav.style.display === "block") {
-      nav.style.display = "none";
-    } else {
-      nav.style.display = "block";
-    }
+    nav.classList.toggle("closed");
   });
 });
 

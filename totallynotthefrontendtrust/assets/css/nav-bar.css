@@ -1,23 +1,17 @@
 nav {
-    width: 200px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: var(--glass-background);
-    border-right: 1px solid var(--glass-border);
-    padding: 20px 0;
-    box-shadow: 4px 0 10px var(--shadow-strong);
-    transform: translateX(0);          /* start visible if no class */
-    transition: transform 0.3s ease;  /* smooth sliding */
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--glass-background);
+  border-right: 1px solid var(--glass-border);
+  padding: 20px 0;
+  box-shadow: 4px 0 10px var(--shadow-strong);
+  transform: translateX(0);           /* default: visible */
+  transition: transform 0.3s ease;    /* smooth sliding */
 }
-
-/* When nav is closed */
-nav.closed {
-    transform: translateX(-100%);
-}
-
 #toggle-button {
     position: fixed; /* Fixed position for the toggle button */
     top: 20px; /* Adjust as needed */
@@ -124,13 +118,21 @@ nav.closed {
   top: 20px;
   left: 20px;
   z-index: 1100;
-  background: #111;
+  background: linear-gradient(45deg, #f39c12, #8e44ad);
   color: white;
   border: none;
   padding: 10px 15px;
   font-size: 20px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 100px;
+  transition: transform 0.3s ease;
+}
+#nav-toggle:hover {
+transition: transform 0.3s ease;
+transform: translateY(-4px) scale(1.1);
+background: linear-gradient(270deg, #ff007f, #00ff7f, #007fff, #ff7f00, #ff00ff);
+background-size: 400% 400%;
+animation: gradientAnimation 5s ease infinite;
 }
 /* --- Preloader Styles (Kept as is, but ensured it integrates) --- */
 #preloader {
@@ -172,21 +174,37 @@ nav.closed {
     opacity: 0;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-/* Container starts from +100px (bottom) */
+/* --- Container intro (slides up from bottom) --- */
 .container.animated-content {
-       transform: translatey(50px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    
+  opacity: 0;
+  transform: translateY(50px); /* start offset */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-/* When show is added */
-.animated-content.show {
-    opacity: 1;
-    transform: translateY(0);
+
+.container.animated-content.show {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* --- Nav intro (slides in from left) --- */
 nav.animated-content {
-       transform: translateX(-50px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  opacity: 0;
+  transform: translateX(-50px); /* start offset */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
+
+nav.animated-content.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- Nav toggle (open/close) --- */
+nav.closed {
+  transform: translateX(-100%) !important;
+  opacity: 1; /* stays visible while sliding out */
+  transition: transform 0.3s ease;
+}
+
 .cuhs {
   font-size: 15px;          /* Size of the icon */
   padding: 10px;
