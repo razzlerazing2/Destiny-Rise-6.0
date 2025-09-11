@@ -97,13 +97,13 @@
     },
      {
     "name": "Basketball Stars",
-    "link": "https://player03.com/run/3/beta/",
+    "link": "https://html5.gamedistribution.com/rvvASMiM/69d78d071f704fa183d75b4114ae40ec/?gd_sdk_referrer_url=https://gamedistribution.com/games/basketball-stars",
     "image": "https://imgs.crazygames.com/games/basketball-stars-2019/cover-1583231506155.png?metadata=none&quality=40&width=1200&height=630&fit=crop",
     "categories": ["all"]
     },
          {
     "name": "Basket Random",
-    "link": "https://basket-random-game.github.io",
+    "link": "https://files.twoplayergames.org/files/games/other/Basket_Random/index.html",
     "image": "https://images.crazygames.com/basket-random_16x9/20240617090207/basket-random_16x9-cover?auto=format,compress&q=75&cs=strip",
     "categories": ["all"]
          },
@@ -820,7 +820,7 @@
   },
   {
     "name": "Fireboy And Watergirl In The Forest Temple",
-    "link": "https://www.coolmathgames.com/sites/default/files/public_games/40034/",
+    "link": "https://ubg100.github.io/games/fbwg1/index.html",
     "image": "/assets/media/icons/fireboyandwatergirlforesttemple.webp",
     "categories": ["all", "2P"]
   },
@@ -910,9 +910,45 @@
     "categories": ["all"]
   },
   {
+    "name": "Stackbounce",
+    "link": "https://game.enjoy4fun.com/baconmaydie/v2/index.html",
+    "image": "https://chemistry.jobvn.com/assets/img/baconmaydie.webp",
+    "categories": ["all", "2P"]
+  },
+  {
+    "name": "Backrooms",
+    "link": "https://www.3kh0-assets.silvereen.net/3kh0-assets/backrooms/index.html",
+    "image": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/backrooms.jpg",
+    "categories": ["all", "2P"]
+  },
+  {
+    "name": "Bacon May Die",
+    "link": "https://gamesnacks.com/games/stackbounce",
+    "image": "https://chemistry.jobvn.com/assets/img/stackbounce.webp",
+    "categories": ["all", "2P"]
+  },
+  {
     "name": "Duck Life Treasure Hunt",
     "link": "https://www.hoodamath.com/mobile/games/duck-life-treasure-hunt/game.html",
     "image": "/assets/media/icons/ducklife.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Tall Man Run",
+    "link": "https://html5.gamedistribution.com/rvvASMiM/7980c23fbbae4af6851e01052fce3cce/index.html",
+    "image": "https://chemistry.jobvn.com/assets/img/tall-man-run.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "Draw The Line",
+    "link": "https://www.mathplayground.com/draw-the-hill/index.html",
+    "image": "https://chemistry.jobvn.com/assets/img/drawthehill.webp",
+    "categories": ["all"]
+  },
+  {
+    "name": "A World's Hardest Game",
+    "link": "https://www.surfertoday.com/games/the-worlds-hardest-game",
+    "image": "https://m.media-amazon.com/images/I/61NZDxmi6uL.png",
     "categories": ["all"]
   }
 ]
