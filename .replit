@@ -1,16 +1,12 @@
-modules = ["nodejs-16", "web"]
-run = "npm run start"
-
-[nix]
-channel = "stable-25_05"
-
-[deployment]
-run = ["sh", "-c", "npm run start"]
-
-[[ports]]
-localPort = 6767
-externalPort = 3000
+modules = ["nodejs-20"]
 
 [[ports]]
 localPort = 6969
+externalPort = 3000
+
+[[ports]]
+localPort = 8080
 externalPort = 80
+
+[agent]
+expertMode = true
