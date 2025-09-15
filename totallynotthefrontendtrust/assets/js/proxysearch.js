@@ -215,6 +215,7 @@ function popout() {
       const name = localStorage.getItem("name") || "Dashboard | Khan Academy";
       const icon =
         localStorage.getItem("icon") ||
+       // "/assets/media/favicon/khan.png";
         "/assets/media/favicon/khan.png";
       newWindow.document.title = name;
       const link = newWindow.document.createElement("link");

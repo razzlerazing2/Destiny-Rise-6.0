@@ -1,11 +1,5 @@
 [
   {
-    "name": "! Create Custom App",
-    "image": "/assets/media/icons/custom.webp",
-    "categories": ["all"],
-    "custom": "true"
-  },
-  {
     "name": "GeForce Now",
     "link": "https://play.geforcenow.com",
     "image": "/assets/img/geforcenow.webp",
@@ -230,7 +224,7 @@
   {
     "name": "Retro Bowl",
     "image": "/assets/img/retro.webp",
-    "link": "retroBowl()",
+    "link": "https://retro-bowl-online.bitbucket.io/",
     "categories": ["all"]
   },
   {
@@ -1318,5 +1312,11 @@
       "link": "https://23azostore.github.io/s/there-is-no-game/",
       "image": "/assets/img/there-is-no-gms.webp",
       "categories": ["all"]
-    }
+    },
+  {
+    "name": "Speed Stars",
+    "link": "https://hydrovolter.com/gg/speedstars/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT20jiqVMF1HOt1O-FbHXvbMt0vBrg-HPaQLQ&s",
+    "categories": ["all"]
+  }
 ]
