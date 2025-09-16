@@ -235,9 +235,75 @@
   },
   {
     "name": "Retro Bowl",
-    "image": "/assets/img/retro.webp",
-    "link": "https://retro-bowl-online.bitbucket.io/",
-    "categories": ["all"]
+    "link": "/e/2/retro/index.html",
+    "image": "/assets/media/icons/retro.webp",
+    "categories": ["all,", "sports", "local"]
+  },
+  {
+    "name": "Minecraft 1.5.2 (Eaglercraft)",
+    "link": "/e/2/eag15/index.html",
+    "image": "/assets/media/icons/mc.webp",
+    "categories": ["all", "2P", "emu", "local"]
+  },
+  {
+    "name": "Minecraft 1.8 (Eaglercraft)",
+    "link": "/e/2/eag18/offline.html",
+    "image": "/assets/media/icons/mc.webp",
+    "categories": ["all", "2P", "emu", "local"]
+  },
+  {
+    "name": "Minecraft 1.8 (Eagler WASM)",
+    "link": "/e/2/eag18/wasm.html",
+    "image": "/assets/media/icons/mc.webp",
+    "categories": ["all", "2P", "emu", "local"]
+  },
+  {
+    "name": "Getaway S.",
+    "link": "https://www.twoplayergames.org/embed/getaway-shootout",
+    "image": "/assets/media/icons/getaway.webp",
+    "categories": ["all", "2P"]
+  },
+  {
+    "name": "2048",
+    "link": "/e/1/2048/index.html",
+    "image": "/assets/media/icons/2048.webp",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "2048 Multitasking",
+    "link": "/e/1/2048-multitask/index.html",
+    "image": "/assets/media/icons/2048.webp",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "Vex 7",
+    "link": "/e/1/vex7/index.html",
+    "image": "/assets/media/icons/vex7.webp",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "Vex 6",
+    "link": "/e/1/vex6/index.html",
+    "image": "/assets/media/icons/vex6.webp",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "Vex 5",
+    "link": "/e/1/vex5/index.html",
+    "image": "/assets/media/icons/vex5.webp",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "Vex 3",
+    "link": "/e/1/vex3/index.html",
+    "image": "/assets/media/icons/vex3.webp",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "Vex 4",
+    "link": "/e/1/vex4/index.html",
+    "image": "/assets/media/icons/vex4.webp",
+    "categories": ["all", "local"]
   },
   {
     "name": "Soccer Random",
@@ -427,9 +493,9 @@
   },
   {
     "name": "Stickman Hook",
-    "link": "https://stickman-hook.io/iframe/index.html",
-    "image": "/assets/img/stickmanhook.webp",
-    "categories": ["all"]
+    "link": "/e/stickman-hook/index.html",
+    "image": "/assets/media/icons/stickmanhook.webp",
+    "categories": ["all", "local"]
   },
   {
     "name": "Super Mario 64",
@@ -678,10 +744,34 @@
     "categories": ["all"]
   },
   {
+    "name": "Doge Miner",
+    "link": "/e/1/DogeMiner/index.html",
+    "image": "/assets/media/icons/doge-miner-1.webp",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "Cluster Rush",
+    "link": "/e/2/Cluster-Rush/index.html",
+    "image": "/assets/media/icons/cluster-rush.webp",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "1",
+    "link": "/e/1/1/index.html",
+    "image": "/assets/media/icons/1.webp",
+    "categories": ["all", "local"]
+  },
+  {
+    "name": "Web Retro",
+    "link": "/e/index.html",
+    "image": "/assets/media/icons/webretro.webp",
+    "categories": ["all,", "emu", "local"]
+  },
+  {
     "name": "Jetpack Joyride",
-    "link": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/jetpack-joyride/index.html",
-    "image": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/jetpack-joyride/splash.jpg",
-    "categories": ["all"]
+    "link": "/e/jetpack-joyride/index.html",
+    "image": "/assets/media/icons/jetpackjoyride.webp",
+    "categories": ["all", "local"]
   },
   {
     "name": "OvO",
@@ -1103,12 +1193,12 @@
       "image": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/images/fp.png",
       "categories": ["all"]
     },
-    {
-      "name": "Idle Breakout",
-      "link": "https://www.onlinegames.io/games/2024/more/idle-breakout/index.html",
-      "image": "/assets/img/idlebreakout.webp",
-      "categories": ["all"]
-    },
+  {
+    "name": "Idle Breakout",
+    "link": "/e/1/idle-breakout/index.html",
+    "image": "/assets/media/icons/idlebreakout.webp",
+    "categories": ["all", "local"]
+  },
     {
       "name": "Monkey Mart",
       "link": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/monkey-mart/index.html",
