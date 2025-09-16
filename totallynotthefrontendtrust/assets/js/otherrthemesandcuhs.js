@@ -433,7 +433,7 @@ function setBackground(background) {
           audio.play();
       });
     */
-   const preloader = document.createElement("div");
+   /*const preloader = document.createElement("div");
 preloader.id = "preloader";
 
 const spinner = document.createElement("div");
@@ -448,4 +448,4 @@ spinner.appendChild(emoji);
 preloader.appendChild(spinner);
 
 // Append to body
-document.body.appendChild(preloader);
+document.body.appendChild(preloader);*/

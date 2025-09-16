@@ -112,6 +112,7 @@ const routes = [
   { path: "/learnmathhere", file: "index.html" },
   { path: "/animes", file: "cuh.html" },
   { path: "/song", file: "web_music.html" },
+  { path: "/proxyhome", file: "proxyhome.html" },
 ];
 
 // biome-ignore lint/complexity/noForEach:

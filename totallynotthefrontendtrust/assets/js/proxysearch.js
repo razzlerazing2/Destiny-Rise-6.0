@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
       const formValue = input.value.trim();
       const url = isUrl(formValue)
         ? prependHttps(formValue)
-        : `https://www.google.com/search?q=${formValue}`;
+        : `https://www.duckduckgo.com/search?q=${formValue}`;
       processUrl(url);
     });
   }
@@ -89,7 +89,8 @@ newIframe.addEventListener("load", () => {
     if (goUrl.includes("/e/")) {
       newIframe.src = window.location.origin + goUrl;
     } else {
-      newIframe.src = `${window.location.origin}/a/${goUrl}`;
+     // newIframe.src = `${window.location.origin}/a/${goUrl}`;
+      newIframe.src = `/proxyhome`;
     }
   } else {
     newIframe.src = "/";
@@ -102,10 +103,11 @@ newIframe.addEventListener("load", () => {
     if (goUrl.includes("/e/")) {
       newIframe.src = window.location.origin + goUrl;
     } else {
-      newIframe.src = `${window.location.origin}/a/${goUrl}`;
+      //newIframe.src = `${window.location.origin}/a/${goUrl}`;
+      newIframe.src = `/proxyhome`;
     }
   } else {
-    newIframe.src = "/";
+    newIframe.src = "/proxyhome";
   }
 }
 

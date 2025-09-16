@@ -272,3 +272,9 @@ body[background="nnotnew"] {
     --primary-color: #FF0000;      /* Vivid Red */
     --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
+body[background="whatis"] {
+    background-image: url("https://cdn.shopify.com/s/files/1/1038/1798/files/31._Fluids_Dark_Blue_iPhone_Wallpaper_4k_HD.jpg?v=1707976065");
+    --text: #cdd6f4;
+    --primary-color: #FF0000;      /* Vivid Red */
+    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
+}
