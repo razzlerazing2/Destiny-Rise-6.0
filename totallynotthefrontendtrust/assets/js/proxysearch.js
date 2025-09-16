@@ -89,8 +89,8 @@ newIframe.addEventListener("load", () => {
     if (goUrl.includes("/e/")) {
       newIframe.src = window.location.origin + goUrl;
     } else {
-     // newIframe.src = `${window.location.origin}/a/${goUrl}`;
-      newIframe.src = `/proxyhome`;
+      newIframe.src = `${window.location.origin}/a/${goUrl}`;
+      
     }
   } else {
     newIframe.src = "/";
