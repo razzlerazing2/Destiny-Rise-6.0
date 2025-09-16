@@ -6,6 +6,12 @@
     "custom": "true"
   },
   {
+    "name": "Airmash",
+    "link": "https://altar.azureedge.net/",
+    "image": "https://www.irrlicht3d.org/images/airmash.jpg",
+    "categories": ["all"]
+  },
+  {
     "name": "GeForce Now",
     "link": "https://play.geforcenow.com",
     "image": "/assets/img/geforcenow.webp",
