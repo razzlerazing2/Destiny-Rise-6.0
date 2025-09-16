@@ -49,8 +49,6 @@
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     --text: #cdd6f4;
-    --primary-color: #cdd104;  /* vivid pink */
-    --primary-light: orange;  /* lighter pink */
   }
 
   @keyframes gradient {
@@ -85,8 +83,6 @@
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     --text: #cdd6f4;
-    --primary-color: blue;
-    --primary-light: lightblue;
   }
 
   body[background="cuhs3"] {
@@ -95,8 +91,6 @@
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    --primary-color: #ff5c79;      /* Soft pink-red */
-    --primary-light: #ffa1a9;      /* Light pink */
   }
 
   body[background="cuhs"] {
@@ -105,8 +99,6 @@
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    --primary-color: #7cffdb;      /* Aquamarine */
-    --primary-light: #b9fff0;      /* Light aquamarine */
   }
 
   body[background="cuhs2"] {
@@ -115,8 +107,6 @@
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4; 
-    --primary-color: #7b68ee;
-    --primary-light: #9a88ff;
   }
 
   body[background="catppuccin-frappe"] {
@@ -125,8 +115,6 @@
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    --primary-color: #7cc1ff;      /* Soft sky blue */
-    --primary-light: #b9d9ff;
   }
 
   body[background="catppuccin-macchiato"] {
@@ -135,8 +123,6 @@
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    --primary-color: #63b3ff;       /* Bright sky blue */
-    --primary-light: #a3d1ff;       /* Lighter sky blue */
   }
 
 body[background="skibididdy"] {
@@ -144,16 +130,12 @@ body[background="skibididdy"] {
                 url("https://gifdb.com/images/high/cyberpunk-pixel-city-neon-2bagugxcfp2to7tx.gif") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
 body[background="waitWHAT"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/urealizetonight.gif") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-  --primary-color: #FDCB6E;
-  --primary-light: #FFEAA7;
 }
 
   body[background="catppuccin-mocha"] {
@@ -162,8 +144,6 @@ body[background="waitWHAT"] {
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    --primary-color: #f5a97f;       /* Warm peach */
-    --primary-light: #f9c7ad;       /* Light warm peach */
   }
 
   body[background="cuh"] {
@@ -172,8 +152,6 @@ body[background="waitWHAT"] {
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
---primary-color: #32CD32;
---primary-light: #A6FF00;
 
  }
 body[background="gg"] {
@@ -181,100 +159,108 @@ body[background="gg"] {
                 url("/assets/media/background/gg.jpg") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 } 
 body[background="ggccc"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/ggccc.jpg") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
-/* body[theme="bro"] {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("/assets/media/background/320630.png") no-repeat center center fixed;
-    background-size: cover;
-    --text: #cdd6f4;
-    --primary-color: #FF0000;   
-    --primary-light: #FF4D4D;     
-}*/
 body[background="whatare"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/600473.png") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
 body[background="youdoing"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/1330526.png") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
-/* body[theme="overhere"] {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("/assets/media/background/1331867.png") no-repeat center center fixed;
-    background-size: cover;
-    --text: #cdd6f4;
-    --primary-color: #FF0000;    
-    --primary-light: #FF4D4D;      
-}*/
 body[background="ru"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/1337139.png") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
 body[background="bi"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/1337140.png") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
 body[background="new"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/new.jpg") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
 body[background="nnew"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/nnew.png") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
 body[background="notnew"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/notnew.png") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
 body[background="nnotnew"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 url("/assets/media/background/nnotnew.png") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
 }
 body[background="whatis"] {
     background-image: url("https://cdn.shopify.com/s/files/1/1038/1798/files/31._Fluids_Dark_Blue_iPhone_Wallpaper_4k_HD.jpg?v=1707976065");
     --text: #cdd6f4;
-    --primary-color: #FF0000;      /* Vivid Red */
-    --primary-light: #FF4D4D;      /* Lighter Vivid Red */
+}
+body[theme="whats"] {
+    --text: #cdd6f4;
+  --primary-color: #7b68ee;
+  --primary-light: #9a88ff;
+}
+body[theme="whathuzz"] {
+    --text: #cdd6f4;
+  --primary-color: #32CD32;
+  --primary-light: #A6FF00;
+
+}
+body[theme="whatwas"] {
+    --text: #cdd6f4;
+  --primary-color: #f5a97f;       /* Warm peach */
+  --primary-light: #f9c7ad;       /* Light warm peach */
+}
+body[theme="whatis"] {
+    --text: #cdd6f4;
+  --primary-color: #FDCB6E;
+  --primary-light: #FFEAA7;
+}
+body[theme="whatcuhs"] {
+    --text: #cdd6f4;
+  --primary-color: #63b3ff;       /* Bright sky blue */
+  --primary-light: #a3d1ff;       /* Lighter sky blue */
+}
+body[theme="whatbuzz"] {
+    --text: #cdd6f4;
+   --primary-color: #7cc1ff;      /* Soft sky blue */
+    --primary-light: #b9d9ff;
+}
+body[theme="whathuhs"] {
+    --text: #cdd6f4;
+  --primary-color: #7cffdb;      /* Aquamarine */
+  --primary-light: #b9fff0;      /* Light aquamarine */
+}
+body[theme="whatluhs"] {
+    --text: #cdd6f4;
+  --primary-color: #ff5c79;      /* Soft pink-red */
+  --primary-light: #ffa1a9;      /* Light pink */
+}
+body[theme="whatfuhs"] {
+    --text: #cdd6f4;
+  --primary-color: #cdd104;  /* vivid pink */
+  --primary-light: orange;  /* lighter pink */
 }

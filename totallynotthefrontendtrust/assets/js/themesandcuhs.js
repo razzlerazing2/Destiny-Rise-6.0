@@ -11,6 +11,19 @@
 
 
 
+
+const savedBackground = localStorage.getItem('theme') || 'whats';
+document.body.setAttribute('theme', savedBackground);
+
+// Define the setTheme function globally
+function setTheme(theme) {
+    document.body.setAttribute('theme', theme);
+    localStorage.setItem('theme', theme);
+}
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Insert nav + button
   const navHTML = `

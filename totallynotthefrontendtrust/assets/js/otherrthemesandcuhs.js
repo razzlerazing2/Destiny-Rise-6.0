@@ -1,12 +1,24 @@
-
 /* hop off, skids */
-const savedTheme = localStorage.getItem('background') || 'whatis';
-document.body.setAttribute('background', savedTheme);
+    const savedTheme = localStorage.getItem('background') || 'whatare';
+    document.body.setAttribute('background', savedTheme);
+
+    // Define the setTheme function globally
+    function setBackground(background) {
+        document.body.setAttribute('background', background);
+        localStorage.setItem('background', background);
+    }
+
+
+
+
+
+const savedBackground = localStorage.getItem('theme') || 'whats';
+document.body.setAttribute('theme', savedBackground);
 
 // Define the setTheme function globally
-function setBackground(background) {
-    document.body.setAttribute('background', background);
-    localStorage.setItem('background', background);
+function setTheme(theme) {
+    document.body.setAttribute('theme', theme);
+    localStorage.setItem('theme', theme);
 }
   /*  document.addEventListener("DOMContentLoaded", () => {
   const navHTML = `
