@@ -442,7 +442,7 @@ function bar() {
   const g = document.getElementsByClassName("column");
 
   for (const game of g) {
-    const name = game.getElementsByTagName("p")[0].textContent.toLowerCase();
+    const name = game.getElementsByTagName("p")[0].textContent.toUpperCase();
 
     if (name.includes(filter)) {
       game.style.display = "block";

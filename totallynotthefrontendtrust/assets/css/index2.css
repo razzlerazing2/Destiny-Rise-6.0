@@ -1,0 +1,145 @@
+
+.container2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark overlay */
+  z-index: 1; /* Put it behind your main content if needed */
+}
+/*.column img {
+   width: 145px;
+   height: 155px;
+   border-radius: 10px;
+   transition: all 0.2s ease;
+   display: block;
+   margin: 0 auto;
+}*/
+
+.column p {
+   font-family: 'Arial', sans-serif;
+   font-size: 13px;
+   color: var(--text-primary);
+   text-align: center;
+   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+   margin-top: 10px;
+   margin-bottom: 12px;
+}
+
+.column {
+  position: relative;
+  width: 50px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  border: 2px solid ghostwhite; /* Initial transparent border */
+  background-clip: padding-box;
+  cursor: pointer;
+}
+.column:hover {
+background: rgba("255, 255, 255, 0.35");
+}
+/* .column::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 18px;
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: none;
+  filter: blur(6px);
+}
+/*
+.column:hover::before {
+  animation: rainbowGlow 5s linear infinite;
+}
+
+@keyframes rainbowGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} 
+
+
+
+.column:hover .label {
+   transform: translateX(-50%) scale(1.3);
+}
+*/
+.apps {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2.3em;
+   flex-direction: row;
+   margin-top: 30px;
+}
+
+.pinned {
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 2.3em;
+}
+
+input {
+  font-family: 'Arial', sans-serif;
+  width: 83%;
+  padding: 16px 20px;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 30px;
+   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   background: rgba(255, 255, 255, 0.05);
+   border: 2px solid white;
+   text-align: center;
+    transition: all 0.3s ease;
+}
+input:hover {
+       border: 2px solid transparent;
+   background: rgba(0, 0, 0, 0.35);
+}
+select {
+   padding: 20px;
+   border-radius: 5px;
+   background: var(--background-column);
+   color: var(--text-primary);
+   font-size: 20px;
+   border: 0px;
+   outline: none;
+   cursor: pointer;
+}
+
+.input-c {
+  position: relative;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;     /* Center items horizontally */
+  gap: 20px;               /* Space between h1 and input */
+}
+input::placeholder {
+  color: gray;
+}

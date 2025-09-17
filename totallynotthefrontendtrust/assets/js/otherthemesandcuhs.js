@@ -1,5 +1,5 @@
 /* hop off, skids */
-    const savedTheme = localStorage.getItem('background') || 'catppuccin-frappe';
+   /* const savedTheme = localStorage.getItem('background') || 'catppuccin-frappe';
     document.body.setAttribute('background', savedTheme);
 
     // Define the setTheme function globally
@@ -19,7 +19,7 @@ document.body.setAttribute('theme', savedBackground);
 function setTheme(theme) {
     document.body.setAttribute('theme', theme);
     localStorage.setItem('theme', theme);
-}
+} */
   /*  document.addEventListener("DOMContentLoaded", () => {
   const navHTML = `
     <nav class="animated-content">

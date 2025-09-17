@@ -2,7 +2,7 @@
 
 :root {
    /* Background Variables */
-   --background-image: url("/./assets/media/background/senkbucketup.webp");  /* Background Image */
+   --background-color: #333333/* Background Image */
    --backdrop-filter: blur(10px) brightness(80%); /* Nav Backdrop filter */
    --background-nav: rgba(255, 255, 255, 0.02); /* Nav Background */
    --background-color: #222; /* Main Background Color */
@@ -176,37 +176,41 @@ transition: all 1s ease;
   -webkit-text-fill-color: transparent;
 }
 
-    .dropdown-container {
-      position: relative;
-      display: inline-block;
-    }
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
 
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute; /* Positioning of dropdown */
+  right: 0;
+  top: 40px; /* Adjust to position dropdown below the button */
+  background: #333333; /* White background for dropdown */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  z-index: 1000; /* Ensure it's on top */
+font-size: 18px;
+}
 
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 40px;
-      background-color: black;
-      border-radius: 6px;
-      max-width: 50px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-      z-index: 1000;
-      transition: all 0.6s ease;
-    }
+.dropdown-menu button {
+  display: flex; /* Use flexbox for button layout */
+  align-items: center; /* Vertically center items */
+  padding: 10px 15px; /* Padding for buttons */
+  color: white; /* Change text color */
+  background: transparent; /* Transparent background */
+  border: none; /* Remove button border */
+  width: 100%; /* Full width for buttons */
+  font-size: 18px;
+}
 
-    .dropdown-menu a {
-      display: block;
-      padding: 10px 15px;
-      color: white;
-      text-decoration: none;
-    }
+.dropdown-menu button:hover {
+  background-color: rgba("255, 255, 255, 0.35"); /* Light gray on hover */
+}
 
-    .dropdown-menu a:hover {
-       transform: rotate(720deg);
-cursor: pointer;
-transition: all 0.6s ease;
-    }
+.dropdown-menu button i {
+  margin-right: 8px; /* Space between icon and text */
+}
 
     .show {
       display: block;

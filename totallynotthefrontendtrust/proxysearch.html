@@ -30,9 +30,6 @@
     <div class="nav-bar animated-content">
         <div class="nav-container animated-content">
             <div class="nav-left">
-                <button title="Home Page" id="home-page" class="nav-button cuhs" onclick="Home()">
-                    <i class="fa-solid fa-house"></i>
-                </button>
                 <button title="Back Arrow" class="nav-button cuhs" onclick="goBack()">
                     <i class="fa-solid fa-arrow-left"></i>
                 </button>
@@ -47,35 +44,41 @@
                 </form>
             </div>
             <div class="nav-right">
-                <button title="More Options" class="nav-button nav-btn-right cuhs" onclick="dropDown()">
-  <i class="fa-solid fa-ellipsis-v"></i>
-</button>
-<div class="dropdown-menu" id="dropdownMenu">
-    <a href="/home" class="dropdown-item"><i class="fas fa-house"></i></a>
-    <a href="/games" class="dropdown-item"><i class="fas fa-gamepad"></i></a>
-    <a href="/apps"  class="dropdown-item"><i class="fas fa-mobile-alt"></i></a>
-    <a href="/animes"  class="dropdown-item"><i class="fas fa-tv"></i></a>
-    <a href="/settings"  class="dropdown-item"><i class="fas fa-cogs"></i></a>
-    <a href="/web_music.html"  class="dropdown-item"><i class="fas fa-music"></i></a>
-</div>
-                <button title="Fullscreen" id="fullscreen-button" class="nav-button nav-btn-right cuhs" onclick="FS()">
-                    <i class="fa-solid fa-expand"></i>
-                </button>
-                <button title="Window Popout" id="popout-button" class="nav-button nav-btn-right cuhs" onclick="popout()">
-                    <i class="fa-solid fa-up-right-from-square"></i>
-                </button>
-                <button title="Inspect" class="nav-button nav-btn-right cuhs" onclick="eToggle()">
-                    <i class="fa-solid fa-code"></i>
-                </button>
+                    <button title="More Options" class="nav-button nav-btn-right cuhs" onclick="dropDown()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <button title="Home Page" id="home-page" class="nav-button cuhs" onclick="Home()">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span>
+                        </button>
+                        <button title="Fullscreen" id="fullscreen-button" class="nav-button cuhs" onclick="FS()">
+                            <i class="fa-solid fa-expand"></i>
+                            <span>Fullscreen</span>
+                        </button>
+                        <button title="Window Popout" id="popout-button" class="nav-button cuhs" onclick="popout()">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            <span>Popout</span>
+                        </button>
+                       <!-- <button title="Inspect" class="nav-button cuhs" onclick="eToggle()">
+                              <i class="fa-solid fa-code"></i>
+                            <span>Inspect</span>
+                            </button>-->
+                            <button title="Tabs" id="tabs-button" class="nav-button cuhs">
+                              <i class="fa-solid fa-magnifying-glass-minus"></i>
+                                <span>Tabs</span>
+                            </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="frame-container" id="frame-container"></div>
     <script src="assets/js/proxysearch.js?v=063"></script>
-    <script src="assets/js/otherthemesandcuhs.js?v=002"></script>
+    <script src="assets/js/otherthemesandcuhs.js?v=0067"></script>
     <script src="./assets/ultra/bundle.js?v=06-07-2025"></script>
-    <script src="./assets/ultra/config.js?v=8-27-2025"></script>
-    <script src="/assets/js/mv.js?v=003"></script>
+    <script src="./assets/ultra/config.js?v=08-27-2025"></script>
+    <script src="/assets/js/mv.js?v=06-05-2025"></script>
 </body>
 
 </html>

@@ -25,11 +25,11 @@ body {
 }
 
 .close-tab {
+   cursor: pointer;
    border: none;
    background: none;
    font-size: 12px;
    color: var(--text-primary);
-   cursor: pointer;
    transition: color 0.3s ease;
    width: 20px;
 }
@@ -53,25 +53,38 @@ body {
 
 
 .nav-button {
-   background: rgba(0, 0, 0, 0.6);
-   border-radius: 10px;
-   color: white;
-   height: 2em;
-   width: 3em;
-   border: none;
-   right: 10px;
-   top: auto;
-   box-sizing: border-box;
-   margin-right: 10px;
-   margin-top: 0 auto;
-   margin-bottom: 0 auto;
-   transition: all 0.6s ease;
+    position: relative;
+    border: none; /* Remove any default border */
+    background-color: transparent; /* Transparent background */
+    color: white; /* Google blue color for the text */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    overflow: hidden; /* Prevents overflow of the hover effect */
+    border-radius: 50px; /* Rounded corners for the button */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Adjust size for hover effect */
+    height: 300%; /* Adjust size for hover effect */
+    background: rgba(255, 255, 255, 0.35); /* Light blue background for hover */
+    border-radius: 50%; /* Circular shape */
+    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 0; /* Positioned behind the text */
+}
+
+.nav-button:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Scale to full size on hover */
 }
 
 .nav-button:hover {
-    transform: rotate(720deg);
-cursor: pointer;
-transition: all 0.6s ease;
+    color: rgba(255, 255, 255, 0.35); /* Change text color on hover (optional) */
+    z-index: 1; /* Ensure text is above the hover effect */
 }
  video#bg-video {
       position: fixed;
@@ -116,7 +129,6 @@ transition: all 0.6s ease;
 
 .nav-right .nav-btn:hover {
    text-transform: uppercase;
-   cursor: pointer;
    font-weight: 800;
    font-family: "Inter", sans-serif;
    font-style: normal;
@@ -126,7 +138,6 @@ transition: all 0.6s ease;
 
 .nav-right .nav-btn:hover {
    text-transform: uppercase;
-   cursor: pointer;
    font-weight: 800;
    font-family: "Inter", sans-serif;
    font-style: normal;
@@ -153,7 +164,7 @@ transition: all 0.6s ease;
    background: rgba(255, 255, 255, 0.05);
    border: none;
    color: var(--text-primary);
-   width: 60vw;
+   width: 900px;
    height: 30px;
    border-radius: 5px;
    margin: 0 auto;
@@ -170,7 +181,7 @@ transition: all 0.6s ease;
 }
 
 .bar:focus {
-   background: rgba(0, 0, 0, 0.6);
+   background: rgba(255, 255, 255, 0.35);
    box-shadow: none;
    outline: none;
    color: var(--text-primary);
@@ -215,19 +226,38 @@ p {
 }
 
 #add-tab {
-   padding: 0.5rem;
-   cursor: pointer;
-   background: rgba(0, 0, 0, 0.6);
-   color: white;
-   border: none;
-   border-radius: 5px;
-   margin-right: 0.5rem;
-   transition: all 0.6s ease;
+    position: relative;
+    border: none; /* Remove any default border */
+    background-color: transparent; /* Transparent background */
+    color: white; /* Google blue color for the text */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    overflow: hidden; /* Prevents overflow of the hover effect */
+    border-radius: 50px; /* Rounded corners for the button */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
+
+#add-tab::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Adjust size for hover effect */
+    height: 300%; /* Adjust size for hover effect */
+    background: rgba(255, 255, 255, 0.35); /* Light blue background for hover */
+    border-radius: 50%; /* Circular shape */
+    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 0; /* Positioned behind the text */
+}
+
+#add-tab:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Scale to full size on hover */
+}
+
 #add-tab:hover {
-    transform: rotate(720deg);
-cursor: pointer;
-transition: all 0.6s ease;
+    color: rgba(255, 255, 255, 0.35); /* Change text color on hover (optional) */
+    z-index: 1; /* Ensure text is above the hover effect */
 }
 
 
@@ -245,7 +275,6 @@ li {
 background: rgba(255, 255, 255, 0.15);
    border: none;
    margin-right: 0.5rem;
-   cursor: pointer;
    border-radius: 5px;
    transition: background-color 0.3s ease;
    display: flex;
