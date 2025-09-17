@@ -534,7 +534,7 @@ function loadParticles() {
                 anim: {
                     enable: false,
                     speed: 1,
-                    opacity_min: 0.1,
+                    opacity_min: 0.67,
                     sync: false
                 }
             },
@@ -544,16 +544,16 @@ function loadParticles() {
                 anim: {
                     enable: false,
                     speed: 40,
-                    size_min: 0.1,
+                    size_min: 0.67,
                     sync: false
                 }
             },
             line_linked: {
-                enable: false
+                enable: true
             },
             move: {
                 enable: true,
-                speed: 3,
+                speed: 17,
                 direction: "none",
                 random: false,
                 straight: false,
@@ -590,7 +590,7 @@ function loadParticles() {
                     size: 40,
                     duration: 2,
                     opacity: 8,
-                    speed: 3
+                    speed: 17
                 },
                 repulse: {
                     distance: 200,
