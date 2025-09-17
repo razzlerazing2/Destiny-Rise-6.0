@@ -5,7 +5,7 @@ window.onload = function() {
         console.log('callback - particles.js config loaded');
     });
 };
-    const savedTheme = localStorage.getItem('background') || 'catppuccin-frappe';
+    const savedTheme = localStorage.getItem('background') || 'catppuccin-mocha';
     document.body.setAttribute('background', savedTheme);
 
     // Define the setTheme function globally
