@@ -8,13 +8,14 @@
   <link rel="icon" href="/assets/media/icons/favicon.png" type="image/x-icon">
  <title>𝕊𝕜𝕣𝕪𝕡𝕥𝕠𝕟𝕚𝕥𝕖 -- 𝔹𝕪𝕡𝕒𝕤𝕤</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <link rel="stylesheet" href="/assets/css/settingz.css" />
   <link rel="stylesheet" href="/assets/css/themes.css" />
   <link rel="stylesheet" href="/assets/css/nav-bar.css">
 </head>
 
 <body>
-
+  <div id="particles-js"></div>
 <div class="container animated-content">
   <div class="content">
     <div class="container">
@@ -65,7 +66,8 @@
   <h3>Backgrounds & Themes</h3>
   <p>Choose from a different variety of backgrounds & color/theme to personalize your background background/theme of choice. Good for picky little good boys (JK IM SORRY). But anyway, it's really good and I prefer you use it.</p>
     <select id="backgroundChange" onchange="setBackground(this.value)">
-      <option value="catppuccin-mocha">Default Background</option>
+      <option value="catppuccin-mocha">Midnight Blue (Default)</option>
+      <option value="catppuccin-moccha">A Skull BG</option>
       <option value="catppuccin-frappe">Ghost Skull BG</option>
 <option value="whatare">Phantom Fight</option>
 <option value="ru">A Dark, Halloween creepy forest BG</option>
@@ -89,15 +91,17 @@
       <option value="whatis">A BG of a beautiful dark blue</option>
     </select>
             <select id="themeChange" onchange="setTheme(this.value)">
-              <option value="whats">Default Theme</option>
-              <option value="whathuhs">Teal-turquoise</option>
-              <option value="whathuzz">Green-Yellowish</option>
+              <option value="whats">Midnight Blue (Default)</option>
+              <option value="whatss">Light Purple</option>
+              <option value="whathuhs">Ocean Teal</option>
+             <!-- <option value="whathuzz">Green-Yellowish</option>-->
               <option value="whatwas">Light Warm Peach</option>
-              <option value="whatis">Orange-Bananaish</option>
-              <option value="whatcuhs">Light-Blue</option>
-              <option value="whatluhs">Reddish</option>
-              <option value="whatfuhs">Yellow-Orangeish</option>
+              <option value="whatis">Warm Banana</option>
+              <option value="whatcuhs">Ocean Blue</option>
+              <option value="whatluhs">Red Radish</option>
+            <!--  <option value="whatfuhs">Yellow-Orangeish</option>-->
           </select>
+            <button class="key-button" id="toggleParticles">Toggle Particles</button>
 </div>
 
           <div class="settings-card">
@@ -123,7 +127,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="/what.js"></script>
+  <script src="/assets/js/particlest.js?v=03"></script>
   <script src="/assets/js/themesandcuhs.js"></script>
   <script src="assets/js/i.js?v=03"></script>
   <script src="/assets/js/passobemsolto.js"></script>

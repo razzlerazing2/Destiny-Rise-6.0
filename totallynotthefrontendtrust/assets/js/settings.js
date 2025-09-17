@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-
 // Dyn
 document.addEventListener("DOMContentLoaded", () => {
   function pChange(selectedValue) {
@@ -477,4 +476,4 @@ function importSaveData() {
   };
   input.click();
 }
-
+// SIX SEVENNNNN

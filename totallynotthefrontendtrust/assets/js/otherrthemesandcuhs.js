@@ -1,4 +1,10 @@
 /* hop off, skids */
+window.onload = function() {
+    console.log("Window loaded, attempting to load particles.js");
+    particlesJS.load('particles-js', '/assets/json/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+};
     const savedTheme = localStorage.getItem('background') || 'catppuccin-mocha';
     document.body.setAttribute('background', savedTheme);
 
@@ -461,3 +467,154 @@ preloader.appendChild(spinner);
 
 // Append to body
 document.body.appendChild(preloader);*/
+// Initialize particles
+let particlesEnabled;
+
+// Function to load particles
+function loadParticles() {
+    particlesJS("particles-js", {
+        particles: {
+            number: {
+                value: 100,
+                density: {
+                    enable: false
+                }
+            },
+            color: {
+                value: "#ffffff"
+            },
+            shape: {
+                type: "circle",
+                stroke: {
+                    width: 0,
+                    color: "#000000"
+                },
+                polygon: {
+                    nb_sides: 5
+                },
+                image: {
+                    src: "img/github.svg",
+                    width: 100,
+                    height: 100
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: false,
+                anim: {
+                    enable: false,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false
+                }
+            },
+            size: {
+                value: 5,
+                random: true,
+                anim: {
+                    enable: false,
+                    speed: 40,
+                    size_min: 0.1,
+                    sync: false
+                }
+            },
+            line_linked: {
+                enable: false
+            },
+            move: {
+                enable: true,
+                speed: 3,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "repulse"
+                },
+                onclick: {
+                    enable: true,
+                    mode: "push"
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 400,
+                    line_linked: {
+                        opacity: 1
+                    }
+                },
+                bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                    speed: 3
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 1
+                },
+                push: {
+                    particles_nb: 4
+                },
+                remove: {
+                    particles_nb: 2
+                }
+            }
+        },
+        retina_detect: true
+    });
+}
+
+// Function to disable particles
+function disableParticles() {
+    particlesJS("particles-js", {
+        particles: {
+            number: {
+                value: 0 // Set number of particles to 0
+            }
+        }
+    });
+}
+
+// Function to toggle particles
+function toggleParticles() {
+    if (particlesEnabled) {
+        disableParticles();
+        particlesEnabled = false;
+        localStorage.setItem("particlesEnabled", "false"); // Save state in localStorage
+    } else {
+        loadParticles();
+        particlesEnabled = true;
+        localStorage.setItem("particlesEnabled", "true"); // Save state in localStorage
+    }
+}
+
+// Check localStorage for particles state
+if (localStorage.getItem("particlesEnabled") === null) {
+    // If no state is stored, initialize it to true (particles on)
+    particlesEnabled = true;
+    loadParticles(); // Load particles by default
+    localStorage.setItem("particlesEnabled", "true"); // Save the default state
+} else if (localStorage.getItem("particlesEnabled") === "false") {
+    particlesEnabled = false;
+    disableParticles(); // Disable particles if the state is false
+} else {
+    particlesEnabled = true; // If it's true, keep it enabled
+    loadParticles(); // Load particles if the state is true
+}
+
+// Event listener for the button
+document.getElementById("toggleParticles").addEventListener("click", toggleParticles);

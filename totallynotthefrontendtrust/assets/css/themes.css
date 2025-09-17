@@ -138,14 +138,20 @@ body[background="waitWHAT"] {
     --text: #cdd6f4;
 }
 
-  body[background="catppuccin-mocha"] {
+  body[background="catppuccin-moccha"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
     url("/assets/media/background/senkbucketup.webp") no-repeat center center fixed;
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
+    #001f3f
   }
-
+body[background="catppuccin-mocha"] {
+    background-color: #000022; /* Dark Midnight Blue */
+    background-size: cover; /* Ensures the background covers the entire body */
+    --shadow: rgba(0, 0, 0, 0.01);
+    --text: #cdd6f4;
+}
   body[background="cuh"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
      url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
@@ -219,6 +225,11 @@ body[background="whatis"] {
     --text: #cdd6f4;
 }
 body[theme="whats"] {
+    --text: #cdd6f4;
+  --primary-color: #000022;
+  --primary-light: #001f3f;
+}
+body[theme="whatss"] {
     --text: #cdd6f4;
   --primary-color: #7b68ee;
   --primary-light: #9a88ff;
