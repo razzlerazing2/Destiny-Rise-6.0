@@ -1,10 +1,10 @@
-[
-  {
-    "name": "! Create Custom App",
-    "image": "/assets/media/icons/custom.webp",
-    "categories": ["all"],
-    "custom": "true"
-  },
+  [
+    {
+      "name": "! Create Custom App",
+      "image": "/assets/media/icons/custom.webp",
+      "categories": ["all"],
+      "custom": "true"
+    },
   {
     "name": "Google",
     "image": "/assets/img/goog.webp",

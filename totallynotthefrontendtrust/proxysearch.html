@@ -8,12 +8,12 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:description" content="SkellySKripts is a very clean and fast proxy" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/media/icons/favicon.png" type="image/x-icon">
-   <title>𝕊𝕜𝕣𝕪𝕡𝕥𝕠𝕟𝕚𝕥𝕖 -- 𝔹𝕪𝕡𝕒𝕤𝕤</title>
+    <title>𝕊𝕜𝕣𝕪𝕡𝕥𝕠𝕟𝕚𝕥𝕖 -- 𝔹𝕪𝕡𝕒𝕤𝕤</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="/assets/css/winohno.css?v=6" />
     <link rel="stylesheet" href="/assets/css/proxysearch.css?v=02" />
-        <link rel="stylesheet" href="/assets/css/themes.css" />
+    <link rel="stylesheet" href="/assets/css/themes.css" />
     <script src="assets/js/f.js"></script>
     <script>
         window.addEventListener("resize", navigator.keyboard.lock(["Escape"]));
@@ -21,6 +21,7 @@
 </head>
 
 <body id="no">
+    <div id="particles-js"></div>
     <nav class="nav animated-content" id="right-side-nav">
         <ul id="tab-list"></ul>
         <button title="add-tab" id="add-tab">
@@ -30,11 +31,14 @@
     <div class="nav-bar animated-content">
         <div class="nav-container animated-content">
             <div class="nav-left">
+                <button title="Home Page" id="home-page" class="nav-button cuhs" onclick="Home()">
+                    <i class="fa-solid fa-house"></i>
+                </button>
                 <button title="Back Arrow" class="nav-button cuhs" onclick="goBack()">
                     <i class="fa-solid fa-arrow-left"></i>
                 </button>
                 <button title="Forward Arrow" class="nav-button cuhs" onclick="goForward()">
-                    <i class="fa-solid fa-arrow-right"></i> 
+                    <i class="fa-solid fa-arrow-right"></i>
                 </button>
                 <button title="Reload" onclick="reload()" class="nav-button cuhs">
                     <i class="fa-solid fa-rotate-right"></i>
@@ -44,31 +48,26 @@
                 </form>
             </div>
             <div class="nav-right">
-                    <button title="More Options" class="nav-button nav-btn-right cuhs" onclick="dropDown()">
-                        <i class="fas fa-bars"></i>
+                <button title="More Options" class="nav-button nav-btn-right cuhs" onclick="dropDown()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <button title="Home Page" id="home-page" class="nav-button cuhs" onclick="Home()">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
                     </button>
-                    <div class="dropdown-menu" id="dropdownMenu">
-                        <button title="Home Page" id="home-page" class="nav-button cuhs" onclick="Home()">
-                            <i class="fa-solid fa-house"></i>
-                            <span>Home</span>
-                        </button>
-                        <button title="Fullscreen" id="fullscreen-button" class="nav-button cuhs" onclick="FS()">
-                            <i class="fa-solid fa-expand"></i>
-                            <span>Fullscreen</span>
-                        </button>
-                        <button title="Window Popout" id="popout-button" class="nav-button cuhs" onclick="popout()">
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                            <span>Popout</span>
-                        </button>
-                       <!-- <button title="Inspect" class="nav-button cuhs" onclick="eToggle()">
-                              <i class="fa-solid fa-code"></i>
-                            <span>Inspect</span>
-                            </button>-->
-                            <button title="Tabs" id="tabs-button" class="nav-button cuhs">
-                              <i class="fa-solid fa-magnifying-glass-minus"></i>
-                                <span>Tabs</span>
-                            </button>
-                    </div>
+                    <button title="Fullscreen" id="fullscreen-button" class="nav-button cuhs" onclick="FS()">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Fullscreen</span>
+                    </button>
+                    <button title="Window Popout" id="popout-button" class="nav-button cuhs" onclick="popout()">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                        <span>Popout</span>
+                    </button>
+                    <button title="Tabs" id="tabs-button" class="nav-button cuhs">
+                        <i class="fa-solid fa-magnifying-glass-minus"></i>
+                        <span>Tabs</span>
+                    </button>
                 </div>
             </div>
         </div>

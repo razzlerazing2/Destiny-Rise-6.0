@@ -2,7 +2,7 @@
 
 :root {
    /* Background Variables */
-   --background-color: #333333/* Background Image */
+   --background-color: black;/* BG image */
    --backdrop-filter: blur(10px) brightness(80%); /* Nav Backdrop filter */
    --background-nav: rgba(255, 255, 255, 0.02); /* Nav Background */
    --background-color: #222; /* Main Background Color */
@@ -49,13 +49,18 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #000000CC;
+  background-color: black;
  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0;
   padding: 0;
   min-height: 100vh; /* ensures full height coverage */
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 

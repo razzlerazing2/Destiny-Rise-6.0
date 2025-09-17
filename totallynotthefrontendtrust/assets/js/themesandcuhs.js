@@ -1,5 +1,5 @@
 /* hop off, skids */
-    const savedTheme = localStorage.getItem('background') || 'catppuccin-frappe';
+    const savedTheme = localStorage.getItem('background') || 'catppuccin-mocha';
     document.body.setAttribute('background', savedTheme);
 
     // Define the setTheme function globally
@@ -12,7 +12,7 @@
 
 
 
-const savedBackground = localStorage.getItem('theme') || 'whathuhs';
+const savedBackground = localStorage.getItem('theme') || 'whats';
 document.body.setAttribute('theme', savedBackground);
 
 // Define the setTheme function globally
@@ -20,7 +20,6 @@ function setTheme(theme) {
     document.body.setAttribute('theme', theme);
     localStorage.setItem('theme', theme);
 }
-
 
 
 
