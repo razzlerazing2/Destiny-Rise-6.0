@@ -18,7 +18,7 @@ window.onload = function() {
 
 
 
-const savedBackground = localStorage.getItem('theme') || 'whatis';
+const savedBackground = localStorage.getItem('theme') || 'whats';
 document.body.setAttribute('theme', savedBackground);
 
 // Define the setTheme function globally
