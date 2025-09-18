@@ -144,7 +144,6 @@ body[background="waitWHAT"] {
     background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
-    #001f3f
   }
 body[background="catppuccin-mocha"] {
     background-color: #000022; /* Dark Midnight Blue */
