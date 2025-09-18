@@ -57,7 +57,7 @@ body {
     background-color: transparent; /* Transparent background */
     color: white; /* Google blue color for the text */
     padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: 15px; /* Adjust font size as needed */
     overflow: hidden; /* Prevents overflow of the hover effect */
     border-radius: 50px; /* Rounded corners for the button */
     transition: color 0.3s ease; /* Smooth color transition */
@@ -159,11 +159,11 @@ body {
 .bar {
    font-family: "Inter", sans-serif;
    font-size: 15px;
-   height: 20px;
-   background: rgba(255, 255, 255, 0.05);
+   height: 15px;
+   background-color: rgba(255, 255, 255, 0.05);
    border: none;
    color: var(--text-primary);
-   width: 767px;
+   width: 820px;
    height: 30px;
    border-radius: 5px;
    margin: 0 auto;
@@ -293,10 +293,10 @@ li.active {
 iframe {
    position: absolute;
    width: 100%;
-   height: 88%;
+   height: 89%;
    border: none;
    left: 0;
-   top: 12%;
+   top: 11%;
 }
 #preloader {
     position: fixed;

@@ -5,7 +5,7 @@ window.onload = function() {
         console.log('callback - particles.js config loaded');
     });
 };
-    const savedTheme = localStorage.getItem('background') || 'catppuccin-mocha';
+    /*const savedTheme = localStorage.getItem('background') || 'catppuccin-mocha';
     document.body.setAttribute('background', savedTheme);
 
     // Define the setTheme function globally
@@ -25,26 +25,10 @@ document.body.setAttribute('theme', savedBackground);
 function setTheme(theme) {
     document.body.setAttribute('theme', theme);
     localStorage.setItem('theme', theme);
-}
-  /*  document.addEventListener("DOMContentLoaded", () => {
-  const navHTML = `
-    <nav class="animated-content">
-      <div class="nav-container">
-        <ul class="nav-links">
-          <li><a href="/home"><i class="fas fa-home cuhs"></i></a></li>
-          <li><a href="/games"><i class="fas fa-gamepad cuhs"></i></a></li>
-          <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i></a></li>
-          <li><a href="/animes"><i class="fas fa-tv cuhs"></i></a></li>
-          <li><a href="/settings"><i class="fas fa-cogs cuhs"></i></a></li>
-          <li><a href="/song"><i class="fas fa-music cuhs"></i></a></li>
-        </ul>
-      </div>
-    </nav>
-  `;
+}*/
 
-  // Insert nav at the top of the body (or wherever you want)
-  document.body.insertAdjacentHTML("afterbegin", navHTML);
-});
+
+/*
 
     // ===============================================
     // SPA (Single Page Application) Core Logic
@@ -110,7 +94,7 @@ function setTheme(theme) {
     }
 
     // ===============================================
-    // All Features Initialized on DOMContentLoaded
+    // All Features Initialized on domcontentloadeed
     // ===============================================
     */
     document.addEventListener('DOMContentLoaded', () => {
@@ -125,29 +109,30 @@ function setTheme(theme) {
 
         if (audioPlayer && playPauseButton && prevButton && nextButton && currentSongTitle && musicListDiv && musicSearchInput) {
             const allSongs = [
-                { name: "Hope - XXXTentacion", url: "/assets/media/_music/hope.mp3" }, // good
-                { name: "Pray for me - Kendrick Lamar & The Weeknd", url: "/assets/media/_music/pfm.mp3" },
-                { name: "Prove it - 21 Savage", url: "/assets/media/_music/proveit.mp3" }, // good
-                { name: "HAPPY - NF", url: "/assets/media/_music/HAPPY.mp3"}, // good
-                { name: "Hide - Juice WRLD", url: "/assets/media/_music/hide.mp3" }, // good
-                { name: "Ransom - Lil Tecca", url: "/assets/media/_music/ransomCUH.mp3" }, // good
-                { name: "Lifestyle - Rich Gang", url: "/assets/media/_music/life.mp3" }, // good
-                { name: "Big Dawgs - Hanumankind", url: "/assets/media/_music/bigdawgs.mp3" }, // good
-                { name: "STD - Glorb", url: "/assets/media/_music/std.mp3" }, // good
-                { name: "The Bottom - Glorb", url: "/assets/media/_music/bottom.mp3" }, // good
-                { name: "The Bottom 2 - Glorb", url: "/assets/media/_music/bottom2.mp3" }, // good
-                { name: "The Bottom 3 - Glorb", url: "/assets/media/_music/bottom3.mp3" }, // good
-                { name: "Feel It - d4vd", url: "/assets/media/_music/feel.mp3" }, // good
-                // { name: "FE!N - Travis Scott", url: "/assets/media/_music/fein.mp3" }, // not good
-                { name: "Let You Down - NF", url: "/assets/media/_music/letyadown.mp3" }, // good
-                { name: "Not Like Us - Kendrick Lamar", url: "/assets/media/_music/nlu.mp3" }, // good
-                { name: "Fight Back - Neffex", url: "/assets/media/_music/fbn.mp3" }, // good
-                 { name: "Crown - Neffex", url: "/assets/media/_music/crown-Lil'Cuzzin.mp3" },
-                { name: "Grateful - Neffex", url: "/assets/media/_music/thankful.mp3" }, // good
-                { name: "Roses - Juice WRLD", url: "/assets/media/_music/rosesCUH.mp3" }, // good
-                { name: "From My Window - Juice WRLD", url: "/assets/media/_music/frommywindowCUH.mp3" }, // good
-                { name: "Burn - Juice WRLD", url: "/assets/media/_music/burnjw.mp3" }, // good
-                { name: "Squabble Up - Kendrick Lamar", url: "/assets/media/_music/squabbleup.mp3" }, // good
+                { name: "Young, Black & Rich - Melly Mike", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ybr.mp3" },
+                { name: "Hope - XXXTentacion", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hope.mp3" },
+                { name: "Pray for me - Kendrick Lamar & The Weeknd", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/pfm.mp3" },
+                { name: "Prove it - 21 Savage", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/proveit.mp3" }, // good
+                { name: "HAPPY - NF", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/HAPPY.mp3"}, // good
+                { name: "Hide - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hide.mp3" }, // good
+                { name: "Ransom - Lil Tecca", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ransomCUH.mp3" }, // good
+                { name: "Lifestyle - Rich Gang", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/life.mp3" }, // good
+                { name: "Big Dawgs - Hanumankind", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bigdawgs.mp3" }, // good
+                { name: "STD - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/std.mp3" }, // good
+                { name: "The Bottom - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bottom.mp3" }, // good
+                { name: "The Bottom 2 - Glorb", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom2.mp3" }, // good
+                { name: "The Bottom 3 - Glorb", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom3.mp3" }, // good
+                { name: "Feel It - d4vd", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/feel.mp3" }, // good
+             // { name: "FE!N - Travis Scott", url: "/assets/media/_music/fein.mp3" }, // not good
+                { name: "Let You Down - NF", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/letyadown.mp3" }, // good
+                { name: "Not Like Us - Kendrick Lamar", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/nlu.mp3" }, // good
+                { name: "Fight Back - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/fbn.mp3" }, // good
+                 { name: "Crown - Neffex", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/crown-Lil'Cuzzin.mp3" },
+                { name: "Grateful - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/thankful.mp3" }, // good
+                { name: "Roses - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/rosesCUH.mp3" }, // good
+                { name: "From My Window - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/frommywindowCUH.mp3" }, // good
+                { name: "Burn - Juice WRLD", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/burnjw.mp3" }, // good
+                { name: "Squabble Up - Kendrick Lamar", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/squabbleup.mp3" }, // good
             ];
 
             let filteredPlaylist = [...allSongs];
@@ -451,7 +436,7 @@ function setTheme(theme) {
           audio.play();
       });
     */
-   /*const preloader = document.createElement("div");
+   const preloader = document.createElement("div");
 preloader.id = "preloader";
 
 const spinner = document.createElement("div");
@@ -466,31 +451,41 @@ spinner.appendChild(emoji);
 preloader.appendChild(spinner);
 
 // Append to body
-document.body.appendChild(preloader);*/
-// Initialize particles
-let particlesEnabled;
+document.body.appendChild(preloader);
+function aboutblank() {
+            var win = window.open('about:blank');
+            var url = 'index.html';
+            var iframe = win.document.createElement('iframe');
+            iframe.style = "position:fixed;width:100vw;height:100vh;top:0px;left:0px;right:0px;bottom:0px;z-index:2147483647;background-color:white;border:none;";
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+
+            window.location.href = 'https://portal.friscoisd.org';
+        }
+/*let particlesEnabled;
 
 // Function to load particles
 function loadParticles() {
-    particlesJS("particles-js", {
+particlesJS("particles-js", {
         particles: {
             number: {
-                value: 100,
+                value: 150,
                 density: {
-                    enable: false
+                    enable: true,
+                    value_area: 800
                 }
             },
             color: {
-                value: "#ffffff"
+                value: ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff"]
             },
             shape: {
-                type: "circle",
+                type: ["circle", "triangle", "edge", "polygon"],
                 stroke: {
                     width: 0,
-                    color: "#000000"
+                    color: "#ffffff"
                 },
                 polygon: {
-                    nb_sides: 5
+                    nb_sides: 6
                 },
                 image: {
                     src: "img/github.svg",
@@ -499,37 +494,43 @@ function loadParticles() {
                 }
             },
             opacity: {
-                value: 0.5,
-                random: false,
+                value: 0.7,
+                random: true,
                 anim: {
                     enable: true,
-                    speed: 17,
-                    opacity_min: 0.67,
+                    speed: 2,
+                    opacity_min: 0.3,
                     sync: false
                 }
             },
             size: {
-                value: 5,
+                value: 8,
                 random: true,
                 anim: {
                     enable: true,
-                    speed: 17,
-                    size_min: 0.67,
+                    speed: 40,
+                    size_min: 0.5,
                     sync: false
                 }
             },
             line_linked: {
-                enable: false
+                enable: true, // false equals it is just particles dead, falling
+                distance: 150,
+                color: {
+                    value: ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff"]
+                }, // hex code for red -- can set multiple colors
+                opacity: 0.4,
+                width: 1
             },
             move: {
                 enable: true,
-                speed: 9.67,
+                speed: 10,
                 direction: "none",
                 random: false,
                 straight: false,
-                out_mode: "out",
+                out_mode: "bounce",
                 attract: {
-                    enable: false,
+                    enable: false, // this will make particles make it look like light show
                     rotateX: 600,
                     rotateY: 1200
                 }
@@ -540,7 +541,7 @@ function loadParticles() {
             events: {
                 onhover: {
                     enable: true,
-                    mode: "repulse"
+                    mode: "bubble"
                 },
                 onclick: {
                     enable: true,
@@ -550,7 +551,7 @@ function loadParticles() {
             },
             modes: {
                 grab: {
-                    distance: 400,
+                    distance: 200,
                     line_linked: {
                         opacity: 1
                     }
@@ -560,14 +561,14 @@ function loadParticles() {
                     size: 40,
                     duration: 2,
                     opacity: 8,
-                    speed: 9.67
+                    speed: 3
                 },
                 repulse: {
-                    distance: 200,
+                    distance: 100,
                     duration: 1
                 },
                 push: {
-                    particles_nb: 4
+                    particles_nb: 5
                 },
                 remove: {
                     particles_nb: 2
@@ -577,43 +578,194 @@ function loadParticles() {
         retina_detect: true
     });
 }
-
 // Function to disable particles
 function disableParticles() {
-    particlesJS("particles-js", {
-        particles: {
-            number: {
-                value: 0 // Set number of particles to 0
-            }
-        }
-    });
+particlesJS("particles-js", {
+particles: {
+number: {
+value: 0 // Set number of particles to 0
+}
+}
+});
 }
 
 // Function to toggle particles
 function toggleParticles() {
-    if (particlesEnabled) {
-        disableParticles();
-        particlesEnabled = false;
-        localStorage.setItem("particlesEnabled", "false"); // Save state in localStorage
-    } else {
-        loadParticles();
-        particlesEnabled = true;
-        localStorage.setItem("particlesEnabled", "true"); // Save state in localStorage
-    }
+if (particlesEnabled) {
+disableParticles();
+particlesEnabled = false;
+localStorage.setItem("particlesEnabled", "false"); // Save state in localStorage
+} else {
+loadParticles();
+particlesEnabled = true;
+localStorage.setItem("particlesEnabled", "true"); // Save state in localStorage
+}
 }
 
 // Check localStorage for particles state
 if (localStorage.getItem("particlesEnabled") === null) {
-    // If no state is stored, initialize it to true (particles on)
-    particlesEnabled = true;
-    loadParticles(); // Load particles by default
-    localStorage.setItem("particlesEnabled", "true"); // Save the default state
+// If no state is stored, initialize it to true (particles on)
+particlesEnabled = true;
+loadParticles(); // Load particles by default
+localStorage.setItem("particlesEnabled", "true"); // Save the default state
 } else if (localStorage.getItem("particlesEnabled") === "false") {
-    particlesEnabled = false;
-    disableParticles(); // Disable particles if the state is false
+particlesEnabled = false;
+disableParticles(); // Disable particles if the state is false
 } else {
-    particlesEnabled = true; // If it's true, keep it enabled
-    loadParticles(); // Load particles if the state is true
+particlesEnabled = true; // If it's true, keep it enabled
+loadParticles(); // Load particles if the state is true
+}
+
+// Event listener for the button
+document.getElementById("toggleParticles").addEventListener("click", toggleParticles); */
+
+// My Normal Particles
+let particlesEnabled;
+
+// Function to load particles
+function loadParticles() {
+particlesJS("particles-js", {
+particles: {
+number: {
+value: 100,
+density: {
+enable: false
+}
+},
+color: {
+value: "#ffffff"
+},
+shape: {
+type: "circle",
+stroke: {
+width: 0,
+color: "#000000"
+},
+polygon: {
+nb_sides: 5
+},
+image: {
+src: "img/github.svg",
+width: 100,
+height: 100
+}
+},
+opacity: {
+value: 0.5,
+random: false,
+anim: {
+enable: true,
+speed: 17,
+opacity_min: 0.67,
+sync: false
+}
+},
+size: {
+value: 5,
+random: true,
+anim: {
+enable: true,
+speed: 17,
+size_min: 0.67,
+sync: false
+}
+},
+line_linked: {
+enable: false
+},
+move: {
+enable: true,
+speed: 17,
+direction: "none",
+random: false,
+straight: false,
+out_mode: "out",
+attract: {
+enable: false,
+rotateX: 600,
+rotateY: 1200
+}
+}
+},
+interactivity: {
+detect_on: "canvas",
+events: {
+onhover: {
+enable: true,
+mode: "repulse"
+},
+onclick: {
+enable: true,
+mode: "push"
+},
+resize: true
+},
+modes: {
+grab: {
+distance: 400,
+line_linked: {
+opacity: 10
+}
+},
+bubble: {
+distance: 400,
+size: 40,
+duration: 2,
+opacity: 8,
+speed: 9.67
+},
+repulse: {
+distance: 200,
+duration: 1
+},
+push: {
+particles_nb: 4
+},
+remove: {
+particles_nb: 2
+}
+}
+},
+retina_detect: true
+});
+}
+
+// Function to disable particles
+function disableParticles() {
+particlesJS("particles-js", {
+particles: {
+number: {
+value: 0 // Set number of particles to 0
+}
+}
+});
+}
+
+// Function to toggle particles
+function toggleParticles() {
+if (particlesEnabled) {
+disableParticles();
+particlesEnabled = false;
+localStorage.setItem("particlesEnabled", "false"); // Save state in localStorage
+} else {
+loadParticles();
+particlesEnabled = true;
+localStorage.setItem("particlesEnabled", "true"); // Save state in localStorage
+}
+}
+
+// Check localStorage for particles state
+if (localStorage.getItem("particlesEnabled") === null) {
+// If no state is stored, initialize it to true (particles on)
+particlesEnabled = true;
+loadParticles(); // Load particles by default
+localStorage.setItem("particlesEnabled", "true"); // Save the default state
+} else if (localStorage.getItem("particlesEnabled") === "false") {
+particlesEnabled = false;
+disableParticles(); // Disable particles if the state is false
+} else {
+particlesEnabled = true; // If it's true, keep it enabled
+loadParticles(); // Load particles if the state is true
 }
 
 // Event listener for the button

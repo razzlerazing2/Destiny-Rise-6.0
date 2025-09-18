@@ -448,6 +448,7 @@ if (name.includes(filter)) {
 game.style.display = "block";
 } else {
 game.style.display = "none";
-}
-}
-}
+    }
+   }
+  }
+
