@@ -296,9 +296,40 @@ fullscreenButton.addEventListener("click", FS);
 function Home() {
   window.location.href = "/home";
 }
-
 const homeButton = document.getElementById("home-page");
 homeButton.addEventListener("click", Home);
+// Settings
+function Games() {
+  window.location.href = "/games";
+}
+const gameButton = document.getElementById("games-page");
+homeButton.addEventListener("click", Games);
+// Settings
+function Anime() {
+  window.location.href = "/animes";
+}
+const animeButton = document.getElementById("anime-page");
+homeButton.addEventListener("click", Anime);
+// Settings
+function App() {
+  window.location.href = "/apps";
+}
+const appButton = document.getElementById("app-page");
+homeButton.addEventListener("click", App);
+// Settings
+function Settings() {
+  window.location.href = "/settings";
+}
+
+const settingsButton = document.getElementById("settings-page");
+homeButton.addEventListener("click", Settings);
+
+const songsButton = document.getElementById("songs-page");
+homeButton.addEventListener("click", Songs);
+// Songs
+function Songs() {
+  window.location.href = "/song";
+}
 // Back
 function goBack() {
   const activeIframe = document.querySelector("#frame-container iframe.active");
@@ -331,14 +362,14 @@ document.addEventListener("DOMContentLoaded", () => {
       nb.style.display = "";
       activeIframe.style.top = "10%";
       activeIframe.style.height = "90%";
-      tb.querySelector("i").classList.remove("fa-magnifying-glass-plus");
-      tb.querySelector("i").classList.add("fa-magnifying-glass-minus");
+      tb.querySelector("i").classList.remove("fa-folder-open");
+      tb.querySelector("i").classList.add("fa-folder");
     } else {
       nb.style.display = "none";
       activeIframe.style.top = "5%";
       activeIframe.style.height = "95%";
-      tb.querySelector("i").classList.remove("fa-magnifying-glass-minus");
-      tb.querySelector("i").classList.add("fa-magnifying-glass-plus");
+      tb.querySelector("i").classList.remove("fa-folder");
+      tb.querySelector("i").classList.add("fa-folder-open");
     }
   });
 });

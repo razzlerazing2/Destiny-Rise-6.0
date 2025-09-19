@@ -146,7 +146,7 @@ body[background="waitWHAT"] {
     --text: #cdd6f4;
   }
 body[background="catppuccin-mocha"] {
-    background-color: #000022; /* Dark Midnight Blue */
+    background-color: #000014; /* Dark Midnight Blue */
     background-size: cover; /* Ensures the background covers the entire body */
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
@@ -225,7 +225,7 @@ body[background="whatis"] {
 }
 body[theme="whats"] {
     --text: #cdd6f4;
-  --primary-color: #000022;
+  --primary-color: #000014;
   --primary-light: #001f3f;
 }
 body[theme="whatss"] {
