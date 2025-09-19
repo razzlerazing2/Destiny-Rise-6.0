@@ -242,15 +242,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-let path = "/assets/json/a.min.json";
+let path = "/assets/json/app.json";
 if (g) {
-    path = "/assets/json/g.min.json";
+    path = "/assets/json/game.json";
 } else if (c) {
     path = "/assets/json/t.min.json";
 } else if (a) {
-    path = "/assets/json/a.min.json";
+    path = "/assets/json/app.json";
 } else if (anime) {
-    path = "/assets/json/anime.min.json";
+    path = "/assets/json/anime.json";
 }
 fetch(path)
     .then(response => {

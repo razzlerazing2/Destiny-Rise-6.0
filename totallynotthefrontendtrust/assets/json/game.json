@@ -240,19 +240,19 @@
     "categories": ["all,", "sports", "local"]
   },
   {
-    "name": "Minecraft 1.5.2 (Eaglercraft)",
+    "name": "Minecraft 1.5.2",
     "link": "/e/2/eag15/index.html",
     "image": "/assets/media/icons/mc.webp",
     "categories": ["all", "2P", "emu", "local"]
   },
   {
-    "name": "Minecraft 1.8 (Eaglercraft)",
+    "name": "Minecraft 1.8",
     "link": "/e/2/eag18/offline.html",
     "image": "/assets/media/icons/mc.webp",
     "categories": ["all", "2P", "emu", "local"]
   },
   {
-    "name": "Minecraft 1.8 (Eagler WASM)",
+    "name": "Minecraft 1.8",
     "link": "/e/2/eag18/wasm.html",
     "image": "/assets/media/icons/mc.webp",
     "categories": ["all", "2P", "emu", "local"]
@@ -354,7 +354,7 @@
     "categories": ["all"]
   },
   {
-    "name": "Big NEON Tower Tiny Square",
+    "name": "Big NEON Tower Square",
     "image": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/bntts/icons/icon-256.png",
     "link": "https://raw.githack.com/Skoolgq/Polaris-Assets/main/bntts/index.html",
     "categories": ["all"]
@@ -414,19 +414,19 @@
     "categories": ["all"]
   },
   {
-    "name": "Henry Stickmin: Breaking the Bank",
+    "name": "Henry Stickmin Bank",
     "link": "https://www.3kh0-assets.silvereen.net/3kh0-assets/breakingthebank/index.html",
     "image": "https://www.3kh0-assets.silvereen.net/3kh0-assets/breakingthebank/breakingthebank.png",
     "categories": ["all"]
   },
   {
-    "name": "Henry Stickmin: Escaping The Prison",
+    "name": "Henry Stickmin Prison",
     "link": "https://www.3kh0-assets.silvereen.net/3kh0-assets/escapingtheprison/index.html",
     "image": "https://www.3kh0-assets.silvereen.net/3kh0-assets/escapingtheprison/escapingtheprison.jpg",
     "categories": ["all"]
   },
   {
-    "name": "Henry Stickmin: Fleeing The Complex",
+    "name": "Henry Stickmin Complex",
     "link": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fleeingthecomplex/index.html",
     "image": "/assets/img/fleeingthecomplex.webp",
     "categories": ["all"]
@@ -816,7 +816,7 @@
     "categories": ["all"]
   },
   {
-    "name": "Subway Surfers: New York",
+    "name": "Subway Surfers: NY",
     "link": "https://www.3kh0-assets.silvereen.net/3kh0-assets/subway-surfers-ny/index.html",
     "image": "https://www.3kh0-assets.silvereen.net/3kh0-assets/subway-surfers-ny/NewYorkIcon.png",
     "categories": ["all"]
@@ -1032,13 +1032,13 @@
       "categories": ["all"]
     },
     {
-      "name": "Cut the Rope Holiday",
+      "name": "Cut Rope Holiday",
       "link": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ctr-holiday/index.html",
       "image": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ctr-holiday/Holiday_Gift.webp",
       "categories": ["all"]
     },
     {
-      "name": "Cut the Rope Time Travel",
+      "name": "Cut Rope Time TRV",
       "link": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ctr-tr/index.html",
       "image": "https://www.3kh0-assets.silvereen.net/3kh0-assets/ctr-tr/logo.png",
       "categories": ["all"]
@@ -1128,7 +1128,7 @@
       "categories": ["all"]
     },
     {
-      "name": "Watermelon Game (Suika)",
+      "name": "Watermelon Game",
       "link": "https://watermelongame.com",
       "image": "/assets/img/suika.webp",
       "categories": ["all"]
@@ -1254,7 +1254,7 @@
       "categories": ["all"]
     },
     {
-      "name": "Burrito Bison: Launcha Libre",
+      "name": "Burrito Bison: LL",
       "link": "https://rawcdn.githack.com/GameHub88/Yexex-Assets/main/bb/index.html",
       "image": "https://play-lh.googleusercontent.com/vpTgm9u7-GzZP_MceTWpDi0HbinXd_4phCoTwf4ZspFL-115FtNRdo_SU1p-khLDnLA",
       "categories": ["all"]
@@ -1356,7 +1356,7 @@
       "categories": ["all"]
     },
     {
-      "name": "Minecraft (Java Edition)",
+      "name": "Minecraft Java",
       "link": "https://mcraft.fun",
       "image": "/assets/img/minecraft.webp",
       "categories": ["all"]
