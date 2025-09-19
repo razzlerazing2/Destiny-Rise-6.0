@@ -492,10 +492,10 @@
     "categories": ["all"]
   },
   {
-    "name": "Stickman Hook",
-    "link": "/e/stickman-hook/index.html",
-    "image": "/assets/media/icons/stickmanhook.webp",
-    "categories": ["all", "local"]
+    "name": "Stick Hook",
+    "link": "https://mountain658.github.io/stickmanhook.html",
+    "image": "https://nintendocore.org/cdn/shop/products/Super-Mario-64-1.png",
+    "categories": ["all"]
   },
   {
     "name": "Super Mario 64",

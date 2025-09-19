@@ -175,7 +175,7 @@ function Custom(app) {
     const link = prompt("Enter link for the app: (MUST INCLUDE HTTPS:// FIRST!)");
     if (title && link) {
         const customApp = {
-            name: `[Custom] ${title}`,
+            name: `Custom: ${title}`,
             link: link,
             face: "/assets/media/icons/custom.webp",
             custom: false,
@@ -258,10 +258,10 @@ fetch(path)
     })
     .then(appsList => {
         appsList.sort((a, b) => {
-            if (a.name.startsWith("[Custom]")) {
+            if (a.name.startsWith("Custom:")) {
                 return -1;
             }
-            if (b.name.startsWith("[Custom]")) {
+            if (b.name.startsWith("Custom:")) {
                 return 1;
             }
             return a.name.localeCompare(b.name);

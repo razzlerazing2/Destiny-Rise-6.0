@@ -5,14 +5,14 @@ window.onload = function() {
         console.log('callback - particles.js config loaded');
     });
 };
-    /*const savedTheme = localStorage.getItem('background') || 'catppuccin-mocha';
+    const savedTheme = localStorage.getItem('background') || 'catppuccin-mocha';
     document.body.setAttribute('background', savedTheme);
 
     // Define the setTheme function globally
     function setBackground(background) {
         document.body.setAttribute('background', background);
         localStorage.setItem('background', background);
-    }*/
+    }
 
 
 
