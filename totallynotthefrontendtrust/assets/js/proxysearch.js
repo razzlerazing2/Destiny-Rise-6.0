@@ -303,29 +303,29 @@ function Games() {
   window.location.href = "/games";
 }
 const gameButton = document.getElementById("games-page");
-homeButton.addEventListener("click", Games);
+gameButton.addEventListener("click", Games);
 // Settings
 function Anime() {
   window.location.href = "/animes";
 }
 const animeButton = document.getElementById("anime-page");
-homeButton.addEventListener("click", Anime);
+animeButton.addEventListener("click", Anime);
 // Settings
 function App() {
   window.location.href = "/apps";
 }
 const appButton = document.getElementById("app-page");
-homeButton.addEventListener("click", App);
+appButton.addEventListener("click", App);
 // Settings
 function Settings() {
   window.location.href = "/settings";
 }
 
 const settingsButton = document.getElementById("settings-page");
-homeButton.addEventListener("click", Settings);
+settingsButton.addEventListener("click", Settings);
 
 const songsButton = document.getElementById("songs-page");
-homeButton.addEventListener("click", Songs);
+songsButton.addEventListener("click", Songs);
 // Songs
 function Songs() {
   window.location.href = "/song";
