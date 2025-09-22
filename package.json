@@ -7,7 +7,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "node --experimental-fetch index.js",
+    "start": "node index.js",
     "format": "biome format --write .",
     "precommit": "npm run format && biome check --write .",
     "lint": "biome lint --write .",
