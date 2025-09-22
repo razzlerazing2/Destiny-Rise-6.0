@@ -19,7 +19,7 @@ const __dirname = process.cwd();
 const server = http.createServer();
 const app = express();
 const bareServer = createBareServer("/fq/");
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 const cache = new Map();
 const CACHE_TTL = 30 * 24 * 60 * 60 * 1000; // Cache for 30 Days
 
@@ -153,5 +153,5 @@ server.on("listening", () => {
 });
   console.log(chalk.white("✅ Server is fully operational and ready to accept connections!"));
   console.log(chalk.red("Removed pnpm-lock.yaml because of some deploying issues"));
-server.listen({ port: PORT });
+server.listen({ port: PORT, host: '0.0.0.0' });
 // @razzlerazing2: "You don't got rizz u got soda fizz" Audience: "OHHHHHHHHHH ROAST W @razzlerazing2"
