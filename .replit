@@ -1,4 +1,4 @@
-modules = ["web", "nodejs-20"]
+modules = ["nodejs-16", "web"]
 
 [[ports]]
 localPort = 5000
