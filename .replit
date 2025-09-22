@@ -1,20 +1,8 @@
-modules = ["web", "nodejs-18"]
+modules = ["nodejs-16", "web"]
 
 [[ports]]
 localPort = 5000
-externalPort = 80
-
-[[ports]]
-localPort = 6969
-externalPort = 3000
-
-[[ports]]
-localPort = 8080
-externalPort = 80
-
-[[ports]]
-localPort = 36999
-externalPort = 3001
+externalPort = 8080
 
 [agent]
 expertMode = true
@@ -41,7 +29,7 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "PORT=5000 npm start"
-waitForPort = 5000
+waitForPort = 8080
 
 [workflows.workflow.metadata]
 outputType = "webview"
