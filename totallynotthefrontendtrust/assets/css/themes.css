@@ -1,17 +1,3 @@
-:root {
-    /* Define primary colors. You can adjust these to match your theme better. */
-    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
-    --primary-light: #9a88ff;
-    --secondary-color: #5d5c61; /* A dark grey for subtle elements */
-    --accent-color: #b0e0e6; /* A light blue for highlights */
-    --text-color: #cdd6f4; /* Your existing text color */
-    --input-bg: rgba(255, 255, 255, 0.1); /* Slightly transparent white for inputs */
-    --button-text-color: #ffffff;
-    --glass-background: rgba(255, 255, 255, 0.1); /* Lighter transparency for glass effect */
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --shadow-light: rgba(0, 0, 0, 0.15);
-    --shadow-strong: rgba(0, 0, 0, 0.3);
-}
 @keyframes gradientAnimation {
   0% {
     background: linear-gradient(45deg, green, red, black);

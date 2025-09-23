@@ -1,46 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* Import Google Font - Poppins for general text */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/*:root {
-   --backdrop-filter: blur(10px) brightness(80%);
-   --background-nav: rgba(255, 255, 255, 0.02);
-   --background-color: #4545459e;
-   --background-input: #4545459e;
-   --background-column: #353535;
-   --background-settings: #2a2a2a;
-   --background-buttons: #333;
-   --tab-active-background: #444;
-   --tab-inactive-background: ;
-   --slider-active-background: #4caf50;
-   --slider-inactive-background: #ccc;
-   --nav-image: url("/./assets/media/favicon/main.png");
-   --text-primary: #fff;
-   --text-dark: #555; 
-   --text-placeholder: #aaa;
-   --save-button: #4caf50;
-   --reset-button: #f44336;
-   --import-button: #009688;
-   --export-button: #ea76cb;
-}*/
+:root {
+    /* Define primary colors. Adjust these to match your preferred theme. */
+    --glass-weak: rgba(255, 255, 255, 0.05);
+    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
+    --primary-light: #9a88ff;
+    --secondary-color: #5d5c61; /* A dark grey for subtle elements */
+    --accent-color: #b0e0e6; /* A light blue for highlights */
+    --text-color: #cdd6f4; /* Your existing text color */
+    --input-bg: rgba(255, 255, 255, 0.1); /* Slightly transparent white for inputs */
+    --button-text-color: #ffffff;
+    --glass-background: rgba(255, 255, 255, 0.08); /* Lighter transparency for glass effect */
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-strong: rgba(0, 0, 0, 0.3);
+    --card-bg: rgba(0, 0, 0, 0.3); /* Slightly darker glass for cards/elements */
 
-::-webkit-scrollbar {
-   width: 6px;
-   background-color: var(--background-color);
-}
+    /* Music player specific colors */
+    --player-bg: rgba(0, 0, 0, 0.4);
+    --player-button-bg: var(--primary-color);
+    --player-button-hover-bg: var(--primary-light);
+    --player-text-color: var(--text-color);
 
-::-webkit-scrollbar-track {
-   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-   border-radius: 10px;
-   background-color: var(--background-color);
-}
-
-::-webkit-scrollbar-thumb {
-   border-radius: 10px;
-   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-   background-color: var(--text-primary);
-}
-
-::-webkit-scrollbar-thumb:hover {
-   background-color: var(--text-dark);
+    /* AI Analysis specific colors */
+    --ai-analysis-bg: rgba(255, 255, 255, 0.05); /* Very light glass for analysis box */
+    --ai-analysis-text: rgba(255, 255, 255, 0.8);
 }
 
 body {
@@ -58,36 +43,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
-
-
-
- /* @keyframes gradientAnimation {
-  0% {
-    background: linear-gradient(45deg, green, red, black);
-  }
-  12.5% {
-    background: linear-gradient(45deg, yellow, orange, red);
-  }
-  25% {
-    background: linear-gradient(45deg, black, red, green);
-  }
-  50% {
-    background: linear-gradient(45deg, yellow, blue, violet);
-  }
-  62.5% {
-    background: linear-gradient(45deg, green, black, indigo);
-  }
-  75% {
-    background: linear-gradient(45deg, red, orange, blue);
-  }
-  87.5% {
-    background: linear-gradient(45deg, red, indigo, gray);
-  }
-  100% {
-    background: linear-gradient(45deg, green, black, red);
-  }
-} */
 
 ::placeholder {
    color: var(--text-placeholder);

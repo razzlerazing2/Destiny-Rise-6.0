@@ -377,12 +377,9 @@ function setTheme(theme) {
                 });
             }, 1000);
         });
-            // ===============================================
-            // CRITICAL: SPA Navigation Event Listeners
-            // This was the missing piece for navigation.
-            // ===============================================
-           // const navLinks = document.querySelectorAll('.nav-links li a');
-           /* navLinks.forEach(link => {
+/*
+            const navLinks = document.querySelectorAll('.nav-links li a');
+            navLinks.forEach(link => {
                 link.addEventListener('click', (event) => {
                     event.preventDefault(); // Stop the browser from doing a full page reload
                     const pageId = link.getAttribute('href').substring(1); // Get the ID from href="#some-page"
@@ -444,8 +441,8 @@ spinner.className = "spinner";
 
 // Add emoji inside an <h1> tag
 const emoji = document.createElement("h1");
-emoji.textContent = "💀";
-
+ emoji.textContent = "💀";
+//emoji.textContent = "🔥";
 // Nest elements
 spinner.appendChild(emoji);
 preloader.appendChild(spinner);

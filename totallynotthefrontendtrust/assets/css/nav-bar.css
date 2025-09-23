@@ -1,11 +1,31 @@
-#particles-js {
-    position: fixed; /* Fixed so it follows scrolling */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 100%; 
-    pointer-events: none; /* makes sure it doesn’t block clicks */
+/* Import Google Font - Poppins for general text */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Define primary colors. Adjust these to match your preferred theme. */
+    --glass-weak: rgba(255, 255, 255, 0.05);
+    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
+    --primary-light: #9a88ff;
+    --secondary-color: #5d5c61; /* A dark grey for subtle elements */
+    --accent-color: #b0e0e6; /* A light blue for highlights */
+    --text-color: #cdd6f4; /* Your existing text color */
+    --input-bg: rgba(255, 255, 255, 0.1); /* Slightly transparent white for inputs */
+    --button-text-color: #ffffff;
+    --glass-background: rgba(255, 255, 255, 0.08); /* Lighter transparency for glass effect */
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-strong: rgba(0, 0, 0, 0.3);
+    --card-bg: rgba(0, 0, 0, 0.3); /* Slightly darker glass for cards/elements */
+
+    /* Music player specific colors */
+    --player-bg: rgba(0, 0, 0, 0.4);
+    --player-button-bg: var(--primary-color);
+    --player-button-hover-bg: var(--primary-light);
+    --player-text-color: var(--text-color);
+
+    /* AI Analysis specific colors */
+    --ai-analysis-bg: rgba(255, 255, 255, 0.05); /* Very light glass for analysis box */
+    --ai-analysis-text: rgba(255, 255, 255, 0.8);
 }
 nav {
   width: 200px;
@@ -14,12 +34,23 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: /*var(--glass-background);*/ rgba(0, 0, 0, 0.4);
+ /* background-color: var(--glass-background);*/
+  background-color: var(--glass-weak);
   border-right: 1px solid var(--glass-border);
   padding: 20px 0;
   box-shadow: 4px 0 10px var(--shadow-strong);
   transform: translateX(0);           /* default: visible */
   transition: transform 0.3s ease;    /* smooth sliding */
+}
+
+#particles-js {
+    position: fixed; /* Fixed so it follows scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%; 
+    pointer-events: none; /* makes sure it doesn’t block clicks */
 }
 #toggle-button {
     position: fixed; /* Fixed position for the toggle button */
@@ -211,7 +242,6 @@ nav.animated-content.show {
 nav.closed {
   transform: translateX(-100%) !important;
   opacity: 1; /* stays visible while sliding out */
-  transition: transform 0.3s ease;
 }
 
 .cuhs {

@@ -1,6 +1,6 @@
 [
   {
-    "name": "! Create Custom App",
+    "name": ".Create Game",
     "image": "/assets/media/icons/custom.webp",
     "categories": ["all"],
     "custom": "true"
@@ -426,7 +426,7 @@
     "categories": ["all"]
   },
   {
-    "name": "Henry Stickmin Complex",
+    "name": "Henry Stick Complex",
     "link": "https://www.3kh0-assets.silvereen.net/3kh0-assets/fleeingthecomplex/index.html",
     "image": "/assets/img/fleeingthecomplex.webp",
     "categories": ["all"]

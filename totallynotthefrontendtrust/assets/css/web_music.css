@@ -1,32 +1,3 @@
-/* Import Google Font - Poppins for general text */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-:root {
-    /* Define primary colors. Adjust these to match your preferred theme. */
-    --primary-color: #7b68ee; /* A vibrant purple for primary actions */
-    --primary-light: #9a88ff;
-    --secondary-color: #5d5c61; /* A dark grey for subtle elements */
-    --accent-color: #b0e0e6; /* A light blue for highlights */
-    --text-color: #cdd6f4; /* Your existing text color */
-    --input-bg: rgba(255, 255, 255, 0.1); /* Slightly transparent white for inputs */
-    --button-text-color: #ffffff;
-    --glass-background: rgba(255, 255, 255, 0.08); /* Lighter transparency for glass effect */
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --shadow-light: rgba(0, 0, 0, 0.15);
-    --shadow-strong: rgba(0, 0, 0, 0.3);
-    --card-bg: rgba(0, 0, 0, 0.3); /* Slightly darker glass for cards/elements */
-
-    /* Music player specific colors */
-    --player-bg: rgba(0, 0, 0, 0.4);
-    --player-button-bg: var(--primary-color);
-    --player-button-hover-bg: var(--primary-light);
-    --player-text-color: var(--text-color);
-
-    /* AI Analysis specific colors */
-    --ai-analysis-bg: rgba(255, 255, 255, 0.05); /* Very light glass for analysis box */
-    --ai-analysis-text: rgba(255, 255, 255, 0.8);
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
