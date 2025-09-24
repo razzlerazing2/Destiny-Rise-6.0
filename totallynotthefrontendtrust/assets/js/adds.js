@@ -2,10 +2,10 @@
   let qp;
 
   try {
-    qp = window.top.location.pathname === "/chatarewecookedindabig25";
+    qp = window.top.location.pathname === "/t";
   } catch {
     try {
-      qp = window.parent.location.pathname === "/chatarewecookedindabig25";   
+      qp = window.parent.location.pathname === "/t";   
     } catch {
       qp = false;
     }

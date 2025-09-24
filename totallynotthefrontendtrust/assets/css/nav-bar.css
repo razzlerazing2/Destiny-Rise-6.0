@@ -243,7 +243,11 @@ nav.closed {
   transform: translateX(-100%) !important;
   opacity: 1; /* stays visible while sliding out */
 }
-
+.page {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+}
 .cuhs {
   font-size: 15px;          /* Size of the icon */
   padding: 10px;

@@ -4,12 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
     <nav class="animated-content open" id="main-nav">
       <div class="nav-container">
         <ul class="nav-links">
-          <li><a href="/home"><i class="fas fa-home cuhs"></i><span>Home</span></a></li>
-          <li><a href="/games"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
-          <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
-          <li><a href="/animes"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
-          <li><a href="/settings"><i class="fas fa-gear cuhs"></i><span>Settings</span></a></li>
-          <li><a href="/song"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
+<!--<li><a href="#home-page"><i class="fas fa-home cuhs"></i><span>Home</span></a></li>
+<li><a href="#games-page"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
+<li><a href="#apps-page"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
+<li><a href="#animes-page"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
+<li><a href="#settings-page"><i class="fas fa-gear cuhs"></i><span>Settings</span></a></li>
+<li><a href="#song-page"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
+<li><a href="#search-page"><i class="fas fa-search cuhs"></i><span>Search</span></a></li>-->
+<li><a href="/home"><i class="fas fa-home cuhs"></i><span>Home</span></a></li>
+<li><a href="/games"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
+<li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
+<li><a href="/animes"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
+<li><a href="/settings"><i class="fas fa-gear cuhs"></i><span>Settings</span></a></li>
+<li><a href="/song"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
         </ul>
       </div>
     </nav>

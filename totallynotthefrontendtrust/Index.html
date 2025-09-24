@@ -15,28 +15,234 @@
 </head>
 
 <body>
-    <div id="particles-js"></div>
-    <div class="container animated-content">
-        <div class="container-inner">
-            <div id="live-clock"></div>
-            <h1>skryptonite&trade;</h1>
-            <h2>Where unblocking possibilities are endless</h2>
-<h3>Under construction for new games, apps, and anime🔥</h3>
-            <div class="search-container">
-                <div class="search-box">
-                    <form id="fv" method="POST">
-                        <input id="iv" class="input" placeholder="Search through the web freely...">
-                        <button class="search-btn"><i class="fas fa-search"></i></button>
-                    </form>
+  <div id="particles-js"></div>
+      <div class="container animated-content">
+          <div class="container-inner">
+              <div id="live-clock"></div>
+              <h1>skryptonite&trade;</h1>
+              <h2>Where unblocking possibilities are endless</h2>
+  <h3>Under construction for new games, apps, and anime🔥</h3>
+                      <form id="fv" method="POST">
+                          <input id="iv" placeholder="Search through the web freely...">
+                          <button class="search-btn"></button>
+                      </form>
+
+              <button class="open-blank-btn" onclick="aboutblank()">
+                  <i class="fas fa-external-link-alt"></i> Open about:blank
+              </button>
+          </div>
+      </div>
+          <!--  <div id="content">
+                <div id="home-page" class="page"><div id="particles-js"></div>
+                        <div class="container animated-content">
+                            <div class="container-inner">
+                                <div id="live-clock"></div>
+                                <h1>skryptonite&trade;</h1>
+                                <h2>Where unblocking possibilities are endless</h2>
+                    <h3>Under construction for new games, apps, and anime🔥</h3>
+                                <div class="search-container">
+                                    <div class="search-box">
+                                        <form id="fv" method="POST">
+                                            <input id="iv" class="input" placeholder="Search through the web freely...">
+                                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+
+
+
+                
+                <div id="games-page" class="page"> <div id="particles-js"></div>
+               <div class="container animated-content">
+                    <div class="container-inner">
+            <div class="input-c">
+                <input type="text" id="search" onkeyup="bar()" placeholder="Scroll down or search games..." />
+            </div>
+                <div class="pinned">
+                <h1><span class="highlight">Play your fav games now!</span></h1></div>
+                <div class="apps"></div>
+            </div>
+            </div></div>
+
+
+
+                
+                <div id="apps-page" class="page">
+                     <div id="particles-js"></div>
+                       <div class="container animated-content">
+                            <div class="container-inner">
+                    <div class="input-c">
+                        <input type="text" id="search" onkeyup="bar()" placeholder="Scroll down or search apps..." />
+                    </div>
+                        <div class="pinned">
+                        <h1><span class="highlight">Use fav apps now!</span></h1></div>
+                        <div class="apps"></div>
+                    </div>
+                    </div>
+                </div>
+                <div id="animes-page" class="page"> <div id="particles-js"></div>
+                       <div class="container animated-content">
+                            <div class="container-inner">
+                    <div class="input-c">
+                        <input type="text" id="search" onkeyup="bar()" placeholder="Scroll down or search anime..." />
+                    </div>
+                        <div class="pinned">
+                        <h1><span class="highlight">Watch top anime now!</span></h1></div>
+                        <div class="apps"></div>
+                    </div>
+                    </div></div>
+                <div id="settings-page" class="page"><div id="particles-js"></div>
+                    <div class="container animated-content">
+                      <div class="content">
+                        <div class="container">
+                          <div class="container-inner">
+                            <h1><span class="highlight">Settings</span></h1>
+
+                            <div class="settings-container">
+
+                              <div class="settings-card">
+                                <h3><span class="highlight">About:Blank</span></h3>
+                                <p>Cloak the site into about:blank to hide it from your search history. WARNING: costs come, so don't use dynamic when about:blank is on/cloaked.</p>
+                                <div id="ab-settings">
+                                  <div id="ab-settings-container">
+                                  </div>
+                                  <button onclick="AB()" class="key-button">Open</button>
+                                </div>
+                              </div>
+
+                              <div class="settings-card">
+                                <h3><span class="highlight"> Search Engine</span></h3>
+                                <p>Change search engine here. Google is best, but others work if it's down.</p>
+                                <div class="select-wrapper">
+                                <select title="engine" id="engine" onchange="EngineChange(this)">
+                                  <option value="DuckDuckGo">DuckDuckGo</option>
+                                  <option value="Google">Google</option>
+                                  <option value="Bing">Bing</option>
+                                  <option value="Qwant">Qwant</option>
+                                  <option value="Startpage">Startpage</option>
+                                  <option value="SearchEncrypt">SearchEncrypt</option>
+                                  <option value="Ecosia">Ecosia</option>
+                                </select>
+                              </div>
+                                <button class="key-button" onclick="SaveEngine();">Save</button>
+                              </div>
+
+                              <div class="settings-card">
+                                <h3><span class="highlight">Choose your Proxy</span></h3>
+                                <p>Use Dynamic for support/speed; Ultraviolet for trust/fame. Avoid Dynamic with about:blank. Dynamic still a bit in beta, so it might not be as good, but for things like Spotify, etc. use dynamic only if needed</p>
+                                <div class="select-wrapper">
+                                  <select id="pChange">
+                                    <option value="uv">Ultra<an>vio</an>let</option>
+                                    <option value="dy">Dynamic</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="settings-card">
+                      <h3>Backgrounds & Themes</h3>
+                      <p>Choose from a different variety of backgrounds & color/theme to personalize your background background/theme of choice. Good for picky little good boys (JK IM SORRY). But anyway, it's really good and I prefer you use it.</p>
+                        <select id="backgroundChange" onchange="setBackground(this.value)">
+                          <option value="catppuccin-mocha">Midnight Blue (Default)</option>
+                          <option value="catppuccin-moccha">A Skull BG</option>
+                          <option value="catppuccin-frappe">Ghost Skull BG</option>
+                    <option value="whatare">Phantom Fight</option>
+                    <option value="ru">A Dark, Halloween creepy forest BG</option>
+                    <option value="bi">A Full Moon Halloween BG</option>
+                    <option value="nnotnew">Average Windows 10 BG 😭</option>
+                    <option value="youdoing">Average Windows 11 BG 😭</option>
+                    <option value="gg">Mountain Vibe BG</option>
+                    <option value="ggccc"> Cold Gazeful Mountain BG</option>
+                    <option value="skibididdy">A Cyberpunk City GIF</option>
+                    <option value="animated-gradient">Rainbow Animation LIVE</option>
+                    <option value="cuhuacadfeelinsadaintnobodycareifugoodorbad">Gradient Animation LIVE</option>
+                    <option value="waitWHAT">2077 Cyberpunk GIF</option>
+                    <option value="new">A Beautiful Starry Night BG</option>
+                    <option value="nnew">Colorful Blocks BG</option>
+                    <option value="notnew">Lightly Colorful Brick Wall BG</option>
+                    <option value="cuhs3">Dark Shattered Neon BG</option>
+                    <option value="cuh">A Dark, Beautiful Abstract BG</option>
+                    <option value="catppuccin-macchiato">Beautiful Cyberpunk City Night GIF</option>
+                    <option value="cuhs2">A Satisfying Abstract BG</option>
+                    <option value="cuhs">Dark, cool-color shaded BG</option>
+                          <option value="whatis">A BG of a beautiful dark blue</option>
+                        </select>
+                                <select id="themeChange" onchange="setTheme(this.value)">
+                                  <option value="whats">Midnight Blue (Default)</option>
+                                  <option value="whatss">Light Purple</option>
+                                  <option value="whathuhs">Ocean Teal</option>
+                                  <option value="whathuzz">Green-Yellowish</option>
+                                  <option value="whatwas">Light Warm Peach</option>
+                                  <option value="whatis">Warm Banana</option>
+                                  <option value="whatcuhs">Ocean Blue</option>
+                                  <option value="whatluhs">Red Radish</option>
+                                  <option value="whatfuhs">Yellow-Orangeish</option>
+                              </select>
+                                <button class="key-button" id="toggleParticles">Toggle Particles</button>
+                    </div>
+
+                              <div class="settings-card">
+                                <h3><span class="highlight">Set Background Image</span></h3>
+                                <p>Change the site background. Good for picky little good boys (JK IM SORRY) Use a valid HTTPS image link. Or it wont work.</p>
+                                <input class="key-form" type="text" id="background-input" placeholder="DO HTTPS:// FIRST" />
+                                <button class="key-button" id="save-button">Save</button>
+                                <button class="key-button" id="reset-button">Reset</button>
+                              </div>
+
+                              <div class="settings-card">
+                                <h3><span class="highlight">Set Panic Key</span></h3>
+                                <p>Assign a key to instantly redirect to a safe site.</p>
+                                <input type="text" id="eventKeyInput" placeholder="Panic Keys (comma separated)" class="key-form" />
+                                <input class="key-form" placeholder="Panic Link DO HTTPS://" type="text" id="linkInput" />
+                                <button class="key-button" onclick="saveEventKey()">Save</button>
+                                <button class="key-button" onclick="resetButton()">Reset</button>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div></div>
+                </div>
+                    
+                <div id="song-page" class="page">  
+                    <div id="particles-js"></div>
+                      <div class="container animated-content">
+
+                        <div class="container-inner">
+                          <h1><span class="highlight">Web Music Player</span></h1>
+                          <p class="music-description">Enjoy a curated selection of music directly in your browser!</p>
+                    <p class="music-description">(My collaborater has a legal license for us giving out copyrighted songs.)</p>    
+                          <div class="input-c">
+                            <input type="text" id="music-search" onkeyup="searchMusic()" placeholder="Search songs..." />
+                          </div>
+
+                          <div id="music-player-controls">
+                            <audio id="audio-player" controls autoplay></audio>
+                            <div class="player-info">
+                              <span id="current-song-title">Select a song to play</span>
+                            </div>
+                            <div class="player-buttons">
+                              <button id="prev-button" title="Previous Song"><i class="fas fa-backward"></i></button>
+                              <button id="play-pause-button" title="Play/Pause"><i class="fas fa-play"></i></button>
+                              <button id="next-button" title="Next Song"><i class="fas fa-forward"></i></button>
+                            </div>
+                          </div>
+
+                          <div id="music-list"></div>
+                        </div>
+                      </div></div>
+                <div id="search-page" class="page"><div class="frame-container" id="frame-container"></div></div>
+
+                <div id="embed-container" style="display:none;">
+                    <iframe id="game-embed-example" src="https://www.example.com" style="display:none;" sandbox="allow-forms"></iframe>
                 </div>
             </div>
-
-            <button class="open-blank-btn" onclick="aboutblank()">
-                <i class="fas fa-external-link-alt"></i> Open about:blank
-            </button>
-        </div>
-    </div>
-    <script src="/assets/js/div.js"></script>
+       <!-- </div>
+    </div>-->
+  <!--  <script src="/assets/js/spa.js"></script>-->
+   <script src="/assets/js/div.js"></script>
     <script src="/assets/js/nav.js?vvv=001"></script>
     <script src="/assets/js/backend.js?v=03"></script>
     <script src="./assets/ultra/bundle.js?vlock"></script>

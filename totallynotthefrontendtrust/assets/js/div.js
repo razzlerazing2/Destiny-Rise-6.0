@@ -26,77 +26,6 @@ function setTheme(theme) {
     document.body.setAttribute('theme', theme);
     localStorage.setItem('theme', theme);
 }
-
-
-/*
-
-    // ===============================================
-    // SPA (Single Page Application) Core Logic
-    // ===============================================
-
-    // This function handles showing/hiding pages
-    function openPage(pageId) {
-        const pages = document.querySelectorAll('.page');
-        const embeds = document.querySelectorAll('#embed-container iframe');
-        const embedContainer = document.getElementById('embed-container');
-
-        // Remove 'current-game-embed' class from all elements
-        document.querySelectorAll('.current-game-embed').forEach(element => {
-            element.classList.remove('current-game-embed');
-        });
-
-        // Hide all pages initially
-        pages.forEach(page => {
-            page.style.display = 'none';
-        });
-
-        // Hide all embeds and the embed container initially
-        embeds.forEach(embed => {
-            embed.style.display = 'none';
-        });
-        if (embedContainer) {
-            embedContainer.style.display = 'none';
-        }
-
-        // Show the selected page
-        const selectedPage = document.getElementById(pageId);
-        if (selectedPage) {
-            selectedPage.style.display = 'block'; // Or 'flex' depending on your CSS layout for .page
-        }
-
-        // Special handling for embed-container if the opened page implies an embed
-        // You might need to refine this if your games/proxies are in separate HTML files
-        // and loaded into the iframe. This example assumes 'game-embed-1' and 'proxy-embed'
-        // are the IDs of the iframes themselves.
-        if (pageId.startsWith('game-embed-') || pageId === 'proxy-embed') {
-            const selectedEmbed = document.getElementById(pageId);
-            if (selectedEmbed && embedContainer) {
-                embedContainer.style.display = 'block'; // Show embed container
-                selectedEmbed.style.display = 'block'; // Show specific embed
-                selectedEmbed.classList.add('current-game-embed'); // Apply class if needed
-                // Optionally, hide all "regular" pages when an embed is active
-                pages.forEach(page => page.style.display = 'none');
-            }
-        }
-
-        // Update active navigation link in the menu
-        const navLinks = document.querySelectorAll('.nav-links li a');
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            // Match the href with the current pageId
-            if (link.getAttribute('href') === `#${pageId}`) {
-                link.classList.add('active');
-            }
-        });
-
-        // Update URL hash for direct linking and browser history
-        history.pushState(null, '', `#${pageId}`);
-    }
-
-    // ===============================================
-    // All Features Initialized on domcontentloadeed
-    // ===============================================
-    */
     document.addEventListener('DOMContentLoaded', () => {
         // --- Music Player Setup ---
         const audioPlayer = document.getElementById('audio-player');
@@ -377,33 +306,12 @@ function setTheme(theme) {
                 });
             }, 1000);
         });
-/*
-            const navLinks = document.querySelectorAll('.nav-links li a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault(); // Stop the browser from doing a full page reload
-                    const pageId = link.getAttribute('href').substring(1); // Get the ID from href="#some-page"
-                    openPage(pageId); // Call your SPA function to switch pages
-                });
-            });
 
-          /*  // Handle initial page load based on URL hash, or default to home
-            const initialHash = window.location.hash.substring(1); // Get the hash part (e.g., "home-page")
-            const initialPageId = initialHash || 'home-page'; // If no hash, default to 'home-page'
-            openPage(initialPageId); // Open the correct page on load
 
-           /* // Handle browser back/forward buttons
-            window.addEventListener('hashchange', () => {
-                const pageId = window.location.hash.substring(1);
-                if (pageId) {
-                    openPage(pageId);
-                } else {
-                    openPage('home-page'); // Default to home if hash becomes empty (e.g., after navigating back)
-                }
-            });*/
 
-        // }, 500); // Delay for preloader to finish
-    /* });
+
+       //  }, 500); // Delay for preloader to finish
+    // });
 
     /*🎵 BGM Playlist Player */
     /* I am commenting this out, bcuz i don't need these songs playlist. I already got a thing not ayo but yuh 🤨*/

@@ -7,10 +7,10 @@ window.addEventListener("load", () => {
 let xl;
 
 try {
-  xl = window.top.location.pathname === "/chatarewecookedindabig25";
+  xl = window.top.location.pathname === "/t";
 } catch {
   try {
-    xl = window.parent.location.pathname === "/chatarewecookedindabig25";   
+    xl = window.parent.location.pathname === "/t";   
   } catch {
     xl = false;
   }
@@ -24,9 +24,9 @@ if (form && input) {
     event.preventDefault();
     try {
       if (xl) processUrl(input.value, "");
-      else processUrl(input.value, "/chatarewecookedindabig25");
+      else processUrl(input.value, "/t");
     } catch {
-      processUrl(input.value, "/chatarewecookedindabig25");
+      processUrl(input.value, "/t");
     }
   });
 }
@@ -54,7 +54,7 @@ function processUrl(value, path) {
 }
 
 function go(value) {
-  processUrl(value, "/chatarewecookedindabig25");
+  processUrl(value, "/t");
 }
 
 function blank(value) {

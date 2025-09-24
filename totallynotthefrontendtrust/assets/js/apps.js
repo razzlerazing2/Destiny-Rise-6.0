@@ -7,10 +7,10 @@ const anime = window.location.pathname === "/animes";
 let t;
 
 try {
-    t = window.top.location.pathname === "/chatarewecookedindabig25";
+    t = window.top.location.pathname === "/t";
 } catch {
     try {
-        t = window.parent.location.pathname === "/chatarewecookedindabig25";
+        t = window.parent.location.pathname === "/t";
     } catch {
         t = false;
     }
@@ -43,7 +43,7 @@ function handleClick(app) {
 
     if (app.local) {
         saveToLocal(Selected);
-        window.location.href = "/chatarewecookedindabig25";
+        window.location.href = "/t";
         if (t) {
             window.location.href = Selected;
         }
