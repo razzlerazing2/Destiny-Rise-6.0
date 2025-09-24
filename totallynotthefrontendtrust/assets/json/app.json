@@ -1,140 +1,162 @@
   [
     {
-      "name": ".Create App",
+      "name": "| Create App |",
       "image": "/assets/media/icons/custom.webp",
       "categories": ["all"],
       "custom": "true"
     },
-  {
-    "name": "Google",
-    "image": "/assets/img/goog.webp",
-    "link": "https://google.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "Bing",
-    "image": "/assets/img/bing.webp",
-    "link": "https://bing.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "Pinterest",
-    "image": "/assets/img/pin.webp",
-    "link": "https://pinterest.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "Twitch",
-    "image": "/assets/img/twitch.webp",
-    "link": "https://twitch.tv",
-    "categories": ["all"]
-  },
-  {
-    "name": "GeForce NOW",
-    "image": "/assets/img/geforcenow.webp",
-    "link": "https://play.geforcenow.com",
-    "disabled": false
-  },
-  {
-    "name": "Symbolab",
-    "image": "/assets/img/symb.webp",
-    "link": "https://symbolab.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "CoolMathGames",
-    "image": "/assets/img/cmg.webp",
-    "link": "https://coolmathgames.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "9anime",
-    "image": "/assets/img/9ani.webp",
-    "link": "https://9animetv.to",
-    "categories": ["all"]
-  },
-  {
-    "name": "CrazyGames",
-    "image": "https://play-lh.googleusercontent.com/91TVBW8CFsOsbh7r3Y-kACNVYely0I7C-UcYP3-Jw-_MHCtfa_18i_4L7ozvGMoI9bk",
-    "link": "https://crazygames.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "Neal.fun",
-    "image": "/assets/img/nf.webp",
-    "link": "https://neal.fun",
-    "categories": ["all"]
-  },
-  {
-    "name": "FMHY.net",
-    "image": "/assets/img/fmhy.webp",
-    "link": "https://fmhy.net",
-    "categories": ["all"]
-  },
-  {
-    "name": "Discord",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=discord.com",
-    "link": "https://discord.com/app",
-    "categories": ["all"]
-  },
-  {
-    "name": "YouTube",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=youtube.com",
-    "link": "https://youtube.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "Reddit",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=reddit.com",
-    "link": "https://reddit.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "Wikipedia",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=wikipedia.org",
-    "link": "https://wikipedia.org",
-    "categories": ["all"]
-  },
-  {
-    "name": "GitHub",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=github.com",
-    "link": "https://github.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "Gmail",
-    "image": "https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png",
-    "link": "https://mail.google.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "Outlook",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=outlook.live.com",
-    "link": "https://outlook.live.com/mail/",
-    "categories": ["all"]
-  },
-  {
-    "name": "Netflix",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=netflix.com",
-    "link": "https://netflix.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "Amazon",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=amazon.com",
-    "link": "https://amazon.com",
-    "categories": ["all"]
-  },
-  {
-    "name": "X (Twitter)",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=x.com",
-    "link": "https://x.com/i/flow/login",
-    "categories": ["all"]
-  },
-  {
-    "name": "Instagram",
-    "image": "https://www.google.com/s2/favicons?sz=128&domain=instagram.com",
-    "link": "https://instagram.com",
-    "categories": ["all"]
-  }
+    {
+      "name": "Google",
+      "desc": "Google.com helps you find anything online.",
+      "icon": "/assets/img/goog.webp",
+      "url": "https://google.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Bing",
+      "desc": "Search freely with Bing, by Microsoft.",
+      "icon": "/assets/img/bing.webp",
+      "url": "https://bing.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Pinterest",
+      "desc": "Discover and save ideas with Pinterest.",
+      "icon": "/assets/img/pin.webp",
+      "url": "https://pinterest.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Twitch",
+      "desc": "Watch and stream games live on Twitch.tv.",
+      "icon": "/assets/img/twitch.webp",
+      "url": "https://twitch.tv",
+      "categories": ["all"]
+    },
+    {
+      "name": "GeForce NOW",
+      "desc": "Play high-end PC games via GeForce NOW cloud.",
+      "icon": "/assets/img/geforcenow.webp",
+      "url": "https://play.geforcenow.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Symbolab",
+      "desc": "Step-by-step math solver powered by Symbolab.",
+      "icon": "/assets/img/symb.webp",
+      "url": "https://symbolab.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "CoolMathGames",
+      "desc": "Fun logic and math games at Coolmath Games!",
+      "icon": "/assets/img/cmg.webp",
+      "url": "https://coolmathgames.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "9anime",
+      "desc": "Watch unlimited anime episodes in HD for free.",
+      "icon": "/assets/img/9ani.webp",
+      "url": "https://9animetv.to",
+      "categories": ["all"]
+    },
+    {
+      "name": "CrazyGames",
+      "desc": "Play free browser games instantly, no install.",
+      "icon": "https://play-lh.googleusercontent.com/91TVBW8CFsOsbh7r3Y-kACNVYely0I7C-UcYP3-Jw-_MHCtfa_18i_4L7ozvGMoI9bk",
+      "url": "https://crazygames.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Neal.fun",
+      "desc": "Games, visualizations, interactives and other weird stuff.",
+      "icon": "/assets/img/nf.webp",
+      "url": "https://neal.fun",
+      "categories": ["all"]
+    },
+    {
+      "name": "FMHY.net",
+      "desc": "The largest collection of free stuff on the internet!",
+      "icon": "/assets/img/fmhy.webp",
+      "url": "https://fmhy.net",
+      "categories": ["all"]
+    },
+    {
+      "name": "Discord",
+      "desc": "Chat, voice, and communities all in one place.",
+      "icon": "/assets/img/discord.webp",
+      "url": "https://discord.com/app",
+      "categories": ["all"]
+    },
+    {
+      "name": "YouTube",
+      "desc": "Watch, create, and share videos worldwide.",
+      "icon": "/assets/img/youtube.webp",
+      "url": "https://youtube.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Reddit",
+      "desc": "Community discussion, news, memes, and more.",
+      "icon": "/assets/img/reddit.webp",
+      "url": "https://reddit.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Wikipedia",
+      "desc": "The free encyclopedia that anyone can edit.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=wikipedia.org",
+      "url": "https://wikipedia.org",
+      "categories": ["all"]
+    },
+    {
+      "name": "GitHub",
+      "desc": "Host, review, and collaborate on code.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=github.com",
+      "url": "https://github.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Gmail",
+      "desc": "Google's fast, secure email service.",
+      "icon": "https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png",
+      "url": "https://mail.google.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Outlook",
+      "desc": "Email and calendar from Microsoft.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=outlook.live.com",
+      "url": "https://outlook.live.com/mail/",
+      "categories": ["all"]
+    },
+    {
+      "name": "Netflix",
+      "desc": "Watch TV shows, movies, and originals.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=netflix.com",
+      "url": "https://netflix.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "Amazon",
+      "desc": "Shop millions of products online.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=amazon.com",
+      "url": "https://amazon.com",
+      "categories": ["all"]
+    },
+    {
+      "name": "X (Twitter)",
+      "desc": "Real-time news and social conversations.",
+      "icon": "/assets/img/twitter-x.webp",
+      "url": "https://x.com/i/flow/login",
+      "categories": ["all"]
+    },
+    {
+      "name": "Instagram",
+      "desc": "Share photos, reels, and stories.",
+      "icon": "https://www.google.com/s2/favicons?sz=128&domain=instagram.com",
+      "url": "https://instagram.com",
+      "categories": ["all"]
+    }
 ]

@@ -33,9 +33,9 @@ function handleClick(app) {
         alert(app.say);
     }
 
-    let Selected = app.link;
-    if (app.links && app.links.length > 1) {
-        Selected = getSelected(app.links);
+    let Selected = app.url;
+    if (app.urls && app.urls.length > 1) {
+        Selected = getSelected(app.urls);
         if (!Selected) {
             return false;
         }
@@ -70,25 +70,25 @@ function handleClick(app) {
     return false;
 }
 
-function getSelected(links) {
-    const options = links
-        .map((link, index) => `${index + 1}: ${link.name}`)
+function getSelected(urls) {
+    const options = urls
+        .map((url, index) => `${index + 1}: ${url.name}`)
         .join("\n");
     const choice = prompt(
-        `Select a link by entering the corresponding number:\n${options}`,
+        `Select a url by entering the corresponding number:\n${options}`,
     );
     const selectedIndex = Number.parseInt(choice, 10) - 1;
 
     if (
         Number.isNaN(selectedIndex) ||
         selectedIndex < 0 ||
-        selectedIndex >= links.length
+        selectedIndex >= urls.length
     ) {
         alert("Invalid selection. Please try again.");
         return null;
     }
 
-    return links[selectedIndex].url;
+    return urls[selectedIndex].url;
 }
 function CustomApp(customApp) {
     let apps;
@@ -171,12 +171,12 @@ function pinContains(i, p) {
 }
 
 function Custom(app) {
-    const title = prompt("Enter title for the app: (Name it anything)");
-    const link = prompt("Enter link for the app: (MUST INCLUDE HTTPS:// FIRST!)");
-    if (title && link) {
+    const title = prompt("Enter title for the app:");
+    const url = prompt("Enter url for the app:");
+    if (title && url) {
         const customApp = {
             name: `Custom: ${title}`,
-            link: link,
+            url: url,
             face: "/assets/media/icons/custom.webp",
             custom: false,
         };
@@ -199,8 +199,8 @@ function CreateCustomApp(customApp) {
 
     btn.title = "Pin";
 
-    const linkElem = document.createElement("a");
-    linkElem.onclick = () => {
+    const urlElem = document.createElement("a");
+    urlElem.onclick = () => {
         handleClick(customApp);
     };
 
@@ -216,9 +216,9 @@ function CreateCustomApp(customApp) {
         paragraph.appendChild(span);
     }
 
-    //linkElem.appendChild(face);
-    linkElem.appendChild(paragraph);
-    columnDiv.appendChild(linkElem);
+    //urlElem.appendChild(face);
+    urlElem.appendChild(paragraph);
+    columnDiv.appendChild(urlElem);
    // columnDiv.appendChild(btn); // Commented out to hide the pin button
 
     const nonPinnedApps = document.querySelector(".apps");
@@ -285,14 +285,14 @@ fetch(path)
             if (app.categories?.includes("local")) {
                 app.local = true;
             } else if (
-                app.link &&
-                (app.link.includes("now.gg") || app.link.includes("nowgg.me"))
+                app.url &&
+                (app.url.includes("now.gg") || app.url.includes("nowgg.me"))
             ) {
                 if (app.partial === null || app.partial === undefined) {
                     app.partial = true;
                     app.say = "Now.gg is currently not working for some users.";
                 }
-            } else if (app.link?.includes("nowgg.nl")) {
+            } else if (app.url?.includes("nowgg.nl")) {
                 if (app.error === null || app.error === undefined) {
                     app.error = true;
                     app.say = "NowGG.nl is currently down.";
@@ -340,8 +340,8 @@ fetch(path)
                 setPin(pinNum);
             };
             btn.title = "pin this app";
-            const link = document.createElement("a");
-                        link.onclick = () => {
+            const url = document.createElement("a");
+                        url.onclick = () => {
                             handleClick(app);
                         };
 
@@ -379,12 +379,12 @@ fetch(path)
                             }
                         }
 
-                        link.appendChild(face);
-                        link.appendChild(paragraph);
-                        columnDiv.appendChild(link);
+                        url.appendChild(face);
+                        url.appendChild(paragraph);
+                        columnDiv.appendChild(url);
 
                         if (appInd !== 0) {
-                          // columnDiv.appendChild(btn); THIS HIDES PIN BTN
+                         //  columnDiv.appendChild(btn); // HIDE PIN BTN
                         }
 
                         if (pinList != null && appInd !== 0) {
@@ -411,7 +411,7 @@ fetch(path)
                 const selectedCategories = Array.from(
                     document.querySelectorAll("#category option:checked"),
                 ).map(option => option.value);
-                const g = document.getElementsByClassName("column");
+                const g = document.getElementsByClassname("column");
 
                 for (const game of g) {
                     const categories = game.getAttribute("data-category").split(" ");

@@ -1,73 +1,73 @@
 [
   {
-    "name": ".Create Anime",
+    "name": "| Create Anime |",
     "image": "/assets/media/icons/custom.webp",
     "categories": ["all"],
     "custom": "true"
   },
   {
     "name": "Demon Slayer",
-    "link": "https://aniwatchtv.to/watch/demon-slayer-kimetsu-no-yaiba-47?ep=1279",
+    "url": "https://aniwatchtv.to/watch/demon-slayer-kimetsu-no-yaiba-47?ep=1279",
     "image": "https://m.media-amazon.com/images/M/MV5BMGVhZTY1YTctOWJlYS00MjcxLTlkNDgtYTUxZTM5MzMzZjI2XkEyXkFqcGc@._V1_.jpg",
     "categories": ["all"]
   },
   {
     "name": "Attack on Titan",
-    "link": "https://aniwatchtv.to/attack-on-titan-112?ref=search",
+    "url": "https://aniwatchtv.to/attack-on-titan-112?ref=search",
     "image": "https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "categories": ["all"]
   },
   {
     "name": "My Hero Academia",
-    "link": "https://aniwatchtv.to/my-hero-academia-322?ref=search",
+    "url": "https://aniwatchtv.to/my-hero-academia-322?ref=search",
     "image": "https://m.media-amazon.com/images/M/MV5BY2QzODA5OTQtYWJlNi00ZjIzLThhNTItMDMwODhlYzYzMjA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "categories": ["all"]
   },
   {
     "name": "One Piece",
-    "link": "https://aniwatchtv.to/one-piece-100?ref=search",
+    "url": "https://aniwatchtv.to/one-piece-100?ref=search",
     "image": "https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_.jpg",
     "categories": ["all"]
   },
   {
     "name": "Naruto",
-    "link": "https://aniwatchtv.to/naruto-677?ref=search",
+    "url": "https://aniwatchtv.to/naruto-677?ref=search",
     "image": "https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "categories": ["all"]
   },
   {
     "name": "Naruto Shippuden",
-    "link": "https://aniwatchtv.to/naruto-shippuden-355",
+    "url": "https://aniwatchtv.to/naruto-shippuden-355",
     "image": "https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "categories": ["all"]
   },
   {
     "name": "Fullmetal Alchemist",
-    "link": "https://aniwatchtv.to/fullmetal-alchemist-308?ref=search",
+    "url": "https://aniwatchtv.to/fullmetal-alchemist-308?ref=search",
     "image": "https://m.media-amazon.com/images/M/MV5BMzNiODA5NjYtYWExZS00OTc4LTg3N2ItYWYwYTUyYmM5MWViXkEyXkFqcGc@._V1_.jpg",
     "categories": ["all"]
   },
   {
     "name": "Sword Art Online",
-    "link": "https://aniwatchtv.to/sword-art-online-2274?ref=search",
+    "url": "https://aniwatchtv.to/sword-art-online-2274?ref=search",
     "image": "https://m.media-amazon.com/images/M/MV5BN2NhYzU2NDEtYzI1NS00MjgzLThjZGUtOTYxNGJkZjZmNDdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "categories": ["all"]
   },
   {
     "name": "Tokyo Ghoul",
-    "link": "https://aniwatchtv.to/tokyo-ghoul-790?ref=search",
+    "url": "https://aniwatchtv.to/tokyo-ghoul-790?ref=search",
     "image": "https://m.media-amazon.com/images/M/MV5BZWI2NzZhMTItOTM3OS00NjcyLThmN2EtZGZjMjlhYWMwODMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "categories": ["all"]
   },
   {
     "name": "Death Note",
-    "link": "https://aniwatchtv.to/death-note-60?ref=search",
+    "url": "https://aniwatchtv.to/death-note-60?ref=search",
     "image": "https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "categories": ["all"]
   },
   {
     "name": "Jujutsu Kaisen",
-    "link": "https://aniwatchtv.to/jujutsu-kaisen-tv-534?ref=search",
+    "url": "https://aniwatchtv.to/jujutsu-kaisen-tv-534?ref=search",
     "image": "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     "categories": ["all"]
   }
