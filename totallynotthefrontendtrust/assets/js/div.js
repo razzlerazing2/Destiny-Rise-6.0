@@ -305,7 +305,7 @@ function setTheme(theme) {
                     }
                 });
             }, 1000);
-        });
+    });
 
 
 
@@ -349,7 +349,7 @@ spinner.className = "spinner";
 
 // Add emoji inside an <h1> tag
 const emoji = document.createElement("h1");
- emoji.textContent = "💀";
+ emoji.textContent = "";
 //emoji.textContent = "🔥";
 // Nest elements
 spinner.appendChild(emoji);

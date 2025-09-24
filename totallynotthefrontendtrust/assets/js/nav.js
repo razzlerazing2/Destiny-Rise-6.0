@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   // Insert nav + button
   const navHTML = `
@@ -17,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 <li><a href="/animes"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
 <li><a href="/settings"><i class="fas fa-gear cuhs"></i><span>Settings</span></a></li>
 <li><a href="/song"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
-        </ul>
       </div>
     </nav>
     <button id="nav-toggle"><i class="fas fa-bars"></button>
@@ -35,4 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
   btn.addEventListener("click", () => {
     nav.classList.toggle("closed");
   });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('toggleButton');
+    const navbar = document.getElementById('navbar');
+
+    button.addEventListener('click', function () {
+        if (navbar.classList.contains('sidebar')) {
+            // Switch to top nav
+            navbar.classList.remove('sidebar');
+            navbar.classList.add('top');
+        } else {
+            // Switch back to sidebar
+            navbar.classList.remove('top');
+            navbar.classList.add('sidebar');
+        }
+    });
 });

@@ -90,7 +90,6 @@ body {
 
 /* --- Search Container --- */
 .search-container {
-    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -98,8 +97,7 @@ body {
 
 .search-box {
     display: flex;
-    width: 100%;
-    max-width: 500px; /* Limit search box width */
+    width: 900px; /* Limit search box width */
     background-color: var(--input-bg);
     border-radius: 30px; /* More rounded search box */
     overflow: hidden;
@@ -108,8 +106,8 @@ body {
 }
 
 .search-box form {
+    width: 900px;
     display: flex;
-    width: 100%;
 }
 
 .search-box .input {
@@ -145,7 +143,9 @@ body {
 
 .search-btn:hover {
     background: linear-gradient(45deg, var(--primary-light), var(--primary-color));
-    transform: scale(1.05); /* Slight enlargement on hover */
+    transform: scale(1.1) translatey(-2px); /* Slight enlargement on hover */
+    transition: background 0.3s ease, transform 0.2s ease;
+    
 }
 
 /* --- Open Blank Button --- */
@@ -838,8 +838,7 @@ select#engine:focus {
 }
 
 input {
-  font-family: 'Arial', sans-serif;
-  width: 83%;
+  font-family: 'Poppins', sans-serif;
   padding: 16px 20px;
   color: white;
   border: none;
