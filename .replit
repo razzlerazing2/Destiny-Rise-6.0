@@ -41,3 +41,7 @@ outputType = "webview"
 task = "shell.exec"
 args = "PORT=5000 npm start"
 waitForPort = 5000
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["npm", "start"]
