@@ -90,6 +90,14 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Add cache control headers for Replit environment
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  next();
+});
+
 /* if (process.env.MASQR === "true") {
   console.log(chalk.green("Masqr is enabled"));
   setupMasqr(app);
