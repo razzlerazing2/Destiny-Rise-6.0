@@ -137,6 +137,12 @@ body[background="catppuccin-mocha"] {
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
 }
+body[background="catppuccin-mochaa"] {
+    background-color: black; /* Dark */
+    background-size: cover; /* Ensures the background covers the entire body */
+    --shadow: rgba(0, 0, 0, 0.01);
+    --text: #cdd6f4;
+}
   body[background="cuh"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
      url("/assets/media/background/canthurtmewmyogscantnerfmesandyop.png") no-repeat center center fixed;
@@ -208,6 +214,11 @@ body[background="nnotnew"] {
 body[background="whatis"] {
     background-image: url("https://cdn.shopify.com/s/files/1/1038/1798/files/31._Fluids_Dark_Blue_iPhone_Wallpaper_4k_HD.jpg?v=1707976065");
     --text: #cdd6f4;
+}
+body[theme="catppuccin-mochaa"] {
+    --text: #cdd6f4;
+  --primary-color: black;
+  --primary-light: #111111;
 }
 body[theme="whats"] {
     --text: #cdd6f4;

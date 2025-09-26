@@ -38,30 +38,30 @@ function setTheme(theme) {
 
         if (audioPlayer && playPauseButton && prevButton && nextButton && currentSongTitle && musicListDiv && musicSearchInput) {
             const allSongs = [
-                { name: "Young, Black & Rich - Melly Mike", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ybr.mp3" },
-                { name: "Hope - XXXTentacion", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hope.mp3" },
-                { name: "Pray for me - Kendrick Lamar & The Weeknd", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/pfm.mp3" },
-                { name: "Prove it - 21 Savage", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/proveit.mp3" }, // good
-                { name: "HAPPY - NF", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/HAPPY.mp3"}, // good
-                { name: "Hide - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hide.mp3" }, // good
-                { name: "Ransom - Lil Tecca", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ransomCUH.mp3" }, // good
-                { name: "Lifestyle - Rich Gang", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/life.mp3" }, // good
-                { name: "Big Dawgs - Hanumankind", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bigdawgs.mp3" }, // good
-                { name: "STD - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/std.mp3" }, // good
-                { name: "The Bottom - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bottom.mp3" }, // good
-                { name: "The Bottom 2 - Glorb", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom2.mp3" }, // good
-                { name: "The Bottom 3 - Glorb", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom3.mp3" }, // good
-                { name: "Feel It - d4vd", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/feel.mp3" }, // good
+                { name: "𝕐𝕠𝕦𝕟𝕘, 𝔹𝕝𝕒𝕔𝕜 & ℝ𝕚𝕔𝕙 - 𝕄𝕖𝕝𝕝𝕪 𝕄𝕚𝕜𝕖", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ybr.mp3" },
+                 { name: "𝔽𝕣𝕠𝕞 𝕄𝕪 𝕎𝕚𝕟𝕕𝕠𝕨 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/frommywindowCUH.mp3" }, // good
+                { name: "ℍ𝕠𝕡𝕖 - 𝕏𝕏𝕏𝕋𝕖𝕟𝕥𝕒𝕔𝕚𝕠𝕟", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hope.mp3" },
+                { name: "ℙ𝕣𝕒𝕪 𝕗𝕠𝕣 𝕞𝕖 - 𝕂𝕖𝕟𝕕𝕣𝕚𝕔𝕜 𝕃𝕒𝕞𝕒𝕣 & 𝕋𝕙𝕖 𝕎𝕖𝕖𝕜𝕟𝕕", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/pfm.mp3" },
+                { name: "ℙ𝕣𝕠𝕧𝕖 𝕚𝕥 - 𝟚𝟙 𝕊𝕒𝕧𝕒𝕘𝕖", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/proveit.mp3" }, // good
+                { name: "ℍ𝔸ℙℙ𝕐 - ℕ𝔽", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/HAPPY.mp3"}, // good
+                { name: "ℍ𝕚𝕕𝕖 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hide.mp3" }, // good
+                { name: "ℝ𝕒𝕟𝕤𝕠𝕞 - 𝕃𝕚𝕝 𝕋𝕖𝕔𝕔𝕒", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ransomCUH.mp3" }, // good
+                { name: "𝕃𝕚𝕗𝕖𝕤𝕥𝕪𝕝𝕖 - ℝ𝕚𝕔𝕙 𝔾𝕒𝕟𝕘", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/life.mp3" }, // good
+                { name: "𝔹𝕚𝕘 𝔻𝕒𝕨𝕘𝕤 - ℍ𝕒𝕟𝕦𝕞𝕒𝕟𝕜𝕚𝕟𝕕", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bigdawgs.mp3" }, // good
+                { name: "𝕊𝕋𝔻 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/std.mp3" }, // good
+                { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bottom.mp3" }, // good
+                { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 2 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom2.mp3" }, // good
+                { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 3 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom3.mp3" }, // good
+                { name: "𝔽𝕖𝕖𝕝 𝕀𝕥 - 𝕕𝟜𝕧𝕕", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/feel.mp3" }, // good
              // { name: "FE!N - Travis Scott", url: "/assets/media/_music/fein.mp3" }, // not good
-                { name: "Let You Down - NF", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/letyadown.mp3" }, // good
-                { name: "Not Like Us - Kendrick Lamar", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/nlu.mp3" }, // good
-                { name: "Fight Back - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/fbn.mp3" }, // good
-                 { name: "Crown - Neffex", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/crown-Lil'Cuzzin.mp3" },
-                { name: "Grateful - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/thankful.mp3" }, // good
-                { name: "Roses - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/rosesCUH.mp3" }, // good
-                { name: "From My Window - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/frommywindowCUH.mp3" }, // good
-                { name: "Burn - Juice WRLD", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/burnjw.mp3" }, // good
-                { name: "Squabble Up - Kendrick Lamar", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/squabbleup.mp3" }, // good
+                { name: "𝕃𝕖𝕥 𝕐𝕠𝕦 𝔻𝕠𝕨𝕟 - ℕ𝔽", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/letyadown.mp3" }, // good
+                { name: "ℕ𝕠𝕥 𝕃𝕚𝕜𝕖 𝕌𝕤 - 𝕂𝕖𝕟𝕕𝕣𝕚𝕔𝕜 𝕃𝕒𝕞𝕒𝕣", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/nlu.mp3" }, // good
+                { name: "𝔽𝕚𝕘𝕙𝕥 𝔹𝕒𝕔𝕜 - ℕ𝕖𝕗𝕗𝕖𝕩", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/fbn.mp3" }, // good
+                 { name: "ℂ𝕣𝕠𝕨𝕟 - ℕ𝕖𝕗𝕗𝕖𝕩", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/crown-Lil'Cuzzin.mp3" },
+                { name: "𝔾𝕣𝕒𝕥𝕖𝕗𝕦𝕝 - ℕ𝕖𝕗𝕗𝕖𝕩", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/thankful.mp3" }, // good
+                { name: "ℝ𝕠𝕤𝕖𝕤 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/rosesCUH.mp3" }, // good
+                { name: "𝔹𝕦𝕣𝕟 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/burnjw.mp3" }, // good
+                { name: "𝕊𝕢𝕦𝕒𝕓𝕓𝕝𝕖 𝕌𝕡 - 𝕂𝕖𝕟𝕕𝕣𝕚𝕔𝕜 𝕃𝕒𝕞𝕒𝕣", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/squabbleup.mp3" }, // good
             ];
 
             let filteredPlaylist = [...allSongs];
@@ -70,7 +70,7 @@ function setTheme(theme) {
             function loadSong(index) {
                 if (filteredPlaylist.length === 0) {
                     audioPlayer.src = '';
-                    currentSongTitle.textContent = 'No songs in playlist';
+                    currentSongTitle.textContent = 'ℕ𝕠 𝕤𝕠𝕟𝕘𝕤 𝕚𝕟 𝕡𝕝𝕒𝕪𝕝𝕚𝕤𝕥';
                     playPauseButton.disabled = true;
                     prevButton.disabled = true;
                     nextButton.disabled = true;
@@ -112,7 +112,7 @@ function setTheme(theme) {
             function renderMusicList() {
                 musicListDiv.innerHTML = '';
                 if (filteredPlaylist.length === 0) {
-                    musicListDiv.innerHTML = '<p class="no-music-message">No matching music found. Try a different search!</p>';
+                    musicListDiv.innerHTML = '<p class="no-music-message">ℕ𝕠 𝕞𝕒𝕥𝕔𝕙𝕚𝕟𝕘 𝕞𝕦𝕤𝕚𝕔 𝕗𝕠𝕦𝕟𝕕. 𝕋𝕣𝕪 𝕒 𝕕𝕚𝕗𝕗𝕖𝕣𝕖𝕟𝕥 𝕤𝕖𝕒𝕣𝕔𝕙!</p>';
                     return;
                 }
 
@@ -126,11 +126,11 @@ function setTheme(theme) {
                             <span>${song.name}</span>
                         </div>
                         <div class="item-actions">
-                            <button class="play-song-btn" title="Play this song"><i class="fas fa-play"></i></button>
-                            <button class="ai-analyze-btn" title="Get AI Analysis ✨"><i class="fas fa-magic"></i></button>
+                            <button class="play-song-btn" title="ℙ𝕝𝕒𝕪 𝕥𝕙𝕚𝕤 𝕤𝕠𝕟𝕘"><i class="fas fa-play"></i></button>
+                            <button class="ai-analyze-btn" title="𝔾𝕖𝕥 𝔸𝕀 𝔸𝕟𝕒𝕝𝕪𝕤𝕚𝕤 ✨"><i class="fas fa-magic"></i></button>
                         </div>
                         <div class="ai-analysis-output hidden">
-                            <p class="loading-analysis hidden">Analyzing...</p>
+                            <p class="loading-analysis hidden">𝔸𝕟𝕒𝕝𝕪𝕫𝕚𝕟𝕘...</p>
                             <p class="analysis-text"></p>
                         </div>
                     `;
@@ -171,7 +171,7 @@ function setTheme(theme) {
                     } else {
                         audioPlayer.pause();
                         audioPlayer.src = '';
-                        currentSongTitle.textContent = 'No songs in playlist';
+                        currentSongTitle.textContent = 'ℕ𝕠 𝕤𝕠𝕟𝕘𝕤 𝕚𝕟 𝕡𝕝𝕒𝕪𝕝𝕚𝕤𝕥';
                         playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
                         playPauseButton.disabled = true;
                         prevButton.disabled = true;
@@ -199,7 +199,7 @@ function setTheme(theme) {
                 analysisText.textContent = '';
                 buttonElement.disabled = true;
 
-                const prompt = `Provide a brief (2-3 sentences), creative description and suggest a mood/vibe for the song titled "${songName}". Focus on general musical characteristics or feelings it evokes.`;
+                const prompt = `ℙ𝕣𝕠𝕧𝕚𝕕𝕖 𝕒 𝕓𝕣𝕚𝕖𝕗 (𝟚-𝟛 𝕤𝕖𝕟𝕥𝕖𝕟𝕔𝕖𝕤), 𝕔𝕣𝕖𝕒𝕥𝕚𝕧𝕖 𝕕𝕖𝕤𝕔𝕣𝕚𝕡𝕥𝕚𝕠𝕟 𝕒𝕟𝕕 𝕤𝕦𝕘𝕘𝕖𝕤𝕥 𝕒 𝕞𝕠𝕠𝕕/𝕧𝕚𝕓𝕖 𝕗𝕠𝕣 𝕥𝕙𝕖 𝕤𝕠𝕟𝕘 𝕥𝕚𝕥𝕝𝕖𝕕 "${songName}". 𝔽𝕠𝕔𝕦𝕤 𝕠𝕟 𝕘𝕖𝕟𝕖𝕣𝕒𝕝 𝕞𝕦𝕤𝕚𝕔𝕒𝕝 𝕔𝕙𝕒𝕣𝕒𝕔𝕥𝕖𝕣𝕚𝕤𝕥𝕚𝕔𝕤 𝕠𝕣 𝕗𝕖𝕖𝕝𝕚𝕟𝕘𝕤 𝕚𝕥 𝕖𝕧𝕠𝕜𝕖𝕤.`;
                 const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
                 const payload = { contents: chatHistory };
                 const apiKey = ""; // Leave this as-is; Canvas will provide it at runtime.
@@ -215,7 +215,7 @@ function setTheme(theme) {
                     if (!response.ok) {
                         const errorData = await response.json();
                         console.error("Gemini API Error:", response.status, response.statusText, errorData);
-                        analysisText.textContent = `Error: Could not get analysis. ${errorData.error.message || 'Please try again.'}`;
+                        analysisText.textContent = `𝔼𝕣𝕣𝕠𝕣: ℂ𝕠𝕦𝕝𝕕 𝕟𝕠𝕥 𝕘𝕖𝕥 𝕒𝕟𝕒𝕝𝕪𝕤𝕚𝕤. ${errorData.error.message || 'ℙ𝕝𝕖𝕒𝕤𝕖 𝕥𝕣𝕪 𝕒𝕘𝕒𝕚𝕟.'}`;
                         return;
                     }
 
@@ -226,12 +226,12 @@ function setTheme(theme) {
                         result.candidates[0].content.parts.length > 0) {
                         analysisText.textContent = result.candidates[0].content.parts[0].text;
                     } else {
-                        analysisText.textContent = "Could not generate analysis for this song.";
+                        analysisText.textContent = "ℂ𝕠𝕦𝕝𝕕 𝕟𝕠𝕥 𝕘𝕖𝕟𝕖𝕣𝕒𝕥𝕖 𝕒𝕟𝕒𝕝𝕪𝕤𝕚𝕤 𝕗𝕠𝕣 𝕥𝕙𝕚𝕤 𝕤𝕠𝕟𝕘.";
                         console.error("Unexpected Gemini API response structure:", result);
                     }
                 } catch (error) {
                     console.error("Network or API Call Error:", error);
-                    analysisText.textContent = "Failed to connect to AI. Check your internet connection.";
+                    analysisText.textContent = "𝔽𝕒𝕚𝕝𝕖𝕕 𝕥𝕠 𝕔𝕠𝕟𝕟𝕖𝕔𝕥 𝕥𝕠 𝔸𝕀. ℂ𝕙𝕖𝕔𝕜 𝕪𝕠𝕦𝕣 𝕚𝕟𝕥𝕖𝕣𝕟𝕖𝕥 𝕔𝕠𝕟𝕟𝕖𝕔𝕥𝕚𝕠𝕟.";
                 } finally {
                     loadingAnalysis.classList.add('hidden');
                     buttonElement.disabled = false;

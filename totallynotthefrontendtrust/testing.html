@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:description" content="SkellySKripts is a very clean and fast proxy" />
+  <link rel="icon" href="/assets/media/icons/favicon.png" type="image/x-icon">
+ <title>𝕊𝕜𝕣𝕪𝕡𝕥𝕠𝕟𝕚𝕥𝕖 -- 𝔹𝕪𝕡𝕒𝕤𝕤</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/inde.x.css" />
+  <link rel="stylesheet" href="/assets/css/themes.css" />
+<style>
+  #toggle-button {
+      position: fixed; /* Fixed position for the toggle button */
+      top: 20px; /* Adjust as needed */
+      left: 20px; /* Adjust as needed */
+      z-index: 1001; /* Ensure it's above the sidebar */
+      background: linear-gradient(180deg, orange, yellow);
+
+      /* Match the sidebar */
+      border: none;
+      padding: 10px;
+      border-radius: 5px; /* Rounded button */
+      cursor: pointer; /* Cursor pointer for button */
+      box-shadow: 0 4px 10px var(--shadow-strong); /* Add shadow */
+  }
+
+  #toggle-button:focus {
+      outline: none; /* Remove default outline */
+  }
+  #particles-js {
+      position: fixed; /* Fixed so it follows scrolling */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 100%; 
+      pointer-events: none; /* makes sure it doesn’t block clicks */
+  }
+  /* Import Google Font - Poppins for general text */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+  :root {
+      --glass-weak: rgba(255, 255, 255, 0.05);
+      --primary-color: #7b68ee;
+      --primary-light: #9a88ff;
+      --secondary-color: #5d5c61;
+      --accent-color: #b0e0e6;
+      --text-color: #cdd6f4;
+      --input-bg: rgba(255, 255, 255, 0.1);
+      --button-text-color: #ffffff;
+      --glass-background: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --shadow-light: rgba(0, 0, 0, 0.15);
+      --shadow-strong: rgba(0, 0, 0, 0.3);
+      --card-bg: rgba(0, 0, 0, 0.3);
+  }
+
+  .sidebar {
+      width: 200px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background-color: var(--glass-weak);
+      border-right: 1px solid var(--glass-border);
+      padding: 20px 0;
+      box-shadow: 4px 0 10px var(--shadow-strong);
+      transform: translateX(0);
+      transition: transform 0.3s ease;
+  }
+
+  .sidebar-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .sidebar-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      align-items: center;
+  }
+
+  .sidebar-links li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 600;
+      padding: 12px 18px;
+      border-radius: 10px;
+      transition: color 0.3s ease, transform 0.6s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 80%;
+  }
+
+  .sidebar-links li a:hover {
+      color: var(--primary-light);
+  }
+
+  .sidebar-links li a.active {
+      color: var(--primary-light);
+  }
+
+  .sidebar-links i.cuhs {
+      display: inline-block;
+      transition: transform 0.6s ease;
+  }
+
+  .sidebar-links li a:hover i.cuhs {
+      transform: rotate(720deg);
+  }
+
+  nav {
+      width: 100%;
+      height: 60px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background-color: var(--glass-weak);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 0 20px;
+      box-shadow: 0 4px 10px var(--shadow-strong);
+      transform: translateY(0);
+      transition: transform 0.3s ease;
+  }
+
+  .nav-container {
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flex for horizontal layout */
+    gap: 15px; /* Space out nav items */
+    align-items: center; /* Center items vertically */
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 12px 18px; /* Padding for button shape */
+    border-radius: 10px; /* Rounded corners */
+    transition: color 0.3s ease, transform 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text within the button */
+    gap: 8px; /* Space between icon and text */
+  }
+  /* base: make the icon rotatable */
+  .nav-links i.cuhs {
+    display: inline-block;              /* required for transform */
+    transition: transform 0.6s ease;    /* smooth spin */
+  }
+
+  /* on link hover: change text color, but spin ONLY the icon */
+  .nav-links li a:hover {
+    color: var(--primary-light);
+  }
+
+  .nav-links li a:hover i.cuhs {
+    transform: rotate(720deg);
+  }
+
+
+  .nav-links li a.active { 
+      color: var(--primary-light);
+  }
+
+  /* --- Responsive Adjustments --- */
+  @media (max-width: 768px) {
+      .container-inner {
+          padding: 30px;
+          margin-left: 260px; /* Space for the sidebar */
+      }
+
+      .container-inner h1 {
+          font-size: 2.5em;
+      }
+
+      .container-inner h2 {
+          font-size: 1.2em;
+      }
+
+      .nav-links {
+          gap: 10px; /* Adjust space on smaller screens */
+      }
+
+      nav {
+          padding: 20px 0; /* Maintain padding */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .nav-links li a {
+          padding: 8px 12px; /* Adjust padding */
+          font-size: 0.9em;
+      }
+  }
+  #nav-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    background: linear-gradient(45deg, #f39c12, #8e44ad);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: transform 0.3s ease;
+  }
+  #nav-toggle:hover {
+  transition: transform 0.3s ease;
+  transform: translateY(-4px) scale(1.1);
+  background: linear-gradient(270deg, #ff007f, #00ff7f, #007fff, #ff7f00, #ff00ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+  }
+  /* --- Preloader Styles (Kept as is, but ensured it integrates) --- */
+  #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.55); /* A dark background, adjust to match your theme */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 1s ease-out;
+      opacity: 1;
+  }
+
+  #preloader.hidden {
+      opacity: 0;
+      pointer-events: none;
+  }
+
+  .spinner {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #fff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  } /*
+
+  /* Base animation style */
+  .animated-content {
+      opacity: 0;
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  /* --- Container intro (slides up from bottom) --- */
+  .container.animated-content {
+    opacity: 0;
+    transform: translateY(50px); /* start offset */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .container.animated-content.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* --- Nav intro (slides in from left) --- */
+  nav.animated-content {
+    opacity: 0;
+    transform: translateY(-50px); /* start offset */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  nav.animated-content.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  sidebar.animated-content {
+    opacity: 0;
+    transform: translateX(-50px); /* start offset */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  sidebar.animated-content.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  sidebar.closed {
+    transform: translateX(-100%) !important;
+    opacity: 1; 
+  }
+  nav.closed {
+    transform: translateY(-100%) !important;
+    opacity: 1; /* stays visible while sliding out */
+  }
+  /*.page {
+      display: none;
+      padding: 20px;
+      margin-top: 10px;
+  }*/
+  .cuhs {
+    font-size: 15px;          /* Size of the icon */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, color 0.75s ease;
+  }
+</style>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" style="display: none;"> <!-- Initially hidden -->
+    <div class="sidebar-container">
+      <ul class="sidebar-links">
+        <li><a href="/home"><i class="fas fa-home cuhs"></i><span>Home</span></a></li>
+        <li><a href="/games"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
+        <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
+        <li><a href="/animes"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
+        <li><a href="/settings"><i class="fas fa-gear cuhs"></i><span>Settings</span></a></li>
+        <li><a href="/song"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="container animated-content">
+  <div class="content">
+    <div class="container">
+      <div class="container-inner">
+        <h1><span class="highlight">Settings</span></h1>
+
+        <div class="settings-container">
+
+          <div class="settings-card">
+            <h3><span class="highlight">About:Blank</span></h3>
+            <p>Cloak the site into about:blank to hide it from your search history. WARNING: costs come, so don't use dynamic when about:blank is on/cloaked.</p>
+            <div id="ab-settings">
+              <div id="ab-settings-container">
+              </div>
+              <button onclick="AB()" class="key-button">Open</button>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3><span class="highlight"> Search Engine</span></h3>
+            <p>Change search engine here. Google is best, but others work if it's down.</p>
+            <div class="select-wrapper">
+            <select title="engine" id="engine" onchange="EngineChange(this)">
+              <option value="DuckDuckGo">DuckDuckGo</option>
+              <option value="Google">Google</option>
+              <option value="Bing">Bing</option>
+              <option value="Qwant">Qwant</option>
+              <option value="Startpage">Startpage</option>
+              <option value="SearchEncrypt">SearchEncrypt</option>
+              <option value="Ecosia">Ecosia</option>
+            </select>
+          </div>
+            <button class="key-button" onclick="SaveEngine();">Save</button>
+          </div>
+
+          <div class="settings-card">
+            <h3><span class="highlight">Choose your Proxy</span></h3>
+            <p>Use Dynamic for support/speed; Ultraviolet for trust/fame. Avoid Dynamic with about:blank. Dynamic still a bit in beta, so it might not be as good, but for things like Spotify, etc. use dynamic only if needed</p>
+            <div class="select-wrapper">
+              <select id="pChange">
+                <option value="uv">Ultra<an>vio</an>let</option>
+                <option value="dy">Dynamic</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="settings-card">
+  <h3>Backgrounds & Themes</h3>
+  <p>Choose from a different variety of backgrounds & color/theme to personalize your background background/theme of choice. Good for picky little good boys (JK IM SORRY). But anyway, it's really good and I prefer you use it.</p>
+    <select id="backgroundChange" onchange="setBackground(this.value)">
+      <option value="catppuccin-mocha">Midnight Blue (Default)</option>
+      <option value="catppuccin-moccha">A Skull BG</option>
+      <option value="catppuccin-frappe">Ghost Skull BG</option>
+<option value="whatare">Phantom Fight</option>
+<option value="ru">A Dark, Halloween creepy forest BG</option>
+<option value="bi">A Full Moon Halloween BG</option>
+<option value="nnotnew">Average Windows 10 BG 😭</option>
+<option value="youdoing">Average Windows 11 BG 😭</option>
+<option value="gg">Mountain Vibe BG</option>
+<option value="ggccc"> Cold Gazeful Mountain BG</option>
+<option value="skibididdy">A Cyberpunk City GIF</option>
+<option value="animated-gradient">Rainbow Animation LIVE</option>
+<option value="cuhuacadfeelinsadaintnobodycareifugoodorbad">Gradient Animation LIVE</option>
+<option value="waitWHAT">2077 Cyberpunk GIF</option>
+<option value="new">A Beautiful Starry Night BG</option>
+<option value="nnew">Colorful Blocks BG</option>
+<option value="notnew">Lightly Colorful Brick Wall BG</option>
+<option value="cuhs3">Dark Shattered Neon BG</option>
+<option value="cuh">A Dark, Beautiful Abstract BG</option>
+<option value="catppuccin-macchiato">Beautiful Cyberpunk City Night GIF</option>
+<option value="cuhs2">A Satisfying Abstract BG</option>
+<option value="cuhs">Dark, cool-color shaded BG</option>
+      <option value="whatis">A BG of a beautiful dark blue</option>
+    </select>
+            <select id="themeChange" onchange="setTheme(this.value)">
+              <option value="whats">Midnight Blue (Default)</option>
+              <option value="whatss">Light Purple</option>
+              <option value="whathuhs">Ocean Teal</option>
+             <!-- <option value="whathuzz">Green-Yellowish</option>-->
+              <option value="whatwas">Light Warm Peach</option>
+              <option value="whatis">Warm Banana</option>
+              <option value="whatcuhs">Ocean Blue</option>
+              <option value="whatluhs">Red Radish</option>
+            <!--  <option value="whatfuhs">Yellow-Orangeish</option>-->
+          </select>
+            <button class="key-button" id="toggleParticles">Toggle Particles</button>
+            <button id="toggleNav" class="key-button">Toggle Navigation</button>
+</div>
+
+          <div class="settings-card">
+            <h3><span class="highlight">Set Background Image</span></h3>
+            <p>Change the site background. Good for picky little good boys (JK IM SORRY) Use a valid HTTPS image link. Or it wont work.</p>
+            <input class="key-form" type="text" id="background-input" placeholder="DO HTTPS:// FIRST" />
+            <button class="key-button" id="save-button">Save</button>
+            <button class="key-button" id="reset-button">Reset</button>
+          </div>
+
+          <div class="settings-card">
+            <h3><span class="highlight">Set Panic Key</span></h3>
+            <p>Assign a key to instantly redirect to a safe site.</p>
+            <input type="text" id="eventKeyInput" placeholder="Panic Keys (comma separated)" class="key-form" />
+            <input class="key-form" placeholder="Panic Link DO HTTPS://" type="text" id="linkInput" />
+            <button class="key-button" onclick="saveEventKey()">Save</button>
+            <button class="key-button" onclick="resetButton()">Reset</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/div.js"></script>
+  <script src="assets/js/backend.js?v=03"></script>
+  <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
+  <script src="./assets/ultra/config.js?v=10-02-2024"></script>
+  <script src="/assets/js/adds.js?v=003"></script>
+  <script src="/assets/js/features.js?v=010"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Insert nav + button
+      const navHTML = `
+        <nav class="animated-content open" id="main-nav" style="display: flex;"> <!-- Initially visible -->
+          <div class="nav-container">
+            <ul class="nav-links">
+              <li><a href="/home"><i class="fas fa-home cuhs"></i><span>Home</span></a></li>
+              <li><a href="/games"><i class="fas fa-gamepad cuhs"></i><span>Games</span></a></li>
+              <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i><span>Apps</span></a></li>
+              <li><a href="/animes"><i class="fas fa-tv cuhs"></i><span>Anime</span></a></li>
+              <li><a href="/settings"><i class="fas fa-gear cuhs"></i><span>Settings</span></a></li>
+              <li><a href="/song"><i class="fas fa-music cuhs"></i><span>Songs</span></a></li>
+            </ul>
+          </div>
+        </nav>
+        <button id="nav-toggle"><i class="fas fa-bars"></i></button>
+      `;
+
+      document.body.insertAdjacentHTML("afterbegin", navHTML);
+
+      const nav = document.getElementById("main-nav");
+      const btn = document.getElementById("nav-toggle");
+      const sidebar = document.querySelector('.sidebar');
+      const topNav = document.getElementById('main-nav');
+
+      // Load the user's choice from localStorage
+      const preferredLayout = localStorage.getItem('navLayout');
+
+      // Set the initial display based on the saved preference
+      if (preferredLayout === 'sidebar') {
+        sidebar.style.display = 'flex';
+        topNav.style.display = 'none';
+      } else {
+        sidebar.style.display = 'none';
+        topNav.style.display = 'flex';
+      }
+
+      // Trigger intro animation (small delay looks smoother)
+      setTimeout(() => {
+        nav.classList.add("show");
+      }, 1000);
+
+      // Toggle nav on button click
+      btn.addEventListener("click", () => {
+        nav.classList.toggle("closed");
+      });
+
+      // Navigation toggle functionality for sidebar and top nav
+      document.getElementById('toggleNav').addEventListener('click', function() {
+        // Check if the sidebar is currently displayed
+        if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+          // Show the sidebar and hide the top navigation
+          sidebar.style.display = 'flex'; // Show the sidebar
+          topNav.style.display = 'none';   // Hide the top navigation
+          localStorage.setItem('navLayout', 'sidebar'); // Save preference
+        } else {
+          // Show the top navigation and hide the sidebar
+          sidebar.style.display = 'none';   // Hide the sidebar
+          topNav.style.display = 'flex';    // Show the top navigation
+          localStorage.setItem('navLayout', 'topNav'); // Save preference
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

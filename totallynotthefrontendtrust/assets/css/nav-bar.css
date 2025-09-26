@@ -27,24 +27,6 @@
     --ai-analysis-bg: rgba(255, 255, 255, 0.05); /* Very light glass for analysis box */
     --ai-analysis-text: rgba(255, 255, 255, 0.8);
 }
-#toggle-button {
-    position: fixed; /* Fixed position for the toggle button */
-    top: 20px; /* Adjust as needed */
-    left: 20px; /* Adjust as needed */
-    z-index: 1001; /* Ensure it's above the sidebar */
-    background: linear-gradient(180deg, orange, yellow);
-
-    /* Match the sidebar */
-    border: none;
-    padding: 10px;
-    border-radius: 5px; /* Rounded button */
-    cursor: pointer; /* Cursor pointer for button */
-    box-shadow: 0 4px 10px var(--shadow-strong); /* Add shadow */
-}
-
-#toggle-button:focus {
-    outline: none; /* Remove default outline */
-}
 #particles-js {
     position: fixed; /* Fixed so it follows scrolling */
     top: 0;
@@ -56,7 +38,7 @@
 }
 nav {
   width: 200px;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -69,7 +51,20 @@ nav {
   transform: translateX(0);           /* default: visible */
   transition: transform 0.3s ease;    /* smooth sliding */
 }
-
+.logo {
+    font-family: serif;
+    color: var(--text-color);
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+     transition: color 0.3s ease;
+}
+.logo a:hover {
+    color: var(--primary-light);
+    transition: color 0.3s ease;
+}
 .nav-container {
     width: 100%; /* Full width of the sidebar */
     display: flex;
@@ -153,12 +148,13 @@ nav {
     }
 }
 #nav-toggle {
+    background: transparent;
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
   z-index: 1100;
-  background: linear-gradient(45deg, #f39c12, #8e44ad);
-  color: white;
+/*  background: linear-gradient(45deg, #f39c12, #8e44ad);*/
+    color: var(--text-color);
   border: none;
   padding: 10px 15px;
   font-size: 20px;
@@ -166,12 +162,17 @@ nav {
   border-radius: 100px;
   transition: transform 0.3s ease;
 }
-#nav-toggle:hover {
+/*#nav-toggle:hover {
 transition: transform 0.3s ease;
 transform: translateY(-4px) scale(1.1);
 background: linear-gradient(270deg, #ff007f, #00ff7f, #007fff, #ff7f00, #ff00ff);
 background-size: 400% 400%;
 animation: gradientAnimation 5s ease infinite;
+}*/
+#nav-toggle:hover {
+    background: transparent;
+    transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.67);
 }
 /* --- Preloader Styles (Kept as is, but ensured it integrates) --- */
 #preloader {
@@ -233,6 +234,15 @@ nav.animated-content {
 }
 
 nav.animated-content.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+#particles-js.animated-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#particles-js.animated-content.show {
   opacity: 1;
   transform: translateX(0);
 }
