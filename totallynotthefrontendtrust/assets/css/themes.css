@@ -137,9 +137,15 @@ body[background="catppuccin-mocha"] {
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
 }
+body[background="catppuccin-mochaaa"] {
+  background: linear-gradient(45deg, #f39c12, #8e44ad) no-repeat center center fixed;
+  background-size: cover;
+    --shadow: rgba(0, 0, 0, 0.01);
+    --text: #cdd6f4;
+}
 body[background="catppuccin-mochaa"] {
-    background-color: black; /* Dark */
-    background-size: cover; /* Ensures the background covers the entire body */
+  background: black no-repeat center center fixed;
+  background-size: cover;
     --shadow: rgba(0, 0, 0, 0.01);
     --text: #cdd6f4;
 }

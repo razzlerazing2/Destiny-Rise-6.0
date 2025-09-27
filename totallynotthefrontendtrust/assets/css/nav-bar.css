@@ -4,6 +4,7 @@
 :root {
     /* Define primary colors. Adjust these to match your preferred theme. */
     --glass-weak: rgba(255, 255, 255, 0.05);
+   /* --primary-color: linear-gradient(45deg, #f39c12, #8e44ad);*/
     --primary-color: #7b68ee; /* A vibrant purple for primary actions */
     --primary-light: #9a88ff;
     --secondary-color: #5d5c61; /* A dark grey for subtle elements */
@@ -181,7 +182,7 @@ animation: gradientAnimation 5s ease infinite;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.55); /* A dark background, adjust to match your theme */
+    background-color: rgba(0, 0, 0, 0.67); /* A dark background, adjust to match your theme */
     display: flex;
     justify-content: center;
     align-items: center;
