@@ -5,7 +5,7 @@ importScripts("/assets/ultra/config.js?v=10-02-2024");
 importScripts(__uv$config.sw || "/assets/ultra/sw.js?v=10-02-2024");
 
 const uv = new UVServiceWorker();
-const dynamic = new dynamic();
+const dynamic = new Dynamic();
 
 const userKey = new URL(self.location).searchParams.get("userkey");
 self.dynamic = dynamic;

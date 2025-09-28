@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../sw.js", {
+  navigator.serviceWorker.register("../sw.js?proxy", {
     scope: "/a/",
   });
 });
