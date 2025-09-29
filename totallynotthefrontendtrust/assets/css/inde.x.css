@@ -20,6 +20,7 @@ body {
 }
 
 .column {
+    color: var(--button-text-color);
     background: var(--primary-color);
   display: block;
   cursor: pointer;
