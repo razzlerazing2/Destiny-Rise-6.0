@@ -29,12 +29,12 @@ body {
   margin: 10px;
   border-radius: 15px;
   transition: all 0.3s ease;
-  border: 2px solid ghostwhite; /* Initial transparent border */
   background-clip: padding-box;
+    border: 1px solid ghostwhite;
 }
 .column:hover {
     background-color: var(--primary-light);
-    transform: translateY(-4px); /* Slight lift on hover */
+    transform: translateY(-4px);
     box-shadow: 0 4px 10px var(--shadow-strong);
 }
 /*.proxy-button {
@@ -864,7 +864,7 @@ background-color: rgba(0, 0, 0, 0.55);
 .proxy-button:hover {
  /* color: #000000;
   background-color: #ffffff;*/
-  transform: scale(1.05) translatey(-4px);
+  transform: translatey(-4px);
   transition: all 0.3s ease;
     background-color: var(--primary-light);
     box-shadow: 0 4px 10px var(--shadow-strong);

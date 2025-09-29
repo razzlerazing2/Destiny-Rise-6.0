@@ -5,7 +5,7 @@ window.onload = function() {
         console.log('callback - particles.js config loaded');
     });
 };
-    const savedTheme = localStorage.getItem('background') || 'cuhs';
+    const savedTheme = localStorage.getItem('background') || 'cuhs2';
     document.body.setAttribute('background', savedTheme);
 
     // Define the setTheme function globally
