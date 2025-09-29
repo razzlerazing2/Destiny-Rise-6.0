@@ -1,5 +1,5 @@
 // skids, better hop tf off
-import fs from "node:fs";
+import fs from "node:fs"
 import http from "node:http";
 import path from "node:path";
 import { createBareServer } from "@nebula-services/bare-server-node";
@@ -116,9 +116,11 @@ const routes = [
   { path: "/home-page", file: "index.html" },
   { path: "/contact", file: "contactsupport.html" },
   { path: "/learnmathhere", file: "index.html" },
-  { path: "/animes", file: "cuh.html" },
+  { path: "/animes", file: "anime.html" },
   { path: "/song", file: "web_music.html" },
   { path: "/proxyhome", file: "proxyhome.html" },
+  { path: "/resources", file: "_trickfiles/resource.html" },
+  { path: "/learn", file: "_trickfiles/learnmore.html" },
 ];
 
 // biome-ignore lint/complexity/noForEach:

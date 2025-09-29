@@ -22,7 +22,10 @@ body {
   background-size: cover;
   background-position: center;
 }
-
+p a {
+  text-decoration: none;
+  color: #ffffff;
+}
 /* Hide scrollbar for WebKit browsers */
 ::-webkit-scrollbar {
   display: none;
