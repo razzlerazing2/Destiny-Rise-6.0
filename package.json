@@ -1,5 +1,5 @@
 {
-  "name": "skelly",
+  "name": "destinyrise",
   "version": "5.2.5",
   "type": "module",
   "engines": {
@@ -13,7 +13,7 @@
     "lint": "biome lint --write .",
     "build": "webpack --config webpack.config.mjs"
   },
-  "author": "Skelly",
+  "author": "Destiny Rise 6.0",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@nebula-services/bare-server-node": "^2.0.4",

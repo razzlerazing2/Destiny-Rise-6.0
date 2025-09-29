@@ -1,6 +1,6 @@
 <div align="center">
 
-#  𝕊𝕂ℝ𝕐ℙ𝕋𝕆ℕ𝕀𝕋𝔼   
+#  Destiny Rise 6.0   
 ### *Where unblocking possibilities are endless 💀*
 
 ---
@@ -15,7 +15,7 @@
 
 ---
 
-##  Why Skryptonite?
+##  Why Destiny Rise?
 - 🔓 **Bypass school restrictions like a pro**  
 - ⚡ **Ultra-fast proxy performance**  
 - 🎨 **Beautiful UI with custom themes**  

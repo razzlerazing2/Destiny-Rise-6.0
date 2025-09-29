@@ -10,7 +10,7 @@
       "package-lock.json",
       "package.json",
       "*.md",
-      "bun.lockb",
+      "bun.lockb"
     ]
   },
   "organizeImports": {
