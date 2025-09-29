@@ -20,6 +20,7 @@ body {
 }
 
 .column {
+    background: var(--primary-color);
   display: block;
   cursor: pointer;
   position: relative;
@@ -847,6 +848,7 @@ background-color: rgba(0, 0, 0, 0.55);
   transition: all 0.3s ease;
 }*/
 .proxy-button {
+    color: var(--button-text-color);
     background: var(--primary-color);
   position: relative;
   padding: 1rem 2rem;

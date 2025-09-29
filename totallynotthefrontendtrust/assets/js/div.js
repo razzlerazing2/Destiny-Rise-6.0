@@ -5,7 +5,7 @@ window.onload = function() {
         console.log('callback - particles.js config loaded');
     });
 };
-    const savedTheme = localStorage.getItem('background') || 'catppuccin-mochaaa';
+    const savedTheme = localStorage.getItem('background') || 'cuhs';
     document.body.setAttribute('background', savedTheme);
 
     // Define the setTheme function globally
@@ -18,7 +18,7 @@ window.onload = function() {
 
 
 
-const savedBackground = localStorage.getItem('theme') || 'whatluhs';
+const savedBackground = localStorage.getItem('theme') || 'whatss';
 document.body.setAttribute('theme', savedBackground);
 
 // Define the setTheme function globally
