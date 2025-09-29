@@ -48,8 +48,8 @@ function setTheme(theme) {
                 { name: "𝔹𝕚𝕘 𝔻𝕒𝕨𝕘𝕤 - ℍ𝕒𝕟𝕦𝕞𝕒𝕟𝕜𝕚𝕟𝕕", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bigdawgs.mp3" }, // good
                 { name: "𝕊𝕋𝔻 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/std.mp3" }, // good
                 { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bottom.mp3" }, // good
-                { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 2 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom2.mp3" }, // good
-                { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 3 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom3.mp3" }, // good
+                { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 2 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom2.mp3" }, // good
+                { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 3 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom3.mp3" }, // good
                  { name: "ℍ𝔸ℙℙ𝕐 - ℕ𝔽", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/HAPPY.mp3"}, // good
                 { name: "ℍ𝕚𝕕𝕖 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hide.mp3" }, // good
                 { name: "𝔽𝕖𝕖𝕝 𝕀𝕥 - 𝕕𝟜𝕧𝕕", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/feel.mp3" }, // good
@@ -57,10 +57,10 @@ function setTheme(theme) {
                 { name: "𝕃𝕖𝕥 𝕐𝕠𝕦 𝔻𝕠𝕨𝕟 - ℕ𝔽", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/letyadown.mp3" }, // good
                 { name: "ℕ𝕠𝕥 𝕃𝕚𝕜𝕖 𝕌𝕤 - 𝕂𝕖𝕟𝕕𝕣𝕚𝕔𝕜 𝕃𝕒𝕞𝕒𝕣", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/nlu.mp3" }, // good
                 { name: "𝔽𝕚𝕘𝕙𝕥 𝔹𝕒𝕔𝕜 - ℕ𝕖𝕗𝕗𝕖𝕩", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/fbn.mp3" }, // good
-                 { name: "ℂ𝕣𝕠𝕨𝕟 - ℕ𝕖𝕗𝕗𝕖𝕩", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/crown-Lil'Cuzzin.mp3" },
+                 { name: "ℂ𝕣𝕠𝕨𝕟 - ℕ𝕖𝕗𝕗𝕖𝕩", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/crown-Lil'Cuzzin.mp3" },
                 { name: "𝔾𝕣𝕒𝕥𝕖𝕗𝕦𝕝 - ℕ𝕖𝕗𝕗𝕖𝕩", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/thankful.mp3" }, // good
                 { name: "ℝ𝕠𝕤𝕖𝕤 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/rosesCUH.mp3" }, // good
-                { name: "𝔹𝕦𝕣𝕟 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/burnjw.mp3" }, // good
+                { name: "𝔹𝕦𝕣𝕟 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/burnjw.mp3" }, // good
                 { name: "𝕊𝕢𝕦𝕒𝕓𝕓𝕝𝕖 𝕌𝕡 - 𝕂𝕖𝕟𝕕𝕣𝕚𝕔𝕜 𝕃𝕒𝕞𝕒𝕣", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/squabbleup.mp3" }, // good
             ];
 

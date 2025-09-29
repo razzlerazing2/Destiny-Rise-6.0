@@ -27,7 +27,7 @@
 
 
 # Clone the repo
-```git clone https://github.com/razzlerazing2/skryptonite.git cd skryptonite```
+```git clone https://github.com/razzlerazing2/Destiny-Rise-6.0.git cd skryptonite```
 
 # Install dependencies
 ```npm install```
