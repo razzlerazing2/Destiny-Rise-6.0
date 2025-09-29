@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", event => {
     newIframe.sandbox =
       "allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-modals allow-orientation-lock allow-presentation allow-storage-access-by-user-activation";
     // When Top Navigation is not allowed links with the "top" value will be entirely blocked, if we allow Top Navigation it will overwrite the tab, which is obviously not wanted.
-    tabTitle.textContent = `Proxy tab ${tabCounter}`;
+    tabTitle.textContent = `ℙ𝕣𝕠𝕩𝕪 𝕋𝕒𝕓 ${tabCounter}`;
     tabTitle.className = "t";
     newTab.dataset.tabId = tabCounter;
     newTab.addEventListener("click", switchTab);
@@ -103,11 +103,12 @@ newIframe.addEventListener("load", () => {
     if (goUrl.includes("/e/")) {
       newIframe.src = window.location.origin + goUrl;
     } else {
-      //newIframe.src = `${window.location.origin}/a/${goUrl}`;
-      newIframe.src = `/proxyhome`;
+      newIframe.src = `${window.location.origin}/a/${goUrl}`;
+      //newIframe.src = `/proxyhome`;
     }
   } else {
-    newIframe.src = "/proxyhome";
+     newIframe.src = `${window.location.origin}/a/${goUrl}`;
+  //  newIframe.src = "/proxyhome";
   }
 }
 

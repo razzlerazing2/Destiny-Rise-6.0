@@ -113,7 +113,7 @@
 
 body[background="skibididdy"] {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                url("https://gifdb.com/images/high/cyberpunk-pixel-city-neon-2bagugxcfp2to7tx.gif") no-repeat center center fixed;
+                url("/assets/media/background/thejinn.gif") no-repeat center center fixed;
     background-size: cover;
     --text: #cdd6f4;
 }
