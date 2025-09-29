@@ -167,17 +167,20 @@ transition: all 1s ease;
   padding: 1rem 2rem;
   border: 2px solid transparent;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
   cursor: pointer;
   z-index: 1;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 .proxy-button:hover {
-  transform: translateY(-20%) scale(1.1);
-  transition: 0.3s ease;
+  color: #000000;
+  background-color: #ffffff;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
-.proxy-button::before {
+/*.proxy-button::before {
   content: '';
   position: absolute;
   top: -2px;
@@ -204,7 +207,7 @@ transition: all 1s ease;
   100% {
     background-position: 100% 50%;
   }
-}
+}*/
 /* Sidebar styling */
 
 .top-nav {
