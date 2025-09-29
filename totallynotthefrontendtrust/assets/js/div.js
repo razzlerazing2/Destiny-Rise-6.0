@@ -43,8 +43,6 @@ function setTheme(theme) {
                 { name: "ℍ𝕠𝕡𝕖 - 𝕏𝕏𝕏𝕋𝕖𝕟𝕥𝕒𝕔𝕚𝕠𝕟", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hope.mp3" },
                 { name: "ℙ𝕣𝕒𝕪 𝕗𝕠𝕣 𝕞𝕖 - 𝕂𝕖𝕟𝕕𝕣𝕚𝕔𝕜 𝕃𝕒𝕞𝕒𝕣 & 𝕋𝕙𝕖 𝕎𝕖𝕖𝕜𝕟𝕕", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/pfm.mp3" },
                 { name: "ℙ𝕣𝕠𝕧𝕖 𝕚𝕥 - 𝟚𝟙 𝕊𝕒𝕧𝕒𝕘𝕖", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/proveit.mp3" }, // good
-                { name: "ℍ𝔸ℙℙ𝕐 - ℕ𝔽", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/HAPPY.mp3"}, // good
-                { name: "ℍ𝕚𝕕𝕖 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hide.mp3" }, // good
                 { name: "ℝ𝕒𝕟𝕤𝕠𝕞 - 𝕃𝕚𝕝 𝕋𝕖𝕔𝕔𝕒", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/ransomCUH.mp3" }, // good
                 { name: "𝕃𝕚𝕗𝕖𝕤𝕥𝕪𝕝𝕖 - ℝ𝕚𝕔𝕙 𝔾𝕒𝕟𝕘", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/life.mp3" }, // good
                 { name: "𝔹𝕚𝕘 𝔻𝕒𝕨𝕘𝕤 - ℍ𝕒𝕟𝕦𝕞𝕒𝕟𝕜𝕚𝕟𝕕", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bigdawgs.mp3" }, // good
@@ -52,6 +50,8 @@ function setTheme(theme) {
                 { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bottom.mp3" }, // good
                 { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 2 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom2.mp3" }, // good
                 { name: "𝕋𝕙𝕖 𝔹𝕠𝕥𝕥𝕠𝕞 3 - 𝔾𝕝𝕠𝕣𝕓", url: "https://github.com/razzlerazing2/skryptonite/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom3.mp3" }, // good
+                 { name: "ℍ𝔸ℙℙ𝕐 - ℕ𝔽", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/HAPPY.mp3"}, // good
+                { name: "ℍ𝕚𝕕𝕖 - 𝕁𝕦𝕚𝕔𝕖 𝕎ℝ𝕃𝔻", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hide.mp3" }, // good
                 { name: "𝔽𝕖𝕖𝕝 𝕀𝕥 - 𝕕𝟜𝕧𝕕", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/feel.mp3" }, // good
              // { name: "FE!N - Travis Scott", url: "/assets/media/_music/fein.mp3" }, // not good
                 { name: "𝕃𝕖𝕥 𝕐𝕠𝕦 𝔻𝕠𝕨𝕟 - ℕ𝔽", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/letyadown.mp3" }, // good
