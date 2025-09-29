@@ -36,6 +36,23 @@ body {
     transform: translateY(-4px); /* Slight lift on hover */
     box-shadow: 0 4px 10px var(--shadow-strong);
 }
+/*.proxy-button {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  width: 145px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid ghostwhite;
+  background-clip: padding-box;
+}
+.proxy-button:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}*/
 
 /* --- Main Content Container --- */
 .container {
@@ -803,8 +820,53 @@ background-color: rgba(0, 0, 0, 0.55);
     transform: translateY(-4px); /* Slight lift on hover */
     box-shadow: 0 4px 10px var(--shadow-strong);
 }
-
-
+.proxy-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 300px;
+}
+/*.proxy-button {
+  position: relative;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.proxy-button:hover {
+  background-color: var(--primary-light);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}*/
+.proxy-button {
+    background: var(--primary-color);
+  position: relative;
+  padding: 1rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+/*  background-color: #000000;
+  color: #ffffff;*/
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.proxy-button:hover {
+ /* color: #000000;
+  background-color: #ffffff;*/
+  transform: scale(1.05) translatey(-4px);
+  transition: all 0.3s ease;
+    background-color: var(--primary-light);
+    box-shadow: 0 4px 10px var(--shadow-strong);
+}
 select#backgroundChange {
   width: 100%;
   padding: 10px 15px;

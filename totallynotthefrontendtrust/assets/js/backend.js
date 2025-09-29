@@ -53,7 +53,7 @@ function processUrl(value, path) {
   }
 }
 
-function go(value) {
+function proxyRunSpeed(value) {
   processUrl(value, "/t");
 }
 

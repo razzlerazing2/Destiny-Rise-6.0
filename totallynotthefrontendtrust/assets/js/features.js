@@ -10,7 +10,7 @@ function loadParticles() {
                 }
             },
             color: {
-                value: ["#ffffff"]
+                value: ["#fff"]
             },
             shape: {
                 type: ["circle"],
@@ -48,7 +48,7 @@ function loadParticles() {
                 }
             },
             line_linked: {
-                enable: true,
+                enable: false,
                 distance: 150,
                 color: "#ffffff",
                 opacity:  3, // Increased opacity for visibility
@@ -72,10 +72,6 @@ function loadParticles() {
             detect_on: "canvas",
             events: {
                 onhover: {
-                    enable: true,
-                    mode: "repulse"
-                },
-                onclick: {
                     enable: true,
                     mode: "push"
                 },
@@ -232,9 +228,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Key
-let eventKey = localStorage.getItem("eventKey") || "`";
-let eventKeyRaw = localStorage.getItem("eventKeyRaw") || "`";
-let pLink = localStorage.getItem("pLink") || "";
+let eventKey = localStorage.getItem("eventKey") || "𝕋𝕪𝕡𝕖 𝕚𝕟 𝕒 𝕣𝕒𝕟𝕕𝕠𝕞 𝕜𝕖𝕪...";
+let eventKeyRaw = localStorage.getItem("eventKeyRaw") || "𝕋𝕪𝕡𝕖 𝕚𝕟 𝕒 𝕣𝕒𝕟𝕕𝕠𝕞 𝕜𝕖𝕪...";
+let pLink = localStorage.getItem("pLink") || "𝕋𝕪𝕡𝕖 𝕚𝕟 𝕒 𝕌ℝ𝕃...";
 
 document.addEventListener("DOMContentLoaded", () => {
   const eventKeyInput = document.getElementById("eventKeyInput");
@@ -406,29 +402,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-// Particles
-document.addEventListener("DOMContentLoaded", () => {
-  const switches = document.getElementById("2");
-  if (switches) {
-    if (window.localStorage.getItem("particles") !== "") {
-      if (window.localStorage.getItem("particles") === "true") {
-        switches.checked = true;
-      } else {
-        switches.checked = false;
-      }
-    }
-
-    switches.addEventListener("change", event => {
-      if (event.currentTarget.checked) {
-        window.localStorage.setItem("particles", "true");
-      } else {
-        window.localStorage.setItem("particles", "false");
-      }
-    });
-  }
-});
-
 // AB Cloak
 function AB() {
   let inFrame;
@@ -449,10 +422,8 @@ function AB() {
       const style = iframe.style;
       const link = doc.createElement("link");
 
-      const name = localStorage.getItem("name") || "Dashboard | Khan Academy";
-      const icon =
-        localStorage.getItem("icon") ||
-        "/assets/media/icon/favicon.png";
+      const name = localStorage.getItem("name") || "My Drive - Google Drive";
+      const icon = localStorage.getItem("icon") || "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png";
 
       doc.title = name;
       link.rel = "icon";
