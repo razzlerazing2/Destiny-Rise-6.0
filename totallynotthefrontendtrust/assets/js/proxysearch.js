@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../sw.js?v=10-02-2024", { scope: "/a/" });
+  navigator.serviceWorker.register("../sw.js?v=06-07-25", { scope: "/a/" });
   const form = document.getElementById("fv");
   const input = document.getElementById("iv");
   if (form && input) {

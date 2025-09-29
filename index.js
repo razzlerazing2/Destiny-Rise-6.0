@@ -107,20 +107,20 @@ app.use(express.static(path.join(__dirname, "totallynotthefrontendtrust")));
 app.use("/fq", cors({ origin: true }));
 
 const routes = [
-  { path: "/about", file: "about.html" },
-  { path: "/apps", file: "apps.html" },
-  { path: "/games", file: "games.html" },
-  { path: "/settings", file: "settings.html" },
-  { path: "/t", file: "proxysearch.html" },
-  { path: "/home", file: "Index.html" },
+  { path: "/about", file: "/real_files/about.html" },
+  { path: "/apps", file: "/real_files/apps.html" },
+  { path: "/games", file: "/real_files/games.html" },
+  { path: "/settings", file: "/real_files/settings.html" },
+  { path: "/t", file: "/real_files/proxysearch.html" },
+  { path: "/home", file: "/real_files/Index.html" },
   { path: "/home-page", file: "index.html" },
-  { path: "/contact", file: "contactsupport.html" },
+  { path: "/contact", file: "/real_files/contactsupport.html" },
   { path: "/learnmathhere", file: "index.html" },
-  { path: "/animes", file: "anime.html" },
-  { path: "/song", file: "web_music.html" },
-  { path: "/proxyhome", file: "proxyhome.html" },
-  { path: "/resources", file: "_trickfiles/resource.html" },
-  { path: "/learn", file: "_trickfiles/learnmore.html" },
+  { path: "/animes", file: "/real_files/anime.html" },
+  { path: "/song", file: "/real_files/web_music.html" },
+  { path: "/proxyhome", file: "/real_files/proxyhome.html" },
+  { path: "/resources", file: "/real_files/trickfiles/resource.html" },
+  { path: "/learn", file: "/real_files/trickfiles/learnmore.html" },
 ];
 
 // biome-ignore lint/complexity/noForEach:
@@ -131,12 +131,12 @@ routes.forEach((route) => {
 });
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, "totallynotthefrontendtrust", "404.html"));
+  res.status(404).sendFile(path.join(__dirname, "totallynotthefrontendtrust", "/real_files/", "404.html"));
 });
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).sendFile(path.join(__dirname, "totallynotthefrontendtrust", "404.html"));
+  res.status(500).sendFile(path.join(__dirname, "totallynotthefrontendtrust", "/real_files/", "404.html"));
 });
 
 server.on("request", (req, res) => {
