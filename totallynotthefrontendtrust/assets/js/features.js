@@ -405,7 +405,7 @@ function SaveEngine() {
     localStorage.setItem("engine", customEngine.value.trim());
     localStorage.setItem("enginename", "Custom");
   } else {
-    alert("Search Engine Saved.");
+    alert("𝕊𝕖𝕒𝕣𝕔𝕙 𝕖𝕟𝕘𝕚𝕟𝕖 𝕤𝕒𝕧𝕖𝕕.");
   }
 }
 
