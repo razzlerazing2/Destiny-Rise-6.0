@@ -471,7 +471,7 @@ function exportSaveData() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'save_data.json';
+  a.download = 'data-saved.json';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -499,8 +499,7 @@ function importSaveData() {
             localStorage.setItem(key, value);
           });
         }
-        alert('Your save data has been imported. Please test it out.')
-        alert('If you find any issues then report it in GitHub or the skryptonite discord.')
+        alert('𝕐𝕠𝕦 𝕚𝕞𝕡𝕠𝕣𝕥𝕖𝕕 𝕪𝕠𝕦𝕣 𝕤𝕒𝕧𝕖 𝕕𝕒𝕥𝕒, 𝕚𝕥 𝕚𝕤 𝕘𝕠𝕠𝕕 𝕚𝕗 𝕥𝕙𝕚𝕤 𝕝𝕚𝕟𝕜 𝕘𝕖𝕥𝕤 𝕓𝕝𝕠𝕔𝕜𝕖𝕕, 𝕠𝕣 𝕒𝕟𝕠𝕥𝕙𝕖𝕣 𝕝𝕚𝕟𝕜 𝕚𝕤 𝕔𝕣𝕖𝕒𝕥𝕖𝕕, 𝕒𝕝𝕤𝕠 𝕚𝕗 𝕪𝕠𝕦 𝕙𝕒𝕧𝕖 𝕘𝕠𝕠𝕕 𝕡𝕣𝕠𝕘𝕣𝕖𝕤𝕤 𝕠𝕟 𝕒 𝕘𝕒𝕞𝕖 𝕠𝕟 𝕥𝕙𝕚𝕤 𝕨𝕖𝕓𝕤𝕚𝕥𝕖.')
       } catch (error) {
         console.error('Error parsing JSON file:', error);
       }
