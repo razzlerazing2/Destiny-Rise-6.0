@@ -5,14 +5,17 @@ window.onload = function() {
         console.log('callback - particles.js config loaded');
     });
 };
-    const savedTheme = localStorage.getItem('background') || 'animated-gradient';
-    document.body.setAttribute('background', savedTheme);
+const savedTheme = localStorage.getItem('background') || 'animated-gradient';
+document.body.setAttribute('background', savedTheme);
 
-    // Define the setTheme function globally
-    function setBackground(background) {
-        document.body.setAttribute('background', background);
-        localStorage.setItem('background', background);
-    }
+// Define the setTheme function globally
+function setBackground(background) {
+    document.body.setAttribute('background', background);
+    localStorage.setItem('background', background);
+
+    // Show alert when background is changed
+    alert("𝔹𝕒𝕔𝕜𝕘𝕣𝕠𝕦𝕟𝕕 𝕙𝕒𝕤 𝕓𝕖𝕖𝕟 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕥𝕠: " + background);
+}
 
 
 
@@ -25,6 +28,8 @@ document.body.setAttribute('theme', savedBackground);
 function setTheme(theme) {
     document.body.setAttribute('theme', theme);
     localStorage.setItem('theme', theme);
+    // Show alert when theme is changed
+    alert("𝕋𝕙𝕖𝕞𝕖 𝕙𝕒𝕤 𝕓𝕖𝕖𝕟 𝕔𝕙𝕒𝕟𝕘𝕖𝕕 𝕥𝕠: " + theme);
 }
     document.addEventListener('DOMContentLoaded', () => {
         // --- Music Player Setup ---
