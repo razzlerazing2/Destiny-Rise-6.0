@@ -6,6 +6,12 @@
     "custom": "true"
   },
   {
+    "name": "| Play game |",
+    "url": "https://boulderbugle.com/H8zovNLh",
+    "image": "/assets/img/geforcenow.webp",
+    "categories": ["all"]
+  },
+  {
     "name": "GeForce Now",
     "url": "https://play.geforcenow.com",
     "image": "/assets/img/geforcenow.webp",
@@ -391,7 +397,7 @@
   },
   {
     "name": "Slope",
-    "url": "https://derpmandev.github.io/unblocked-games/slope",
+    "url": "https://nexusapp.neocities.org/moderngame/projects/slope/",
     "image": "/assets/img/slope.webp",
     "categories": ["all"]
   },
