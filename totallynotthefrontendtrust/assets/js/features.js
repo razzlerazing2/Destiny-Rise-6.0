@@ -1,5 +1,5 @@
 // skids, hop off or hope to see a job application
-/*let particlesEnabled;
+let particlesEnabled;
 
 function loadParticles() {
   particlesJS("particles-js", {
@@ -51,11 +51,12 @@ if (localStorage.getItem("particlesEnabled") === null) {
 }
 
 document.getElementById("toggleParticles").addEventListener("click", toggleParticles);
-*/
+
 
 // Particles Enabled
-// Particles 
+/*
 let particlesEnabled; function loadParticles() { particlesJS("particles-js", { particles: { number: { value: 150, density: { enable: false } }, color: { value: ["#fff"] }, shape: { type: ["circle"], stroke: { width: 0, color: "#ffffff" }, polygon: { nb_sides: 6 }, image: { src: "img/github.svg", width: 100, height: 100 } }, opacity: { value: 0.5, random: false, anim: { enable: true, speed: 9, opacity_min: 0.67, sync: false } }, size: { value: 5, random: true, anim: { enable: true, speed: 9, size_min: 0.67, sync: false } }, line_linked: { enable: false, distance: 150, color: "#ffffff", opacity: 3, width: 3  }, move: { enable: true, speed: 9, direction: "none", random: false, straight: false, out_mode: "out", attract: { enable: false, rotateX: 600, rotateY: 1200 } } }, interactivity: { detect_on: "canvas", events: { onhover: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 200, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 9.67 }, repulse: { distance: 200, duration: 1 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } } }, retina_detect: true }); } function disableParticles() { particlesJS("particles-js", { particles: { number: { value: 0 } } }); } function toggleParticles() { if (particlesEnabled) { disableParticles(); particlesEnabled = false; localStorage.setItem("particlesEnabled", "false"); } else { loadParticles(); particlesEnabled = true; localStorage.setItem("particlesEnabled", "true"); } } if (localStorage.getItem("particlesEnabled") === null) { particlesEnabled = true; loadParticles(); localStorage.setItem("particlesEnabled", "true"); } else if (localStorage.getItem("particlesEnabled") === "false") { particlesEnabled = false; disableParticles(); } else { particlesEnabled = true; loadParticles(); } document.getElementById("toggleParticles").addEventListener("click", toggleParticles);
+*/
 // Ads
 document.addEventListener("DOMContentLoaded", () => {
   function adChange(selectedValue) {
