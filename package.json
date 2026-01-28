@@ -10,8 +10,7 @@
     "start": "node index.js",
     "format": "biome format --write .",
     "precommit": "npm run format && biome check --write .",
-    "lint": "biome lint --write .",
-    "build": "webpack --config webpack.config.mjs"
+    "lint": "biome lint --write ."
   },
   "author": "Destiny Rise 6.0",
   "license": "GPL-3.0-or-later",
@@ -26,14 +25,5 @@
     "mime": "^4.0.6",
     "node-fetch": "^3.3.2",
     "tsparticles": "^3.8.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.21.5",
-    "@babel/preset-env": "^7.21.5",
-    "@biomejs/biome": "1.9.4",
-    "babel-loader": "^10.0.0",
-    "webpack": "^5.99.7",
-    "webpack-cli": "^6.0.1",
-    "webpack-node-externals": "^3.0.0"
   }
 }
