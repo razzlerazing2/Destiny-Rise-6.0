@@ -64,6 +64,14 @@ document.head.appendChild(faLink);
       transition: all 0.3s ease;
       pointer-events: none;
     }
+    .nav-divider {
+      width: 70%;
+      height: 1px;
+      background: var(--primary-color);
+      margin: 10px auto;
+      border-radius: 2px;
+      box-shadow: 0 10px 20px var(--primary-color); 
+    }
   `;
   document.head.appendChild(style);
 });
