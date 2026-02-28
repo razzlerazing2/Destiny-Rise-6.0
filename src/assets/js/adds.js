@@ -2,10 +2,10 @@
   let qp;
 
   try {
-    qp = window.top.location.pathname === "/URLexeNcode_Iframe7.js";
+    qp = window.top.location.pathname === "/search";
   } catch {
     try {
-      qp = window.parent.location.pathname === "/URLexeNcode_Iframe7.js";   
+      qp = window.parent.location.pathname === "/search";   
     } catch {
       qp = false;
     }

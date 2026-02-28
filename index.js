@@ -1,4 +1,4 @@
-// skids, better hop off
+// hop off
 import fs from "node:fs"
 import http from "node:http";
 import path from "node:path";
@@ -84,21 +84,21 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, "totallynotthefrontendtrust")));
+app.use(express.static(path.join(__dirname, "src")));
 app.use("/fq", cors({ origin: true }));
 
 const routes = [
-  { path: "/URLexeNcode_Iframe5.js", file: "/real_files/apps.html" },
-  { path: "/URLexeNcode_Iframe3.js", file: "/real_files/games.html" },
-  { path: "/URLexeNcode_Iframe6.js", file: "/real_files/settings.html"},
-  { path: "/URLexeNcode_Iframe7.js", file: "/real_files/proxysearch.html" },
-  { path: "/learnmathhere", file: "/trick_files/index.html" },
+  { path: "/apps", file: "/apps.html" },
+  { path: "/games", file: "/games.html" },
+  { path: "/settings", file: "/settings.html"},
+  { path: "/search", file: "/proxysearch.html" },
+  { path: "/index.jsx", file: "index.html" },
   { path: "/signup", file: "/trick_files/password_input.html" },
-  { path: "/URLexeNcode_Iframe4.js", file: "/real_files/index.html" },
-  { path: "/URLexeNcode_Iframe2.js", file: "/real_files/anime.html" },
-  { path: "/URLexeNcode_Iframe1.js", file: "/real_files/song.html" },
-  { path: "/testing", file: "/real_files/testing.html" },
-  { path: "/m", file: "/real_files/m.html" },
+  { path: "/home", file: "Index.html" },
+  { path: "/anime", file: "/anime.html" },
+  { path: "/music", file: "/song.html" },
+  { path: "/testing", file: "/testing.html" },
+  { path: "/oldsite", file: "/m.html" },
   { path: "/ts_1.js", file: "test_files/test_subject1.html"},
     { path: "/ts_2.js", file: "test_files/test_subject2.html"},
 ];
@@ -106,17 +106,17 @@ const routes = [
 // biome-ignore lint/complexity/noForEach:
 routes.forEach((route) => {
   app.get(route.path, (_req, res) => {
-    res.sendFile(path.join(__dirname, "totallynotthefrontendtrust", route.file));
+    res.sendFile(path.join(__dirname, "src", route.file));
   });
 });
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, "totallynotthefrontendtrust", "/real_files/", "404.html"));
+  res.status(404).sendFile(path.join(__dirname, "src", "/", "404.html"));
 });
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).sendFile(path.join(__dirname, "totallynotthefrontendtrust", "/real_files/", "404.html"));
+  res.status(500).sendFile(path.join(__dirname, "src", "/", "404.html"));
 });
 
 server.on("request", (req, res) => {

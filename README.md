@@ -35,12 +35,12 @@
 # Start the app
 ```npm run start```
 <h1>⚠️ Important Notes</h1>
-<h2>Don't edit files outside "totallynotthefrontendtrust" folder unless yk what you're doing</h2>
+<h2>Don't edit files outside "src" folder unless you know what you're doing</h2>
 
-<h2>✅ You MAY edit anything inside the folder: <code>totallynotthefrontendtrust</code></h2>
+<h2>✅ You MAY edit anything inside the folder: <code>src</code></h2>
 <h3>🔐 Pro Tip: Hide this from teachers 👀. Freedom > Restrictions 💻
 
-👑 Credits
+👑 Credits:
 Huge thanks to @467riguy8 for the help!
 Maintained by @razzlerazing2</h3>
 

@@ -294,8 +294,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "VENGEANCE - Glorb", url: "/assets/media/partial_song/1.m4a" },
                 { name: "STD - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/std.mp3" }, // good
                 { name: "The Bottom - Glorb", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/bottom.mp3" }, // good
-                { name: "The Bottom 2 - Glorb", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom2.mp3" }, // good
-                { name: "The Bottom 3 - Glorb", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/bottom3.mp3" }, // good
+                { name: "The Bottom 2 - Glorb", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/src/assets/media/_music/bottom2.mp3" }, // good
+                { name: "The Bottom 3 - Glorb", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/src/assets/media/_music/bottom3.mp3" }, // good
                 { name: "HAPPY - NF", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/HAPPY.mp3" }, // good
                 { name: "Hide - Juicе WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/hide.mp3" }, // good
                 { name: "Feel It - d4vvd", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/feel.mp3" }, // good
@@ -303,10 +303,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "Let You Down - NF", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/letyadown.mp3" }, // good
                 { name: "Not like us - Kendrick Lamar", url: "/assets/media/partial_song/e.m4a" }, // good
                 { name: "Fight back - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/fbn.mp3" }, // good
-                 { name: "Crown Neffex", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/crown-Lil'Cuzzin.mp3" },
+                 { name: "Crown Neffex", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/src/assets/media/_music/crown-Lil'Cuzzin.mp3" },
                 { name: "Grateful - Neffex", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/thankful.mp3" }, // good
                 { name: "Roses - Juice WRLD", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/rosesCUH.mp3" }, // good
-                { name: "Burn - Juice WRLD", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/totallynotthefrontendtrust/assets/media/_music/burnjw.mp3" }, // good
+                { name: "Burn - Juice WRLD", url: "https://github.com/razzlerazing2/Destiny-Rise-6.0/raw/d86f2ebaa83bc5d42ff428708d67fcb6a9fa5fc7/src/assets/media/_music/burnjw.mp3" }, // good
                 { name: "Squabble up - Kendrick Lamar", url: "https://github.com/razzlerazing4/music-file-storage/raw/refs/heads/main/squabbleup.mp3" }, // good
                 { name: "Dia Delicia - NAKAMA", url: "/assets/media/partial_song/diadelicia.mp3" },
                 { name: "Accelerada - MXZI", url: "/assets/media/partial_song/accelerate.mp3" },
@@ -528,7 +528,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         ? link.pathname.slice(0, -1)
                         : link.pathname;
                     if (normalizedLinkPath === normalizedCurrentPath ||
-                        (normalizedLinkPath === '/URLexeNcode_Iframe4.js' && normalizedCurrentPath === '/')) {
+                        (normalizedLinkPath === '/' && normalizedCurrentPath === '/')) {
                         link.classList.add('active');
                     } else {
                         link.classList.remove('active');
@@ -622,7 +622,7 @@ function _() {
     }
 }
 function $() {
-    window.location.href = "/URLexeNcode_Iframe4.js"
+    window.location.href = "/home"
 }
 // Favicon
 function setFavicon(url) {

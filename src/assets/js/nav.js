@@ -9,18 +9,18 @@ document.head.appendChild(faLink);
       <div class="nav-container">
         <ul class="nav-links">
       <!--    <div class="logo">DR</div>-->
-          <li><a href="/URLexeNcode_Iframe4.js"><i class="fas fa-house cuhs"></i><span></span></a></li>
-          <li><a href="/URLexeNcode_Iframe3.js"><i class="fas fa-gamepad cuhs"></i><span></span></a></li>
-          <li><a href="/URLexeNcode_Iframe5.js"><i class="fas fa-mobile-alt cuhs"></i><span></span></a></li>
-          <li><a href="/URLexeNcode_Iframe2.js"><i class="fas fa-tv cuhs"></i><span></span></a></li>
-          <li><a href="/URLexeNcode_Iframe1.js"><i class="fas fa-music cuhs"></i><span></span></a></li>
+          <li><a href="/home"><i class="fas fa-house cuhs"></i><span></span></a></li>
+          <li><a href="/games"><i class="fas fa-gamepad cuhs"></i><span></span></a></li>
+          <li><a href="/apps"><i class="fas fa-mobile-alt cuhs"></i><span></span></a></li>
+          <li><a href="/anime"><i class="fas fa-tv cuhs"></i><span></span></a></li>
+          <li><a href="/music"><i class="fas fa-music cuhs"></i><span></span></a></li>
         </ul>
         <div class="nav-divider"></div> <!-- Short dash separating top and bottom links -->
         <!-- Bottom nav buttons -->
         <ul class="nav-links nav-bottom">
           <li><a href="https://discord.gg/mnWwZjcteb" target="_blank"><i class="fab fa-discord cuhs"></i><span></span></a></li>
           <li><a href="https://github.com/razzlerazing2/skryptonite" target="_blank"><i class="fab fa-github cuhs"></i><span></span></a></li>
-          <li><a href="/URLexeNcode_Iframe6.js"><i class="fas fa-gear cuhs"></i><span></span></a></li>
+          <li><a href="/settings"><i class="fas fa-gear cuhs"></i><span></span></a></li>
         </ul>
 
       </div>

@@ -7,10 +7,10 @@ window.addEventListener("load", () => {
 let xl;
 
 try {
-  xl = window.top.location.pathname === "/URLexeNcode_Iframe7.js";
+  xl = window.top.location.pathname === "/search";
 } catch {
   try {
-    xl = window.parent.location.pathname === "/URLexeNcode_Iframe7.js";   
+    xl = window.parent.location.pathname === "/search";   
   } catch {
     xl = false;
   }
@@ -24,9 +24,9 @@ if (form && input) {
     event.preventDefault();
     try {
       if (xl) processUrl(input.value, "");
-      else processUrl(input.value, "/URLexeNcode_Iframe7.js");
+      else processUrl(input.value, "/search");
     } catch {
-      processUrl(input.value, "/URLexeNcode_Iframe7.js");
+      processUrl(input.value, "/search");
     }
   });
 }
@@ -54,7 +54,7 @@ function processUrl(value, path) {
 }
 
 function go(value) {
-  processUrl(value, "/URLexeNcode_Iframe7.js");
+  processUrl(value, "/search");
 }
 
 function blank(value) {
