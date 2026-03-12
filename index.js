@@ -93,6 +93,7 @@ const routes = [
   { path: "/settings", file: "/settings.html"},
   { path: "/search", file: "/proxysearch.html" },
   { path: "/index.jsx", file: "index.html" },
+  { path: "/learnmathhere", file: "index.html" },
   { path: "/signup", file: "/trick_files/password_input.html" },
   { path: "/home", file: "Index.html" },
   { path: "/anime", file: "/anime.html" },
