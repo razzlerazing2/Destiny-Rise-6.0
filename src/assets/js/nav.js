@@ -68,7 +68,7 @@ document.head.appendChild(faLink);
       width: 70%;
       height: 1px;
       background: var(--primary-color);
-      margin: 20px auto; /* Increased margin for better spacing */
+      margin: auto;
       border-radius: 2px;
       box-shadow: 0 10px 20px var(--primary-color); 
     }

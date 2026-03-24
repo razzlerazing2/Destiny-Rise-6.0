@@ -126,7 +126,7 @@ nav {
   width: 70%;
   height: 1px;
   background: var(--primary-color);
-  margin: 10px auto;
+  margin: auto;
   border-radius: 2px;
   box-shadow: 0 10px 20px var(--primary-color); 
 }
@@ -249,7 +249,6 @@ nav {
 }
 
 .nav-bottom {
-  margin-top: auto;
   margin-bottom: 20px;
 }
 
